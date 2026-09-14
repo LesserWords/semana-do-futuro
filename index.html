@@ -1,0 +1,5105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semana do Futuro 2026 — Circuito de IA Cianorte</title>
+  <meta name="description"
+    content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento, especialistas de mercado e educadores em debate direto.">
+
+  <!-- Favicon Oficial — Símbolo Semana do Futuro (Sem texto) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <!-- Fontes Oficiais do Design System -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --fundo: #000000;
+      --superficie: #0A0A12;
+      --card-bg: rgba(14, 14, 26, 0.75);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-hover: rgba(255, 255, 255, 0.22);
+      --branco: #FFFFFF;
+      --papel: #F1F2F7;
+      --indigo: #3B0CAD;
+      --azul-elo: #2B49C4;
+      --ciano: #08D1F8;
+      --ciano-glow: rgba(8, 209, 248, 0.35);
+      --azul-glow: rgba(43, 73, 196, 0.4);
+      --muted: #8E8EA8;
+      --muted-light: #C9C9DA;
+      --gradiente-oficial: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      --grad-text: linear-gradient(100deg, #FFFFFF 0%, #08D1F8 100%);
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, sans-serif;
+      --container-max: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--fundo);
+      color: var(--branco);
+      font-family: var(--body);
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background: radial-gradient(circle at 50% 0%, rgba(59, 12, 173, 0.22) 0%, transparent 60%),
+        radial-gradient(circle at 100% 40%, rgba(8, 209, 248, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 0% 80%, rgba(43, 73, 196, 0.18) 0%, transparent 60%),
+        var(--fundo);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Utilitários */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .grad-text {
+      background: var(--gradiente-oficial);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(8, 209, 248, 0.08);
+      border: 1px solid rgba(8, 209, 248, 0.4);
+      color: var(--ciano);
+      box-shadow: 0 0 20px rgba(8, 209, 248, 0.15);
+    }
+
+    .badge-pill .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--ciano);
+      box-shadow: 0 0 10px var(--ciano);
+    }
+
+    .btn-primary {
+      background: var(--gradiente-oficial);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      padding: 14px 32px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 25px var(--azul-glow);
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 35px rgba(8, 209, 248, 0.45);
+      filter: brightness(1.1);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--ciano);
+      transform: translateY(-2px);
+    }
+
+    /* HEADER & NAVEGAÇÃO */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo-event {
+      height: 42px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 2px 10px rgba(8, 209, 248, 0.25));
+    }
+
+    .brand-sep {
+      width: 1px;
+      height: 28px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .header-logo-nia {
+      height: 26px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--muted-light);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: var(--ciano);
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--ciano);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--branco);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* SEÇÃO HERO */
+    .hero {
+      position: relative;
+      padding: 150px 0 90px;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: radial-gradient(circle at 15% 20%, rgba(59, 12, 173, 0.4) 0%, transparent 55%),
+        radial-gradient(circle at 85% 30%, rgba(8, 209, 248, 0.22) 0%, transparent 55%),
+        radial-gradient(circle at 50% 85%, rgba(43, 73, 196, 0.2) 0%, transparent 60%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(circle at 50% 50%, #000 30%, transparent 80%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .elo-line {
+      position: absolute;
+      top: 0;
+      right: -80px;
+      width: 700px;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.6;
+    }
+
+    .hero-content {
+      width: 100%;
+      max-width: 1220px;
+      position: relative;
+      z-index: 2;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 50px;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+
+    .hero-city-tag {
+      font-family: var(--display);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ciano);
+      background: rgba(8, 209, 248, 0.1);
+      border: 1px solid rgba(8, 209, 248, 0.3);
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .hero-brand-wrap {
+      margin-bottom: 20px;
+      display: inline-block;
+      position: relative;
+    }
+
+    .hero-event-logo {
+      max-width: 440px;
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 10px 35px rgba(8, 209, 248, 0.35));
+      animation: heroLogoGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroLogoGlow {
+      from {
+        filter: drop-shadow(0 8px 25px rgba(8, 209, 248, 0.28));
+      }
+
+      to {
+        filter: drop-shadow(0 14px 45px rgba(8, 209, 248, 0.55)) drop-shadow(0 0 24px rgba(59, 12, 173, 0.45));
+      }
+    }
+
+    .hero-title {
+      font-family: var(--display);
+      font-size: clamp(32px, 3.8vw, 48px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      color: var(--branco);
+    }
+
+    .hero-desc {
+      font-size: clamp(16px, 1.6vw, 18.5px);
+      line-height: 1.6;
+      color: var(--muted-light);
+      margin-bottom: 32px;
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .hero-trust-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted-light);
+      align-items: center;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-trust-item svg {
+      color: var(--ciano);
+      flex-shrink: 0;
+    }
+
+    /* RIGHT COLUMN: HOLOGRAPHIC SHOWCASE CARD */
+    .hero-visual-col {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-card-showcase {
+      width: 100%;
+      max-width: 440px;
+      background: linear-gradient(160deg, rgba(20, 20, 38, 0.85) 0%, rgba(8, 8, 18, 0.95) 100%);
+      border: 1.5px solid rgba(8, 209, 248, 0.4);
+      border-radius: 28px;
+      padding: 30px 26px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.95), 0 0 60px rgba(8, 209, 248, 0.2);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .hero-card-showcase::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(8, 209, 248, 0.25) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-card-showcase::after {
+      content: "";
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(59, 12, 173, 0.35) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-live-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(8, 209, 248, 0.12);
+      border: 1px solid var(--ciano);
+      border-radius: 999px;
+      padding: 6px 14px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ciano);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .hero-emblem-wrap {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      margin: 6px 0;
+    }
+
+    .hero-emblem-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(8, 209, 248, 0.4);
+      animation: spinRing 24s linear infinite;
+    }
+
+    .hero-emblem-ring-2 {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 1px solid rgba(43, 73, 196, 0.35);
+      animation: spinRingReverse 36s linear infinite;
+    }
+
+    @keyframes spinRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinRingReverse {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    .hero-emblem-img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 25px rgba(8, 209, 248, 0.7));
+      animation: floatEmblem 3.5s ease-in-out infinite alternate;
+      z-index: 2;
+    }
+
+    @keyframes floatEmblem {
+      from {
+        transform: translateY(-4px) scale(0.98);
+      }
+
+      to {
+        transform: translateY(4px) scale(1.02);
+      }
+    }
+
+    .hero-card-meta {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 1;
+    }
+
+    .hero-card-feature {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.035);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 10px 14px;
+      transition: all 0.2s ease;
+    }
+
+    .hero-card-feature:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(8, 209, 248, 0.35);
+    }
+
+    .hero-feature-icon {
+      font-size: 19px;
+      flex-shrink: 0;
+    }
+
+    .hero-feature-text h5 {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 2px;
+    }
+
+    .hero-feature-text p {
+      font-size: 11.5px;
+      color: var(--muted-light);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding: 24px 32px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding-right: 16px;
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+      padding-right: 0;
+    }
+
+    .stat-number {
+      font-family: var(--display);
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      color: var(--branco);
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* SEÇÕES COMUNS */
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 64px;
+    }
+
+    .section-tag {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ciano);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 17px;
+      color: var(--muted-light);
+      line-height: 1.6;
+    }
+
+    /* CONCEITO E DINÂMICA DIÁDICA */
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .concept-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      backdrop-filter: blur(14px);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .concept-card:hover {
+      border-color: rgba(8, 209, 248, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(8, 209, 248, 0.1);
+    }
+
+    .concept-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradiente-oficial);
+    }
+
+    .concept-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(8, 209, 248, 0.1);
+      border: 1px solid rgba(8, 209, 248, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ciano);
+    }
+
+    .concept-card h3 {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .concept-card p {
+      color: var(--muted-light);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* O MODELO DIÁDICO DESTAQUE */
+    .diadic-box {
+      background: linear-gradient(135deg, rgba(59, 12, 173, 0.3) 0%, rgba(14, 14, 26, 0.9) 100%);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+      border-radius: 24px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(43, 73, 196, 0.15);
+    }
+
+    .diadic-left h3 {
+      font-family: var(--display);
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .diadic-left p {
+      color: var(--muted-light);
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 24px;
+    }
+
+    .diadic-right {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .diadic-role {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .diadic-role-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--gradiente-oficial);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .diadic-role-text h4 {
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+
+    .diadic-role-text p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    /* PROGRAMAÇÃO DIA A DIA (CIRCUITO CONECTADO & HISTORY TRACK) */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Linha Conectora da Trilha Histórica (History Track) */
+    .timeline-container::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      bottom: 60px;
+      left: 36px;
+      width: 3px;
+      background: linear-gradient(180deg, #3B0CAD 0%, #2B49C4 35%, #08D1F8 70%, #3B0CAD 100%);
+      box-shadow: 0 0 16px rgba(8, 209, 248, 0.45);
+      z-index: 1;
+      border-radius: 999px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 28px;
+      position: relative;
+      margin-bottom: 40px;
+      z-index: 2;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Ponto Conector na Trilha (Node Pin) */
+    .timeline-node {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 28px;
+    }
+
+    .timeline-dot {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--superficie);
+      border: 2.5px solid var(--ciano);
+      box-shadow: 0 0 20px rgba(8, 209, 248, 0.5), inset 0 0 10px rgba(59, 12, 173, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--branco);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .timeline-item:hover .timeline-dot {
+      transform: scale(1.15);
+      background: var(--ciano);
+      color: #000;
+      box-shadow: 0 0 28px rgba(8, 209, 248, 0.85);
+    }
+
+    .session-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 36px 40px;
+      backdrop-filter: blur(14px);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 36px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+    }
+
+    .session-card:hover {
+      border-color: rgba(8, 209, 248, 0.55);
+      transform: translateY(-4px) translateX(4px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85), 0 0 35px rgba(8, 209, 248, 0.22);
+    }
+
+    .session-card:focus-visible {
+      outline: 2px solid var(--ciano);
+      outline-offset: 4px;
+    }
+
+    .session-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 5px;
+      background: var(--gradiente-oficial);
+    }
+
+    /* Ícone de Expansão no Canto Inferior Direito do Card */
+    .card-expand-corner {
+      position: absolute;
+      bottom: 22px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(8, 209, 248, 0.08);
+      border: 1px solid rgba(8, 209, 248, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ciano);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .session-card:hover .card-expand-corner {
+      background: linear-gradient(135deg, rgba(59, 12, 173, 0.85) 0%, rgba(8, 209, 248, 0.9) 100%);
+      border-color: #FFFFFF;
+      color: #FFFFFF;
+      transform: scale(1.12);
+      box-shadow: 0 0 22px rgba(8, 209, 248, 0.6);
+    }
+
+    /* Header de Polo e Badges da Sessão */
+    .session-polo-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .session-badges-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .session-polo-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--branco);
+      margin-bottom: 0;
+    }
+
+    /* COMPONENTE DE STATUS: CONCLUÍDO / HOJE / AMANHÃ / EM BREVE */
+    .session-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    /* 1. Concluído */
+    .session-status-badge.status-concluido {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      color: #34D399;
+    }
+
+    /* 2. Hoje (Vibrante com Efeito Glow e Pulso) */
+    .session-status-badge.status-hoje {
+      background: rgba(8, 209, 248, 0.18);
+      border: 1px solid var(--ciano);
+      color: #FFFFFF;
+      box-shadow: 0 0 14px rgba(8, 209, 248, 0.45);
+    }
+
+    .status-pulse-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--ciano);
+      box-shadow: 0 0 8px var(--ciano);
+      animation: pulseDot 1.5s infinite;
+    }
+
+    @keyframes pulseDot {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.4);
+        opacity: 0.4;
+      }
+    }
+
+    /* 3. Amanhã */
+    .session-status-badge.status-amanha {
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.45);
+      color: #FBBF24;
+    }
+
+    /* 4. Em breve / Programado */
+    .session-status-badge.status-programado {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--muted-light);
+    }
+
+    .session-inst-logo {
+      height: 36px;
+      width: auto;
+      max-width: 110px;
+      object-fit: contain;
+      background: #FFFFFF;
+      border-radius: 8px;
+      padding: 4px 10px;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .session-logos-group {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .session-logos-group .session-inst-logo {
+      height: 30px;
+      max-width: 105px;
+      padding: 3px 8px;
+    }
+
+    .session-inst-logo-placeholder {
+      height: 36px;
+      width: 36px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px dashed rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .session-inst-logo-link {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.2s ease, filter 0.2s ease;
+      cursor: pointer;
+    }
+
+    .session-inst-logo-link:hover {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 12px rgba(8, 209, 248, 0.45));
+    }
+
+    .session-main {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .session-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding-right: 30px;
+    }
+
+    .session-date {
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--branco);
+      margin-bottom: 4px;
+    }
+
+    .session-time {
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ciano);
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .session-venue {
+      font-size: 14px;
+      color: var(--muted-light);
+      line-height: 1.45;
+    }
+
+    .session-cert {
+      font-size: 12px;
+      color: var(--ciano);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 14px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Botão de Inscrição Exclusivo por Dia */
+    .btn-session-sub {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      color: var(--branco);
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 18px rgba(8, 209, 248, 0.25);
+      width: 100%;
+    }
+
+    .btn-session-sub:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(8, 209, 248, 0.45);
+      filter: brightness(1.1);
+    }
+
+    .session-topic {
+      font-family: var(--display);
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      color: var(--branco);
+    }
+
+    /* Linha de Palestrantes (Fotos Amplas e Sem Cortes) */
+    .speakers-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .speaker-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      transition: all 0.25s ease;
+    }
+
+    .speaker-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(8, 209, 248, 0.4);
+      transform: translateY(-3px);
+    }
+
+    /* Moldura de Foto Redesenhada: Sem Cortes no Rosto/Postura */
+    .speaker-avatar {
+      width: 80px;
+      height: 96px;
+      border-radius: 14px;
+      object-fit: cover;
+      object-position: top center;
+      border: 2px solid var(--ciano);
+      flex-shrink: 0;
+      background: #0D0D14;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease;
+    }
+
+    .speaker-card:hover .speaker-avatar {
+      transform: scale(1.04);
+      border-color: #FFFFFF;
+    }
+
+    .speaker-avatar-placeholder {
+      width: 80px;
+      height: 96px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(59, 12, 173, 0.5) 0%, rgba(8, 209, 248, 0.3) 100%);
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--branco);
+      flex-shrink: 0;
+    }
+
+    .speaker-info h4 {
+      font-family: var(--display);
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 3px;
+      color: var(--branco);
+    }
+
+    .speaker-info p {
+      font-size: 13px;
+      color: var(--muted-light);
+      line-height: 1.35;
+    }
+
+    .speaker-info .speaker-tag {
+      font-size: 11px;
+      color: var(--ciano);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 4px;
+      display: block;
+    }
+
+    /* SEÇÃO PALESTRANTES EM DESTAQUE */
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .speaker-profile-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      backdrop-filter: blur(14px);
+      transition: all 0.3s ease;
+    }
+
+    .speaker-profile-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(8, 209, 248, 0.4);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(8, 209, 248, 0.12);
+    }
+
+    /* Formato Vertical 3:4 Proporcional Para Evitar Cortes */
+    .speaker-img-wrap {
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      position: relative;
+      background: #08080C;
+    }
+
+    .speaker-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.4s ease;
+    }
+
+    .speaker-profile-card:hover .speaker-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .speaker-badge-polo {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid rgba(8, 209, 248, 0.5);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ciano);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .speaker-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .speaker-body h3 {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .speaker-role {
+      font-size: 13.5px;
+      color: var(--muted-light);
+      line-height: 1.4;
+    }
+
+    .speaker-topic-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 12.5px;
+      color: var(--muted-light);
+      line-height: 1.35;
+    }
+
+    .speaker-topic-pill strong {
+      color: var(--ciano);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* SEÇÃO PATROCINADORES E APOIADORES */
+    .sponsors-hierarchy {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+
+    .sponsor-tier-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .sponsor-tier-label {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .sponsor-tier-label::before,
+    .sponsor-tier-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Cota Master */
+    .master-sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    .sponsor-card-master {
+      background: linear-gradient(135deg, rgba(59, 12, 173, 0.4) 0%, rgba(14, 14, 26, 0.95) 100%);
+      border: 1.5px solid rgba(8, 209, 248, 0.45);
+      border-radius: 24px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      box-shadow: 0 16px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(8, 209, 248, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sponsor-card-master::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradiente-oficial);
+    }
+
+    .master-badge-tag {
+      background: rgba(8, 209, 248, 0.15);
+      border: 1px solid var(--ciano);
+      color: var(--ciano);
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .sponsor-card-master h3 {
+      font-family: var(--display);
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--branco);
+    }
+
+    .sponsor-card-master p {
+      font-size: 14.5px;
+      color: var(--muted-light);
+      max-width: 32ch;
+    }
+
+    .sponsor-card-open {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1.5px dashed rgba(255, 223, 112, 0.4);
+      border-radius: 24px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .open-badge-tag {
+      background: rgba(255, 223, 112, 0.12);
+      border: 1px solid rgba(255, 223, 112, 0.4);
+      color: #FFDF70;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .sponsor-card-open h3 {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 700;
+      color: #FFDF70;
+    }
+
+    .sponsor-card-open p {
+      font-size: 13.5px;
+      color: var(--muted);
+      max-width: 28ch;
+    }
+
+    /* Cotas Nucleados */
+    .nucleados-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 860px;
+    }
+
+    .sponsor-card-nucleado {
+      background: var(--card-bg);
+      border: 1px solid rgba(43, 73, 196, 0.35);
+      border-radius: 18px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+      align-items: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .sponsor-card-nucleado .badge-nc {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      color: #9EC0FF;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .sponsor-card-nucleado h4 {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--branco);
+    }
+
+    .sponsor-card-nucleado p {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .sponsor-brand-link {
+      text-decoration: none;
+      color: inherit;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .sponsor-brand-link:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.15);
+    }
+
+    /* Polos Anfitriões & Instituições */
+    .instituicoes-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+    }
+
+    .inst-badge {
+      text-decoration: none;
+      background: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 16px 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 84px;
+      min-width: 145px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .inst-badge:hover {
+      border-color: var(--ciano);
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 12px 30px rgba(8, 209, 248, 0.25);
+    }
+
+    .inst-badge img {
+      height: 50px;
+      width: auto;
+      max-width: 148px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .inst-badge:hover img {
+      transform: scale(1.03);
+    }
+
+    .sponsor-card-logo {
+      height: 52px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      margin: 4px 0 8px 0;
+      filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+    }
+
+    /* BANNER DE CAPTAÇÃO DE PATROCÍNIO */
+    .sponsorship-cta-banner {
+      background: linear-gradient(100deg, rgba(59, 12, 173, 0.4) 0%, rgba(43, 73, 196, 0.3) 50%, rgba(8, 209, 248, 0.2) 100%);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+      border-radius: 24px;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-banner-text h3 {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .cta-banner-text p {
+      font-size: 15px;
+      color: var(--muted-light);
+      max-width: 55ch;
+    }
+
+    /* FAQ */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item h4 {
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--branco);
+    }
+
+    .faq-item p {
+      font-size: 14.5px;
+      color: var(--muted-light);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 60px 0 40px;
+      background: #020204;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-left p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      font-size: 14px;
+      color: var(--muted-light);
+    }
+
+    .footer-links a:hover {
+      color: var(--ciano);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ========================================================================= */
+    /* MODAL DE DETALHES EXPANDIDOS (SPOTLIGHT / FULL SCREEN CENTERED OVERLAY)    */
+    /* ========================================================================= */
+    .session-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(4, 4, 10, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+    }
+
+    .session-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ========================================================================= */
+    /* SELETOR DE DIAS DO CIRCUITO (NAVEGAÇÃO RÁPIDA SEM SCROLL)                */
+    /* ========================================================================= */
+    /* SELETOR DE DIAS DO CIRCUITO (NAVEGAÇÃO RÁPIDA SEM SCROLL)                */
+    /* ========================================================================= */
+    .circuit-day-selector {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .circuit-day-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      padding: 8px 18px;
+      color: var(--muted-light);
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .circuit-day-pill:hover {
+      background: rgba(8, 209, 248, 0.1);
+      border-color: var(--ciano);
+      color: var(--branco);
+      transform: translateY(-2px);
+    }
+
+    .circuit-day-pill.active {
+      background: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      border-color: var(--ciano);
+      color: var(--branco);
+      box-shadow: 0 4px 18px rgba(8, 209, 248, 0.35);
+    }
+
+    .circuit-day-pill .pill-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .circuit-day-pill.active .pill-num {
+      background: rgba(255, 255, 255, 0.25);
+      color: #fff;
+    }
+
+    .circuit-day-pill.view-all-pill {
+      background: rgba(255, 255, 255, 0.02);
+      border-style: dashed;
+    }
+
+    .circuit-day-pill.view-all-pill:hover {
+      border-style: solid;
+    }
+
+    /* DECK / TAB MODE PARA TIMELINE (ZERO SCROLL) */
+    .timeline-container.tab-mode::before {
+      display: none;
+    }
+
+    .timeline-container.tab-mode .timeline-item {
+      display: none;
+      margin-bottom: 0;
+    }
+
+    .timeline-container.tab-mode .timeline-item.active-session {
+      display: grid;
+      animation: fadeInSession 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes fadeInSession {
+      from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.99);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .timeline-container.tab-mode .timeline-node {
+      padding-top: 20px;
+    }
+
+    .deck-nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 26px;
+      padding: 14px 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
+
+    .deck-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px;
+      padding: 9px 18px;
+      color: var(--branco);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .deck-btn:hover:not(:disabled) {
+      background: rgba(8, 209, 248, 0.15);
+      border-color: var(--ciano);
+      color: var(--ciano);
+      transform: translateY(-1px);
+    }
+
+    .deck-btn:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .deck-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .deck-current-polo {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--branco);
+      letter-spacing: 0.02em;
+    }
+
+    .deck-dots {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .deck-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .deck-dot.active {
+      width: 24px;
+      border-radius: 999px;
+      background: var(--ciano);
+      box-shadow: 0 0 12px rgba(8, 209, 248, 0.6);
+    }
+
+    /* ========================================================================= */
+    /* MODAL DE DETALHES AMPLIADOS — WIDESCREEN DASHBOARD (ZERO SCROLL)         */
+    /* ========================================================================= */
+    .session-modal-box {
+      background: linear-gradient(180deg, #101022 0%, #080812 100%);
+      border: 1.5px solid rgba(8, 209, 248, 0.5);
+      border-radius: 24px;
+      width: 95vw;
+      max-width: 1220px;
+      max-height: 88vh;
+      box-shadow: 0 35px 120px rgba(0, 0, 0, 0.95), 0 0 60px rgba(8, 209, 248, 0.25);
+      position: relative;
+      transform: scale(0.95) translateY(16px);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .session-modal-overlay.active .session-modal-box {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-top-bar {
+      padding: 12px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(16, 16, 32, 0.95);
+      flex-shrink: 0;
+    }
+
+    .modal-top-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .modal-polo-badge {
+      background: rgba(8, 209, 248, 0.12);
+      border: 1px solid var(--ciano);
+      color: var(--ciano);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .modal-inst-logo {
+      height: 30px;
+      width: auto;
+      max-width: 110px;
+      object-fit: contain;
+      background: #FFFFFF;
+      border-radius: 6px;
+      padding: 2px 8px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-close-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--branco);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .modal-close-btn:hover {
+      background: rgba(8, 209, 248, 0.2);
+      border-color: var(--ciano);
+      color: var(--ciano);
+      transform: rotate(90deg);
+    }
+
+    .modal-grid-layout {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 22px;
+      padding: 20px 24px;
+      align-items: stretch;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .modal-col-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding-right: 20px;
+      overflow: hidden;
+    }
+
+    .modal-topic-title {
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--branco);
+      line-height: 1.25;
+    }
+
+    .modal-meta-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .modal-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .modal-meta-item.full {
+      grid-column: 1 / -1;
+    }
+
+    .modal-meta-label {
+      font-family: var(--display);
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .modal-meta-val {
+      font-size: 12px;
+      color: var(--branco);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    .modal-description {
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--muted-light);
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--ciano);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .modal-left-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .modal-col-right {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      overflow: hidden;
+      justify-content: flex-start;
+    }
+
+    .modal-right-header {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--branco);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .modal-speakers-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: stretch;
+    }
+
+    .modal-speakers-grid .modal-speaker-card:only-child {
+      grid-column: 1 / -1;
+    }
+
+    .modal-speaker-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .modal-speaker-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(8, 209, 248, 0.4);
+    }
+
+    .modal-speaker-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .modal-speaker-avatar {
+      width: 50px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      object-position: top center;
+      border: 1.5px solid var(--ciano);
+      flex-shrink: 0;
+      background: #0D0D14;
+    }
+
+    .modal-speaker-avatar-placeholder {
+      width: 50px;
+      height: 60px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(59, 12, 173, 0.4), rgba(8, 209, 248, 0.3));
+      border: 1.5px dashed rgba(8, 209, 248, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 800;
+      color: var(--ciano);
+      flex-shrink: 0;
+    }
+
+    .modal-speaker-info h4 {
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .modal-speaker-info p {
+      font-size: 11px;
+      color: var(--muted-light);
+      line-height: 1.25;
+      margin-bottom: 2px;
+    }
+
+    .modal-speaker-info .speaker-tag {
+      font-size: 9.5px;
+      color: var(--ciano);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .modal-speaker-bio {
+      font-size: 11px;
+      color: var(--muted-light);
+      line-height: 1.35;
+      background: rgba(8, 209, 248, 0.035);
+      border-left: 2px solid var(--ciano);
+      padding: 5px 8px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    @media (max-width: 1024px) {
+      .session-modal-box {
+        overflow-y: auto;
+      }
+
+      .modal-grid-layout {
+        grid-template-columns: 1fr;
+        overflow-y: auto;
+      }
+
+      .modal-col-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-right: 0;
+        padding-bottom: 20px;
+      }
+
+      .modal-speakers-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* RESPONSIVIDADE */
+    @media (max-width: 992px) {
+      .session-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .session-side {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-right: 0;
+        padding-bottom: 24px;
+      }
+
+      .session-polo-header {
+        flex-wrap: wrap;
+      }
+
+      .diadic-box {
+        grid-template-columns: 1fr;
+      }
+
+      .concept-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-event-logo {
+        max-width: 380px;
+      }
+
+      .hero-card-showcase {
+        max-width: 100%;
+      }
+
+      .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .faq-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .timeline-container::before {
+        left: 20px;
+      }
+
+      .timeline-item {
+        grid-template-columns: 42px 1fr;
+        gap: 16px;
+      }
+
+      .timeline-dot {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+      }
+
+      .session-card {
+        padding: 24px 20px;
+      }
+
+      .nav-links,
+      .header-cta .btn-primary {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 120px 0 50px;
+      }
+
+      .hero-event-logo {
+        max-width: 290px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-actions .btn-primary,
+      .hero-actions .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .stats-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .signup-box {
+        padding: 36px 24px;
+      }
+    }
+
+    /* ========================================================================= */
+    /* VARIAÇÃO DE ALTO IMPACTO (HERO & CONCEITO E PROPÓSITO)                    */
+    /* ========================================================================= */
+
+    /* SWITCH FLUTUANTE DE VERSÕES */
+    .version-switch-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background: rgba(10, 10, 20, 0.88);
+      border: 1px solid rgba(8, 209, 248, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 8px 16px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(8, 209, 248, 0.2);
+      font-family: var(--display);
+      font-size: 12.5px;
+      font-weight: 600;
+    }
+
+    .version-switch-pill a {
+      color: var(--muted-light);
+      text-decoration: none;
+      padding: 4px 10px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+
+    .version-switch-pill a.active {
+      background: var(--gradiente-oficial);
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .version-switch-pill a:hover:not(.active) {
+      color: var(--ciano);
+    }
+
+    /* HERO ALTO IMPACTO: LOGO LADO A LADO AO TEXTO + ANIMAÇÃO CIRCULAR */
+    .hero-impact {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 120px 0 50px;
+      overflow: hidden;
+    }
+
+    .hero-impact-backdrop {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .hero-mesh-glow {
+      position: absolute;
+      top: -15%;
+      left: 20%;
+      width: 850px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(8, 209, 248, 0.18) 0%, rgba(59, 12, 173, 0.22) 50%, transparent 70%);
+      filter: blur(60px);
+      animation: heroGlowFlow 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroGlowFlow {
+      0% {
+        transform: scale(0.95) translate(0, 0);
+        opacity: 0.7;
+      }
+
+      100% {
+        transform: scale(1.08) translate(-25px, 20px);
+        opacity: 1;
+      }
+    }
+
+    .hero-tech-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      background-size: 50px 50px;
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 30%, transparent 80%);
+    }
+
+    .hero-impact-container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    /* GRID LADO A LADO: LOGO À ESQUERDA, TEXTO NO LUGAR DO CARD */
+    .hero-impact-duo-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 52px;
+      align-items: center;
+      margin-bottom: 46px;
+    }
+
+    /* COLUNA DO LOGO COM ANIMAÇÃO ORBITAL HERO-EMBLEM-RING-2 */
+    .hero-impact-logo-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      padding: 30px 10px;
+    }
+
+    .hero-logo-orbital-stage {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-orbital-glow {
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(8, 209, 248, 0.3) 0%, rgba(59, 12, 173, 0.2) 60%, transparent 70%);
+      filter: blur(30px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ANEL 1 (TRACEJADO CIANO) */
+    .hero-emblem-ring {
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(8, 209, 248, 0.45);
+      animation: spinRing 24s linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* ANEL 2 (OFICIAL HERO-EMBLEM-RING-2 EM ROTAÇÃO REVERSA) */
+    .hero-emblem-ring-2 {
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(43, 73, 196, 0.45);
+      border-top-color: rgba(8, 209, 248, 0.6);
+      border-bottom-color: rgba(59, 12, 173, 0.6);
+      animation: spinRingReverse 36s linear infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    @keyframes spinRing {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spinRingReverse {
+      from {
+        transform: rotate(360deg);
+      }
+
+      to {
+        transform: rotate(0deg);
+      }
+    }
+
+    .hero-side-logo {
+      width: 100%;
+      max-width: 440px;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 14px 35px rgba(8, 209, 248, 0.4)) drop-shadow(0 0 20px rgba(59, 12, 173, 0.3));
+      animation: heroLogoFloat 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes heroLogoFloat {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(-6px);
+      }
+    }
+
+    /* COLUNA DO TEXTO: O FUTURO DA IA, ACONTECENDO EM CIANORTE */
+    .hero-impact-text-stage {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    .hero-impact-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero-impact-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: rgba(8, 209, 248, 0.08);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+      color: var(--ciano);
+      box-shadow: 0 0 20px rgba(8, 209, 248, 0.15);
+    }
+
+    .hero-impact-city-badge {
+      font-family: var(--display);
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--muted-light);
+    }
+
+    .hero-impact-title {
+      font-family: var(--display);
+      font-size: clamp(36px, 4.2vw, 56px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 18px;
+      color: var(--branco);
+    }
+
+    .hero-impact-lead {
+      font-size: clamp(16px, 1.3vw, 18.5px);
+      line-height: 1.6;
+      color: #C9C9E0;
+      max-width: 52ch;
+      margin-bottom: 30px;
+      font-weight: 400;
+    }
+
+    .hero-impact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .hero-btn-main {
+      font-size: 15.5px;
+      padding: 15px 30px;
+      border-radius: 12px;
+      font-weight: 700;
+      box-shadow: 0 8px 30px rgba(8, 209, 248, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+    .hero-btn-sub {
+      font-size: 15px;
+      padding: 15px 22px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .hero-btn-sub:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--ciano);
+      transform: translateY(-2px);
+    }
+
+    .hero-impact-trust {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+      color: var(--muted-light);
+    }
+
+    .hero-impact-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-impact-trust-item svg {
+      color: var(--ciano);
+    }
+
+    /* BARRA INFERIOR DE MÉTRICAS (DOCK UNIFICADO) */
+    .hero-impact-dock {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      background: rgba(14, 14, 28, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 22px 36px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .dock-metric-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 4px;
+      position: relative;
+    }
+
+    .dock-metric-cell:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -10px;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .dock-val {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--branco);
+      letter-spacing: -0.02em;
+    }
+
+    .dock-lbl {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted-light);
+      font-weight: 600;
+    }
+
+    @media (max-width: 980px) {
+      .hero-impact-duo-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-impact-logo-stage {
+        padding: 10px 0;
+      }
+
+      .hero-emblem-ring {
+        width: 220px;
+        height: 220px;
+      }
+
+      .hero-emblem-ring-2 {
+        width: 260px;
+        height: 260px;
+      }
+
+      .hero-side-logo {
+        max-width: 360px;
+      }
+
+      .hero-impact-text-stage {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-impact-lead {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-impact-actions {
+        justify-content: center;
+      }
+
+      .hero-impact-trust {
+        justify-content: center;
+      }
+
+      .hero-impact-dock {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 20px;
+      }
+
+      .dock-metric-cell:nth-child(2)::after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .hero-impact-dock {
+        grid-template-columns: 1fr;
+      }
+
+      .dock-metric-cell::after {
+        display: none !important;
+      }
+
+      .hero-impact-title {
+        font-size: 32px;
+      }
+    }
+
+    /* SEÇÃO CONCEITO & PROPÓSITO — ALTO IMPACTO */
+    .sobre-impact {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .impact-display-title {
+      font-size: clamp(32px, 4.2vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    /* TRÍADE DE FORÇA */
+    .impact-triad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .impact-triad-card {
+      background: rgba(14, 14, 26, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      padding: 38px 30px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .impact-triad-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(8, 209, 248, 0.45);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(8, 209, 248, 0.15);
+    }
+
+    .impact-triad-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradiente-oficial);
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .impact-triad-card:hover::before {
+      opacity: 1;
+    }
+
+    .triad-num {
+      font-family: var(--display);
+      font-size: 42px;
+      font-weight: 800;
+      line-height: 1;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 18px;
+      letter-spacing: -0.04em;
+    }
+
+    .triad-body h3 {
+      font-family: var(--display);
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .triad-body p {
+      font-size: 15.5px;
+      line-height: 1.6;
+      color: var(--muted-light);
+      margin-bottom: 24px;
+    }
+
+    .triad-tag {
+      align-self: flex-start;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--muted-light);
+    }
+
+    .triad-tag.active {
+      background: rgba(8, 209, 248, 0.12);
+      border-color: rgba(8, 209, 248, 0.4);
+      color: var(--ciano);
+    }
+
+    @media (max-width: 900px) {
+      .impact-triad-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* BOX DE SHOWDOWN DIÁDICO SINTETIZADO */
+    .diadic-showdown-box {
+      background: linear-gradient(145deg, rgba(20, 15, 45, 0.7) 0%, rgba(8, 8, 18, 0.95) 100%);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+      border-radius: 26px;
+      padding: 42px 36px;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8), 0 0 40px rgba(43, 73, 196, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .diadic-showdown-header {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+
+    .diadic-showdown-header .badge-pill {
+      margin-bottom: 12px;
+    }
+
+    .diadic-showdown-header h3 {
+      font-family: var(--display);
+      font-size: clamp(24px, 2.6vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .diadic-showdown-grid {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .diadic-side {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 28px 24px;
+      transition: all 0.3s ease;
+    }
+
+    .diadic-side:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .diadic-side .side-pill {
+      display: inline-block;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(43, 73, 196, 0.2);
+      border: 1px solid rgba(43, 73, 196, 0.5);
+      color: #9EC0FF;
+      margin-bottom: 14px;
+    }
+
+    .diadic-side .side-pill.accent {
+      background: rgba(8, 209, 248, 0.15);
+      border-color: rgba(8, 209, 248, 0.5);
+      color: var(--ciano);
+    }
+
+    .diadic-side h4 {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 8px;
+    }
+
+    .diadic-side p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--muted-light);
+    }
+
+    .diadic-center-spark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spark-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--gradiente-oficial);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 16px;
+      color: #FFFFFF;
+      box-shadow: 0 0 25px rgba(8, 209, 248, 0.5);
+    }
+
+    .spark-label {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ciano);
+      white-space: nowrap;
+    }
+
+    .diadic-bottom-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 20px;
+      border-radius: 12px;
+      background: rgba(8, 209, 248, 0.06);
+      border: 1px solid rgba(8, 209, 248, 0.2);
+      color: var(--muted-light);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .diadic-showdown-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .diadic-center-spark {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+
+    /* ========================================================================= */
+    /* HIERARQUIA DE PATROCINADORES, REALIZAÇÃO E APOIADORES                     */
+    /* ========================================================================= */
+
+    .master-sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+
+    .sponsor-card-master {
+      background: linear-gradient(145deg, rgba(20, 20, 36, 0.85) 0%, rgba(10, 10, 20, 0.95) 100%);
+      border: 1.5px solid rgba(8, 209, 248, 0.4);
+      border-radius: 20px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 30px rgba(8, 209, 248, 0.12);
+      transition: all 0.3s ease;
+    }
+
+    .sponsor-card-master:hover {
+      transform: translateY(-4px);
+      border-color: var(--ciano);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 45px rgba(8, 209, 248, 0.25);
+    }
+
+    .master-badge-tag {
+      font-family: var(--display);
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ciano);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      background: rgba(8, 209, 248, 0.12);
+      border: 1px solid rgba(8, 209, 248, 0.3);
+      padding: 4px 14px;
+      border-radius: 999px;
+    }
+
+    .master-brand-box {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .master-brand-name {
+      font-family: var(--display);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--branco);
+      letter-spacing: -0.02em;
+    }
+
+    .master-sponsor-logo {
+      height: 64px;
+      width: auto;
+      max-width: 220px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+
+    .sponsor-card-master p {
+      font-size: 14px;
+      color: var(--muted-light);
+      line-height: 1.55;
+    }
+
+    /* 2. OUTROS PATROCINADORES (BORDA CINZA, 0.75 DO TAMANHO DA MASTER) */
+    .regular-sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .sponsor-card-regular {
+      background: rgba(14, 14, 26, 0.75);
+      border: 1px solid #52525B;
+      /* Borda cinza */
+      border-radius: 16px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 12px;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s ease;
+    }
+
+    .sponsor-card-regular:hover {
+      border-color: #A1A1AA;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .badge-arrival {
+      font-family: var(--display);
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #A1A1AA;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .regular-brand-name {
+      font-family: var(--display);
+      font-size: 22px;
+      /* 75% de 30px */
+      font-weight: 700;
+      color: var(--branco);
+    }
+
+    .regular-sponsor-logo {
+      height: 48px;
+      /* 0.75 (75%) de 64px do master */
+      width: auto;
+      max-width: 165px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .sponsor-card-regular p {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .sponsor-card-regular.open-slot {
+      border-style: dashed;
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .btn-regular-join {
+      margin-top: 6px;
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ciano);
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(8, 209, 248, 0.08);
+      border: 1px solid rgba(8, 209, 248, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .btn-regular-join:hover {
+      background: rgba(8, 209, 248, 0.2);
+    }
+
+    /* 3. REALIZAÇÃO E 4. APOIADORES (CARDS BRANCOS) */
+    .realizacao-strip,
+    .apoiadores-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      width: 100%;
+    }
+
+    .entity-card {
+      text-decoration: none;
+      background: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 14px;
+      padding: 14px 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 76px;
+      min-width: 135px;
+      transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    }
+
+    .entity-card:hover {
+      border-color: var(--ciano);
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 10px 28px rgba(8, 209, 248, 0.25);
+    }
+
+    .entity-logo {
+      height: 48px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.25s ease;
+    }
+
+    .entity-card:hover .entity-logo {
+      transform: scale(1.03);
+    }
+
+    .tier-instruction-note {
+      font-size: 13.5px;
+      color: var(--muted-light);
+      text-align: center;
+      max-width: 65ch;
+      margin: -6px auto 18px;
+    }
+
+    /* 5. BOX DE PARCEIROS DE BRINDES (SEM LOGOS) */
+    .brindes-notice-box {
+      background: rgba(14, 14, 26, 0.6);
+      border: 1px dashed rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .brindes-notice-icon {
+      font-size: 32px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .brindes-notice-content h4 {
+      font-family: var(--display);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--branco);
+      margin-bottom: 4px;
+    }
+
+    .brindes-notice-content p {
+      font-size: 13.5px;
+      color: var(--muted-light);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- HEADER & NAVEGAÇÃO                                                        -->
+  <!-- ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a href="#inicio" title="Semana do Futuro 2026">
+          <img src="assets/logo-branca.png" alt="Semana do Futuro" class="header-logo-event">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#sobre">O Evento</a></li>
+          <li><a href="#programacao">Programação</a></li>
+          <li><a href="#palestrantes">Especialistas</a></li>
+          <li><a href="#patrocinadores">Patrocinadores</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="#programacao" class="btn-primary" style="padding: 10px 24px; font-size: 14px;">
+          Inscrever-se
+        </a>
+        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Abrir Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION                                                              -->
+  <!-- ========================================================================= -->
+
+  <!-- ========================================================================= -->
+  <!-- HERO SECTION — VARIAÇÃO DE ALTO IMPACTO                                   -->
+  <!-- ========================================================================= -->
+  <section class="hero hero-impact" id="inicio">
+    <div class="hero-impact-backdrop">
+      <div class="hero-mesh-glow"></div>
+      <div class="hero-tech-grid"></div>
+    </div>
+
+    <div class="container hero-impact-container">
+      <div class="hero-impact-duo-grid">
+        <!-- LADO ESQUERDO: LOGO OFICIAL COM ANIMAÇÕES CIRCULARES HERO-EMBLEM-RING-2 -->
+        <div class="hero-impact-logo-stage">
+          <div class="hero-logo-orbital-stage">
+            <div class="hero-orbital-glow"></div>
+            <div class="hero-emblem-ring"></div>
+            <div class="hero-emblem-ring-2"></div>
+            <img src="assets/logo-branca.png" alt="Semana do Futuro — Circuito Itinerante de IA &amp; Tecnologia"
+              class="hero-side-logo">
+          </div>
+        </div>
+
+        <!-- LADO DIREITO (NO LUGAR DO CARD): O TEXTO 'O FUTURO DA IA' + AÇÕES -->
+        <div class="hero-impact-text-stage">
+          <div class="hero-impact-eyebrow">
+            <div class="hero-impact-pill">
+              <span class="pulse-dot"></span>
+              <span>28 SETEMBRO — 02 OUTUBRO</span>
+            </div>
+            <span class="hero-impact-city-badge">Cianorte · PR</span>
+          </div>
+
+          <h1 class="hero-impact-title">
+            O futuro da IA,<br>
+            <span class="grad-text">acontecendo em Cianorte.</span>
+          </h1>
+
+          <p class="hero-impact-lead">
+            Cinco noites, 6 polos integrados e 30 horas de imersão prática para acelerar sua carreira e os negócios de
+            toda a região.
+          </p>
+
+          <div class="hero-impact-actions">
+            <a href="#programacao" class="btn-primary hero-btn-main">
+              <span>Garantir Ingresso no Sympla</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#programacao" class="hero-btn-sub">
+              <span>Ver os 6 Polos</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="hero-impact-trust">
+            <div class="hero-impact-trust-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>100% Gratuito</span>
+            </div>
+            <div class="hero-impact-trust-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Certificação Oficial de 30h</span>
+            </div>
+            <div class="hero-impact-trust-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Vagas Limitadas por Polo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DOCK UNIFICADO DE MÉTRICAS -->
+      <div class="hero-impact-dock">
+        <div class="dock-metric-cell">
+          <span class="dock-val">5 Dias</span>
+          <span class="dock-lbl">Circuito Itinerante</span>
+        </div>
+        <div class="dock-metric-cell">
+          <span class="dock-val">6 Polos</span>
+          <span class="dock-lbl">Anfiteatros Conectados</span>
+        </div>
+        <div class="dock-metric-cell">
+          <span class="dock-val">30 Horas</span>
+          <span class="dock-lbl">Imersão &amp; Certificado</span>
+        </div>
+        <div class="dock-metric-cell">
+          <span class="dock-val">100% Free</span>
+          <span class="dock-lbl">Entrada Gratuita</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CONCEITO & PROPÓSITO — VARIAÇÃO DE ALTO IMPACTO                           -->
+  <!-- ========================================================================= -->
+  <section id="sobre" class="sobre-impact">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 860px; margin: 0 auto 50px;">
+        <span class="section-tag">Conceito e Propósito</span>
+        <h2 class="section-title impact-display-title">
+          Menos teoria de palco.<br>
+          <span class="grad-text">Mais impacto na vida real.</span>
+        </h2>
+        <p class="section-subtitle" style="font-size: 18.5px; max-width: 65ch; margin: 16px auto 0;">
+          A tecnologia só tem valor quando gera transformação prática. Por isso, a Semana do Futuro foi desenhada em
+          cima de três pilares objetivos.
+        </p>
+      </div>
+
+      <div class="impact-triad-grid">
+        <div class="impact-triad-card">
+          <div class="triad-num">01</div>
+          <div class="triad-body">
+            <h3>Prática Sem Rodeios</h3>
+            <p>Casos reais de sistemas RAG, agentes autônomos, automação comercial e robótica aplicados sem jargões
+              elitistas.</p>
+          </div>
+          <div class="triad-tag">Aplicação Direta</div>
+        </div>
+
+        <div class="impact-triad-card">
+          <div class="triad-num">02</div>
+          <div class="triad-body">
+            <h3>Formato Diádico</h3>
+            <p>Mercado corporativo e pesquisadores universitários no mesmo palco. Menos monólogos, mais debate direto
+              com a plateia.</p>
+          </div>
+          <div class="triad-tag active">Debate em Dupla</div>
+        </div>
+
+        <div class="impact-triad-card">
+          <div class="triad-num">03</div>
+          <div class="triad-body">
+            <h3>Circuito Itinerante</h3>
+            <p>O conhecimento vai até a comunidade. Cada dia em uma instituição de ensino diferente, integrando toda
+              Cianorte.</p>
+          </div>
+          <div class="triad-tag">6 Polos Conectados</div>
+        </div>
+      </div>
+
+      <div class="diadic-showdown-box">
+        <div class="diadic-showdown-header">
+          <span class="badge-pill">Por dentro da dinâmica</span>
+          <h3>Dois Olhares. Uma Conexão Direta.</h3>
+        </div>
+
+        <div class="diadic-showdown-grid">
+          <div class="diadic-side">
+            <div class="side-pill">Lado 01 · Prática</div>
+            <h4>Especialista de Mercado</h4>
+            <p>Cases corporativos, desafios de escala, inteligência comercial e ferramentas que geram resultado
+              financeiro real hoje.</p>
+          </div>
+
+          <div class="diadic-center-spark">
+            <div class="spark-circle">&</div>
+            <div class="spark-label">Debate Aberto</div>
+          </div>
+
+          <div class="diadic-side">
+            <div class="side-pill accent">Lado 02 · Ciência</div>
+            <h4>Pesquisador & Educador</h4>
+            <p>Fundamentação científica, rigor metodológico, formação de talentos de alto nível e visão crítica do
+              futuro.</p>
+          </div>
+        </div>
+
+        <div class="diadic-bottom-banner">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08D1F8" stroke-width="2.5">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Plateia ativa com microfone aberto e perguntas sem filtro em todas as 6 sessões.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PROGRAMAÇÃO DIA A DIA                                                     -->
+  <!-- ========================================================================= -->
+  <section id="programacao" style="background: rgba(10, 10, 18, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Circuito Itinerante</span>
+        <h2 class="section-title">Programação Oficial das <span class="grad-text">6 Sessões</span></h2>
+        <p class="section-subtitle">
+          De segunda a sexta-feira, uma jornada por Cianorte. Participe das sessões do seu interesse ou complete o
+          circuito integral de 30 horas.
+        </p>
+      </div>
+
+      <!-- SELETOR DE DIAS DO CIRCUITO (NAVEGAÇÃO RÁPIDA) -->
+      <div class="circuit-day-selector" id="circuitDaySelector">
+        <button type="button" class="circuit-day-pill view-all-pill active" onclick="switchTimelineDay('all', this)"
+          title="Ver todas as 6 sessões na linha contínua">
+          <span>👁️ Todas as Sessões</span>
+        </button>
+        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(0, this)">
+          <span class="pill-num">01</span>
+          <span>28/09 · UMFG</span>
+        </button>
+        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(1, this)">
+          <span class="pill-num">02</span>
+          <span>29/09 · UEM</span>
+        </button>
+        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(2, this)">
+          <span class="pill-num">03</span>
+          <span>30/09 · ACIC</span>
+        </button>
+        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(3, this)">
+          <span class="pill-num">04</span>
+          <span>01/10 · UNIPAR</span>
+        </button>
+        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(4, this)">
+          <span class="pill-num">05</span>
+          <span>02/10 M · CEEP</span>
+        </button>
+        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(5, this)">
+          <span class="pill-num">06</span>
+          <span>02/10 N · Paço</span>
+        </button>
+      </div>
+
+      <div class="timeline-container" id="timelineContainer">
+
+        <!-- SESSÃO 01 · 28/09 (SEG) — UMFG -->
+        <div class="timeline-item" data-session-idx="0">
+          <div class="timeline-node">
+            <div class="timeline-dot">01</div>
+          </div>
+          <article class="session-card" onclick="openSessionModal(0)" role="button" tabindex="0"
+            aria-label="Ver detalhes da Sessão 01 · UMFG"
+            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(0);event.preventDefault();}">
+            <div class="session-side">
+              <div>
+                <div class="session-polo-header">
+                  <div class="session-badges-wrap">
+                    <div class="session-polo-badge">UMFG</div>
+                    <span class="session-status-badge status-programado" data-session-date="2026-09-28">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Em breve</span>
+                    </span>
+                  </div>
+                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
+                    onclick="event.stopPropagation()" title="Acessar portal da UMFG">
+                    <img src="assets/instituicoes/umfg-logo.png" alt="UMFG Faculdade" class="session-inst-logo">
+                  </a>
+                </div>
+                <div class="session-date">28 de Setembro</div>
+                <div class="session-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Segunda-feira · 19h30
+                </div>
+                <p class="session-venue">📍 Anfiteatro Principal da UMFG Cianorte</p>
+                <span class="session-cert">🎓 Certificação de 5h</span>
+              </div>
+              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
+                class="btn-session-sub" onclick="event.stopPropagation()">
+                <span>Inscrever no Sympla</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="session-main">
+              <h3 class="session-topic">Inteligência Artificial nos Negócios, Gestão e Estratégias de Marketing</h3>
+
+              <div class="speakers-row">
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/vinicius-grecco-foto.png" alt="Vinicius Grecco"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Vinicius Grecco</h4>
+                    <p>Especialista em Marketing e Estratégia Digital</p>
+                    <span class="speaker-tag">Palestrante Convidado</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/willian-pelissari-foto.png" alt="Prof. Willian Pelissari"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Prof. Willian Pelissari</h4>
+                    <p>Corpo Docente de Gestão e Tecnologia</p>
+                    <span class="speaker-tag" style="color:#9EC0FF;">Educador Anfitrião · UMFG</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 3h6v6"></path>
+                <path d="M9 21H3v-6"></path>
+                <path d="M21 3l-7 7"></path>
+                <path d="M3 21l7-7"></path>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <!-- SESSÃO 02 · 29/09 (TER) — UEM -->
+        <div class="timeline-item" data-session-idx="1">
+          <div class="timeline-node">
+            <div class="timeline-dot">02</div>
+          </div>
+          <article class="session-card" onclick="openSessionModal(1)" role="button" tabindex="0"
+            aria-label="Ver detalhes da Sessão 02 · UEM"
+            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(1);event.preventDefault();}">
+            <div class="session-side">
+              <div>
+                <div class="session-polo-header">
+                  <div class="session-badges-wrap">
+                    <div class="session-polo-badge">UEM</div>
+                    <span class="session-status-badge status-programado" data-session-date="2026-09-29">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Em breve</span>
+                    </span>
+                  </div>
+                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
+                    onclick="event.stopPropagation()" title="Acessar portal da UEM Cianorte">
+                    <div class="session-inst-logo-placeholder">🏛️</div>
+                  </a>
+                </div>
+                <div class="session-date">29 de Setembro</div>
+                <div class="session-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Terça-feira · 19h30
+                </div>
+                <p class="session-venue">📍 Anfiteatro UEM — Câmpus Regional de Cianorte</p>
+                <span class="session-cert">🎓 Certificação de 5h</span>
+              </div>
+              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
+                class="btn-session-sub" onclick="event.stopPropagation()">
+                <span>Inscrever no Sympla</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="session-main">
+              <h3 class="session-topic">Inovação, Pesquisa Científica e as Novas Fronteiras da Tecnologia</h3>
+
+              <div class="speakers-row">
+                <div class="speaker-card">
+                  <div class="speaker-avatar-placeholder">PJ</div>
+                  <div class="speaker-info">
+                    <h4>Profa. Dra. Janaína</h4>
+                    <p>Pesquisa em Inovação e Ciência de Dados</p>
+                    <span class="speaker-tag">Palestrante Confirmada</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <div class="speaker-avatar-placeholder" style="background: rgba(43,73,196,0.3);">PA</div>
+                  <div class="speaker-info">
+                    <h4>Profa. Anelise</h4>
+                    <p>Docente e Pesquisadora</p>
+                    <span class="speaker-tag" style="color:#9EC0FF;">Educadora Anfitriã · UEM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 3h6v6"></path>
+                <path d="M9 21H3v-6"></path>
+                <path d="M21 3l-7 7"></path>
+                <path d="M3 21l7-7"></path>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <!-- SESSÃO 03 · 30/09 (QUA) — ACIC -->
+        <div class="timeline-item" data-session-idx="2">
+          <div class="timeline-node">
+            <div class="timeline-dot">03</div>
+          </div>
+          <article class="session-card" onclick="openSessionModal(2)" role="button" tabindex="0"
+            aria-label="Ver detalhes da Sessão 03 · ACIC"
+            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(2);event.preventDefault();}">
+            <div class="session-side">
+              <div>
+                <div class="session-polo-header">
+                  <div class="session-badges-wrap">
+                    <div class="session-polo-badge">ACIC</div>
+                    <span class="session-status-badge status-programado" data-session-date="2026-09-30">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Em breve</span>
+                    </span>
+                  </div>
+                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
+                    onclick="event.stopPropagation()" title="Acessar portal da ACIC Cianorte">
+                    <img src="assets/instituicoes/acic-logo.png" alt="ACIC Cianorte" class="session-inst-logo">
+                  </a>
+                </div>
+                <div class="session-date">30 de Setembro</div>
+                <div class="session-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Quarta-feira · 19h30
+                </div>
+                <p class="session-venue">📍 Auditório Principal da ACIC Cianorte</p>
+                <span class="session-cert">🎓 Certificação de 5h</span>
+              </div>
+              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
+                class="btn-session-sub" onclick="event.stopPropagation()">
+                <span>Inscrever no Sympla</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="session-main">
+              <h3 class="session-topic">Inovação Pública, Empreendedorismo e o Ecossistema Regional de Inovação</h3>
+
+              <div class="speakers-row">
+                <div class="speaker-card" style="grid-column: 1 / -1;">
+                  <div class="speaker-avatar-placeholder" style="background: var(--gradiente-oficial);">Mesa</div>
+                  <div class="speaker-info">
+                    <h4>Mesa Redonda: ACIC · Prefeitura de Cianorte · SEBRAE</h4>
+                    <p>Políticas públicas de incentivo à tecnologia, fomento a startups, linhas de crédito e
+                      transformação digital dos pequenos e médios negócios.</p>
+                    <span class="speaker-tag">Co-curadoria Multissetorial</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 3h6v6"></path>
+                <path d="M9 21H3v-6"></path>
+                <path d="M21 3l-7 7"></path>
+                <path d="M3 21l7-7"></path>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <!-- SESSÃO 04 · 01/10 (QUI) — UNIPAR -->
+        <div class="timeline-item" data-session-idx="3">
+          <div class="timeline-node">
+            <div class="timeline-dot"
+              style="border-color: #FFFFFF; background: linear-gradient(135deg, #2B49C4, #08D1F8); color: #FFF;">04
+            </div>
+          </div>
+          <article class="session-card" style="border-color: rgba(8, 209, 248, 0.4);" onclick="openSessionModal(3)"
+            role="button" tabindex="0" aria-label="Ver detalhes da Sessão 04 · UNIPAR"
+            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(3);event.preventDefault();}">
+            <div class="session-side">
+              <div>
+                <div class="session-polo-header">
+                  <div class="session-badges-wrap">
+                    <div class="session-polo-badge">UNIPAR</div>
+                    <span class="session-status-badge status-programado" data-session-date="2026-10-01">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Em breve</span>
+                    </span>
+                  </div>
+                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
+                    onclick="event.stopPropagation()" title="Acessar portal da UNIPAR">
+                    <img src="assets/instituicoes/unipar-logo.png" alt="UNIPAR" class="session-inst-logo">
+                  </a>
+                </div>
+                <div class="session-date">01 de Outubro</div>
+                <div class="session-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Quinta-feira · 19h30
+                </div>
+                <p class="session-venue">📍 Anfiteatro Principal UNIPAR Cianorte</p>
+                <span class="session-cert">🎓 Certificação de 5h</span>
+              </div>
+              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank"
+                rel="noopener" class="btn-session-sub" onclick="event.stopPropagation()">
+                <span>Inscrever no Sympla</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="session-main">
+              <h3 class="session-topic">RAG na Prática: Fazendo a IA Responder com Fatos, Não com Achismo</h3>
+
+              <div class="speakers-row">
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/alberto-vieira-de-lima-foto.jpeg" alt="Alberto Vieira de Lima"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Alberto Vieira de Lima</h4>
+                    <p>CIO Think Outside Tech (+23 anos em TI)</p>
+                    <span class="speaker-tag">Palestrante Confirmado</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/allan-da-silva-foto.jpeg" alt="Allan da Silva" class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Allan da Silva</h4>
+                    <p>Tech Lead, Dev Full Stack &amp; Prof. UNIPAR</p>
+                    <span class="speaker-tag">Palestrante Confirmado</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <div class="speaker-avatar-placeholder" style="background: rgba(43,73,196,0.4);">PH</div>
+                  <div class="speaker-info">
+                    <h4>Prof. Hudson</h4>
+                    <p>Mestrado em IA / Docente UNIPAR</p>
+                    <span class="speaker-tag" style="color:#9EC0FF;">Mediação &amp; Anfitrião</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 3h6v6"></path>
+                <path d="M9 21H3v-6"></path>
+                <path d="M21 3l-7 7"></path>
+                <path d="M3 21l7-7"></path>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <!-- SESSÃO 05 · 02/10 (SEX - MANHÃ) — CEEP -->
+        <div class="timeline-item" data-session-idx="4">
+          <div class="timeline-node">
+            <div class="timeline-dot">05</div>
+          </div>
+          <article class="session-card" onclick="openSessionModal(4)" role="button" tabindex="0"
+            aria-label="Ver detalhes da Sessão 05 · CEEP"
+            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(4);event.preventDefault();}">
+            <div class="session-side">
+              <div>
+                <div class="session-polo-header">
+                  <div class="session-badges-wrap">
+                    <div class="session-polo-badge">CEEP (Manhã)</div>
+                    <span class="session-status-badge status-programado" data-session-date="2026-10-02">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Em breve</span>
+                    </span>
+                  </div>
+                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
+                    onclick="event.stopPropagation()" title="Acessar portal do CEEP Cianorte">
+                    <img src="assets/instituicoes/ceep-logo.png" alt="CEEP Cianorte" class="session-inst-logo">
+                  </a>
+                </div>
+                <div class="session-date">02 de Outubro</div>
+                <div class="session-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Sexta-feira · 09h00 (Manhã)
+                </div>
+                <p class="session-venue">📍 Anfiteatro CEEP Cianorte</p>
+                <span class="session-cert">🎓 Certificação de 5h</span>
+              </div>
+              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
+                class="btn-session-sub" onclick="event.stopPropagation()">
+                <span>Inscrever no Sympla</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="session-main">
+              <h3 class="session-topic">Inteligência Artificial, Robótica Educacional e o Futuro do Ensino Técnico</h3>
+
+              <div class="speakers-row">
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/pedro-pancotte-foto.png" alt="Pedro Lucas Pancotte"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Pedro Lucas Pancotte</h4>
+                    <p>Software Engineer · Especialista em IA e LLMs (Yungu)</p>
+                    <span class="speaker-tag">Palestrante Confirmado</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/guilherme-vicentini-foto.jpeg" alt="Guilherme Vicentini"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Guilherme Vicentini</h4>
+                    <p>Mestre (ITA) & Prof. Universitário UMFG</p>
+                    <span class="speaker-tag">Palestrante Confirmado</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <div class="speaker-avatar-placeholder" style="background: rgba(43,73,196,0.3);">PV</div>
+                  <div class="speaker-info">
+                    <h4>Prof. Vitor</h4>
+                    <p>Coordenação de IA e Programação CEEP</p>
+                    <span class="speaker-tag" style="color:#9EC0FF;">Educador Anfitrião · CEEP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 3h6v6"></path>
+                <path d="M9 21H3v-6"></path>
+                <path d="M21 3l-7 7"></path>
+                <path d="M3 21l7-7"></path>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+        <!-- SESSÃO 06 · 02/10 (SEX - NOITE) — PREFEITURA -->
+        <div class="timeline-item" data-session-idx="5">
+          <div class="timeline-node">
+            <div class="timeline-dot" style="background: linear-gradient(135deg, #3B0CAD, #08D1F8); color:#FFF;">06
+            </div>
+          </div>
+          <article class="session-card" style="border-color: rgba(59, 12, 173, 0.6);" onclick="openSessionModal(5)"
+            role="button" tabindex="0" aria-label="Ver detalhes da Sessão 06 · Paço Municipal"
+            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(5);event.preventDefault();}">
+            <div class="session-side">
+              <div>
+                <div class="session-polo-header">
+                  <div class="session-badges-wrap">
+                    <div class="session-polo-badge">Paço Municipal</div>
+                    <span class="session-status-badge status-programado" data-session-date="2026-10-02">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                      </svg>
+                      <span>Em breve</span>
+                    </span>
+                  </div>
+                  <div class="session-logos-group">
+                    <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="session-inst-logo-link"
+                      onclick="event.stopPropagation()" title="Prefeitura Municipal de Cianorte">
+                      <img src="assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura Municipal de Cianorte"
+                        class="session-inst-logo">
+                    </a>
+                    <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="session-inst-logo-link"
+                      onclick="event.stopPropagation()" title="Centro de Inovação de Cianorte">
+                      <img src="assets/instituicoes/centro-de-inovacao-logo.png" alt="Centro de Inovação de Cianorte"
+                        class="session-inst-logo">
+                    </a>
+                  </div>
+                </div>
+                <div class="session-date">02 de Outubro</div>
+                <div class="session-time">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                  </svg>
+                  Sexta-feira · 19h00
+                </div>
+                <p class="session-venue">📍 Auditório da Prefeitura Municipal de Cianorte</p>
+                <span class="session-cert">🎓 Certificação de 5h</span>
+              </div>
+              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank"
+                rel="noopener" class="btn-session-sub" onclick="event.stopPropagation()">
+                <span>Inscrever no Sympla</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
+            </div>
+
+            <div class="session-main">
+              <h3 class="session-topic">Educação Digital, Robótica e Inovação Pedagógica na Rede Municipal</h3>
+
+              <div class="speakers-row">
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/claudia-stefane-foto.jpeg" alt="Claudia Roberta Stefane"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Claudia Roberta Stefane</h4>
+                    <p>Coord. Educação Integral e Robótica Municipal</p>
+                    <span class="speaker-tag">Palestrante Confirmada</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/douglas-possavati-foto.jpeg" alt="Douglas Possavati"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Douglas Possavati</h4>
+                    <p>Coord. Pedagógico de Educação Digital</p>
+                    <span class="speaker-tag">Palestrante Confirmado</span>
+                  </div>
+                </div>
+
+                <div class="speaker-card">
+                  <img src="assets/palestrantes/willian-pelissari-foto.png" alt="Prof. Willian Pelissari"
+                    class="speaker-avatar">
+                  <div class="speaker-info">
+                    <h4>Prof. Willian Pelissari</h4>
+                    <p>Docência, Inovação e Educação Tecnológica</p>
+                    <span class="speaker-tag" style="color:#9EC0FF;">Participante Confirmado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M15 3h6v6"></path>
+                <path d="M9 21H3v-6"></path>
+                <path d="M21 3l-7 7"></path>
+                <path d="M3 21l7-7"></path>
+              </svg>
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- CONTROLES DO DECK SEM SCROLL -->
+      <div class="deck-nav-bar" id="deckNavBar" style="display: none;">
+        <button type="button" class="deck-btn" id="prevDayBtn" onclick="navigateDayStep(-1)" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+          <span>Dia Anterior</span>
+        </button>
+
+        <div class="deck-indicator" id="deckIndicator">
+          <span class="deck-current-polo" id="deckCurrentPolo">UMFG (28/09)</span>
+          <div class="deck-dots">
+            <span class="deck-dot active" onclick="switchTimelineDay(0)"></span>
+            <span class="deck-dot" onclick="switchTimelineDay(1)"></span>
+            <span class="deck-dot" onclick="switchTimelineDay(2)"></span>
+            <span class="deck-dot" onclick="switchTimelineDay(3)"></span>
+            <span class="deck-dot" onclick="switchTimelineDay(4)"></span>
+            <span class="deck-dot" onclick="switchTimelineDay(5)"></span>
+          </div>
+        </div>
+
+        <button type="button" class="deck-btn" id="nextDayBtn" onclick="navigateDayStep(1)">
+          <span>Próximo Dia</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PALESTRANTES E ESPECIALISTAS CONFIRMADOS                                  -->
+  <!-- ========================================================================= -->
+  <section id="palestrantes">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Vanguarda e Liderança</span>
+        <h2 class="section-title">Quem conduz as discussões</h2>
+        <p class="section-subtitle">
+          Profissionais com cases reais de mercado, liderança em tecnologia e atuação destacada em inovação e educação.
+        </p>
+      </div>
+
+      <div class="speakers-grid">
+
+        <!-- ALBERTO VIEIRA DE LIMA -->
+        <article class="speaker-profile-card">
+          <div class="speaker-img-wrap">
+            <img src="assets/palestrantes/alberto-vieira-de-lima-foto.jpeg" alt="Alberto Vieira de Lima">
+            <span class="speaker-badge-polo">01/10 · UNIPAR</span>
+          </div>
+          <div class="speaker-body">
+            <div>
+              <h3>Alberto Vieira de Lima</h3>
+              <p class="speaker-role">CIO Think Outside Tech (TOT System)</p>
+            </div>
+            <div class="speaker-topic-pill">
+              <strong>Tema de Destaque</strong>
+              RAG na prática corporativa: precisão e LLMs conectados a bases reais de negócio.
+            </div>
+          </div>
+        </article>
+
+        <!-- ALLAN DA SILVA -->
+        <article class="speaker-profile-card">
+          <div class="speaker-img-wrap">
+            <img src="assets/palestrantes/allan-da-silva-foto.jpeg" alt="Allan da Silva">
+            <span class="speaker-badge-polo">01/10 · UNIPAR</span>
+          </div>
+          <div class="speaker-body">
+            <div>
+              <h3>Allan da Silva</h3>
+              <p class="speaker-role">Tech Lead & Prof. Universitário UNIPAR</p>
+            </div>
+            <div class="speaker-topic-pill">
+              <strong>Tema de Destaque</strong>
+              Arquitetura de sistemas escaláveis e formação de desenvolvedores para a era da IA.
+            </div>
+          </div>
+        </article>
+
+        <!-- PEDRO PANCOTTE -->
+        <article class="speaker-profile-card">
+          <div class="speaker-img-wrap">
+            <img src="assets/palestrantes/pedro-pancotte-foto.png" alt="Pedro Lucas Pancotte">
+            <span class="speaker-badge-polo">02/10 · CEEP</span>
+          </div>
+          <div class="speaker-body">
+            <div>
+              <h3>Pedro Lucas Pancotte</h3>
+              <p class="speaker-role">Software Engineer & Product Owner (Yungu)</p>
+            </div>
+            <div class="speaker-topic-pill">
+              <strong>Tema de Destaque</strong>
+              Agentes de IA, arquiteturas conversacionais autônomas e futuro do ensino técnico.
+            </div>
+          </div>
+        </article>
+
+        <!-- GUILHERME VICENTINI -->
+        <article class="speaker-profile-card">
+          <div class="speaker-img-wrap">
+            <img src="assets/palestrantes/guilherme-vicentini-foto.jpeg" alt="Guilherme Vicentini">
+            <span class="speaker-badge-polo">02/10 · CEEP</span>
+          </div>
+          <div class="speaker-body">
+            <div>
+              <h3>Guilherme Vicentini</h3>
+              <p class="speaker-role">Mestre (ITA) & Prof. Universitário UMFG</p>
+            </div>
+            <div class="speaker-topic-pill">
+              <strong>Tema de Destaque</strong>
+              Engenharia de software aplicada, microsserviços e formação de novos desenvolvedores.
+            </div>
+          </div>
+        </article>
+
+        <!-- CLAUDIA ROBERTA STEFANE -->
+        <article class="speaker-profile-card">
+          <div class="speaker-img-wrap">
+            <img src="assets/palestrantes/claudia-stefane-foto.jpeg" alt="Claudia Roberta Stefane">
+            <span class="speaker-badge-polo">02/10 · Prefeitura</span>
+          </div>
+          <div class="speaker-body">
+            <div>
+              <h3>Claudia Roberta Stefane</h3>
+              <p class="speaker-role">Coord. de Educação Integral da Sec. Municipal</p>
+            </div>
+            <div class="speaker-topic-pill">
+              <strong>Tema de Destaque</strong>
+              Pioneirismo em robótica educacional e torneios mundiais na rede pública.
+            </div>
+          </div>
+        </article>
+
+        <!-- DOUGLAS POSSAVATI -->
+        <article class="speaker-profile-card">
+          <div class="speaker-img-wrap">
+            <img src="assets/palestrantes/douglas-possavati-foto.jpeg" alt="Douglas Possavati">
+            <span class="speaker-badge-polo">02/10 · Prefeitura</span>
+          </div>
+          <div class="speaker-body">
+            <div>
+              <h3>Douglas Possavati</h3>
+              <p class="speaker-role">Coord. Pedagógico de Educação Digital</p>
+            </div>
+            <div class="speaker-topic-pill">
+              <strong>Tema de Destaque</strong>
+              Pensamento computacional nas séries iniciais e inovação em sala de aula.
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- PATROCINADORES E APOIADORES                                               -->
+  <!-- ========================================================================= -->
+  <section id="patrocinadores" style="background: rgba(8, 8, 14, 0.75);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Apoio e Parceria</span>
+        <h2 class="section-title">Empresas e Instituições que <span class="grad-text">constroem o evento</span></h2>
+        <p class="section-subtitle">
+          O empresariado e as entidades de classe de Cianorte acelerando a formação tecnológica e o protagonismo
+          regional.
+        </p>
+      </div>
+
+      <div class="sponsors-hierarchy">
+
+        <!-- 1. PATROCINADORES MASTER (TAMANHO MAIOR DAS LOGOS) -->
+        <div class="sponsor-tier-wrapper">
+          <span class="sponsor-tier-label">Patrocínio Master</span>
+
+          <div class="master-sponsors-grid">
+            <!-- Tintas MC (Confirmado) -->
+            <div class="sponsor-card-master">
+              <span class="master-badge-tag">💎 Cota Master Confirmada</span>
+              <a href="#" target="_blank" rel="noopener" class="sponsor-brand-link" title="Tintas MC">
+                <div class="master-brand-box">
+                  <img src="assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC" class="master-sponsor-logo">
+                </div>
+              </a>
+              <p>Presença de maior destaque visual nos materiais oficiais, vídeo de 30s no telão de abertura e estande
+                institucional nos polos.</p>
+            </div>
+
+            <!-- Vaga Aberta Master -->
+            <div class="sponsor-card-open">
+              <span class="open-badge-tag">⚡ Resta 1 Cota Master</span>
+              <h3>Sua Marca Aqui</h3>
+              <p>Última oportunidade de posicionamento master com máxima visibilidade e presença em toda a comunicação
+                da Semana do Futuro.</p>
+              <a href="mailto:nia.acic.cianorte@gmail.com?subject=Patrocínio%20Semana%20do%20Futuro%202026"
+                target="_blank" class="btn-primary" style="padding: 10px 20px; font-size: 13px; margin-top: 6px;">
+                Reservar Cota Master
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. OUTROS PATROCINADORES (ORDEM DE CHEGADA, BORDA CINZA, 0.75 DO TAMANHO DA MASTER) -->
+        <div class="sponsor-tier-wrapper">
+          <span class="sponsor-tier-label">Patrocinadores</span>
+
+          <div class="regular-sponsors-grid">
+
+            <!-- Log Sistemas -->
+            <div class="sponsor-card-regular">
+              <span class="badge-arrival">01 · Confirmado</span>
+              <a href="#" target="_blank" rel="noopener" class="sponsor-brand-link"
+                title="Acessar site da Log Sistemas">
+                <img src="assets/patrocinadores/log-sistemas-logo.png" alt="Log Sistemas" class="regular-sponsor-logo">
+                <h4 class="regular-brand-name">Log Sistemas</h4>
+              </a>
+              <p>Sistemas de gestão empresarial e inteligência de negócios.</p>
+            </div>
+
+            <!-- Broder -->
+            <div class="sponsor-card-regular">
+              <span class="badge-arrival">02 · Confirmado</span>
+              <a href="#" target="_blank" rel="noopener" class="sponsor-brand-link" title="Broder">
+                <img src="assets/patrocinadores/broder-logo.png" alt="Broder" class="regular-sponsor-logo">
+                <h4 class="regular-brand-name">Broder</h4>
+              </a>
+              <p>Tecnologia e inovação acelerando o ecossistema de Cianorte.</p>
+            </div>
+
+            <!-- Vaga Aberta Demais Cotas -->
+            <div class="sponsor-card-regular open-slot">
+              <span class="badge-arrival" style="color: var(--ciano); border-color: rgba(8, 209, 248, 0.3);">Vaga
+                Aberta</span>
+              <h4>Sua Empresa</h4>
+              <p>Cotas abertas por ordem de adesão para todo o empresariado.</p>
+              <a href="mailto:nia.acic.cianorte@gmail.com?subject=Patrocínio%20Semana%20do%20Futuro%202026"
+                class="btn-regular-join">
+                Quero Patrocinar
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. REALIZAÇÃO -->
+        <div class="sponsor-tier-wrapper">
+          <span class="sponsor-tier-label">Realização</span>
+          <p class="tier-instruction-note">
+            Iniciativa do ecossistema de tecnologia, centro de inovação e faculdades anfitriãs de Cianorte.
+          </p>
+
+          <div class="realizacao-strip">
+            <!-- NIA -->
+            <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener"
+              class="entity-card realizacao-card" title="NIA — Núcleo de Inteligência Artificial de Cianorte">
+              <img src="assets/instituicoes/nia-logo.svg" alt="NIA — Núcleo de Inteligência Artificial de Cianorte"
+                class="entity-logo">
+            </a>
+
+            <!-- Centro de Inovação -->
+            <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
+              title="Centro de Inovação de Cianorte">
+              <img src="assets/instituicoes/centro-de-inovacao-logo.png" alt="Centro de Inovação de Cianorte"
+                class="entity-logo">
+            </a>
+
+            <!-- Faculdades (divulgação geral / no dia do polo somente a anfitriã) -->
+            <a href="https://umfg.edu.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
+              title="UMFG — Faculdade de Cianorte (Polo 01)">
+              <img src="assets/instituicoes/umfg-logo.png" alt="Faculdade UMFG" class="entity-logo">
+            </a>
+
+            <a href="https://www.uem.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
+              title="UEM — Universidade Estadual de Maringá / Câmpus Cianorte (Polo 02)">
+              <img src="assets/instituicoes/uem-logo.png" alt="UEM — Universidade Estadual de Maringá"
+                class="entity-logo">
+            </a>
+
+            <a href="https://www.unipar.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
+              title="UNIPAR — Universidade Paranaense / Unidade Cianorte (Polo 04)">
+              <img src="assets/instituicoes/unipar-logo.png" alt="UNIPAR" class="entity-logo">
+            </a>
+
+            <a href="http://www.ceepcianorte.com.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
+              title="CEEP — Centro Estadual de Educação Profissional de Cianorte (Polo 05)">
+              <img src="assets/instituicoes/ceep-logo.png" alt="CEEP Cianorte" class="entity-logo">
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. APOIADORES INSTITUCIONAIS -->
+        <div class="sponsor-tier-wrapper">
+          <span class="sponsor-tier-label">Apoiadores</span>
+
+          <div class="apoiadores-strip">
+            <!-- Programa Empreender -->
+            <a href="https://www.acic-cianorte.com.br/programa-empreender/" target="_blank" rel="noopener"
+              class="entity-card apoiador-card" title="Programa Empreender">
+              <img src="assets/instituicoes/logo-empreender.png" alt="Programa Empreender" class="entity-logo">
+            </a>
+
+            <!-- ACIC -->
+            <a href="https://www.acic-cianorte.com.br/" target="_blank" rel="noopener" class="entity-card apoiador-card"
+              title="ACIC — Associação Comercial e Industrial de Cianorte">
+              <img src="assets/instituicoes/acic-logo.png" alt="ACIC Cianorte" class="entity-logo">
+            </a>
+
+            <!-- SEBRAE (temporariamente oculto a pedido):
+            <a href="https://sebraepr.com.br" target="_blank" rel="noopener" class="entity-card apoiador-card" title="SEBRAE Paraná">
+              <img src="assets/instituicoes/sebrae-logo.svg" alt="SEBRAE Paraná" class="entity-logo">
+            </a>
+            -->
+
+            <!-- PREFEITURA -->
+            <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="entity-card apoiador-card"
+              title="Prefeitura Municipal de Cianorte">
+              <img src="assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura Municipal de Cianorte"
+                class="entity-logo">
+            </a>
+          </div>
+        </div>
+
+        <!-- 5. PARCEIROS DE BRINDES (SEM LOGOS NO SITE OU MATERIAIS) -->
+        <div class="brindes-notice-box">
+          <div class="brindes-notice-icon">🎁</div>
+          <div class="brindes-notice-content">
+            <h4>Parceiros de Brindes & Sorteios</h4>
+            <p>
+              Empresas e pessoas parceiras que doarem vouchers, cursos, livros ou produtos serão contempladas com
+              <strong>menção nominal e agradecimento oficial no palco</strong> durante os sorteios diários em cada polo
+              (sem veiculação de marca em materiais gráficos ou no site).
+            </p>
+          </div>
+          <a href="mailto:nia.acic.cianorte@gmail.com?subject=Olá,%20gostaria%20de%20apoiar%20a%20Semana%20do%20Futuro%20com%20brindes"
+            target="_blank" class="btn-secondary"
+            style="font-size: 13px; padding: 10px 18px; white-space: nowrap; flex-shrink: 0;">
+            Doar Brindes
+          </a>
+        </div>
+
+        <!-- BANNER DE CAPTAÇÃO DE NOVOS APOIADORES -->
+        <div class="sponsorship-cta-banner">
+          <div class="cta-banner-text">
+            <h3>Quer posicionar sua marca na Semana do Futuro?</h3>
+            <p>Temos cotas abertas a partir de R$ 300,00 com ampla visibilidade em backdrop, redes sociais, aberturas
+              nominais e estande promocional.</p>
+          </div>
+          <a href="mailto:nia.acic.cianorte@gmail.com?subject=Patrocínio%20Semana%20do%20Futuro%202026"
+            class="btn-primary">
+            <span>Falar com a Diretoria</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FAQ / PERGUNTAS FREQUENTES                                                -->
+  <!-- ========================================================================= -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Dúvidas Frequentes</span>
+        <h2 class="section-title">Tudo o que você precisa saber</h2>
+        <p class="section-subtitle">Tire suas dúvidas operacionais sobre ingressos, certificação e participação.</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4>O evento é gratuito?</h4>
+          <p>Sim! A Semana do Futuro é 100% gratuita para toda a população de Cianorte e região. É uma iniciativa
+            colaborativa do NIA, da ACIC e de todas as entidades anfitriãs.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Como funciona a certificação de horas?</h4>
+          <p>Cada sessão confere um certificado oficial de 5 horas complementares. Ao participar de todas as sessões do
+            circuito itinerante, você acumula 30 horas totais de certificação.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Preciso me inscrever para cada dia separadamente?</h4>
+          <p>Sim! Cada polo do circuito possui seu link próprio no Sympla e capacidade limitada pelo anfiteatro
+            anfitrião.
+            Escolha as sessões de seu interesse na programação e emita seus ingressos individuais gratuitos.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Quem pode participar?</h4>
+          <p>O evento é aberto a estudantes de graduação e ensino técnico, profissionais de TI, empresários,
+            comerciantes, gestores públicos e qualquer pessoa interessada em IA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER INSTITUCIONAL                                                      -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="brand-group" style="margin-bottom: 12px;">
+            <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener"
+              title="NIA - Núcleo de Inteligência Artificial de Cianorte">
+              <svg class="footer-logo-nia" viewBox="110 340 860 310" fill="none"
+                style="height: 38px; width: auto; display: block;">
+                <defs>
+                  <linearGradient id="footerNavG" x1="120" y1="347" x2="682" y2="643" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#3B0CAD" />
+                    <stop offset=".5" stop-color="#2B49C4" />
+                    <stop offset="1" stop-color="#08D1F8" />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M 682 347 L 478 348 L 458 353 L 441 361 L 431 368 L 412 387 L 388 364 L 370 354 L 347 348 L 324 348 L 305 352 L 287 360 L 268 375 L 253 395 L 120 643 L 328 642 L 344 638 L 360 630 L 371 622 L 389 604 L 391 604 L 405 619 L 420 630 L 434 637 L 451 642 L 484 642 L 501 637 L 513 631 L 527 621 L 537 611 L 548 596 Z M 186 603 L 286 416 L 292 407 L 310 391 L 327 385 L 342 385 L 360 392 L 378 408 L 415 461 L 448 407 L 460 396 L 471 390 L 483 387 L 615 388 L 517 572 L 506 588 L 494 598 L 477 605 L 458 605 L 439 597 L 424 583 L 386 529 L 358 578 L 349 588 L 332 599 L 308 604 Z"
+                  fill="url(#footerNavG)" fill-rule="evenodd" />
+                <circle cx="650.5" cy="571" r="23" fill="#FFFFFF" />
+                <rect x="693" y="397" width="47" height="197" fill="#FFFFFF" />
+                <polygon points="831,397 887,397 959,594 910,594 858.5,442 806,594 760,594" fill="#FFFFFF" />
+              </svg>
+            </a>
+          </div>
+          <p>Realização: <strong>Núcleo de Inteligência Artificial de Cianorte (NIA)</strong> & <strong>ACIC</strong>
+          </p>
+          <p>Endereço Oficial: Av. Goiás, 550 — Centro, Cianorte - PR</p>
+        </div>
+
+        <div class="footer-links">
+          <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener">Instagram: @nia.cianorte</a>
+          <a href="mailto:nia.acic.cianorte@gmail.com">E-mail: nia.acic.cianorte@gmail.com</a>
+          <a href="https://linktr.ee/nucleodeiacianorte" target="_blank" rel="noopener">Linktree Oficial</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Semana do Futuro · NIA Cianorte. Todos os direitos reservados. Humanidade no centro da Inteligência
+          Artificial.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL DE DETALHES AMPLIADOS (WIDESCREEN ZERO SCROLL DASHBOARD)            -->
+  <!-- ========================================================================= -->
+  <div id="sessionModalOverlay" class="session-modal-overlay" onclick="closeSessionModal(event)" role="dialog"
+    aria-modal="true" aria-labelledby="modalTopicTitle">
+    <div class="session-modal-box" onclick="event.stopPropagation()">
+      <div class="modal-top-bar">
+        <div class="modal-top-left" id="modalTopLeft"></div>
+        <button type="button" class="modal-close-btn" onclick="closeSessionModal()" aria-label="Fechar Detalhes">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-grid-layout">
+        <div class="modal-col-left" id="modalColLeft"></div>
+        <div class="modal-col-right" id="modalColRight"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT INTERATIVO -->
+  <script>
+    const SESSIONS_DATA = [
+      {
+        index: 0,
+        poloKey: 'umfg',
+        poloBadge: 'Polo 01 · UMFG',
+        poloLogo: 'assets/instituicoes/umfg-logo.png',
+        poloLogoAlt: 'UMFG Faculdade',
+        poloUrl: '#',
+        symplaUrl: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+        date: '28 de Setembro de 2026',
+        dayTime: 'Segunda-feira · 19h30',
+        venue: 'Anfiteatro Principal da UMFG Cianorte',
+        venueAddress: 'Av. Dom Pedro II, 1500 — Cianorte, PR',
+        cert: '5 Horas Complementares Oficiais',
+        title: 'Inteligência Artificial nos Negócios, Gestão e Estratégias de Marketing',
+        description: 'Abertura oficial do circuito itinerante da Semana do Futuro 2026. Uma noite desenhada para empresários, gestores e estudantes que desejam compreender como a IA está transformando funis comerciais, automação de processos, geração de conteúdo personalizado e tomadas de decisão orientadas a dados.',
+        speakers: [
+          {
+            name: 'Vinicius Grecco',
+            role: 'Especialista em Marketing e Estratégia Digital',
+            tag: 'Palestrante Convidado',
+            avatar: 'assets/palestrantes/vinicius-grecco-foto.png',
+            initials: 'VG',
+            bio: 'Referência em estratégias de crescimento acelerado e aplicação de tecnologias emergentes em aquisição de clientes, automação inteligente e branding para o mercado corporativo.',
+            highlight: 'Estratégias práticas para elevar vendas e eficiência operacional usando ferramentas generativas.'
+          },
+          {
+            name: 'Prof. Willian Pelissari',
+            role: 'Corpo Docente de Gestão e Tecnologia',
+            tag: 'Educador Anfitrião · UMFG',
+            avatar: 'assets/palestrantes/willian-pelissari-foto.png',
+            initials: 'WP',
+            bio: 'Docente universitário e pesquisador na UMFG com foco no desenvolvimento de competências analíticas em novos líderes empresariais.',
+            highlight: 'A formação de novos gestores capazes de liderar equipes potencializadas por IA.'
+          }
+        ]
+      },
+      {
+        index: 1,
+        poloKey: 'uem',
+        poloBadge: 'Polo 02 · UEM',
+        poloLogo: '',
+        poloLogoPlaceholder: '🏛️ UEM Cianorte',
+        poloUrl: '#',
+        symplaUrl: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+        date: '29 de Setembro de 2026',
+        dayTime: 'Terça-feira · 19h30',
+        venue: 'Anfiteatro UEM — Câmpus Regional de Cianorte',
+        venueAddress: 'R. Mandaguari, s/n — Cianorte, PR',
+        cert: '5 Horas Complementares Oficiais',
+        title: 'Inovação, Pesquisa Científica e as Novas Fronteiras da Tecnologia',
+        description: 'Mergulho no rigor científico e na vanguarda acadêmica. Como a universidade pública lidera a fronteira do conhecimento em inteligência artificial, processamento de sinais, modelos matemáticos e a criação de pontes sólidas entre teses de pesquisa e aplicações práticas na economia real.',
+        speakers: [
+          {
+            name: 'Profa. Dra. Janaína',
+            role: 'Pesquisa em Inovação e Ciência de Dados',
+            tag: 'Palestrante Confirmada',
+            avatar: '',
+            initials: 'PJ',
+            bio: 'Doutora com vasta atuação na modelagem estatística e análise avançada de dados aplicada à solução de problemas complexos na sociedade.',
+            highlight: 'Como a pesquisa científica em IA antecipa os próximos saltos disruptivos do mercado.'
+          },
+          {
+            name: 'Profa. Anelise',
+            role: 'Docente e Pesquisadora',
+            tag: 'Educadora Anfitriã · UEM',
+            avatar: '',
+            initials: 'PA',
+            bio: 'Pesquisadora atuante no Câmpus Regional de Cianorte, impulsionando a iniciação científica e o intercâmbio de conhecimento com a comunidade.',
+            highlight: 'O protagonismo da universidade pública no desenvolvimento tecnológico do interior paranaense.'
+          }
+        ]
+      },
+      {
+        index: 2,
+        poloKey: 'acic',
+        poloBadge: 'Polo 03 · ACIC',
+        poloLogo: 'assets/instituicoes/acic-logo.png',
+        poloLogoAlt: 'ACIC Cianorte',
+        poloUrl: '#',
+        symplaUrl: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+        date: '30 de Setembro de 2026',
+        dayTime: 'Quarta-feira · 19h30',
+        venue: 'Auditório Principal da ACIC Cianorte',
+        venueAddress: 'Av. Goiás, 550 — Centro, Cianorte, PR',
+        cert: '5 Horas Complementares Oficiais',
+        title: 'Inovação Pública, Empreendedorismo e o Ecossistema Regional de Inovação',
+        description: 'Painel multissetorial decisivo para o futuro econômico de Cianorte. A união entre a Associação Comercial, o Poder Público Municipal e o SEBRAE para estruturar incentivos fiscais, apoiar startups, capacitar o comércio tradicional e consolidar a cidade como polo tecnológico de atração de investimentos.',
+        speakers: [
+          {
+            name: 'Mesa Redonda: ACIC · Prefeitura de Cianorte · SEBRAE Paraná',
+            role: 'Lideranças Empresariais, Gestores Públicos e Agentes de Inovação',
+            tag: 'Co-curadoria Multissetorial',
+            avatar: '',
+            initials: 'Mesa',
+            bio: 'Representantes da ACIC, Secretaria Municipal de Desenvolvimento Econômico e SEBRAE Paraná reunidos em debate colaborativo com espaço aberto para participação e perguntas da plateia.',
+            highlight: 'Plano de ação integrado para aceleração de PMEs, desburocratização e atração de talentos de tecnologia.'
+          }
+        ]
+      },
+      {
+        index: 3,
+        poloKey: 'unipar',
+        poloBadge: 'Polo 04 · UNIPAR',
+        poloLogo: 'assets/instituicoes/unipar-logo.png',
+        poloLogoAlt: 'UNIPAR Cianorte',
+        poloUrl: '#',
+        symplaUrl: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+        date: '01 de Outubro de 2026',
+        dayTime: 'Quinta-feira · 19h30',
+        venue: 'Anfiteatro Principal UNIPAR Cianorte',
+        venueAddress: 'Av. Brasil, 1123 — Cianorte, PR',
+        cert: '5 Horas Complementares Oficiais',
+        title: 'RAG na Prática: Fazendo a IA Responder com Fatos, Não com Achismo',
+        description: 'Sessão técnica altamente imersiva sobre arquitetura Retrieval-Augmented Generation (RAG). Entenda como grandes empresas conectam modelos fundacionais a bases documentais proprietárias, contratos e bancos relacionais, eliminando alucinações e garantindo auditoria e conformidade técnica.',
+        speakers: [
+          {
+            name: 'Alberto Vieira de Lima',
+            role: 'CIO Think Outside Tech (+23 anos em TI)',
+            tag: 'Palestrante Confirmado',
+            avatar: 'assets/palestrantes/alberto-vieira-de-lima-foto.jpeg',
+            initials: 'AL',
+            bio: 'Especialista em governança corporativa de TI, arquiteturas distribuídas e orquestração de dados em escala com mais de duas décadas no setor tecnológico.',
+            highlight: 'Pipelines práticos de ingestão vetorial e governança de dados corporativos para LLMs.'
+          },
+          {
+            name: 'Allan da Silva',
+            role: 'Tech Lead, Dev Full Stack & Prof. UNIPAR',
+            tag: 'Palestrante Confirmado',
+            avatar: 'assets/palestrantes/allan-da-silva-foto.jpeg',
+            initials: 'AS',
+            bio: 'Desenvolvedor com ampla vivência em software de missão crítica e professor do curso de TI da UNIPAR, capacitando a próxima geração de desenvolvedores.',
+            highlight: 'Implementação de RAG ponta a ponta com Python, vector stores e frameworks modernos.'
+          },
+          {
+            name: 'Prof. Hudson',
+            role: 'Mestrado em IA / Docente UNIPAR',
+            tag: 'Mediação & Anfitrião',
+            avatar: '',
+            initials: 'PH',
+            bio: 'Mestre em Inteligência Artificial e coordenador de projetos acadêmicos na área computacional da UNIPAR.',
+            highlight: 'Mediação dos conceitos teóricos e desafios éticos na aplicação corporativa de IA.'
+          }
+        ]
+      },
+      {
+        index: 4,
+        poloKey: 'ceep',
+        poloBadge: 'Polo 05 · CEEP (Manhã)',
+        poloLogo: 'assets/instituicoes/ceep-logo.png',
+        poloLogoAlt: 'CEEP Cianorte',
+        poloUrl: '#',
+        symplaUrl: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+        date: '02 de Outubro de 2026',
+        dayTime: 'Sexta-feira · 09h00 (Manhã)',
+        venue: 'Anfiteatro CEEP Cianorte',
+        venueAddress: 'R. Dom Pedro II — Cianorte, PR',
+        cert: '5 Horas Complementares Oficiais',
+        title: 'Inteligência Artificial, Robótica Educacional e o Futuro do Ensino Técnico',
+        description: 'Sessão matutina dinâmica voltada à comunidade do ensino profissionalizante e formação técnica. O papel do hardware programável, sensores, sistemas autônomos e o desenvolvimento de produtos reais ainda durante o período escolar para ingressar de imediato nas melhores vagas de tecnologia.',
+        speakers: [
+          {
+            name: 'Pedro Lucas Pancotte',
+            role: 'Software Engineer · Especialista em IA e LLMs (Yungu)',
+            tag: 'Palestrante Confirmado',
+            avatar: 'assets/palestrantes/pedro-pancotte-foto.png',
+            initials: 'PP',
+            bio: 'Engenheiro de software especializado na arquitetura de sistemas conversacionais, agentes autônomos e integração de LLMs em soluções de escala global.',
+            highlight: 'Como construir agentes de IA autônomos e a transição da programação clássica para a era da IA.'
+          },
+          {
+            name: 'Guilherme Vicentini',
+            role: 'Mestre (ITA), Prof. Universitário UMFG & Eng. Full Stack',
+            tag: 'Palestrante Confirmado',
+            avatar: 'assets/palestrantes/guilherme-vicentini-foto.jpeg',
+            initials: 'GV',
+            bio: 'Mestre em Ciências e Tecnologias Espaciais pelo ITA, Eng. Mecânico (UTFPR) e desenvolvedor Full Stack. Docente em Eng. de Software e ADS na Faculdade UMFG.',
+            highlight: 'Engenharia de software escalável, arquitetura de sistemas e formação prática conectada ao mercado tech.'
+          },
+          {
+            name: 'Prof. Vitor',
+            role: 'Coordenação de IA e Programação CEEP',
+            tag: 'Educador Anfitrião · CEEP',
+            avatar: '',
+            initials: 'PV',
+            bio: 'Professor de computação e coordenador das iniciativas de formação prática e projetos em robótica no CEEP Cianorte.',
+            highlight: 'Metodologias práticas e projetos que transformam alunos do ensino médio em programadores disputados.'
+          }
+        ]
+      },
+      {
+        index: 5,
+        poloKey: 'prefeitura',
+        poloBadge: 'Polo 06 · Paço Municipal',
+        poloLogo: 'assets/instituicoes/prefeitura-cianorte-logo.png',
+        poloLogoAlt: 'Prefeitura Municipal de Cianorte',
+        poloUrl: 'https://cianorte.pr.gov.br',
+        partnerLogo: 'assets/instituicoes/centro-de-inovacao-logo.png',
+        partnerLogoAlt: 'Centro de Inovação de Cianorte',
+        partnerUrl: 'https://cianorte.pr.gov.br',
+        symplaUrl: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+        date: '02 de Outubro de 2026',
+        dayTime: 'Sexta-feira · 19h00',
+        venue: 'Auditório da Prefeitura Municipal de Cianorte',
+        venueAddress: 'Centro Cívico — Cianorte, PR',
+        cert: '5 Horas Complementares Oficiais',
+        title: 'Educação Digital, Robótica e Inovação Pedagógica na Rede Municipal',
+        description: 'Grande encerramento da Semana do Futuro 2026. A celebração dos resultados e o compartilhamento do modelo vitorioso da rede municipal de Cianorte no ensino de robótica e raciocínio lógico, com premiações e presença de estudantes que representaram o município em torneios mundiais.',
+        speakers: [
+          {
+            name: 'Claudia Roberta Stefane',
+            role: 'Coord. Educação Integral e Robótica Municipal',
+            tag: 'Palestrante Confirmada',
+            avatar: 'assets/palestrantes/claudia-stefane-foto.jpeg',
+            initials: 'CS',
+            bio: 'Liderança pedagógica à frente do projeto pioneiro de robótica nas escolas municipais de Cianorte, com histórico de premiações estaduais e internacionais.',
+            highlight: 'A metodologia pública que levou crianças de Cianorte aos pódios mundiais de robótica.'
+          },
+          {
+            name: 'Douglas Possavati',
+            role: 'Coord. Pedagógico de Educação Digital',
+            tag: 'Palestrante Confirmado',
+            avatar: 'assets/palestrantes/douglas-possavati-foto.jpeg',
+            initials: 'DP',
+            bio: 'Especialista no desenvolvimento curricular de pensamento computacional e inclusão digital na primeira infância e ensino fundamental.',
+            highlight: 'Formação docente continuada para transformar as salas de aula em laboratórios vivos de inovação.'
+          },
+          {
+            name: 'Prof. Willian Pelissari',
+            role: 'Docência, Inovação e Educação Tecnológica',
+            tag: 'Participante Confirmado',
+            avatar: 'assets/palestrantes/willian-pelissari-foto.png',
+            initials: 'WP',
+            bio: 'Docente e pesquisador atuante na integração de tecnologia, inovação e métodos pedagógicos contemporâneos no ensino superior e regional.',
+            highlight: 'Contribuição para o ecossistema educacional e formação de talentos de Cianorte.'
+          }
+        ]
+      }
+    ];
+
+    function toggleMobileNav() {
+      const nav = document.querySelector('.nav-links');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+        nav.style.flexDirection = 'column';
+        nav.style.position = 'absolute';
+        nav.style.top = '80px';
+        nav.style.left = '0';
+        nav.style.right = '0';
+        nav.style.background = '#0A0A12';
+        nav.style.padding = '24px';
+        nav.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+      }
+    }
+
+    let currentTimelineDay = 0;
+    const TOTAL_SESSIONS = 6;
+    const POLO_TITLES = [
+      'UMFG (28/09)',
+      'UEM (29/09)',
+      'ACIC (30/09)',
+      'UNIPAR (01/10)',
+      'CEEP (02/10 Manhã)',
+      'Paço Municipal (02/10 Noite)'
+    ];
+
+    function switchTimelineDay(idx, pillElement) {
+      const container = document.getElementById('timelineContainer');
+      if (!container) return;
+      const items = container.querySelectorAll('.timeline-item');
+      const pills = document.querySelectorAll('.circuit-day-pill');
+      const deckNavBar = document.getElementById('deckNavBar');
+
+      pills.forEach(p => p.classList.remove('active'));
+
+      if (idx === 'all') {
+        if (pillElement) {
+          pillElement.classList.add('active');
+        } else {
+          const allPill = document.querySelector('.view-all-pill');
+          if (allPill) allPill.classList.add('active');
+        }
+        container.classList.remove('tab-mode');
+        items.forEach(it => it.classList.remove('active-session'));
+        if (deckNavBar) deckNavBar.style.display = 'none';
+        return;
+      }
+
+      container.classList.add('tab-mode');
+      if (deckNavBar) deckNavBar.style.display = 'flex';
+
+      currentTimelineDay = parseInt(idx, 10);
+      const dayPills = Array.from(pills).filter(p => !p.classList.contains('view-all-pill'));
+      if (pillElement) {
+        pillElement.classList.add('active');
+      } else if (dayPills[currentTimelineDay]) {
+        dayPills[currentTimelineDay].classList.add('active');
+      }
+
+      items.forEach((it, i) => {
+        if (i === currentTimelineDay) {
+          it.classList.add('active-session');
+        } else {
+          it.classList.remove('active-session');
+        }
+      });
+
+      updateDeckControls();
+    }
+
+    function navigateDayStep(step) {
+      let nextIdx = currentTimelineDay + step;
+      if (nextIdx < 0) nextIdx = 0;
+      if (nextIdx >= TOTAL_SESSIONS) nextIdx = TOTAL_SESSIONS - 1;
+      const dayPills = Array.from(document.querySelectorAll('.circuit-day-pill')).filter(p => !p.classList.contains('view-all-pill'));
+      switchTimelineDay(nextIdx, dayPills[nextIdx]);
+    }
+
+    function updateSessionStatusBadges() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const simParam = urlParams.get('data'); // Permite testar datas via ?data=YYYY-MM-DD
+      const now = simParam ? new Date(simParam + 'T12:00:00') : new Date();
+
+      // Normaliza para meia-noite da data atual local
+      const todayMs = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+
+      document.querySelectorAll('.session-card').forEach(card => {
+        const badge = card.querySelector('.session-status-badge');
+        if (!badge) return;
+        const dateStr = badge.getAttribute('data-session-date');
+        if (!dateStr) return;
+
+        const [y, m, d] = dateStr.split('-').map(Number);
+        const sessionMs = new Date(y, m - 1, d).getTime();
+        const diffDays = Math.round((sessionMs - todayMs) / (1000 * 60 * 60 * 24));
+
+        badge.className = 'session-status-badge';
+        if (diffDays < 0) {
+          badge.classList.add('status-concluido');
+          badge.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> <span>Concluído</span>';
+        } else if (diffDays === 0) {
+          badge.classList.add('status-hoje');
+          badge.innerHTML = '<span class="status-pulse-dot"></span> <span>Hoje</span>';
+        } else if (diffDays === 1) {
+          badge.classList.add('status-amanha');
+          badge.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <span>Amanhã</span>';
+        } else {
+          badge.classList.add('status-programado');
+          badge.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg> <span>Em breve</span>';
+        }
+      });
+    }
+
+    function updateDeckControls() {
+      const currentLabel = document.getElementById('deckCurrentPolo');
+      if (currentLabel) {
+        currentLabel.textContent = POLO_TITLES[currentTimelineDay] || '';
+      }
+      const prevBtn = document.getElementById('prevDayBtn');
+      const nextBtn = document.getElementById('nextDayBtn');
+      if (prevBtn) prevBtn.disabled = (currentTimelineDay === 0);
+      if (nextBtn) nextBtn.disabled = (currentTimelineDay === TOTAL_SESSIONS - 1);
+
+      const dots = document.querySelectorAll('.deck-dot');
+      dots.forEach((d, i) => {
+        if (i === currentTimelineDay) {
+          d.classList.add('active');
+        } else {
+          d.classList.remove('active');
+        }
+      });
+    }
+
+    function openSessionModal(index) {
+      const data = SESSIONS_DATA[index];
+      if (!data) return;
+
+      const topBarLeft = document.getElementById('modalTopLeft');
+      let logoHtml = '';
+      if (data.poloLogo) {
+        logoHtml = `<a href="${data.poloUrl}" target="_blank" rel="noopener" class="session-inst-logo-link" title="${data.poloLogoAlt}"><img src="${data.poloLogo}" alt="${data.poloLogoAlt}" class="modal-inst-logo"></a>`;
+        if (data.partnerLogo) {
+          logoHtml += `<a href="${data.partnerUrl || data.poloUrl}" target="_blank" rel="noopener" class="session-inst-logo-link" title="${data.partnerLogoAlt}"><img src="${data.partnerLogo}" alt="${data.partnerLogoAlt}" class="modal-inst-logo"></a>`;
+        }
+      } else {
+        logoHtml = `<a href="${data.poloUrl}" target="_blank" rel="noopener" class="session-inst-logo-link" title="Acessar portal da instituição"><div class="modal-polo-badge" style="background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.2); color: #fff;">${data.poloLogoPlaceholder}</div></a>`;
+      }
+      topBarLeft.innerHTML = `
+        <span class="modal-polo-badge">${data.poloBadge}</span>
+        <div style="display:inline-flex; align-items:center; gap:8px;">${logoHtml}</div>
+      `;
+
+      const colLeft = document.getElementById('modalColLeft');
+      colLeft.innerHTML = `
+        <div>
+          <h2 class="modal-topic-title" id="modalTopicTitle">${data.title}</h2>
+        </div>
+
+        <div class="modal-meta-list">
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">📅 Data</span>
+            <span class="modal-meta-val">${data.date}</span>
+          </div>
+          <div class="modal-meta-item">
+            <span class="modal-meta-label">⏰ Horário</span>
+            <span class="modal-meta-val">${data.dayTime}</span>
+          </div>
+          <div class="modal-meta-item full">
+            <span class="modal-meta-label">📍 Local</span>
+            <span class="modal-meta-val">${data.venue} <br><small style="color:var(--muted); font-size:11.5px;">${data.venueAddress}</small></span>
+          </div>
+          <div class="modal-meta-item full">
+            <span class="modal-meta-label">🎓 Certificação</span>
+            <span class="modal-meta-val" style="color:var(--ciano);">${data.cert}</span>
+          </div>
+        </div>
+
+        <div class="modal-description">
+          ${data.description}
+        </div>
+
+        <div class="modal-left-actions">
+          <a href="${data.symplaUrl}" target="_blank" rel="noopener" class="btn-primary" style="width: 100%; justify-content: center; padding: 11px 18px; font-size: 13.5px; text-decoration: none;">
+            <span>Inscrever-se no Sympla</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <button type="button" class="btn-secondary" style="width: 100%; justify-content: center; padding: 8px 16px; font-size: 12.5px;" onclick="closeSessionModal()">
+            Fechar Detalhes
+          </button>
+        </div>
+      `;
+
+      let speakersHtml = '';
+      data.speakers.forEach(sp => {
+        let avatarHtml = '';
+        if (sp.avatar) {
+          avatarHtml = `<img src="${sp.avatar}" alt="${sp.name}" class="modal-speaker-avatar">`;
+        } else {
+          avatarHtml = `<div class="modal-speaker-avatar-placeholder">${sp.initials}</div>`;
+        }
+        speakersHtml += `
+          <div class="modal-speaker-card">
+            <div class="modal-speaker-top">
+              ${avatarHtml}
+              <div class="modal-speaker-info">
+                <h4>${sp.name}</h4>
+                <p>${sp.role}</p>
+                <span class="speaker-tag">${sp.tag}</span>
+              </div>
+            </div>
+            <div class="modal-speaker-bio">
+              ${sp.bio}
+            </div>
+          </div>
+        `;
+      });
+
+      const colRight = document.getElementById('modalColRight');
+      colRight.innerHTML = `
+        <div class="modal-right-header">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span>Especialistas Confirmados (${data.speakers.length})</span>
+        </div>
+        <div class="modal-speakers-grid">
+          ${speakersHtml}
+        </div>
+      `;
+
+      const modal = document.getElementById('sessionModalOverlay');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSessionModal(e) {
+      if (e && e.target && !e.target.classList.contains('session-modal-overlay') && !e.target.closest('.modal-close-btn') && !e.target.closest('.btn-secondary')) {
+        return;
+      }
+      const modal = document.getElementById('sessionModalOverlay');
+      if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    const SYMPLA_URLS = {
+      umfg: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+      uem: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+      acic: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+      unipar: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+      ceep: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027',
+      prefeitura: 'https://www.sympla.com.br/evento/semana-do-futuro/3578027'
+    };
+
+    function openSubscriptionFor(poloKey) {
+      const url = SYMPLA_URLS[poloKey] || 'https://www.sympla.com.br/';
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+
+    function selectSessionFromModal(poloKey) {
+      openSubscriptionFor(poloKey);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeSessionModal();
+      }
+    });
+
+    // Inicialização: modo 'all' (linha contínua) por padrão e renderização de status dos cards
+    document.addEventListener('DOMContentLoaded', () => {
+      switchTimelineDay('all');
+      updateSessionStatusBadges();
+    });
+  </script>
+
+  <!-- SWITCH FLUTUANTE DE VERSÕES (COMPARATIVO) -->
+  <!-- <div class="version-switch-pill" id="versionSwitchPill">
+    <span style="color: var(--ciano); font-size: 13px;">⚡ Modo:</span>
+    <a href="index.html" class="active" title="Versão padrão com menos conteúdo e alto impacto visual">Alto Impacto (Padrão)</a>
+    <a href="index-completa.html" title="Versão completa descritiva">Completa</a>
+  </div> -->
+
+</body>
+
+</html>

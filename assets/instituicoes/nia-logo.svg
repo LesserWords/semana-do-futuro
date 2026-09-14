@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="110 340 860 310" width="860" height="310" fill="none">
+  <defs>
+    <linearGradient id="niaGrad" x1="120" y1="347" x2="682" y2="643" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B0CAD" />
+      <stop offset=".5" stop-color="#2B49C4" />
+      <stop offset="1" stop-color="#08D1F8" />
+    </linearGradient>
+  </defs>
+  <path
+    d="M 682 347 L 478 348 L 458 353 L 441 361 L 431 368 L 412 387 L 388 364 L 370 354 L 347 348 L 324 348 L 305 352 L 287 360 L 268 375 L 253 395 L 120 643 L 328 642 L 344 638 L 360 630 L 371 622 L 389 604 L 391 604 L 405 619 L 420 630 L 434 637 L 451 642 L 484 642 L 501 637 L 513 631 L 527 621 L 537 611 L 548 596 Z M 186 603 L 286 416 L 292 407 L 310 391 L 327 385 L 342 385 L 360 392 L 378 408 L 415 461 L 448 407 L 460 396 L 471 390 L 483 387 L 615 388 L 517 572 L 506 588 L 494 598 L 477 605 L 458 605 L 439 597 L 424 583 L 386 529 L 358 578 L 349 588 L 332 599 L 308 604 Z"
+    fill="url(#niaGrad)" fill-rule="evenodd" />
+  <circle cx="650.5" cy="571" r="23" fill="#111111" />
+  <rect x="693" y="397" width="47" height="197" fill="#111111" />
+  <polygon points="831,397 887,397 959,594 910,594 858.5,442 806,594 760,594" fill="#111111" />
+</svg>
