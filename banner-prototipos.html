@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Banner 80×120 — Semana do Futuro 2026</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --indigo: #3A0CAD;
+      --elo: #2A57E4;
+      --ciano: #05D3F9;
+      --preto: #000;
+      --superficie: #0A0A0F;
+      --papel: #F1F2F7;
+      --branco: #fff;
+      --cinza: #E4E5EE;
+      --grad: linear-gradient(160deg, #3A0CAD 0%, #2A57E4 46%, #05D3F9 100%);
+      --disp: "Space Grotesk", system-ui, sans-serif;
+      --corpo: "IBM Plex Sans", system-ui, sans-serif;
+    }
+
+    * { box-sizing: border-box }
+
+    body {
+      background: var(--papel);
+      color: #111;
+      font-family: var(--corpo);
+      margin: 0;
+      padding: 32px;
+    }
+
+    .wrap { max-width: 1160px; margin: 0 auto }
+
+    h1 {
+      font-family: var(--disp);
+      font-weight: 700;
+      letter-spacing: -.03em;
+      font-size: 26px;
+      margin: 0 0 4px;
+    }
+
+    .lede {
+      color: #555;
+      margin: 0 0 28px;
+      max-width: 74ch;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 40px;
+    }
+
+    .variant { margin: 0 }
+
+    .vhead {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 0 0 10px;
+      flex-wrap: wrap;
+    }
+
+    .vhead h2 {
+      font-family: var(--disp);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      font-size: 19px;
+      margin: 0;
+    }
+
+    .vtag { font-family: var(--disp); font-weight: 500; font-size: 12px; color: #666 }
+
+    .note { font-size: 12.5px; color: #555; line-height: 1.55; margin: 10px 2px 0 }
+    .note b { color: #222 }
+
+    /* 2:3 portrait artboard (80 × 120 cm) */
+    .board {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, .16);
+      container-type: inline-size;
+      color: #fff;
+    }
+
+    .safe {
+      position: absolute;
+      inset: 6.5%;
+      border: 1px dashed rgba(255, 255, 255, .22);
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 6;
+    }
+
+    .safe.dark { border-color: rgba(0, 0, 0, .18) }
+
+    .eloline { position: absolute; inset: 0; width: 100%; height: 100% }
+
+    /* shared bits */
+    .eyebrow {
+      font-family: var(--disp);
+      font-weight: 500;
+      font-size: 3.4cqw;
+      letter-spacing: .24em;
+      text-transform: uppercase;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .tagline { font-family: var(--disp); font-weight: 500; letter-spacing: .01em }
+    .dates { font-family: var(--disp); font-weight: 600 }
+
+    .sponsors {
+      position: absolute;
+      left: 6.5%;
+      right: 6.5%;
+      bottom: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4cqw;
+      z-index: 4;
+    }
+
+    .sponsors .lbl {
+      font-family: var(--disp);
+      font-weight: 500;
+      font-size: 2.4cqw;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      opacity: .7;
+    }
+
+    .sponsors .chips { display: flex; align-items: center; gap: 2.6cqw }
+
+    .chip {
+      background: #fff;
+      border-radius: 2cqw;
+      padding: 1.6cqw 2.2cqw;
+      display: flex;
+      align-items: center;
+    }
+
+    .chip img { height: 5cqw; width: auto; display: block; object-fit: contain }
+
+    /* QR placeholder */
+    .qr {
+      background: #fff;
+      padding: 1.4cqw;
+      border-radius: 2.4cqw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1cqw;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, .35);
+    }
+
+    .qr svg { width: 100%; height: auto; display: block }
+
+    .qr span {
+      font-family: var(--disp);
+      font-weight: 600;
+      font-size: 2.4cqw;
+      color: #111;
+      letter-spacing: .06em;
+    }
+
+    /* ---- V1 Palco ---- */
+    .v1 { background: radial-gradient(120% 80% at 50% 8%, #141033 0%, #000 62%) }
+
+    .v1 .center {
+      position: absolute;
+      inset: 6.5% 6.5% 22%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4cqw;
+      text-align: center;
+      z-index: 3;
+    }
+
+    .v1 .logo-event { width: 78%; filter: drop-shadow(0 2px 18px rgba(5, 211, 249, .3)) }
+    .v1 .tagline { color: #fff; font-size: 5cqw; opacity: .94; max-width: 90% }
+    .v1 .dates { color: #fff; font-size: 3.6cqw; opacity: .85 }
+    .v1 .qr { position: absolute; left: 50%; transform: translateX(-50%); bottom: 15%; width: 26%; z-index: 4 }
+
+    /* ---- V2 Photo Wall (step & repeat) ---- */
+    .v2 { background: var(--preto) }
+
+    .v2 .tile {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, .05) 1px, transparent 1px);
+      background-size: 4% 2.6%;
+    }
+
+    .v2 .repeat {
+      position: absolute;
+      inset: 0 0 15% 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
+      place-items: center;
+    }
+
+    .v2 .cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12%;
+      transform: scale(.86);
+    }
+
+    .v2 .cell img.mk { width: 40% }
+    .v2 .cell img.wm { width: 76%; opacity: .96 }
+
+    .v2 .strap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15%;
+      background: var(--grad);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      z-index: 3;
+    }
+
+    .v2 .strap .dates { color: #fff; font-size: 3.4cqw }
+    .v2 .strap .site { font-family: var(--disp); font-weight: 600; color: #fff; font-size: 2.8cqw; opacity: .95 }
+    .v2 .qr { position: absolute; right: 6.5%; bottom: 19%; width: 22%; z-index: 4 }
+
+    /* ---- V3 Claro Editorial ---- */
+    .v3 { background: var(--papel); color: #111 }
+
+    .v3 .hero {
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 30%;
+      background: var(--grad);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3cqw;
+      padding: 6.5%;
+      text-align: center;
+    }
+
+    .v3 .hero .eyebrow {
+      background: none;
+      -webkit-background-clip: initial;
+      background-clip: initial;
+      color: rgba(255, 255, 255, .92);
+    }
+
+    .v3 .hero img { width: 74%; filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .25)) }
+
+    .v3 .body {
+      position: absolute;
+      inset: 34% 8% 24%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5cqw;
+    }
+
+    .v3 .headline {
+      font-family: var(--disp);
+      font-weight: 700;
+      letter-spacing: -.02em;
+      font-size: 7.4cqw;
+      line-height: 1.08;
+      color: #111;
+    }
+
+    .v3 .headline .g {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .v3 .dates { color: #333; font-size: 3.4cqw }
+    .v3 .sym { width: 16%; position: absolute; right: 8%; top: 34%; opacity: .9 }
+
+    .v3 .qr { position: absolute; left: 8%; bottom: 5%; width: 22% }
+    .v3 .sponsors { left: auto; right: 8%; bottom: 6%; justify-content: flex-end }
+    .v3 .sponsors .lbl { color: #555; opacity: 1 }
+    .v3 .chip { border: 1px solid var(--cinza) }
+
+    /* ---- V4 Xadrez ---- */
+    .v4 { background: #000 }
+
+    .v4 .grid-x {
+      position: absolute;
+      inset: 0 0 15% 0;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: 1fr;
+    }
+
+    .v4 .sq { position: relative; display: flex; align-items: center; justify-content: center }
+    .v4 .sq.dark { background: radial-gradient(120% 120% at 50% 0%, #141033, #05050b) }
+    .v4 .sq.dark img { width: 56%; opacity: .9 }
+
+    .v4 .plate {
+      position: absolute;
+      left: 12%;
+      right: 12%;
+      top: 30%;
+      background: var(--grad);
+      border-radius: 3cqw;
+      padding: 6cqw 5cqw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3cqw;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+      z-index: 3;
+      text-align: center;
+    }
+
+    .v4 .plate .wm { width: 82% }
+    .v4 .plate .dates { color: #fff; font-size: 3.2cqw; opacity: .95 }
+    .v4 .strap {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 15%;
+      background: #05050b;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 7%;
+      z-index: 3;
+    }
+
+    .v4 .strap .site { font-family: var(--disp); font-weight: 600; color: #fff; font-size: 2.8cqw; opacity: .95 }
+    .v4 .qr { position: absolute; right: 8%; bottom: 19%; width: 22%; z-index: 4 }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Banner 80 × 120 — Semana do Futuro 2026 · 4 versões</h1>
+    <p class="lede">Protótipos de <b>banner vertical 0,80 × 1,20 m</b> (proporção 2:3, retrato — tipo roll-up / pull-up),
+      uma versão por backdrop. Espelho de <b>backdrop-prototipos.html</b> no Design System NIA: preto base · gradiente
+      índigo→ciano · Space Grotesk / IBM Plex Sans · o Elo como assinatura. Linha tracejada = margem de segurança.
+      Trocar os QR placeholder pelo definitivo (Sympla/site) antes de fechar arte.</p>
+
+    <div class="grid">
+      <!-- V1 Palco -->
+      <section class="variant">
+        <div class="vhead">
+          <h2>V1 · Palco</h2><span class="vtag">Composição central — logo, elo e datas</span>
+        </div>
+        <div class="board v1">
+          <div class="eloline" data-elo></div>
+          <div class="center">
+            <div class="eyebrow">Circuito Itinerante de IA &amp; Tecnologia</div>
+            <img class="logo-event" src="assets/logo-branca.png" alt="Semana do Futuro">
+            <div class="tagline">O futuro da IA, acontecendo em Cianorte</div>
+            <div class="dates">28.09 – 02.10 · 2026 · Gratuito · Certificado 5h</div>
+          </div>
+          <div class="qr" data-qr data-label="INSCREVA-SE"></div>
+          <div class="sponsors">
+            <span class="lbl">Apoio</span>
+            <div class="chips">
+              <span class="chip"><img src="assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC"></span>
+              <span class="chip"><img src="assets/patrocinadores/log-sistemas-logo.png" alt="Log Sistemas"></span>
+              <span class="chip"><img src="assets/patrocinadores/broder-logo.png" alt="Broder"></span>
+            </div>
+          </div>
+          <div class="safe"></div>
+        </div>
+        <p class="note"><b>Uso:</b> palco, recepção, fundo de foto individual. <b>Trocar:</b> QR pelo link Sympla.</p>
+      </section>
+
+      <!-- V2 Photo Wall -->
+      <section class="variant">
+        <div class="vhead">
+          <h2>V2 · Photo Wall</h2><span class="vtag">Step-and-repeat vertical — press wall</span>
+        </div>
+        <div class="board v2">
+          <div class="tile"></div>
+          <div class="repeat" data-repeat></div>
+          <div class="qr" data-qr data-label="CHECK-IN"></div>
+          <div class="strap">
+            <span class="dates">28.09 – 02.10 · 2026</span>
+            <span class="site">semanadofuturo.com.br</span>
+          </div>
+          <div class="safe"></div>
+        </div>
+        <p class="note"><b>Uso:</b> parede de fotos / stories. <b>Trocar:</b> densidade da grade (data-repeat) conforme a largura real.</p>
+      </section>
+
+      <!-- V3 Claro Editorial -->
+      <section class="variant">
+        <div class="vhead">
+          <h2>V3 · Claro Editorial</h2><span class="vtag">Fundo papel — halls iluminados / totens</span>
+        </div>
+        <div class="board v3">
+          <div class="hero">
+            <div class="eyebrow">Núcleo de IA · Cianorte, PR</div>
+            <img src="assets/logo-branca.png" alt="Semana do Futuro">
+          </div>
+          <img class="sym" src="assets/simbolo-gradiente.png" alt="">
+          <div class="body">
+            <div class="headline">O futuro da IA,<br><span class="g">acontecendo em Cianorte.</span></div>
+            <div class="dates">28.09 – 02.10 · 2026 · Gratuito · Certificado 5h</div>
+          </div>
+          <div class="qr" data-qr data-label="INSCREVA-SE"></div>
+          <div class="sponsors">
+            <span class="lbl">Apoio</span>
+            <div class="chips">
+              <span class="chip"><img src="assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC"></span>
+              <span class="chip"><img src="assets/patrocinadores/log-sistemas-logo.png" alt="Log Sistemas"></span>
+              <span class="chip"><img src="assets/patrocinadores/broder-logo.png" alt="Broder"></span>
+            </div>
+          </div>
+          <div class="safe dark"></div>
+        </div>
+        <p class="note"><b>Uso:</b> ambientes claros. <b>Trocar:</b> versão escura do wordmark quando fechar (aqui vai no hero gradiente).</p>
+      </section>
+
+      <!-- V4 Xadrez -->
+      <section class="variant">
+        <div class="vhead">
+          <h2>V4 · Xadrez</h2><span class="vtag">Tabuleiro 6×9 — placa central com a logo</span>
+        </div>
+        <div class="board v4">
+          <div class="grid-x" data-xadrez></div>
+          <div class="plate">
+            <img class="wm" src="assets/logo-branca.png" alt="Semana do Futuro">
+            <span class="dates">28.09 – 02.10 · 2026 · Gratuito</span>
+          </div>
+          <div class="qr" data-qr data-label="INSCREVA-SE"></div>
+          <div class="strap">
+            <span class="site">semanadofuturo.com.br</span>
+          </div>
+          <div class="safe"></div>
+        </div>
+        <p class="note"><b>Uso:</b> impacto gráfico / grid modular. <b>Trocar:</b> densidade do tabuleiro (6×9) ajustável.</p>
+      </section>
+    </div>
+
+    <p class="note" style="margin-top:24px;padding-top:16px;border-top:1px solid var(--cinza)">
+      <b>Specs de impressão (todas):</b> 800 × 1200 mm · 100–150 dpi no tamanho final · CMYK · margem de segurança ≈ 8 cm
+      (linha tracejada) · sangria 2 cm.
+      <b>QR:</b> mínimo 15 × 15 cm impresso, quiet-zone livre, testar leitura a 1,5 m.
+      <b>Logos patrocinador:</b> placeholders — versões vetoriais no fechamento.
+    </p>
+  </div>
+
+  <script>
+    // Elo signature (portrait viewBox)
+    function eloSVG(id) {
+      return `
+      <svg viewBox="0 0 800 1200" preserveAspectRatio="none" aria-hidden="true" style="width:100%;height:100%">
+        <defs><linearGradient id="g${id}" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#3A0CAD"/><stop offset=".46" stop-color="#2A57E4"/><stop offset="1" stop-color="#05D3F9"/>
+        </linearGradient></defs>
+        <path d="M-40 940 C 180 820 260 1020 420 900 S 700 640 860 720" fill="none"
+          stroke="url(#g${id})" stroke-width="6" stroke-linecap="round" opacity=".7"/>
+        <circle cx="180" cy="852" r="9" fill="#05D3F9"/>
+        <circle cx="420" cy="900" r="9" fill="#2A57E4"/>
+        <circle cx="690" cy="672" r="9" fill="#3A0CAD"/>
+      </svg>`;
+    }
+
+    // Faux-QR placeholder (deterministic pseudo-random modules + 3 finders)
+    function qrSVG() {
+      const n = 21, cell = 100 / n;
+      let seed = 7, rnd = () => (seed = (seed * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
+      const finder = (x, y) =>
+        `<rect x="${x * cell}" y="${y * cell}" width="${cell * 7}" height="${cell * 7}" fill="#111"/>
+         <rect x="${(x + 1) * cell}" y="${(y + 1) * cell}" width="${cell * 5}" height="${cell * 5}" fill="#fff"/>
+         <rect x="${(x + 2) * cell}" y="${(y + 2) * cell}" width="${cell * 3}" height="${cell * 3}" fill="#111"/>`;
+      const inFinder = (r, c) =>
+        (r < 8 && c < 8) || (r < 8 && c > n - 9) || (r > n - 9 && c < 8);
+      let mods = '';
+      for (let r = 0; r < n; r++)
+        for (let c = 0; c < n; c++)
+          if (!inFinder(r, c) && rnd() > .5)
+            mods += `<rect x="${c * cell}" y="${r * cell}" width="${cell}" height="${cell}" fill="#111"/>`;
+      return `<svg viewBox="0 0 100 100">${mods}${finder(0, 0)}${finder(n - 7, 0)}${finder(0, n - 7)}</svg>`;
+    }
+
+    document.querySelectorAll('[data-qr]').forEach(q => {
+      q.innerHTML = qrSVG() + `<span>${q.dataset.label || 'INSCREVA-SE'}</span>`;
+    });
+    document.querySelectorAll('[data-elo]').forEach(e => e.innerHTML = eloSVG(1));
+
+    // V2 step-and-repeat cells
+    document.querySelectorAll('[data-repeat]').forEach(rep => {
+      for (let i = 0; i < 15; i++) {
+        rep.insertAdjacentHTML('beforeend',
+          `<div class="cell">
+             <img class="mk" src="assets/simbolo-gradiente.png" alt="">
+             <img class="wm" src="assets/logo-branca.png" alt="">
+           </div>`);
+      }
+    });
+
+    // V4 checkerboard 6×9 (dark squares carry the symbol; center reserved for the plate)
+    document.querySelectorAll('[data-xadrez]').forEach(gx => {
+      const COLS = 6, ROWS = 9;
+      for (let r = 0; r < ROWS; r++)
+        for (let c = 0; c < COLS; c++) {
+          const dark = (r + c) % 2 === 0;
+          gx.insertAdjacentHTML('beforeend',
+            `<div class="sq ${dark ? 'dark' : ''}">${dark ? '<img src="assets/simbolo-gradiente.png" alt="">' : ''}</div>`);
+        }
+    });
+  </script>
+</body>
+
+</html>
