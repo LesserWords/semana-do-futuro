@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flyer 10×21 cm (DL / 1/3 A4) — Semana do Futuro 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --indigo: #3A0CAD;
+      --elo: #2A57E4;
+      --ciano: #00A9D8;
+      --escuro: #0E111D;
+      --texto: #181C2C;
+      --subtexto: #4E5569;
+      --mutado: #727B93;
+      --fundo: #FFFFFF;
+      --cinza-claro: #F4F6FB;
+      --borda: #E2E6F0;
+      --borda-suave: #EEF1F7;
+      --grad: linear-gradient(135deg, #3A0CAD 0%, #2A57E4 50%, #00B4D8 100%);
+      --grad-sutil: linear-gradient(135deg, rgba(58, 12, 173, 0.05) 0%, rgba(0, 180, 216, 0.08) 100%);
+      --disp: 'Space Grotesk', system-ui, sans-serif;
+      --corpo: 'IBM Plex Sans', system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: 100mm 210mm;
+      margin: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background: #DCE1EB;
+      font-family: var(--corpo);
+      color: var(--texto);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    body.headless {
+      background: #FFFFFF !important;
+      padding: 0 !important;
+    }
+
+    /* Container físico 100 × 210 mm */
+    .flyer {
+      position: relative;
+      width: 100mm;
+      height: 210mm;
+      max-width: 100vw;
+      max-height: 100vh;
+      aspect-ratio: 100 / 210;
+      background: var(--fundo);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 16px 45px rgba(15, 23, 42, 0.22);
+      container-type: inline-size;
+    }
+
+    body.headless .flyer {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: none !important;
+      max-height: none !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+    }
+
+    /* Margem de segurança de corte (4% interna) */
+    .safe-guide {
+      position: absolute;
+      inset: 4%;
+      border: 1px dashed rgba(42, 87, 228, 0.3);
+      border-radius: 4px;
+      pointer-events: none;
+      z-index: 99;
+      display: none;
+    }
+
+    body.show-guides .safe-guide {
+      display: block;
+    }
+
+    /* ========================================================
+       PARTE SUPERIOR & MÉDIA (~67% DA ALTURA = 141mm)
+       ======================================================== */
+    .top-two-thirds {
+      height: 67%;
+      padding: 5.5cqw 5cqw 3cqw 5cqw;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: #FFFFFF;
+      border-bottom: 1.5px solid var(--borda);
+    }
+
+    .top-ribbon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2.8cqw;
+      background: var(--grad);
+    }
+
+    /* Hero Superior: Logo à Esquerda + QR Code à Direita (Sem Borda de Card) */
+    .top-hero-card {
+      background: transparent;
+      border: none;
+      padding: 0.2cqw 0 1cqw 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3cqw;
+      margin-top: 0.4cqw;
+      margin-bottom: 2.2cqw;
+      box-shadow: none;
+    }
+
+    .hero-brand {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      min-width: 0;
+    }
+
+    .hero-logo {
+      height: 19.5cqw;
+      max-width: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .hero-qr-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6cqw;
+      flex-shrink: 0;
+      text-align: center;
+      max-width: 32cqw;
+    }
+
+    .qr-label-top {
+      font-family: var(--disp);
+      font-size: 1.8cqw;
+      font-weight: 800;
+      color: var(--escuro);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .qr-box {
+      width: 17cqw;
+      height: 17cqw;
+      background: #FFFFFF;
+      border-radius: 1.5cqw;
+      border: none;
+      padding: 0.6cqw;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qr-subtitle {
+      font-size: 1.3cqw;
+      font-weight: 600;
+      color: var(--subtexto);
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    /* Programação dos 5 Dias / 6 Sessões */
+    .schedule-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 0;
+    }
+
+    .schedule-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2cqw;
+    }
+
+    .schedule-title {
+      font-family: var(--disp);
+      font-size: 2.5cqw;
+      font-weight: 800;
+      color: var(--escuro);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 1.6cqw;
+    }
+
+    .schedule-title::before {
+      content: "";
+      width: 2cqw;
+      height: 2cqw;
+      background: var(--elo);
+      border-radius: 0.5cqw;
+    }
+
+
+    .schedule-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6cqw;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .schedule-item {
+      display: flex;
+      align-items: center;
+      background: var(--fundo);
+      border: 1px solid var(--borda-suave);
+      border-left: 3px solid var(--elo);
+      border-radius: 1.6cqw;
+      padding: 1.8cqw 2.5cqw;
+      gap: 2.5cqw;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+      background: #FAF8FF;
+    }
+
+    .schedule-item:nth-child(even) {
+      border-left-color: var(--ciano);
+    }
+
+    .s-date-col {
+      min-width: 16cqw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .s-date {
+      font-family: var(--disp);
+      font-size: 2.7cqw;
+      font-weight: 800;
+      color: var(--escuro);
+      line-height: 1;
+    }
+
+    .s-time {
+      font-size: 2cqw;
+      font-weight: 600;
+      color: var(--elo);
+      margin-top: 0.3cqw;
+    }
+
+    .s-info-col {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .s-place {
+      font-family: var(--disp);
+      font-size: 2.6cqw;
+      font-weight: 700;
+      color: var(--escuro);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.15;
+    }
+
+    .s-theme {
+      font-size: 2.1cqw;
+      color: var(--subtexto);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 0.3cqw;
+    }
+
+    .presence-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.2cqw;
+      padding: 0.6cqw 1.6cqw;
+      border: 1px dashed rgba(42, 87, 228, 0.4);
+      border-radius: 1cqw;
+      background: rgba(42, 87, 228, 0.03);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .check-box-square {
+      width: 3.2cqw;
+      height: 3.2cqw;
+      border: 1.8px solid var(--elo);
+      border-radius: 0.6cqw;
+      background: #FFFFFF;
+      display: inline-block;
+    }
+
+    .check-box-label {
+      font-family: var(--disp);
+      font-size: 1.8cqw;
+      font-weight: 700;
+      color: var(--escuro);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ========================================================
+       PARTE INFERIOR: TERÇO DE LOGOS (~33% DA ALTURA = 69mm)
+       ======================================================== */
+    .bottom-third {
+      height: 33%;
+      background: #FAFBFD;
+      padding: 3.5cqw 5cqw 4.5cqw 5cqw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .logos-section-title {
+      display: flex;
+      align-items: center;
+      gap: 2cqw;
+      margin-bottom: 1.5cqw;
+    }
+
+    .logos-section-title .title-text {
+      font-family: var(--disp);
+      font-size: 2.2cqw;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--subtexto);
+      white-space: nowrap;
+    }
+
+    .logos-section-title .title-line {
+      flex: 1;
+      height: 1px;
+      background: var(--borda);
+    }
+
+    /* Bloco 1: Patrocinadores */
+    .sponsors-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4cqw;
+    }
+
+    .sponsors-row {
+      display: flex;
+      align-items: center;
+      gap: 2.2cqw;
+    }
+
+    /* Master Sponsors */
+    .sponsor-master-card {
+      flex: 1.35;
+      height: 13.5cqw;
+      background: #FFFFFF;
+      border: 1.2px solid #CBD5E1;
+      border-radius: 1.8cqw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.4cqw 2.4cqw;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      position: relative;
+    }
+
+    .master-badge-mini {
+      position: absolute;
+      top: -1.6cqw;
+      right: 2.2cqw;
+      font-family: var(--disp);
+      font-size: 1.6cqw;
+      font-weight: 800;
+      color: #FFFFFF;
+      background: linear-gradient(135deg, #1E3A8A 0%, #0284C7 100%);
+      padding: 0.3cqw 1.5cqw;
+      border-radius: 0.8cqw;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .sponsor-master-card img {
+      max-height: 10.5cqw;
+      max-width: 95%;
+      object-fit: contain;
+    }
+
+    /* Patrocinadores Padrão */
+    .sponsor-reg-card {
+      flex: 1;
+      height: 13.5cqw;
+      background: #FFFFFF;
+      border: 1px solid #E2E6F0;
+      border-radius: 1.8cqw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2cqw 2.2cqw;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    }
+
+    .sponsor-reg-card img {
+      max-height: 9.5cqw;
+      max-width: 92%;
+      object-fit: contain;
+    }
+
+    .sponsor-reg-card img.log-logo {
+      max-height: 10cqw;
+      filter: invert(1) brightness(0.18);
+    }
+
+    /* Bloco 2: Realização & Apoio Institucional */
+    .partners-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5cqw;
+      margin-top: 1.4cqw;
+    }
+
+    .partners-capsule {
+      background: #FFFFFF;
+      border: 1px solid var(--borda);
+      border-radius: 1.8cqw;
+      padding: 1.6cqw 2.4cqw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.2cqw;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .p-logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      height: 7.2cqw;
+    }
+
+    .p-logo-item img {
+      max-height: 6.8cqw;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .p-divider {
+      width: 1px;
+      height: 5.5cqw;
+      background: var(--borda);
+    }
+
+    /* Grid de Faculdades & Parceiros de Polo */
+    .institutions-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.8cqw;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid var(--borda);
+      border-radius: 1.8cqw;
+      padding: 1.5cqw 2cqw;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    }
+
+    .inst-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 6.2cqw;
+    }
+
+    .inst-item img {
+      max-height: 5.8cqw;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    /* Rodapé do Flyer */
+    .footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1cqw;
+      padding-top: 1cqw;
+      border-top: 1px dashed var(--borda);
+    }
+
+    .footer-url {
+      font-family: var(--disp);
+      font-size: 2.4cqw;
+      font-weight: 800;
+      color: var(--elo);
+      letter-spacing: 0.02em;
+    }
+
+    .footer-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6cqw;
+      font-family: var(--disp);
+      font-size: 2cqw;
+      font-weight: 700;
+      color: var(--escuro);
+      letter-spacing: 0.01em;
+    }
+
+    .footer-instagram svg {
+      width: 1.8cqw;
+      height: 1.8cqw;
+      color: var(--elo);
+      vertical-align: middle;
+    }
+
+    /* Impressão direta */
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        min-height: auto !important;
+        overflow: visible !important;
+      }
+
+      .flyer {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        width: 100mm !important;
+        height: 210mm !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="flyer">
+    <!-- Linha de guia de corte (toggle) -->
+    <div class="safe-guide"></div>
+
+    <!-- ========================================================
+         PARTE 1 E 2: TOPO + CORPO (67% = 141mm)
+         ======================================================== -->
+    <div class="top-two-thirds">
+      <div class="top-ribbon"></div>
+
+      <!-- Hero Superior: Logo à Esquerda + QR Code Conteúdo Extra à Direita -->
+      <div class="top-hero-card">
+        <div class="hero-brand">
+          <img class="hero-logo" src="assets/logo-preta.png" alt="Semana do Futuro · Cianorte">
+        </div>
+        <div class="hero-qr-group">
+          <span class="qr-label-top">Conteúdo Extra</span>
+          <div class="qr-box">
+            <img src="assets/qrcode-oficial.svg" alt="QR Code Conteúdos de Estudo">
+          </div>
+          <span class="qr-subtitle">Materiais e recursos para estudar mais</span>
+        </div>
+      </div>
+
+      <!-- Programação Resumida dos 5 Dias -->
+      <section class="schedule-section">
+        <div class="schedule-header">
+          <span class="schedule-title">Circuito dos 6 Polos de Conhecimento</span>
+        </div>
+
+        <div class="schedule-list">
+          <!-- Polo 1 -->
+          <div class="schedule-item">
+            <div class="s-date-col">
+              <span class="s-date">28/09 · Seg</span>
+              <span class="s-time">19h30</span>
+            </div>
+            <div class="s-info-col">
+              <div class="s-place">Anfiteatro UMFG</div>
+              <div class="s-theme">Marketing e Estratégia na era da IA</div>
+            </div>
+            <div class="presence-check" title="Marcar presença">
+              <span class="check-box-square"></span>
+              <span class="check-box-label">Presença</span>
+            </div>
+          </div>
+
+          <!-- Polo 2 -->
+          <div class="schedule-item">
+            <div class="s-date-col">
+              <span class="s-date">29/09 · Ter</span>
+              <span class="s-time">19h30</span>
+            </div>
+            <div class="s-info-col">
+              <div class="s-place">Anfiteatro UEM Cianorte</div>
+              <div class="s-theme">Desmistificando a IA no mercado de trabalho</div>
+            </div>
+            <div class="presence-check" title="Marcar presença">
+              <span class="check-box-square"></span>
+              <span class="check-box-label">Presença</span>
+            </div>
+          </div>
+
+          <!-- Polo 3 -->
+          <div class="schedule-item">
+            <div class="s-date-col">
+              <span class="s-date">30/09 · Qua</span>
+              <span class="s-time">19h30</span>
+            </div>
+            <div class="s-info-col">
+              <div class="s-place">Auditório SEBRAE</div>
+              <div class="s-theme">Ecossistema Regional de Inovação & Negócios</div>
+            </div>
+            <div class="presence-check" title="Marcar presença">
+              <span class="check-box-square"></span>
+              <span class="check-box-label">Presença</span>
+            </div>
+          </div>
+
+          <!-- Polo 4 -->
+          <div class="schedule-item">
+            <div class="s-date-col">
+              <span class="s-date">01/10 · Qui</span>
+              <span class="s-time">19h30</span>
+            </div>
+            <div class="s-info-col">
+              <div class="s-place">Anfiteatro UNIPAR</div>
+              <div class="s-theme">RAG e Inteligência Artificial Aplicada</div>
+            </div>
+            <div class="presence-check" title="Marcar presença">
+              <span class="check-box-square"></span>
+              <span class="check-box-label">Presença</span>
+            </div>
+          </div>
+
+          <!-- Polo 5 -->
+          <div class="schedule-item">
+            <div class="s-date-col">
+              <span class="s-date">02/10 · Sex</span>
+              <span class="s-time">09h00 (Manhã)</span>
+            </div>
+            <div class="s-info-col">
+              <div class="s-place">Anfiteatro CEEP</div>
+              <div class="s-theme">Desenvolvimento de Software e Futuro da TI</div>
+            </div>
+            <div class="presence-check" title="Marcar presença">
+              <span class="check-box-square"></span>
+              <span class="check-box-label">Presença</span>
+            </div>
+          </div>
+
+          <!-- Polo 6 -->
+          <div class="schedule-item">
+            <div class="s-date-col">
+              <span class="s-date">02/10 · Sex</span>
+              <span class="s-time">19h00 (Noite)</span>
+            </div>
+            <div class="s-info-col">
+              <div class="s-place">Auditório Paço Municipal</div>
+              <div class="s-theme">Educação Digital e Grande Encerramento</div>
+            </div>
+            <div class="presence-check" title="Marcar presença">
+              <span class="check-box-square"></span>
+              <span class="check-box-label">Presença</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========================================================
+         PARTE 3: TERÇO INFERIOR DE LOGOS (~33% = 69mm)
+         ======================================================== -->
+    <div class="bottom-third">
+      <!-- Patrocínio -->
+      <div class="sponsors-wrap">
+        <div class="logos-section-title">
+          <span class="title-text">Patrocínio</span>
+          <span class="title-line"></span>
+        </div>
+
+        <div class="sponsors-row">
+          <!-- Master Tintas MC -->
+          <div class="sponsor-master-card tintas" title="Tintas MC — Patrocinador Master">
+            <span class="master-badge-mini">Master</span>
+            <img src="assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC">
+          </div>
+
+          <!-- Master Wizard -->
+          <div class="sponsor-master-card wizard" title="Wizard Cianorte — Patrocinador Master">
+            <span class="master-badge-mini">Master</span>
+            <img src="assets/patrocinadores/wizard-logo.jpeg" alt="Wizard Cianorte">
+          </div>
+
+          <!-- Log Sistemas -->
+          <div class="sponsor-reg-card" title="Log Sistemas">
+            <img class="log-logo" src="assets/patrocinadores/log-sistemas-logo.png" alt="Log Sistemas">
+          </div>
+
+          <!-- Broder -->
+          <div class="sponsor-reg-card" title="Broder">
+            <img src="assets/patrocinadores/broder-logo.png" alt="Broder">
+          </div>
+        </div>
+      </div>
+
+      <!-- Realização & Instituições Parceiras -->
+      <div class="partners-wrap">
+        <div class="logos-section-title">
+          <span class="title-text">Realização &amp; Polos Parceiros</span>
+          <span class="title-line"></span>
+        </div>
+
+        <!-- Realizadores Principais -->
+        <div class="partners-capsule">
+          <div class="p-logo-item" title="NIA - Núcleo de Inteligência Artificial">
+            <img src="assets/instituicoes/nia-logo.svg" alt="Núcleo de IA">
+          </div>
+          <div class="p-divider"></div>
+          <div class="p-logo-item" title="ACIC Cianorte">
+            <img src="assets/instituicoes/acic-logo.png" alt="ACIC Cianorte">
+          </div>
+          <div class="p-divider"></div>
+          <div class="p-logo-item" title="Programa Empreender">
+            <img src="assets/instituicoes/logo-empreender.png" alt="Programa Empreender">
+          </div>
+          <div class="p-divider"></div>
+          <div class="p-logo-item" title="Centro de Inovação de Cianorte">
+            <img src="assets/instituicoes/centro-de-inovacao-logo.png" alt="Centro de Inovação">
+          </div>
+        </div>
+
+        <!-- Faculdades e Apoio Institucional dos Polos -->
+        <div class="institutions-grid">
+          <div class="inst-item" title="UMFG"><img src="assets/instituicoes/umfg-logo.png" alt="UMFG"></div>
+          <div class="inst-item" title="UEM"><img src="assets/instituicoes/uem-logo.png" alt="UEM"></div>
+          <div class="inst-item" title="UNIPAR"><img src="assets/instituicoes/unipar-logo.png" alt="UNIPAR"></div>
+          <div class="inst-item" title="CEEP"><img src="assets/instituicoes/ceep-logo.png" alt="CEEP"></div>
+          <div class="inst-item" title="SEBRAE"><img src="assets/instituicoes/sebrae-logo.svg" alt="SEBRAE"></div>
+          <div class="inst-item" title="Prefeitura de Cianorte"><img
+              src="assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura"></div>
+        </div>
+      </div>
+
+      <!-- Rodapé -->
+      <footer class="footer-bar">
+        <span class="footer-url">semanadofuturo.com.br</span>
+        <span class="footer-instagram">
+          <svg viewBox="0 0 24 24" width="1.6em" height="1.6em" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @nia.cianorte
+        </span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    if (window.location.search.includes('headless')) {
+      document.body.classList.add('headless');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recursos & Materiais de Estudo — Semana do Futuro 2026</title>
+  <meta name="description"
+    content="Materiais oficiais, slides das apresentações, referências bibliográficas, ferramentas e conteúdos extras do Circuito Itinerante de Inteligência Artificial de Cianorte.">
+
+  <link rel="canonical" href="https://semanadofuturo.com.br/recursos">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#3B0CAD">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://semanadofuturo.com.br/recursos">
+  <meta property="og:title" content="Recursos & Materiais de Estudo — Semana do Futuro 2026">
+  <meta property="og:description"
+    content="Acesse slides, referências e ferramentas de IA recomendadas pelos palestrantes nos 6 polos de Cianorte.">
+  <meta property="og:image" content="https://semanadofuturo.com.br/assets/favicon-512x512.png">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --fundo: #000000;
+      --superficie: #0A0A12;
+      --card-bg: rgba(14, 14, 26, 0.75);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-hover: rgba(8, 209, 248, 0.35);
+      --branco: #FFFFFF;
+      --papel: #F1F2F7;
+      --indigo: #3B0CAD;
+      --azul-elo: #2B49C4;
+      --ciano: #08D1F8;
+      --ciano-glow: rgba(8, 209, 248, 0.35);
+      --azul-glow: rgba(43, 73, 196, 0.4);
+      --muted: #8E8EA8;
+      --muted-light: #C9C9DA;
+      --gradiente-oficial: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      --grad-text: linear-gradient(100deg, #FFFFFF 0%, #08D1F8 100%);
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, sans-serif;
+      --container-max: 1240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--fundo);
+      color: var(--branco);
+      font-family: var(--body);
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(59, 12, 173, 0.28) 0%, transparent 55%),
+        radial-gradient(circle at 100% 30%, rgba(8, 209, 248, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 0% 70%, rgba(43, 73, 196, 0.18) 0%, transparent 50%),
+        var(--fundo);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Header & Navegação */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 18, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 14px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo-event {
+      height: 38px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted-light);
+      transition: color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ciano);
+    }
+
+    .header-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--branco);
+      transition: all 0.2s;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: var(--ciano);
+      color: var(--ciano);
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: 999px;
+      background: var(--gradiente-oficial);
+      color: #FFFFFF;
+      box-shadow: 0 4px 16px rgba(43, 73, 196, 0.4);
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(8, 209, 248, 0.4);
+    }
+
+    /* Hero da Página de Recursos */
+    .resources-hero {
+      padding: 60px 0 36px;
+      position: relative;
+    }
+
+    .hero-top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ciano);
+      background: rgba(8, 209, 248, 0.1);
+      border: 1px solid rgba(8, 209, 248, 0.3);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-family: var(--display);
+      font-size: clamp(32px, 4.2vw, 54px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+    }
+
+    .grad-text {
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-lead {
+      font-size: clamp(16px, 1.8vw, 19px);
+      color: var(--muted-light);
+      max-width: 68ch;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    /* Central do QR Code / Studio Bar */
+    .qr-studio-panel {
+      background: linear-gradient(135deg, rgba(20, 24, 44, 0.85) 0%, rgba(10, 14, 28, 0.9) 100%);
+      border: 1px solid rgba(8, 209, 248, 0.3);
+      border-radius: 20px;
+      padding: 24px 28px;
+      margin-bottom: 48px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(8, 209, 248, 0.12);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .qr-studio-panel::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradiente-oficial);
+    }
+
+    .qr-panel-grid {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .qr-visual-box {
+      width: 140px;
+      height: 140px;
+      background: #FFFFFF;
+      border-radius: 14px;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      flex-shrink: 0;
+    }
+
+    .qr-visual-box img,
+    .qr-visual-box canvas,
+    .qr-visual-box svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qr-meta-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .qr-meta-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #70E2FF;
+    }
+
+    .qr-meta-title {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--branco);
+      letter-spacing: -0.01em;
+    }
+
+    .qr-meta-desc {
+      font-size: 14px;
+      color: var(--muted-light);
+      line-height: 1.45;
+    }
+
+    .qr-route-field {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      padding: 6px 12px;
+      gap: 8px;
+      margin-top: 4px;
+      max-width: 480px;
+    }
+
+    .qr-route-field input {
+      background: transparent;
+      border: none;
+      color: var(--ciano);
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 600;
+      width: 100%;
+      outline: none;
+    }
+
+    .qr-actions-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .btn-qr-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 9px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--branco);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-qr-action:hover {
+      background: rgba(8, 209, 248, 0.15);
+      border-color: var(--ciano);
+      color: var(--ciano);
+    }
+
+    .btn-qr-action.primary {
+      background: var(--gradiente-oficial);
+      border: none;
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(43, 73, 196, 0.35);
+    }
+
+    .btn-qr-action.primary:hover {
+      box-shadow: 0 6px 18px rgba(8, 209, 248, 0.4);
+    }
+
+    /* Barra de Busca e Filtros */
+    .filter-section {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      min-width: 280px;
+      position: relative;
+    }
+
+    .search-input-wrap svg {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      background: rgba(14, 14, 26, 0.8);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px 16px 14px 46px;
+      color: var(--branco);
+      font-family: var(--body);
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--ciano);
+      box-shadow: 0 0 0 3px rgba(8, 209, 248, 0.18);
+    }
+
+    .search-input::placeholder {
+      color: var(--muted);
+    }
+
+    .track-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-btn {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted-light);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--branco);
+    }
+
+    .filter-btn.active {
+      background: var(--ciano);
+      color: #000000;
+      border-color: var(--ciano);
+      font-weight: 700;
+      box-shadow: 0 0 14px rgba(8, 209, 248, 0.35);
+    }
+
+    /* Seções de Conteúdo */
+    .content-block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .content-block-title {
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .content-block-title::before {
+      content: "";
+      width: 4px;
+      height: 24px;
+      background: var(--ciano);
+      border-radius: 2px;
+    }
+
+    .content-block-desc {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Grade dos 6 Polos / Slides */
+    .polos-slides-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+
+    .polo-resource-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+      position: relative;
+      backdrop-filter: blur(12px);
+    }
+
+    .polo-resource-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--card-hover);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(8, 209, 248, 0.1);
+    }
+
+    .polo-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .polo-date-pill {
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ciano);
+      background: rgba(8, 209, 248, 0.1);
+      border: 1px solid rgba(8, 209, 248, 0.25);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .polo-status-tag {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #A3E635;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .polo-status-tag::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: #A3E635;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #A3E635;
+    }
+
+    .polo-status-tag.pending {
+      color: #FBBF24;
+    }
+
+    .polo-status-tag.pending::before {
+      background: #FBBF24;
+      box-shadow: 0 0 8px #FBBF24;
+    }
+
+    .polo-venue-title {
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--branco);
+      margin-bottom: 4px;
+    }
+
+    .polo-theme-desc {
+      font-size: 14px;
+      color: var(--muted-light);
+      line-height: 1.45;
+    }
+
+    .polo-speaker-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 10px;
+      padding: 10px 12px;
+    }
+
+    .polo-speaker-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--superficie);
+      border: 1px solid var(--card-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    .polo-speaker-info h5 {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--branco);
+    }
+
+    .polo-speaker-info p {
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    .polo-downloads-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      color: var(--branco);
+      transition: all 0.2s;
+    }
+
+    .dl-btn:hover {
+      background: rgba(8, 209, 248, 0.15);
+      border-color: var(--ciano);
+      color: var(--ciano);
+    }
+
+    /* Biblioteca de Links & Recursos Gerais */
+    .resources-library-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 20px;
+      margin-bottom: 56px;
+    }
+
+    .resource-entry-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      transition: transform 0.25s, border-color 0.25s;
+      position: relative;
+    }
+
+    .resource-entry-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--card-hover);
+    }
+
+    .card-meta-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .type-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: rgba(43, 73, 196, 0.2);
+      border: 1px solid rgba(43, 73, 196, 0.4);
+      color: #9EC0FF;
+    }
+
+    .level-badge {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .resource-title {
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .resource-desc {
+      font-size: 13.5px;
+      color: var(--muted-light);
+      line-height: 1.5;
+    }
+
+    .resource-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .rtag {
+      font-size: 11px;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    .resource-link-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--branco);
+      transition: all 0.2s;
+    }
+
+    .resource-link-btn:hover {
+      background: var(--ciano);
+      border-color: var(--ciano);
+      color: #000000;
+      font-weight: 800;
+    }
+
+    /* Callout de Envio de Sugestão */
+    .community-suggest-box {
+      background: radial-gradient(circle at 100% 50%, rgba(8, 209, 248, 0.15) 0%, transparent 60%),
+        rgba(14, 14, 26, 0.7);
+      border: 1px dashed rgba(8, 209, 248, 0.35);
+      border-radius: 18px;
+      padding: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .suggest-info h4 {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 6px;
+    }
+
+    .suggest-info p {
+      font-size: 14px;
+      color: var(--muted-light);
+      max-width: 60ch;
+    }
+
+    /* Rodapé */
+    .site-footer {
+      background: #05050A;
+      border-top: 1px solid var(--card-border);
+      padding: 40px 0 24px;
+      margin-top: auto;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer-ig-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ciano);
+    }
+
+    /* Toast */
+    .toast-msg {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--ciano);
+      color: #000000;
+      font-family: var(--display);
+      font-size: 13.5px;
+      font-weight: 800;
+      padding: 10px 18px;
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: none;
+    }
+
+    @media (max-width: 860px) {
+      .qr-panel-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .qr-visual-box {
+        margin: 0 auto;
+      }
+
+      .qr-route-field {
+        margin: 8px auto 0;
+      }
+
+      .qr-actions-box {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .polos-slides-grid,
+      .resources-library-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- HEADER & NAVEGAÇÃO                                                        -->
+  <!-- ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a href="index.html" title="Voltar para a Página Inicial">
+          <img src="assets/logo-branca.png" alt="Semana do Futuro" class="header-logo-event">
+        </a>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">← Página Inicial</a></li>
+          <li><a href="index.html#sobre">O Evento</a></li>
+          <li><a href="index.html#programacao">Programação</a></li>
+          <li><a href="recursos.html" class="active">📚 Recursos & Slides</a></li>
+          <li><a href="sorteador.html">🎁 Sorteios</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta-group">
+        <a href="https://instagram.com/nia.cianorte" target="_blank" class="btn-ghost" title="Instagram NIA">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @nia.cianorte
+        </a>
+        <a href="index.html#programacao" class="btn-primary">
+          Participar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- HERO DA PÁGINA DE RECURSOS                                                -->
+  <!-- ========================================================================= -->
+  <section class="resources-hero">
+    <div class="container">
+      <span class="hero-top-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        Hub Oficial de Estudos & Materiais
+      </span>
+
+      <h1 class="hero-title">
+        Aprofunde seus estudos.<br>
+        <span class="grad-text">Vá além das palestras.</span>
+      </h1>
+
+      <p class="hero-lead">
+        Compilado oficial de apresentações, slides dos 6 polos, referências acadêmicas, artigos e ferramentas de Inteligência Artificial para você continuar estudando e aplicando o conhecimento na prática.
+      </p>
+
+      <!-- ========================================================================= -->
+      <!-- CENTRAL DE GERAÇÃO & EXPORTAÇÃO DO QR CODE DA ROTA                        -->
+      <!-- ========================================================================= -->
+      <div class="qr-studio-panel">
+        <div class="qr-panel-grid">
+          <!-- Preview do QR Code -->
+          <div class="qr-visual-box" id="qrContainer" title="QR Code Oficial da Rota">
+            <img id="qrImage" src="assets/qrcode-recursos.svg" alt="QR Code Recursos Semana do Futuro">
+          </div>
+
+          <!-- Metadados da Rota -->
+          <div class="qr-meta-box">
+            <span class="qr-meta-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <rect x="7" y="7" width="3" height="3"></rect>
+                <rect x="14" y="7" width="3" height="3"></rect>
+                <rect x="7" y="14" width="3" height="3"></rect>
+              </svg>
+              QR Code Oficial dos Flyers & Filipetas
+            </span>
+            <h3 class="qr-meta-title">Template de Acesso Direto à Página de Recursos</h3>
+            <p class="qr-meta-desc">
+              Este QR Code aponta diretamente para esta página de recursos e estudos. Você pode alterar a rota no campo abaixo para gerar e baixar instantaneamente novos QR Codes em SVG (vetor para gráfica) ou PNG em 300 DPI.
+            </p>
+
+            <div class="qr-route-field">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+              <input type="text" id="routeInput" value="https://semanadofuturo.com.br/recursos"
+                title="URL de destino do QR Code">
+            </div>
+          </div>
+
+          <!-- Botões de Ação & Download -->
+          <div class="qr-actions-box">
+            <button class="btn-qr-action primary" onclick="copyRouteUrl()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copiar Link da Rota
+            </button>
+            <a href="assets/qrcode-recursos.svg" download="qrcode-semana-do-futuro-recursos.svg" class="btn-qr-action">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Baixar Vetor (SVG)
+            </a>
+            <a href="assets/qrcode-recursos.png" download="qrcode-semana-do-futuro-recursos.png" class="btn-qr-action">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              Baixar PNG (300 DPI)
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- FILTROS & BUSCA DINÂMICA                                                  -->
+      <!-- ========================================================================= -->
+      <div class="filter-section">
+        <div class="search-row">
+          <div class="search-input-wrap">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="searchInput" class="search-input"
+              placeholder="Buscar por tema, polo, tecnologia, palestrante ou palavra-chave..."
+              oninput="filterResources()">
+          </div>
+        </div>
+
+        <div class="track-filters">
+          <button class="filter-btn active" data-filter="all" onclick="setFilter('all', this)">Todos os Recursos</button>
+          <button class="filter-btn" data-filter="slides" onclick="setFilter('slides', this)">Slides dos Polos</button>
+          <button class="filter-btn" data-filter="fundamentos" onclick="setFilter('fundamentos', this)">Fundamentos de IA</button>
+          <button class="filter-btn" data-filter="rag" onclick="setFilter('rag', this)">RAG & LLMs</button>
+          <button class="filter-btn" data-filter="negocios" onclick="setFilter('negocios', this)">IA & Negócios</button>
+          <button class="filter-btn" data-filter="dev" onclick="setFilter('dev', this)">Desenvolvimento & Ferramentas</button>
+          <button class="filter-btn" data-filter="educacao" onclick="setFilter('educacao', this)">Educação & Sociedade</button>
+        </div>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- BLOCO 1: SLIDES & APRESENTAÇÕES DOS 6 POLOS                               -->
+      <!-- ========================================================================= -->
+      <div class="content-block-header">
+        <div>
+          <h2 class="content-block-title">Apresentações Oficiais dos 6 Polos</h2>
+          <p class="content-block-desc">Slides, demonstrações e anotações técnicas liberados após cada noite do circuito.</p>
+        </div>
+      </div>
+
+      <div class="polos-slides-grid" id="polosGrid">
+        <!-- Polo 1 -->
+        <article class="polo-resource-card" data-category="slides negocios">
+          <div>
+            <div class="polo-card-top">
+              <span class="polo-date-pill">28/09 · Seg · 19h30</span>
+              <span class="polo-status-tag pending">Liberado após a sessão</span>
+            </div>
+            <h4 class="polo-venue-title">Anfiteatro UMFG</h4>
+            <p class="polo-theme-desc">Marketing, Posicionamento e Estratégia Comercial na era da IA.</p>
+          </div>
+          <div class="polo-speaker-box">
+            <div class="polo-speaker-avatar">📈</div>
+            <div class="polo-speaker-info">
+              <h5>Painel Aberto de Mercado</h5>
+              <p>Cases práticos de CRM, geração de demanda e automação</p>
+            </div>
+          </div>
+          <div class="polo-downloads-list">
+            <button class="dl-btn" onclick="notifySoon('Slides UMFG')">📄 Slides (PDF em breve)</button>
+            <button class="dl-btn" onclick="notifySoon('Frameworks')">🔗 Links e Ferramentas</button>
+          </div>
+        </article>
+
+        <!-- Polo 2 -->
+        <article class="polo-resource-card" data-category="slides fundamentos">
+          <div>
+            <div class="polo-card-top">
+              <span class="polo-date-pill">29/09 · Ter · 19h30</span>
+              <span class="polo-status-tag pending">Liberado após a sessão</span>
+            </div>
+            <h4 class="polo-venue-title">Anfiteatro UEM Cianorte</h4>
+            <p class="polo-theme-desc">Desmistificando a IA no mercado de trabalho e novas carreiras.</p>
+          </div>
+          <div class="polo-speaker-box">
+            <div class="polo-speaker-avatar">🎓</div>
+            <div class="polo-speaker-info">
+              <h5>Pesquisa & Carreira</h5>
+              <p>Habilidades indispensáveis e futuro das profissões</p>
+            </div>
+          </div>
+          <div class="polo-downloads-list">
+            <button class="dl-btn" onclick="notifySoon('Slides UEM')">📄 Slides (PDF em breve)</button>
+            <button class="dl-btn" onclick="notifySoon('Roadmap de Carreira')">🧭 Roadmap de Estudos</button>
+          </div>
+        </article>
+
+        <!-- Polo 3 -->
+        <article class="polo-resource-card" data-category="slides negocios">
+          <div>
+            <div class="polo-card-top">
+              <span class="polo-date-pill">30/09 · Qua · 19h30</span>
+              <span class="polo-status-tag pending">Liberado após a sessão</span>
+            </div>
+            <h4 class="polo-venue-title">Auditório SEBRAE</h4>
+            <p class="polo-theme-desc">Ecossistema Regional de Inovação, Startups e Novos Modelos de Negócio.</p>
+          </div>
+          <div class="polo-speaker-box">
+            <div class="polo-speaker-avatar">💡</div>
+            <div class="polo-speaker-info">
+              <h5>Inovação Regional</h5>
+              <p>Linhas de fomento, estruturação de startups e incubação</p>
+            </div>
+          </div>
+          <div class="polo-downloads-list">
+            <button class="dl-btn" onclick="notifySoon('Slides SEBRAE')">📄 Slides (PDF em breve)</button>
+            <button class="dl-btn" onclick="notifySoon('Guia de Fomento')">📊 Guia de Ecossistema</button>
+          </div>
+        </article>
+
+        <!-- Polo 4 -->
+        <article class="polo-resource-card" data-category="slides rag dev">
+          <div>
+            <div class="polo-card-top">
+              <span class="polo-date-pill">01/10 · Qui · 19h30</span>
+              <span class="polo-status-tag pending">Liberado após a sessão</span>
+            </div>
+            <h4 class="polo-venue-title">Anfiteatro UNIPAR</h4>
+            <p class="polo-theme-desc">RAG (Retrieval-Augmented Generation) e Inteligência Artificial Aplicada.</p>
+          </div>
+          <div class="polo-speaker-box">
+            <div class="polo-speaker-avatar">⚙️</div>
+            <div class="polo-speaker-info">
+              <h5>Arquitetura & Engenharia</h5>
+              <p>Bancos vetoriais, embeddings e integração com dados corporativos</p>
+            </div>
+          </div>
+          <div class="polo-downloads-list">
+            <button class="dl-btn" onclick="notifySoon('Slides UNIPAR')">📄 Slides (PDF em breve)</button>
+            <button class="dl-btn" onclick="notifySoon('Código RAG')">💻 Repositório GitHub</button>
+          </div>
+        </article>
+
+        <!-- Polo 5 -->
+        <article class="polo-resource-card" data-category="slides dev">
+          <div>
+            <div class="polo-card-top">
+              <span class="polo-date-pill">02/10 · Sex · 09h00</span>
+              <span class="polo-status-tag pending">Liberado após a sessão</span>
+            </div>
+            <h4 class="polo-venue-title">Anfiteatro CEEP</h4>
+            <p class="polo-theme-desc">Desenvolvimento de Software, Engenharia de Prompt e o Futuro da TI.</p>
+          </div>
+          <div class="polo-speaker-box">
+            <div class="polo-speaker-avatar">💻</div>
+            <div class="polo-speaker-info">
+              <h5>Pair Programming & Agentes</h5>
+              <p>Assistentes de código, depuração autônoma e DevOps inteligente</p>
+            </div>
+          </div>
+          <div class="polo-downloads-list">
+            <button class="dl-btn" onclick="notifySoon('Slides CEEP')">📄 Slides (PDF em breve)</button>
+            <button class="dl-btn" onclick="notifySoon('Guia de Prompts')">🛠️ Prompt Cheatsheet</button>
+          </div>
+        </article>
+
+        <!-- Polo 6 -->
+        <article class="polo-resource-card" data-category="slides educacao">
+          <div>
+            <div class="polo-card-top">
+              <span class="polo-date-pill">02/10 · Sex · 19h00</span>
+              <span class="polo-status-tag pending">Liberado após a sessão</span>
+            </div>
+            <h4 class="polo-venue-title">Auditório Paço Municipal</h4>
+            <p class="polo-theme-desc">Educação Digital, Impacto Social e o Grande Encerramento da Semana.</p>
+          </div>
+          <div class="polo-speaker-box">
+            <div class="polo-speaker-avatar">🏛️</div>
+            <div class="polo-speaker-info">
+              <h5>Políticas Públicas & Futuro</h5>
+              <p>Letramento digital, IA nas escolas e sustentabilidade</p>
+            </div>
+          </div>
+          <div class="polo-downloads-list">
+            <button class="dl-btn" onclick="notifySoon('Slides Paço')">📄 Slides (PDF em breve)</button>
+            <button class="dl-btn" onclick="notifySoon('Manifesto')">📜 Manifesto do Futuro</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- BLOCO 2: BIBLIOTECA DE LINKS, PAPERS & FERRAMENTAS                        -->
+      <!-- ========================================================================= -->
+      <div class="content-block-header">
+        <div>
+          <h2 class="content-block-title">Materiais Recomendados para Estudo</h2>
+          <p class="content-block-desc">Curadoria aberta de leituras, tutoriais e repositórios selecionados pelos palestrantes.</p>
+        </div>
+      </div>
+
+      <div class="resources-library-grid" id="resourcesGrid">
+        <!-- Recurso 1: RAG -->
+        <article class="resource-entry-card" data-category="rag dev">
+          <div>
+            <div class="card-meta-header">
+              <span class="type-badge">Arquitetura RAG</span>
+              <span class="level-badge">Intermediário</span>
+            </div>
+            <h4 class="resource-title">O que é RAG (Retrieval-Augmented Generation)?</h4>
+            <p class="resource-desc">
+              Guia conceitual e arquitetural explicando como conectar LLMs com bases privadas de documentos para eliminar alucinações e alimentar agentes com dados em tempo real.
+            </p>
+          </div>
+          <div>
+            <div class="resource-tags">
+              <span class="rtag">#rag</span>
+              <span class="rtag">#vetores</span>
+              <span class="rtag">#embeddings</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="https://aws.amazon.com/pt/what-is/retrieval-augmented-generation/" target="_blank"
+                class="resource-link-btn">
+                <span>Acessar Guia Completo</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recurso 2: Engenharia de Prompts -->
+        <article class="resource-entry-card" data-category="fundamentos dev">
+          <div>
+            <div class="card-meta-header">
+              <span class="type-badge">Documentação</span>
+              <span class="level-badge">Iniciante / Todos</span>
+            </div>
+            <h4 class="resource-title">Guia Canônico de Engenharia de Prompt</h4>
+            <p class="resource-desc">
+              Técnicas essenciais de Few-shot, Chain-of-Thought e estruturação determinística de contexto para obter respostas assertivas de qualquer modelo de linguagem.
+            </p>
+          </div>
+          <div>
+            <div class="resource-tags">
+              <span class="rtag">#prompt</span>
+              <span class="rtag">#few-shot</span>
+              <span class="rtag">#llm</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="https://www.promptingguide.ai/pt" target="_blank" class="resource-link-btn">
+                <span>Acessar Prompting Guide</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recurso 3: IA nos Negócios -->
+        <article class="resource-entry-card" data-category="negocios">
+          <div>
+            <div class="card-meta-header">
+              <span class="type-badge">Estratégia & ROI</span>
+              <span class="level-badge">Negócios / Gestão</span>
+            </div>
+            <h4 class="resource-title">Framework de Implementação de IA em PMEs</h4>
+            <p class="resource-desc">
+              Passo a passo para pequenas e médias empresas identificarem gargalos operacionais que podem ser automatizados de forma viável, mensurando retorno sobre investimento (ROI).
+            </p>
+          </div>
+          <div>
+            <div class="resource-tags">
+              <span class="rtag">#pme</span>
+              <span class="rtag">#roi</span>
+              <span class="rtag">#automacao</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="https://sebrae.com.br/sites/PortalSebrae" target="_blank" class="resource-link-btn">
+                <span>Explorar Conteúdos SEBRAE</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recurso 4: Agentes Autônomos -->
+        <article class="resource-entry-card" data-category="dev rag">
+          <div>
+            <div class="card-meta-header">
+              <span class="type-badge">Engenharia Dev</span>
+              <span class="level-badge">Avançado</span>
+            </div>
+            <h4 class="resource-title">Padrões de Agentes de IA & Tool Calling</h4>
+            <p class="resource-desc">
+              Como construir sistemas com chamadas a APIs, uso de memória compartilhada, orquestração multi-agente e execução em sandbox para automações avançadas.
+            </p>
+          </div>
+          <div>
+            <div class="resource-tags">
+              <span class="rtag">#agents</span>
+              <span class="rtag">#tool-calling</span>
+              <span class="rtag">#mcp</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="https://github.com" target="_blank" class="resource-link-btn">
+                <span>Repositórios & Exemplos</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recurso 5: Educação & Sociedade -->
+        <article class="resource-entry-card" data-category="educacao">
+          <div>
+            <div class="card-meta-header">
+              <span class="type-badge">Artigo & Discussão</span>
+              <span class="level-badge">Sociedade</span>
+            </div>
+            <h4 class="resource-title">Inteligência Artificial e o Futuro da Educação</h4>
+            <p class="resource-desc">
+              Reflexões sobre avaliação por competência, hiper-personalização de aprendizado em sala de aula e ética digital para professores e gestores escolares.
+            </p>
+          </div>
+          <div>
+            <div class="resource-tags">
+              <span class="rtag">#educacao</span>
+              <span class="rtag">#escola</span>
+              <span class="rtag">#letramento</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="https://unesco.org" target="_blank" class="resource-link-btn">
+                <span>Diretrizes UNESCO para IA</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Recurso 6: Ferramentas & Ecossistema -->
+        <article class="resource-entry-card" data-category="fundamentos dev">
+          <div>
+            <div class="card-meta-header">
+              <span class="type-badge">Hub de Ferramentas</span>
+              <span class="level-badge">Geral</span>
+            </div>
+            <h4 class="resource-title">Radar de Ferramentas de IA em Produção</h4>
+            <p class="resource-desc">
+              Diretório selecionado de modelos abertos (Llama, Mistral), bancos vetoriais (Chroma, Qdrant) e frameworks modernos para construir soluções completas.
+            </p>
+          </div>
+          <div>
+            <div class="resource-tags">
+              <span class="rtag">#open-source</span>
+              <span class="rtag">#modelos</span>
+              <span class="rtag">#ferramentas</span>
+            </div>
+            <div style="margin-top: 14px;">
+              <a href="https://huggingface.co" target="_blank" class="resource-link-btn">
+                <span>Acessar Hugging Face</span>
+                <span>↗</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ========================================================================= -->
+      <!-- BOX DE CONTRIBUIÇÃO / INDICAÇÃO                                           -->
+      <!-- ========================================================================= -->
+      <div class="community-suggest-box">
+        <div class="suggest-info">
+          <h4>💡 Quer indicar um material, paper ou ferramenta?</h4>
+          <p>
+            O Núcleo de IA de Cianorte recebe indicações de links, repositórios abertos e estudos para enriquecer este hub. Envie sua sugestão diretamente pelo nosso canal no Instagram.
+          </p>
+        </div>
+        <div>
+          <a href="https://instagram.com/nia.cianorte" target="_blank" class="btn-primary" style="padding: 12px 24px;">
+            Mandar no Instagram @nia.cianorte ↗
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- RODAPÉ                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-row">
+        <div class="brand-group">
+          <img src="assets/logo-branca.png" alt="Semana do Futuro" style="height: 32px; width: auto;">
+        </div>
+        <div class="footer-copy">
+          Semana do Futuro 2026 · Circuito Itinerante de IA em Cianorte
+        </div>
+        <a href="https://instagram.com/nia.cianorte" target="_blank" class="footer-ig-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+          @nia.cianorte
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mensagem Toast -->
+  <div id="toast" class="toast-msg"></div>
+
+  <!-- Scripts Interativos -->
+  <script>
+    // Inicialização da Rota Dinâmica
+    window.addEventListener('DOMContentLoaded', () => {
+      const routeField = document.getElementById('routeInput');
+      if (routeField && window.location.origin && window.location.origin !== 'null' && window.location.protocol.startsWith('http')) {
+        routeField.value = window.location.origin + '/recursos';
+      }
+    });
+
+    // Copiar URL da Rota
+    function copyRouteUrl() {
+      const input = document.getElementById('routeInput');
+      if (input) {
+        navigator.clipboard.writeText(input.value).then(() => {
+          showToast('Link da rota copiado com sucesso!');
+        }).catch(() => {
+          input.select();
+          document.execCommand('copy');
+          showToast('Link copiado!');
+        });
+      }
+    }
+
+    // Feedback de Em Breve
+    function notifySoon(name) {
+      showToast(`${name}: será disponibilizado logo após a realização do polo.`);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      if (toast) {
+        toast.innerText = msg;
+        toast.style.display = 'block';
+        setTimeout(() => {
+          toast.style.display = 'none';
+        }, 3200);
+      }
+    }
+
+    // Filtros por Categoria
+    function setFilter(category, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const poloCards = document.querySelectorAll('.polo-resource-card');
+      const resourceCards = document.querySelectorAll('.resource-entry-card');
+
+      poloCards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        if (category === 'all' || cat.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      resourceCards.forEach(card => {
+        const cat = card.getAttribute('data-category') || '';
+        if (category === 'all' || cat.includes(category)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Busca Dinâmica em Tempo Real
+    function filterResources() {
+      const q = document.getElementById('searchInput').value.toLowerCase().trim();
+      const allCards = document.querySelectorAll('.polo-resource-card, .resource-entry-card');
+
+      allCards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (!q || text.includes(q)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
