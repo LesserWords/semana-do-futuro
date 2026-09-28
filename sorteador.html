@@ -961,6 +961,7 @@
   <div class="header-actions">
     <button class="btn-s" onclick="toggleDrawer('prizes')">🎁 Prêmios (<span id="prize-count">0</span>)</button>
     <button class="btn-s" onclick="toggleDrawer('history')">📜 Ganhadores (<span id="history-count">0</span>)</button>
+    <button class="btn-s" onclick="carregarPorUrl()">📥 Importar Planilha</button>
     <button class="btn-s" onclick="toggleDrawer('settings')">⚙️ Dados</button>
     <button class="btn-s" onclick="toggleFullscreen()">⛶ Telão</button>
   </div>
@@ -1115,8 +1116,8 @@
   </div>
 
   <div class="form-group">
-    <label>Importar via URL CSV da Planilha Google</label>
-    <input type="url" id="cfg-url" placeholder="https://docs.google.com/spreadsheets/d/.../export?format=csv">
+    <label>Importar via URL CSV da Planilha Google · <a href="https://docs.google.com/spreadsheets/d/1g8d6pAokXw9xHEXfS2ZG6nFfCm_lLuG01sqZgY4Flig/edit?usp=sharing" target="_blank" rel="noopener">abrir planilha de hoje ↗</a></label>
+    <input type="url" id="cfg-url" value="https://docs.google.com/spreadsheets/d/1g8d6pAokXw9xHEXfS2ZG6nFfCm_lLuG01sqZgY4Flig/gviz/tq?tqx=out:csv" placeholder="https://docs.google.com/spreadsheets/d/.../export?format=csv">
     <button class="btn-s" style="margin-top:6px; width:100%; justify-content:center;" onclick="carregarPorUrl()">📥 Carregar Dados</button>
   </div>
 
@@ -1636,7 +1637,7 @@ function carregarTexto() {
   const lines = txt.split('\n');
   const novos = [];
   lines.forEach(l => {
-    const p = l.split(/[,;\t]/).map(s => s.trim());
+    const p = l.split(/[,;\t]/).map(s => s.trim().replace(/^"|"$/g, ''));
     if (p[0] && !['nome','nome completo'].includes(p[0].toLowerCase())) {
       const hasCheckin = p.length >= 4 && ['SIM','NAO','NÃO'].includes(p[3]?.toUpperCase());
       novos.push({
