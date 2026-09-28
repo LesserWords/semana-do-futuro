@@ -10,15 +10,13 @@
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <meta name="googlebot" content="noindex, nofollow">
 
-  <base href="/">
-
   <!-- Favicon Oficial -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192x192.png">
+  <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#3B0CAD">
 
   <!-- Google Fonts: Space Grotesk & IBM Plex Sans -->
@@ -678,12 +676,18 @@
     }
 
     /* SLIDE 6: Palestrantes do Dia */
+    .slide[data-slide="5"] .slide-header {
+      text-align: center;
+      margin: 0 auto 32px auto;
+      max-width: 1100px;
+    }
+
     .speakers-deck-grid {
       display: flex;
       justify-content: center;
-      gap: 56px;
+      gap: 70px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      margin-top: 10px;
       align-items: center;
     }
 
@@ -692,8 +696,8 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      max-width: 420px;
-      padding: 12px;
+      max-width: 440px;
+      padding: 16px 20px;
       transition: all 0.3s;
     }
 
@@ -702,13 +706,15 @@
     }
 
     .speaker-avatar {
-      width: 180px;
-      height: 180px;
+      width: 210px;
+      height: 210px;
       border-radius: 50%;
       border: 4px solid var(--ciano);
-      box-shadow: 0 0 35px rgba(8, 209, 248, 0.5);
+      box-shadow: 0 0 35px rgba(8, 209, 248, 0.45);
       object-fit: cover;
-      margin-bottom: 20px;
+      object-position: center center;
+      margin-bottom: 22px;
+      background: #0A0A14;
     }
 
     .speaker-avatar.placeholder {
@@ -982,13 +988,13 @@
 
   <!-- Logo Oficial Permanente do Evento (Visível em todos os slides) -->
   <div class="deck-permanent-brand">
-    <img src="assets/logo-branca.png" alt="Semana do Futuro 2026">
+    <img src="../assets/logo-branca.png" alt="Semana do Futuro 2026">
   </div>
 
   <!-- Top HUD Bar (Visível apenas on hover no topo da página) -->
   <header class="deck-hud" id="hudBar">
     <div class="brand-group">
-      <img src="assets/logo-branca.png" alt="Semana do Futuro 2026">
+      <img src="../assets/logo-branca.png" alt="Semana do Futuro 2026">
       <div class="brand-badge" id="hudSessionBadge">POLO 01 · UMFG</div>
     </div>
 
@@ -1052,7 +1058,7 @@
               <div class="emblem-halo"></div>
               <div class="emblem-ring-outer"></div>
               <div class="emblem-ring-inner"></div>
-              <img src="assets/simbolo-gradiente.png" alt="Emblema Semana do Futuro" class="emblem-symbol">
+              <img src="../assets/simbolo-gradiente.png" alt="Emblema Semana do Futuro" class="emblem-symbol">
             </div>
           </div>
         </div>
@@ -1139,10 +1145,10 @@
             <div class="sponsor-tier-heading">💎 Patrocinadores Master</div>
             <div class="master-plaques-grid">
               <div class="sponsor-plaque master">
-                <img src="assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC">
+                <img src="../assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC">
               </div>
               <div class="sponsor-plaque master">
-                <img src="assets/patrocinadores/wizard-logo.jpeg" alt="Wizard Cianorte">
+                <img src="../assets/patrocinadores/wizard-logo.jpeg" alt="Wizard Cianorte">
               </div>
             </div>
           </div>
@@ -1151,10 +1157,10 @@
             <div class="sponsor-tier-heading">🤝 Patrocinadores de Ativação</div>
             <div class="standard-plaques-grid">
               <div class="sponsor-plaque standard">
-                <img src="assets/patrocinadores/log-sistemas-logo-cor.png" alt="Log Sistemas">
+                <img src="../assets/patrocinadores/log-sistemas-logo-cor.png" alt="Log Sistemas">
               </div>
               <div class="sponsor-plaque standard">
-                <img src="assets/patrocinadores/broder-logo.png" alt="Broder">
+                <img src="../assets/patrocinadores/broder-logo.png" alt="Broder">
               </div>
             </div>
           </div>
@@ -1174,56 +1180,56 @@
         <div class="entities-stage">
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/nia-logo.svg" alt="NIA — Núcleo de IA">
+              <img src="../assets/instituicoes/nia-logo.svg" alt="NIA — Núcleo de IA">
             </div>
             <span>NIA · Núcleo de IA</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/umfg-logo.png" alt="Faculdade UMFG">
+              <img src="../assets/instituicoes/umfg-logo.png" alt="Faculdade UMFG">
             </div>
             <span>Faculdade UMFG</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/uem-logo.png" alt="UEM Câmpus Cianorte">
+              <img src="../assets/instituicoes/uem-logo.png" alt="UEM Câmpus Cianorte">
             </div>
             <span>UEM Cianorte</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/unipar-logo.png" alt="UNIPAR Cianorte">
+              <img src="../assets/instituicoes/unipar-logo.png" alt="UNIPAR Cianorte">
             </div>
             <span>UNIPAR Cianorte</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/ceep-logo.png" alt="CEEP Cianorte">
+              <img src="../assets/instituicoes/ceep-logo.png" alt="CEEP Cianorte">
             </div>
             <span>CEEP Cianorte</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/sebrae-logo.svg" alt="SEBRAE Paraná">
+              <img src="../assets/instituicoes/sebrae-logo.svg" alt="SEBRAE Paraná">
             </div>
             <span>SEBRAE Paraná</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/acic-logo.png" alt="ACIC Cianorte">
+              <img src="../assets/instituicoes/acic-logo.png" alt="ACIC Cianorte">
             </div>
             <span>ACIC Cianorte</span>
           </div>
 
           <div class="entity-plaque-col">
             <div class="entity-plaque">
-              <img src="assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura de Cianorte">
+              <img src="../assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura de Cianorte">
             </div>
             <span>Prefeitura de Cianorte</span>
           </div>
@@ -1281,7 +1287,7 @@
 
           <div class="resources-qr-card">
             <div class="qr-white-frame">
-              <img src="assets/qrcode-recursos.svg" alt="QR Code da página de recursos">
+              <img src="../assets/qrcode-recursos.svg" alt="QR Code da página de recursos">
             </div>
             <h3>Conteúdo Complementar</h3>
             <p>Slides, links e materiais dos palestrantes</p>
@@ -1323,13 +1329,13 @@
             name: "Vinicius Grecco",
             role: "Especialista em Marketing e Estratégia Digital",
             tag: "Palestrante Convidado",
-            avatar: "assets/palestrantes/vinicius-grecco-foto.png"
+            avatar: "../assets/palestrantes/vinicius-grecco-quadrado.png"
           },
           {
             name: "Prof. Willian Pelissari",
             role: "Docência, Inovação e Educação Tecnológica",
             tag: "Educador Anfitrião · UMFG",
-            avatar: "assets/palestrantes/willian-pelissari-foto.png"
+            avatar: "../assets/palestrantes/willian-pelissari-quadrado.png"
           }
         ]
       },
@@ -1344,13 +1350,13 @@
             name: "João Gabriel Mauricio",
             role: "Senior Software Engineer na Altas AI",
             tag: "Palestrante Convidado",
-            avatar: "assets/palestrantes/joao-gabriel-foto.jpeg"
+            avatar: "../assets/palestrantes/joao-gabriel-quadrado.jpeg"
           },
           {
             name: "Profa. Me. Anelise Dalberto",
             role: "Docente · Fab Lab Design UEM Cianorte",
             tag: "Educadora Anfitriã · UEM",
-            avatar: "assets/palestrantes/anelise-dalberto-foto.jpeg"
+            avatar: "../assets/palestrantes/anelise-dalberto-quadrado.jpeg"
           }
         ]
       },
@@ -1380,19 +1386,19 @@
             name: "Allan da Silva",
             role: "Tech Lead, Dev Full Stack e Prof. Universitário",
             tag: "Palestrante Convidado",
-            avatar: "assets/palestrantes/allan-da-silva-foto.jpeg"
+            avatar: "../assets/palestrantes/allan-da-silva-quadrado.jpeg"
           },
           {
             name: "Alberto Vieira de Lima",
             role: "CIO Think Outside Tech — Especialista em IA e RAG",
             tag: "Palestrante Convidado",
-            avatar: "assets/palestrantes/alberto-vieira-de-lima-foto.jpeg"
+            avatar: "../assets/palestrantes/alberto-vieira-de-lima-quadrado.jpeg"
           },
           {
             name: "Erica Romero",
             role: "Coord. do Núcleo de Ciências Sociais e Humanas",
             tag: "Educadora Anfitriã · UNIPAR",
-            avatar: "assets/palestrantes/erica-romero-foto.jpeg"
+            avatar: "../assets/palestrantes/erica-romero-quadrado.jpeg"
           }
         ]
       },
@@ -1407,19 +1413,19 @@
             name: "Pedro Lucas Pancotte",
             role: "Software Engineer / Yungu — Soluções Tecnológicas",
             tag: "Palestrante Convidado",
-            avatar: "assets/palestrantes/pedro-pancotte-foto.png"
+            avatar: "../assets/palestrantes/pedro-pancotte-quadrado.png"
           },
           {
             name: "Guilherme Vicentini",
             role: "Mestre (ITA), Prof. Universitário UMFG & Dev Full Stack",
             tag: "Palestrante Convidado",
-            avatar: "assets/palestrantes/guilherme-vicentini-foto.jpeg"
+            avatar: "../assets/palestrantes/guilherme-vicentini-foto.jpeg"
           },
           {
             name: "Edvaldo Rodrigues",
             role: "Coord. Curso Técnico em Desenvolvimento de Sistemas",
             tag: "Educador Anfitrião · CEEP",
-            avatar: "assets/palestrantes/edvaldo-rodrigues-foto.jpeg"
+            avatar: "../assets/palestrantes/edvaldo-rodrigues-quadrado.jpeg"
           }
         ]
       },
@@ -1434,19 +1440,19 @@
             name: "Claudia Roberta Stefane",
             role: "Coord. Educação Integral e Inovação Pedagógica",
             tag: "Palestrante SME",
-            avatar: "assets/palestrantes/claudia-stefane-foto.jpeg"
+            avatar: "../assets/palestrantes/claudia-stefane-quadrado.jpeg"
           },
           {
             name: "Douglas Possavati",
             role: "Coord. Pedagógico de Educação Digital",
             tag: "Palestrante SME",
-            avatar: "assets/palestrantes/douglas-possavati-foto.jpeg"
+            avatar: "../assets/palestrantes/douglas-possavati-quadrado.jpeg"
           },
           {
             name: "Prof. Willian Pelissari",
             role: "Docência, Inovação e Educação Tecnológica",
             tag: "Convidado Especial",
-            avatar: "assets/palestrantes/willian-pelissari-foto.png"
+            avatar: "../assets/palestrantes/willian-pelissari-quadrado.png"
           }
         ]
       }
