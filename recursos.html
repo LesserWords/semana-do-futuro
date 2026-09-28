@@ -384,11 +384,167 @@
       background: var(--gradiente-oficial);
       border: none;
       color: #FFFFFF;
-      box-shadow: 0 4px 12px rgba(43, 73, 196, 0.35);
+      box-shadow: 0 4px 14px rgba(43, 73, 196, 0.4);
     }
 
     .btn-qr-action.primary:hover {
-      box-shadow: 0 6px 18px rgba(8, 209, 248, 0.4);
+      box-shadow: 0 6px 20px rgba(8, 209, 248, 0.45);
+      color: #FFFFFF;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background: #00E676;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #00E676;
+      animation: pulseGreen 1.8s infinite ease-in-out;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(0.85); }
+    }
+
+    .btn-copy-inline {
+      background: rgba(8, 209, 248, 0.12);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+      color: var(--ciano);
+      font-family: var(--display);
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-copy-inline:hover {
+      background: var(--ciano);
+      color: #000000;
+      box-shadow: 0 0 12px rgba(8, 209, 248, 0.4);
+    }
+
+    .route-icon {
+      font-size: 14px;
+      opacity: 0.8;
+      user-select: none;
+    }
+
+    /* Modal de Ampliação do QR Code */
+    .qr-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 99999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .qr-modal-backdrop.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    .qr-modal-card {
+      background: #0D0E18;
+      border: 1px solid rgba(8, 209, 248, 0.4);
+      border-radius: 24px;
+      padding: 34px 28px;
+      text-align: center;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 45px rgba(8, 209, 248, 0.25);
+      position: relative;
+      transform: scale(0.95);
+      transition: transform 0.25s ease;
+    }
+
+    .qr-modal-backdrop.open .qr-modal-card {
+      transform: scale(1);
+    }
+
+    .qr-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--branco);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .qr-modal-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: var(--ciano);
+    }
+
+    .qr-modal-header h3 {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--branco);
+      margin: 8px 0 6px;
+    }
+
+    .qr-modal-header p {
+      font-size: 13.5px;
+      color: var(--muted-light);
+      line-height: 1.45;
+    }
+
+    .qr-modal-img-wrap {
+      width: 250px;
+      height: 250px;
+      background: #FFFFFF;
+      border-radius: 18px;
+      padding: 12px;
+      margin: 18px auto 14px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-modal-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .qr-modal-url {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ciano);
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+      display: block;
+      word-break: break-all;
+    }
+
+    .qr-modal-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     /* Barra de Busca e Filtros */
@@ -893,6 +1049,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">← Página Inicial</a></li>
+          <li><a href="#checkin-panel" style="color: #70E2FF; font-weight: 700;">⚡ Check-in</a></li>
           <li><a href="index.html#sobre">O Evento</a></li>
           <li><a href="index.html#programacao">Programação</a></li>
           <li><a href="recursos.html" class="active">📚 Recursos & Slides</a></li>
@@ -909,8 +1066,8 @@
           </svg>
           @nia.cianorte
         </a>
-        <a href="index.html#programacao" class="btn-primary">
-          Participar
+        <a href="#checkin-panel" class="btn-primary" style="background: var(--gradiente-oficial); box-shadow: 0 0 16px rgba(8, 209, 248, 0.4);">
+          ⚡ Fazer Check-in
         </a>
       </div>
     </div>
@@ -938,7 +1095,53 @@
         Compilado oficial de apresentações, slides dos 6 polos, referências acadêmicas, artigos e ferramentas de Inteligência Artificial para você continuar estudando e aplicando o conhecimento na prática.
       </p>
 
+      <!-- ========================================================================= -->
+      <!-- PAINEL CENTRAL DE CHECK-IN & QR CODE DO DIA                               -->
+      <!-- ========================================================================= -->
+      <section class="qr-studio-panel" id="checkin-panel">
+        <div class="qr-panel-grid">
+          <div class="qr-visual-box" title="Aponte a câmera do celular para fazer check-in">
+            <img src="assets/qrcode-checkin.svg" alt="QR Code Oficial de Check-in" id="checkinQrImg" width="124" height="124">
+          </div>
 
+          <div class="qr-meta-box">
+            <div class="qr-meta-badge">
+              <span class="live-dot"></span>
+              ⚡ Check-in Oficial · Presença na Hora
+            </div>
+            <h3 class="qr-meta-title">Está no evento? Confirme sua presença agora</h3>
+            <p class="qr-meta-desc">
+              Escaneie o QR Code com a câmera do seu celular (ou clique no botão ao lado) para confirmar sua presença no polo de hoje, garantir seu <strong>Certificado Oficial de 5 Horas</strong> e validar sua participação nos <strong>sorteios de brindes ao vivo</strong> no telão.
+            </p>
+            <div class="qr-route-field">
+              <span class="route-icon" title="Link do Google Form">🔗</span>
+              <input type="text" id="checkinInput" value="https://forms.gle/NSLJ7wpeTNnGWU4k9" readonly>
+              <button type="button" class="btn-copy-inline" onclick="copyCheckinUrl()" title="Copiar link do formulário">
+                Copiar Link
+              </button>
+            </div>
+          </div>
+
+          <div class="qr-actions-box">
+            <a href="https://forms.gle/NSLJ7wpeTNnGWU4k9" target="_blank" rel="noopener noreferrer" class="btn-qr-action primary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Fazer Check-in Agora
+            </a>
+            <button type="button" class="btn-qr-action" onclick="openQrModal()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <path d="M15 3v6h6"></path>
+                <path d="M9 21v-6H3"></path>
+              </svg>
+              Ampliar QR Code
+            </button>
+          </div>
+        </div>
+      </section>
 
       <!-- ========================================================================= -->
       <!-- FILTROS & BUSCA DINÂMICA                                                  -->
@@ -1336,32 +1539,78 @@
     </div>
   </footer>
 
+  <!-- Modal Ampliar QR Code -->
+  <div id="qrModal" class="qr-modal-backdrop" onclick="closeQrModal(event)">
+    <div class="qr-modal-card">
+      <button class="qr-modal-close" onclick="closeQrModal()" title="Fechar janela">✕</button>
+      <div class="qr-modal-header">
+        <span class="qr-meta-badge"><span class="live-dot"></span> ⚡ Semana do Futuro 2026</span>
+        <h3>Check-in Oficial de Presença</h3>
+        <p>Aponte a câmera do seu celular para registrar sua presença na sessão de hoje</p>
+      </div>
+      <div class="qr-modal-img-wrap">
+        <img src="assets/qrcode-checkin.svg" alt="QR Code Oficial de Check-in">
+      </div>
+      <span class="qr-modal-url">forms.gle/NSLJ7wpeTNnGWU4k9</span>
+      <div class="qr-modal-actions">
+        <a href="https://forms.gle/NSLJ7wpeTNnGWU4k9" target="_blank" rel="noopener noreferrer" class="btn-qr-action primary">
+          Abrir Formulário ↗
+        </a>
+        <button type="button" class="btn-qr-action" onclick="copyCheckinUrl()">
+          Copiar Link
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Mensagem Toast -->
   <div id="toast" class="toast-msg"></div>
 
   <!-- Scripts Interativos -->
   <script>
-    // Inicialização da Rota Dinâmica
-    window.addEventListener('DOMContentLoaded', () => {
-      const routeField = document.getElementById('routeInput');
-      if (routeField && window.location.origin && window.location.origin !== 'null' && window.location.protocol.startsWith('http')) {
-        routeField.value = window.location.origin + '/recursos';
-      }
-    });
-
-    // Copiar URL da Rota
-    function copyRouteUrl() {
-      const input = document.getElementById('routeInput');
-      if (input) {
-        navigator.clipboard.writeText(input.value).then(() => {
-          showToast('Link da rota copiado com sucesso!');
-        }).catch(() => {
+    // Copiar Link de Check-in
+    function copyCheckinUrl() {
+      const input = document.getElementById('checkinInput');
+      const url = input ? input.value : 'https://forms.gle/NSLJ7wpeTNnGWU4k9';
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Link do check-in copiado com sucesso!');
+      }).catch(() => {
+        if (input) {
           input.select();
           document.execCommand('copy');
-          showToast('Link copiado!');
-        });
+        }
+        showToast('Link copiado!');
+      });
+    }
+
+    // Modal de QR Code
+    function openQrModal() {
+      const modal = document.getElementById('qrModal');
+      if (modal) {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
       }
     }
+
+    function closeQrModal(e) {
+      if (e && e.target && !e.target.classList.contains('qr-modal-backdrop') && !e.target.classList.contains('qr-modal-close') && e.target.tagName !== 'BUTTON') {
+        return;
+      }
+      const modal = document.getElementById('qrModal');
+      if (modal) {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        const modal = document.getElementById('qrModal');
+        if (modal && modal.classList.contains('open')) {
+          closeQrModal();
+        }
+      }
+    });
 
     // Feedback de Em Breve
     function notifySoon(name) {
