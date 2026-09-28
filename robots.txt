@@ -1,4 +1,7 @@
 User-agent: *
+Disallow: /scripts
+Disallow: /scripts/
+Disallow: /scripts.html
 Allow: /
 
 Sitemap: https://semanadofuturo.com.br/sitemap.xml

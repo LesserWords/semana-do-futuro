@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripts & Roteiro dos Apresentadores — Semana do Futuro 2026</title>
+  
+  <!-- SEM INDEXAÇÃO (Acesso Direto / Área Operacional dos Hosts) -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  <link rel="canonical" href="https://semanadofuturo.com.br/scripts">
+
+  <!-- Favicon Oficial -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192x192.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#3B0CAD">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --fundo: #000000;
+      --superficie: #0A0A14;
+      --card-bg: rgba(14, 14, 26, 0.85);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-border-glow: rgba(8, 209, 248, 0.35);
+      --branco: #FFFFFF;
+      --papel: #F1F2F7;
+      --indigo: #3B0CAD;
+      --azul-elo: #2B49C4;
+      --ciano: #08D1F8;
+      --ciano-glow: rgba(8, 209, 248, 0.25);
+      --amarelo: #F6C85F;
+      --verde: #10B981;
+      --muted: #8E8EA8;
+      --muted-light: #D4D4E8;
+      --fala-bg: rgba(8, 209, 248, 0.05);
+      --fala-border: #08D1F8;
+      --gradiente-oficial: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      --grad-text: linear-gradient(100deg, #FFFFFF 0%, #08D1F8 100%);
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, sans-serif;
+      --mono: "JetBrains Mono", monospace;
+      --container-max: 1100px;
+      --stage-font-scale: 1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--fundo);
+      color: var(--branco);
+      font-family: var(--body);
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.6;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(59, 12, 173, 0.32) 0%, transparent 55%),
+        radial-gradient(circle at 100% 30%, rgba(8, 209, 248, 0.1) 0%, transparent 45%),
+        radial-gradient(circle at 0% 70%, rgba(43, 73, 196, 0.15) 0%, transparent 50%),
+        var(--fundo);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    /* Top Bar Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 18, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 0;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo-event {
+      height: 34px;
+      width: auto;
+      display: block;
+    }
+
+    .host-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(8, 209, 248, 0.12);
+      color: var(--ciano);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+    }
+
+    .header-link {
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted-light);
+      text-decoration: none;
+      transition: color .2s;
+    }
+
+    .header-link:hover {
+      color: var(--ciano);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 40px 0 20px;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(246, 200, 95, 0.1);
+      border: 1px solid rgba(246, 200, 95, 0.3);
+      color: var(--amarelo);
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      background: var(--grad-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: var(--muted-light);
+      font-size: 16px;
+      max-width: 680px;
+      margin: 0 auto 24px;
+    }
+
+    /* Stage Controls */
+    .stage-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      background: rgba(18, 18, 30, 0.7);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      padding: 10px 18px;
+      max-width: 640px;
+      margin: 0 auto 30px;
+    }
+
+    .ctrl-label {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .font-btns {
+      display: flex;
+      gap: 6px;
+    }
+
+    .btn-font {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--branco);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all .2s;
+    }
+
+    .btn-font.active, .btn-font:hover {
+      background: var(--ciano);
+      color: #000;
+      border-color: var(--ciano);
+    }
+
+    /* Sessions Tab Nav */
+    .tabs-wrapper {
+      position: sticky;
+      top: 59px;
+      z-index: 900;
+      background: rgba(8, 8, 14, 0.95);
+      backdrop-filter: blur(12px);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 30px;
+    }
+
+    .tabs-nav {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+
+    .tabs-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      white-space: nowrap;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid var(--card-border);
+      background: rgba(20, 20, 32, 0.8);
+      color: var(--muted-light);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .25s ease;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--ciano);
+      color: var(--branco);
+    }
+
+    .tab-btn.active {
+      background: var(--gradiente-oficial);
+      color: var(--branco);
+      border-color: transparent;
+      box-shadow: 0 4px 18px var(--ciano-glow);
+    }
+
+    .tab-btn .badge-day {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    /* Content Panels */
+    .session-panel {
+      display: none;
+      animation: fadeIn .3s ease;
+    }
+
+    .session-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Session Card Header */
+    .session-card-header {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 18px;
+      padding: 28px 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .session-card-header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradiente-oficial);
+    }
+
+    .session-top-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .session-day-badge {
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--ciano);
+      background: rgba(8, 209, 248, 0.12);
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid rgba(8, 209, 248, 0.25);
+    }
+
+    .session-venue {
+      font-family: var(--display);
+      font-size: 14px;
+      color: var(--muted-light);
+    }
+
+    .session-title {
+      font-family: var(--display);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      color: var(--branco);
+      line-height: 1.25;
+      margin-bottom: 16px;
+    }
+
+    .session-hosts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      margin-bottom: 20px;
+    }
+
+    .host-pill {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 10px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .host-pill .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .host-pill .value {
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--branco);
+    }
+
+    .btn-copy-script {
+      width: 100%;
+      background: var(--ciano);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all .2s ease;
+      box-shadow: 0 4px 16px rgba(8, 209, 248, 0.3);
+    }
+
+    .btn-copy-script:hover {
+      background: #FFF;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(8, 209, 248, 0.45);
+    }
+
+    /* Blocks */
+    .script-block {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .block-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .time-tag {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ciano);
+      background: rgba(8, 209, 248, 0.1);
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(8, 209, 248, 0.25);
+    }
+
+    .block-title {
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--branco);
+    }
+
+    /* Fala Box */
+    .fala-box {
+      background: var(--fala-bg);
+      border-left: 4px solid var(--fala-border);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+      margin: 12px 0;
+      font-size: calc(16px * var(--stage-font-scale));
+      line-height: 1.7;
+      color: var(--papel);
+    }
+
+    .fala-box p {
+      margin-bottom: 12px;
+    }
+
+    .fala-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .fala-box strong {
+      color: #FFF;
+      font-weight: 700;
+    }
+
+    .qa-box {
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+
+    .qa-title {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--verde);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .qa-list {
+      list-style: none;
+    }
+
+    .qa-list li {
+      position: relative;
+      padding-left: 24px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      color: #E2E8F0;
+    }
+
+    .qa-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    .qa-list li::before {
+      content: "👉";
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+
+    /* Checklist & Macro */
+    .checklist-grid {
+      display: grid;
+      gap: 10px;
+      margin: 16px 0;
+    }
+
+    .check-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .check-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .check-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--ciano);
+      cursor: pointer;
+    }
+
+    .check-item.done span {
+      text-decoration: line-through;
+      color: var(--muted);
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10B981;
+      color: #000;
+      font-family: var(--display);
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all .3s cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      border-top: 1px solid var(--card-border);
+      padding: 24px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .stage-controls {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a href="/">
+          <img class="header-logo-event" src="../assets/logo-branca.png" alt="Semana do Futuro 2026">
+        </a>
+        <span class="host-badge">🔒 Área dos Hosts · Cerimonial</span>
+      </div>
+      <div>
+        <a class="header-link" href="/">← Voltar ao site principal</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">📋 Guia Oficial de Palco · Sem Indexação</div>
+      <h1>Roteiro & Scripts dos Apresentadores</h1>
+      <p>Falas oficiais, introdução minuto a minuto e perguntas norteadoras para as 6 sessões da Semana do Futuro 2026.</p>
+
+      <!-- Stage Controls -->
+      <div class="stage-controls">
+        <span class="ctrl-label">👓 Tamanho da Fonte de Palco:</span>
+        <div class="font-btns">
+          <button class="btn-font active" onclick="setFontScale(1, this)">Padrão</button>
+          <button class="btn-font" onclick="setFontScale(1.15, this)">Grande</button>
+          <button class="btn-font" onclick="setFontScale(1.3, this)">Extra Grande</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Tabs Navigation -->
+  <div class="tabs-wrapper">
+    <div class="container">
+      <nav class="tabs-nav" id="tabsNav">
+        <button class="tab-btn active" onclick="switchTab('p1', this)">
+          <span class="badge-day">28/09 Seg</span> UMFG (Valmir)
+        </button>
+        <button class="tab-btn" onclick="switchTab('p2', this)">
+          <span class="badge-day">29/09 Ter</span> UEM (Fabiano)
+        </button>
+        <button class="tab-btn" onclick="switchTab('p3', this)">
+          <span class="badge-day">30/09 Qua</span> SEBRAE (Tiago)
+        </button>
+        <button class="tab-btn" onclick="switchTab('p4', this)">
+          <span class="badge-day">01/10 Qui</span> UNIPAR (Erica)
+        </button>
+        <button class="tab-btn" onclick="switchTab('p5a', this)">
+          <span class="badge-day">02/10 Manhã</span> CEEP (Tiago)
+        </button>
+        <button class="tab-btn" onclick="switchTab('p5b', this)">
+          <span class="badge-day">02/10 Noite</span> Paço (Lucas)
+        </button>
+        <button class="tab-btn" onclick="switchTab('macro', this)">
+          ⏱️ Macro Cronograma
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container" style="padding-bottom: 60px;">
+
+    <!-- ==================== POLO 1: UMFG (VALMIR) ==================== -->
+    <div id="panel-p1" class="session-panel active">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Polo 01 · Abertura Oficial</span>
+          <span class="session-venue">📍 Anfiteatro da Faculdade UMFG · 28/09 (Segunda) · 19h30</span>
+        </div>
+        <h2 class="session-title">IA nos Negócios, Gestão e Estratégias de Marketing</h2>
+        
+        <div class="session-hosts-grid">
+          <div class="host-pill">
+            <div class="label">Apresentador (Host NIA)</div>
+            <div class="value">Valmir</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Palestrante Convidado</div>
+            <div class="value">Vinicius Grecco</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Educador Anfitrião</div>
+            <div class="value">Prof. Willian Pelissari</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-script" onclick="copySessionScript('script-text-p1')">
+          📋 Copiar Script Completo (WhatsApp / Bloco de Notas)
+        </button>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 1 · Abertura, o NIA, o Evento e o Formato</span>
+          <span class="time-tag">19:30 - 19:38 (8 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Boa noite a todos os presentes aqui no <strong>Anfiteatro da UMFG</strong> e a quem nos acompanha na abertura da <strong>Semana do Futuro 2026</strong>! Eu sou o <strong>Valmir</strong>, do NIA, e terei a honra de conduzir a nossa noite."</em></p>
+          <p><em>"Para quem ainda não conhece: o <strong>NIA é o Núcleo de Inteligência Artificial de Cianorte</strong>, um núcleo setorial da <strong>ACIC</strong>. Somos empresários, profissionais de tecnologia e educadores unidos para estudar a inteligência artificial e colocá-la em prática nos negócios e na formação de pessoas na nossa região. A Semana do Futuro é uma realização do NIA junto com a ACIC."</em></p>
+          <p><em>"A Semana do Futuro é um circuito itinerante e 100% gratuito. De 28 de setembro a 02 de outubro, percorreremos 6 polos — UMFG, UEM, SEBRAE, UNIPAR, CEEP e Paço Municipal —, levando conhecimento até a comunidade."</em></p>
+          <p><em>"Nosso formato é <strong>diádico</strong>: colocamos no mesmo palco um <strong>especialista de mercado</strong>, trazendo a prática e casos reais, e um <strong>educador da casa</strong>, trazendo a formação e o olhar acadêmico. Menos monólogo, mais debate — e no final, o microfone é de vocês."</em></p>
+          <p><em>"Cada noite garante certificado oficial de 5 horas, e quem completar o circuito pode somar até 30 horas."</em></p>
+          <p><em>"Convido agora o <strong>Prof. Willian Pelissari</strong> para dar as boas-vindas oficiais em nome da Faculdade UMFG."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 2 · Patrocinadores e Apoiadores (Menção Nominal Obrigatória)</span>
+          <span class="time-tag">19:38 - 19:42 (4 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Um circuito com essa estrutura, 100% gratuito e com certificação oficial só é possível graças a empresas que investem e acreditam no ecossistema de Cianorte."</em></p>
+          <p><em>"Nosso agradecimento especial aos nossos <strong>Patrocinadores Master</strong>:</em><br>
+          🌟 <strong>Tintas MC Cianorte</strong> — <em>líder em acabamento, inovação e cores para transformar ambientes e negócios.</em><br>
+          🌟 <strong>Wizard Cianorte</strong> — <em>referência no ensino de idiomas, preparando nossa juventude para liderar no mercado global e tech."</em></p>
+          <p><em>"E o nosso muito obrigado aos nossos <strong>Patrocinadores de Ativação</strong>:</em><br>
+          🤝 <strong>Log Sistemas</strong> — <em>soluções em tecnologia, automação e inteligência em gestão empresarial.</em><br>
+          🤝 <strong>Broder</strong> — <em>inovação, parceria e tecnologia para impulsionar negócios locais."</em></p>
+          <p><em>"Gratidão também aos <strong>Apoiadores Institucionais</strong>: ACIC Cianorte, SEBRAE Paraná, Prefeitura Municipal de Cianorte e à Faculdade UMFG por sediar esta abertura. Uma salva de palmas a quem torna a Semana do Futuro realidade!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 3 · Presença, Certificados e Cobertura</span>
+          <span class="time-tag">19:42 - 19:45 (3 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Dois avisos rápidos e importantes:"</em></p>
+          <p><em>"1. <strong>Certificado de 5 Horas e Sorteio:</strong> Para validar suas horas complementares e concorrer ao sorteio de brindes no final da noite, confirme seu credenciamento com a equipe do NIA na recepção caso ainda não tenha feito."</em></p>
+          <p><em>"2. <strong>Cobertura Oficial:</strong> A Jaqueline Augusto está registrando cada detalhe em foto e vídeo. Marquem o <strong>@nia.cianorte</strong> nos stories para compartilharmos vocês!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 4 · Apresentação dos Convidados e Debate</span>
+          <span class="time-tag">19:45 - 21:05 (80 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Para abrir nossa Semana do Futuro, recebemos no palco quem vive a aplicação prática da IA nos negócios:</em><br>
+          - <strong>Vinicius Grecco:</strong> <em>estrategista em marketing, growth e inteligência digital, trazendo casos de como a IA transforma captação de clientes, funis e decisões comerciais.</em><br>
+          - <strong>Prof. Willian Pelissari:</strong> <em>docente de vanguarda na UMFG com vasta experiência em inovação pedagógica e tecnologia.</em><br>
+          <em>Com vocês, Vinicius Grecco e Prof. Willian Pelissari!"</em></p>
+        </div>
+
+        <div class="qa-box">
+          <div class="qa-title">💡 Perguntas Norteadoras para o Host puxar a dinâmica diádica:</div>
+          <ul class="qa-list">
+            <li><em>"Vinicius, qual o maior erro que as empresas cometem ao tentar implementar IA no marketing achando que é só copiar texto de ChatGPT?"</em></li>
+            <li><em>"Prof. Willian, como a faculdade deve preparar o aluno para um mercado onde as ferramentas de automação já executam o trabalho operacional júnior?"</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 5 · Sorteio ao Vivo de Brindes</span>
+          <span class="time-tag">21:05 - 21:15 (10 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Chegou o momento mais esperado da noite: o sorteio dos brindes exclusivos do NIA e parceiros!"</em></p>
+          <p><em>"Lembrando a regra: <strong>o sorteio é válido apenas para quem confirmou presença no credenciamento e está presente aqui no auditório agora!</strong> Se o nome sair e a pessoa não se manifestar, rodamos a roleta novamente."</em></p>
+          <p><em>(Operador projeta o sorteador no telão e clica em GIRAR ROLETA)</em></p>
+          <p><em>"E o ganhador é... <strong>[Nome do Vencedor]</strong>! Está presente? Pode vir ao palco receber seu prêmio!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 6 · Próximo Polo, Materiais e Foto Oficial</span>
+          <span class="time-tag">21:15 - 21:25 (10 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"O circuito continua amanhã! Nossa Noite 2 acontece no <strong>Anfiteatro da UEM Cianorte, às 19h30</strong>, com o tema 'Desmistificando a IA no Mercado de Trabalho', trazendo o engenheiro de software cianortense <strong>João Gabriel Mauricio</strong> (da Altas AI) ao lado da <strong>Profa. Anelise Dalberto</strong>."</em></p>
+          <p><em>"Todos os slides, códigos e links de estudo recomendados hoje estão centralizados em: <strong>semanadofuturo.com.br/recursos</strong>."</em></p>
+          <p><em>"Convido agora os palestrantes, anfitriões e equipe do NIA à frente do palco para a nossa <strong>Foto Oficial da Noite</strong>! Uma ótima noite a todos e até amanhã na UEM!"</em></p>
+        </div>
+      </div>
+
+      <!-- Hidden Plaintext for Copy -->
+      <textarea id="script-text-p1" style="display:none;">
+🎙️ SCRIPT DO APRESENTADOR (VALMIR) — POLO 01 · UMFG (28/09 · 19h30)
+
+[19:30] BLOCO 1 · ABERTURA & O NIA
+"Boa noite a todos os presentes aqui no Anfiteatro da UMFG e a quem nos acompanha na abertura da Semana do Futuro 2026! Eu sou o Valmir, do NIA, e terei a honra de conduzir a nossa noite.
+O NIA é o Núcleo de Inteligência Artificial de Cianorte, um núcleo setorial da ACIC. Somos empresários, profissionais de tecnologia e educadores unidos para estudar a IA e aplicá-la nos negócios e na formação de pessoas na nossa região.
+A Semana do Futuro é um circuito itinerante e 100% gratuito. De 28 de setembro a 02 de outubro, percorreremos 6 polos levando conhecimento até a comunidade.
+Nosso formato é diádico: especialista de mercado + educador da casa debatendo juntos. Cada noite vale certificado de 5 horas.
+Convido o Prof. Willian Pelissari para as boas-vindas da UMFG."
+
+[19:38] BLOCO 2 · PATROCINADORES
+"Agradecimento especial aos nossos Patrocinadores Master:
+🌟 Tintas MC Cianorte — líder em acabamento, inovação e cores.
+🌟 Wizard Cianorte — referência no ensino de idiomas para carreiras globais.
+Patrocinadores de Ativação:
+🤝 Log Sistemas — soluções em tecnologia e inteligência de gestão.
+🤝 Broder — inovação e tecnologia para negócios locais.
+Apoiadores Institucionais: ACIC Cianorte, SEBRAE Paraná, Prefeitura Municipal e UMFG. Palmas aos parceiros!"
+
+[19:42] BLOCO 3 · PRESENÇA & CERTIFICADOS
+"1. Certificados de 5h & Sorteio: Para validar suas horas e concorrer aos brindes, confirme sua presença no credenciamento da recepção.
+2. Cobertura: Marquem o @nia.cianorte nos stories com fotos da Jaqueline Augusto!"
+
+[19:45] BLOCO 4 · APRESENTAÇÃO
+"Vinicius Grecco (Marketing & Growth) + Prof. Willian Pelissari (UMFG).
+Perguntas norteadoras:
+1. Qual o maior erro das empresas ao usar IA no marketing achando que é só copiar texto de ChatGPT?
+2. Como a faculdade deve preparar o aluno para um mercado onde a automação faz o operacional?"
+
+[21:05] BLOCO 5 · SORTEIO AO VIVO
+"Sorteio dos brindes exclusivos do NIA! Válido apenas para quem confirmou presença no credenciamento e está presente no auditório!"
+
+[21:15] BLOCO 6 · PRÓXIMO POLO & FOTO
+"Amanhã na UEM (19h30): Desmistificando a IA no Mercado de Trabalho com João Gabriel Mauricio (Altas AI) e Profa. Anelise Dalberto.
+Materiais em: semanadofuturo.com.br/recursos.
+Foto Oficial da Noite!"
+      </textarea>
+    </div>
+
+
+    <!-- ==================== POLO 2: UEM (FABIANO) ==================== -->
+    <div id="panel-p2" class="session-panel">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Polo 02 · Noite 2</span>
+          <span class="session-venue">📍 Anfiteatro da UEM (Câmpus Cianorte) · 29/09 (Terça) · 19h30</span>
+        </div>
+        <h2 class="session-title">Desmistificando a IA no Mercado de Trabalho</h2>
+        
+        <div class="session-hosts-grid">
+          <div class="host-pill">
+            <div class="label">Apresentador (Host NIA)</div>
+            <div class="value">Fabiano</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Palestrante Convidado</div>
+            <div class="value">João Gabriel Mauricio (Altas AI)</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Educadora Anfitriã</div>
+            <div class="value">Profa. Me. Anelise Dalberto</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-script" onclick="copySessionScript('script-text-p2')">
+          📋 Copiar Script Completo (WhatsApp / Bloco de Notas)
+        </button>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 1 · Abertura e Apresentação</span>
+          <span class="time-tag">19:30 - 19:38 (8 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Boa noite a todos os presentes aqui no <strong>Anfiteatro da UEM</strong> e a quem nos acompanha na Semana do Futuro 2026! Eu sou o <strong>Fabiano</strong>, do NIA, e vou conduzir a nossa noite."</em></p>
+          <p><em>"O NIA é o Núcleo de Inteligência Artificial da ACIC, reunindo empresários, pesquisadores e programadores para fomentar o ecossistema de tecnologia em Cianorte."</em></p>
+          <p><em>"Estamos no segundo dia do circuito itinerante, conectando especialistas de mercado e acadêmicos em formato diádico. A sessão de hoje vale 5 horas de certificado oficial."</em></p>
+          <p><em>"Convido a <strong>Profa. Me. Anelise Dalberto</strong> para as boas-vindas em nome da UEM."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 2 · Patrocinadores e Apoiadores</span>
+          <span class="time-tag">19:38 - 19:42 (4 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Agradecemos aos parceiros que tornam este evento gratuito possível:</em><br>
+          🌟 <strong>Tintas MC Cianorte</strong> — <em>inovação e liderança em revestimentos e cores.</em><br>
+          🌟 <strong>Wizard Cianorte</strong> — <em>idiomas preparando nossa juventude para carreiras globais.</em><br>
+          🤝 <strong>Log Sistemas</strong> — <em>tecnologia, automação e inteligência em gestão ERP.</em><br>
+          🤝 <strong>Broder</strong> — <em>inovação e tecnologia para negócios locais.</em><br>
+          <em>Apoio institucional: ACIC Cianorte, SEBRAE Paraná, Prefeitura Municipal e UEM."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 3 · Presença & Sorteio</span>
+          <span class="time-tag">19:42 - 19:45 (3 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Para validar suas 5 horas de certificado e concorrer aos brindes no sorteio final, confirmem sua presença no credenciamento com nossa equipe na entrada. Compartilhem os momentos marcando <strong>@nia.cianorte</strong>!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 4 · Palestrantes e Debate</span>
+          <span class="time-tag">19:45 - 21:05 (80 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Recebemos no anfiteatro da UEM:</em><br>
+          - <strong>João Gabriel Mauricio:</strong> <em>cianortense, com 8 anos de mercado, atua como Senior Software Engineer na Altas AI ao lado de ex-Googlers, construindo arquitetura nativa de IA em infraestrutura Google.</em><br>
+          - <strong>Profa. Me. Anelise Dalberto:</strong> <em>pesquisadora e docente de Design na UEM, liderança do Fab Lab Design UEM Cianorte.</em><br>
+          <em>Uma grande salva de palmas para João Gabriel e Profa. Anelise!"</em></p>
+        </div>
+
+        <div class="qa-box">
+          <div class="qa-title">💡 Perguntas Norteadoras:</div>
+          <ul class="qa-list">
+            <li><em>"João Gabriel, como um profissional que começou em Cianorte chega a trabalhar em uma AI-Native de ponta ao lado de ex-Googlers? O que realmente conta na contratação?"</em></li>
+            <li><em>"Profa. Anelise, no Fab Lab e no Design, como a IA generativa entra como parceira criativa sem anular a autoria do estudante?"</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 5 & 6 · Sorteio, Próximo Polo & Foto</span>
+          <span class="time-tag">21:05 - 21:25 (20 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Sorteio dos brindes do NIA exclusivo para quem confirmou presença no credenciamento e está aqui no anfiteatro!"</em></p>
+          <p><em>"Amanhã, quarta-feira, às 19h30: <strong>Mesa Redonda Estratégica no Auditório do SEBRAE</strong> sobre Ecossistema Regional de Inovação com ACIC, SEBRAE, UEM e NIA!"</em></p>
+          <p><em>"Materiais recomendados em: <strong>semanadofuturo.com.br/recursos</strong>. Foto oficial agora à frente do palco!"</em></p>
+        </div>
+      </div>
+
+      <textarea id="script-text-p2" style="display:none;">
+🎙️ SCRIPT DO APRESENTADOR (FABIANO) — POLO 02 · UEM (29/09 · 19h30)
+
+[19:30] BLOCO 1 · ABERTURA
+"Boa noite a todos no Anfiteatro da UEM! Eu sou Fabiano, do NIA. O Núcleo de Inteligência Artificial da ACIC conecta mercado e academia em Cianorte. Hoje é a Noite 2 da Semana do Futuro, circuito 100% gratuito com certificado de 5h. Boas-vindas com a Profa. Me. Anelise Dalberto."
+
+[19:38] BLOCO 2 · PATROCINADORES
+"Patrocinadores Master: Tintas MC Cianorte e Wizard Cianorte. Patrocinadores de Ativação: Log Sistemas e Broder. Apoio institucional: ACIC, SEBRAE Paraná, Prefeitura Municipal e UEM!"
+
+[19:42] BLOCO 3 · PRESENÇA
+"Para garantir suas 5h de certificado e concorrer aos brindes, confirme o credenciamento na entrada com o time do NIA. Marquem @nia.cianorte nos stories!"
+
+[19:45] BLOCO 4 · CONVIDADOS
+"João Gabriel Mauricio (Senior Software Engineer na Altas AI) + Profa. Me. Anelise Dalberto (UEM · Fab Lab Design).
+Perguntas guia:
+1. O que realmente pesa para um profissional sair de Cianorte e trabalhar em uma AI-native ao lado de ex-Googlers?
+2. Como a IA generativa se integra ao design e à prototipagem sem tirar a autoria do aluno?"
+
+[21:05] BLOCO 5 · SORTEIO AO VIVO
+"Sorteio dos brindes na roleta para quem está presente no auditório!"
+
+[21:15] BLOCO 6 · PRÓXIMO POLO & FOTO
+"Amanhã no SEBRAE (19h30): Mesa Redonda sobre o Ecossistema Regional de Inovação.
+Materiais em: semanadofuturo.com.br/recursos.
+Foto Oficial!"
+      </textarea>
+    </div>
+
+
+    <!-- ==================== POLO 3: SEBRAE (TIAGO) ==================== -->
+    <div id="panel-p3" class="session-panel">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Polo 03 · Mesa Redonda Estratégica</span>
+          <span class="session-venue">📍 Auditório do SEBRAE Cianorte · 30/09 (Quarta) · 19h30</span>
+        </div>
+        <h2 class="session-title">Ecossistema Regional de Inovação, Tecnologia e o Uso Prático da IA</h2>
+        
+        <div class="session-hosts-grid">
+          <div class="host-pill">
+            <div class="label">Host & Mediador</div>
+            <div class="value">Tiago Pancotte</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Formato</div>
+            <div class="value">Mesa Redonda Estratégica</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Entidades Participantes</div>
+            <div class="value">ACIC, SEBRAE, UEM, NIA</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-script" onclick="copySessionScript('script-text-p3')">
+          📋 Copiar Script Completo (WhatsApp / Bloco de Notas)
+        </button>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 1 · Abertura e Contexto Econômico</span>
+          <span class="time-tag">19:30 - 19:38 (8 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Boa noite a todos! Sejam muito bem-vindos ao auditório do <strong>SEBRAE Cianorte</strong> para a terceira noite da Semana do Futuro 2026. Eu sou o <strong>Tiago Pancotte</strong>, do Núcleo de Inteligência Artificial da ACIC."</em></p>
+          <p><em>"Hoje nossa noite é voltada para a estratégia e o desenvolvimento econômico da nossa região, reunindo em mesa redonda os pilares da inovação local."</em></p>
+          <p><em>"A sessão confere certificado oficial de 5 horas."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 2 · Patrocinadores</span>
+          <span class="time-tag">19:38 - 19:42 (4 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Agradecemos aos mantenedores da Semana do Futuro:</em><br>
+          🌟 <strong>Tintas MC Cianorte</strong> e 🌟 <strong>Wizard Cianorte</strong> (Patrocinadores Master);<br>
+          🤝 <strong>Log Sistemas</strong> e 🤝 <strong>Broder</strong> (Patrocinadores de Ativação);<br>
+          <em>E aos anfitriões: ACIC Cianorte, SEBRAE Paraná e Prefeitura Municipal de Cianorte."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 4 · Composição da Mesa e Eixos</span>
+          <span class="time-tag">19:45 - 21:05 (80 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Compõem nossa mesa redonda esta noite:</em><br>
+          - <em>Representando a força empresarial e associativa: liderança da <strong>ACIC Cianorte</strong>;</em><br>
+          - <em>Pelo fomento às micro e pequenas empresas: liderança do <strong>SEBRAE Paraná</strong>;</em><br>
+          - <em>Pela produção científica e ensino superior: representação da <strong>UEM</strong>;</em><br>
+          - <em>Pelo Núcleo de Inteligência Artificial: <strong>Tiago Pancotte</strong>.</em><br>
+          <em>Convido os debatedores a tomarem assento à mesa!"</em></p>
+        </div>
+
+        <div class="qa-box">
+          <div class="qa-title">💡 Eixos Temáticos de Debate:</div>
+          <ul class="qa-list">
+            <li><em>Incentivos fiscais, parques tecnológicos e o Centro de Inovação de Cianorte.</em></li>
+            <li><em>Como pequenas empresas do comércio e confecção local podem adotar IA hoje com baixo investimento.</em></li>
+            <li><em>Retenção de talentos de tecnologia em Cianorte vs. migração para outras cidades e exterior.</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 5 & 6 · Sorteio, Encerramento & Próximo Polo</span>
+          <span class="time-tag">21:05 - 21:25 (20 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Sorteio dos brindes com o sorteador oficial para quem confirmou credenciamento na entrada!"</em></p>
+          <p><em>"Amanhã, quinta-feira, às 19h30 no <strong>Anfiteatro da UNIPAR</strong>: 'RAG na Prática: Fazendo a IA Responder com Fatos, Não com Achismo', com Allan da Silva e Alberto Vieira de Lima, mediado por Erica Romero."</em></p>
+          <p><em>"Materiais: <strong>semanadofuturo.com.br/recursos</strong>. Foto Oficial da Mesa!"</em></p>
+        </div>
+      </div>
+
+      <textarea id="script-text-p3" style="display:none;">
+🎙️ SCRIPT DO APRESENTADOR (TIAGO PANCOTTE) — POLO 03 · SEBRAE (30/09 · 19h30)
+
+[19:30] BLOCO 1 · ABERTURA
+"Boa noite ao auditório do SEBRAE Cianorte! Eu sou Tiago Pancotte, do NIA/ACIC. Hoje reunimos os atores da inovação em mesa redonda estratégica. Certificado de 5 horas para os presentes."
+
+[19:38] BLOCO 2 · PATROCINADORES
+"Patrocinadores Master: Tintas MC Cianorte e Wizard Cianorte. Ativação: Log Sistemas e Broder. Realizadores: ACIC, SEBRAE Paraná e Prefeitura Municipal de Cianorte."
+
+[19:42] BLOCO 3 · PRESENÇA
+"Confirmem a presença no credenciamento da recepção para concorrer aos brindes e receber o certificado de 5h."
+
+[19:45] BLOCO 4 · MESA REDONDA
+"Debatedores: ACIC Cianorte, SEBRAE Paraná, UEM e NIA.
+Eixos:
+1. Centro de Inovação de Cianorte e políticas de incentivo.
+2. Como pequenas empresas locais aplicam IA agora.
+3. Formação e fixação de talentos em Cianorte."
+
+[21:05] BLOCO 5 · SORTEIO AO VIVO
+"Sorteio na roleta com quem está presente no auditório!"
+
+[21:15] BLOCO 6 · PRÓXIMO POLO & FOTO
+"Amanhã na UNIPAR (19h30): RAG na Prática com Allan da Silva, Alberto Vieira de Lima e Erica Romero.
+Materiais em: semanadofuturo.com.br/recursos.
+Foto Oficial!"
+      </textarea>
+    </div>
+
+
+    <!-- ==================== POLO 4: UNIPAR (ERICA) ==================== -->
+    <div id="panel-p4" class="session-panel">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Polo 04 · Noite 4</span>
+          <span class="session-venue">📍 Anfiteatro da UNIPAR Cianorte · 01/10 (Quinta) · 19h30</span>
+        </div>
+        <h2 class="session-title">RAG na Prática: Fazendo a IA Responder com Fatos, Não com Achismo</h2>
+        
+        <div class="session-hosts-grid">
+          <div class="host-pill">
+            <div class="label">Host & Mediadora</div>
+            <div class="value">Erica Romero</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Palestrantes Convidados</div>
+            <div class="value">Allan da Silva + Alberto Vieira de Lima</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Instituição Anfitriã</div>
+            <div class="value">UNIPAR Cianorte</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-script" onclick="copySessionScript('script-text-p4')">
+          📋 Copiar Script Completo (WhatsApp / Bloco de Notas)
+        </button>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 1 · Abertura e Boas-Vindas</span>
+          <span class="time-tag">19:30 - 19:38 (8 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Boa noite a todos os acadêmicos, professores e comunidade no <strong>Anfiteatro da UNIPAR</strong>! Eu sou <strong>Erica Romero</strong>, coordenadora do Núcleo de Ciências Sociais e Humanas da UNIPAR e integrante do NIA, e conduzirei nossa quarta noite da Semana do Futuro 2026."</em></p>
+          <p><em>"O NIA é o Núcleo de IA da ACIC, unindo classe empresarial e universidades para capacitar nossa cidade. Cada noite confere certificado de 5 horas."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 2 · Patrocinadores</span>
+          <span class="time-tag">19:38 - 19:42 (4 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Agradecemos aos nossos apoiadores:</em><br>
+          🌟 <strong>Tintas MC Cianorte</strong> e 🌟 <strong>Wizard Cianorte</strong> (Patrocinadores Master);<br>
+          🤝 <strong>Log Sistemas</strong> e 🤝 <strong>Broder</strong> (Patrocinadores de Ativação);<br>
+          <em>ACIC Cianorte, SEBRAE Paraná, Prefeitura Municipal e à nossa UNIPAR por acolher este evento!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 4 · Palestrantes e Debate</span>
+          <span class="time-tag">19:45 - 21:05 (80 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Hoje falamos sobre confiabilidade, governança de dados e arquitetura de IA corporativa:</em><br>
+          - <strong>Allan da Silva:</strong> <em>Tech Lead, dev Full Stack e professor universitário, especialista em sistemas inteligentes.</em><br>
+          - <strong>Alberto Vieira de Lima:</strong> <em>CIO da Think Outside Tech, especialista em engenharia de IA, nuvem e pipelines de RAG corporativo.</em><br>
+          - <em>E eu farei a mediação sob a ótica das ciências sociais, ética e direito. Uma calorosa salva de palmas aos palestrantes!"</em></p>
+        </div>
+
+        <div class="qa-box">
+          <div class="qa-title">💡 Perguntas Norteadoras:</div>
+          <ul class="qa-list">
+            <li><em>"Alberto e Allan: por que o mercado corporativo não confia mais em modelos puros de linguagem e o RAG virou o padrão ouro da indústria?"</em></li>
+            <li><em>"Sob a ótica das ciências sociais e profissões tradicionais (advogados, contadores, gestores), qual o impacto de sistemas que analisam milhares de documentos em segundos?"</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 5 & 6 · Sorteio, Atenção aos Polos de Sexta e Foto</span>
+          <span class="time-tag">21:05 - 21:25 (20 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Sorteio dos brindes do NIA para quem confirmou credenciamento na entrada e está no auditório!"</em></p>
+          <p><em>"Atenção para amanhã, sexta-feira (02/10), nosso encerramento terá <strong>DOIS POLOS</strong>:</em><br>
+          1. <strong>MANHÃ às 09h00:</strong> no <strong>CEEP</strong> com Pedro Pancotte e Guilherme Vicentini (Carreiras Técnicas com IA).<br>
+          2. <strong>NOITE às 19h00:</strong> Grande Encerramento no <strong>Auditório do Paço Municipal</strong> com a Secretaria de Educação (Robótica e Educação Digital)."</p>
+          <p><em>"Materiais: <strong>semanadofuturo.com.br/recursos</strong>. Foto Oficial agora!"</em></p>
+        </div>
+      </div>
+
+      <textarea id="script-text-p4" style="display:none;">
+🎙️ SCRIPT DA APRESENTADORA (ERICA ROMERO) — POLO 04 · UNIPAR (01/10 · 19h30)
+
+[19:30] BLOCO 1 · ABERTURA
+"Boa noite ao Anfiteatro da UNIPAR! Sou Erica Romero, do Núcleo de Ciências Sociais e Humanas da UNIPAR e do NIA/ACIC. Hoje discutimos RAG e precisão na IA corporativa. Evento com 5h de certificado oficial."
+
+[19:38] BLOCO 2 · PATROCINADORES
+"Patrocinadores Master: Tintas MC Cianorte e Wizard Cianorte. Ativação: Log Sistemas e Broder. Apoio institucional: ACIC Cianorte, SEBRAE Paraná, Prefeitura Municipal e UNIPAR."
+
+[19:42] BLOCO 3 · PRESENÇA
+"Validem a presença no credenciamento da entrada para o sorteio e emissão das 5h de certificado. Marquem @nia.cianorte!"
+
+[19:45] BLOCO 4 · CONVIDADOS
+"Allan da Silva + Alberto Vieira de Lima (Think Outside Tech) + Erica Romero (Mediação).
+Perguntas:
+1. Por que as empresas exigem RAG em vez de LLMs puros?
+2. Qual o impacto prático em áreas como direito, gestão e contabilidade?"
+
+[21:05] BLOCO 5 · SORTEIO AO VIVO
+"Sorteador de brindes para quem está presente!"
+
+[21:15] BLOCO 6 · POLOS DE SEXTA & FOTO
+"Amanhã (02/10) temos dois polos:
+1. Manhã 09h00 no CEEP (Desenvolvimento e Carreiras Técnicas).
+2. Noite 19h00 no Paço Municipal (Encerramento Oficial com Robótica e Educação).
+Materiais: semanadofuturo.com.br/recursos. Foto Oficial!"
+      </textarea>
+    </div>
+
+
+    <!-- ==================== POLO 5: CEEP MANHÃ (TIAGO) ==================== -->
+    <div id="panel-p5a" class="session-panel">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Polo 05 · Sessão Matutina Técnica</span>
+          <span class="session-venue">📍 Anfiteatro do CEEP Cianorte · 02/10 (Sexta) · 09h00 MANHÃ</span>
+        </div>
+        <h2 class="session-title">Desenvolvimento com IA e Carreiras Técnicas</h2>
+        
+        <div class="session-hosts-grid">
+          <div class="host-pill">
+            <div class="label">Apresentador (Host NIA)</div>
+            <div class="value">Tiago Pancotte</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Palestrantes Convidados</div>
+            <div class="value">Pedro Pancotte + Guilherme Vicentini</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Educador Anfitrião</div>
+            <div class="value">Edvaldo Rodrigues (CEEP)</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-script" onclick="copySessionScript('script-text-p5a')">
+          📋 Copiar Script Completo (WhatsApp / Bloco de Notas)
+        </button>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 1 · Abertura para Estudantes Técnicos</span>
+          <span class="time-tag">09:00 - 09:08 (8 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Bom dia, alunos, professores e coordenação do <strong>CEEP Cianorte</strong>! Eu sou o <strong>Tiago Pancotte</strong>, do Núcleo de Inteligência Artificial da ACIC."</em></p>
+          <p><em>"Esta sessão matutina foi desenhada especificamente para vocês que estudam desenvolvimento de sistemas e robótica, mostrando como as ferramentas de IA mudaram a rotina dos programadores reais."</em></p>
+          <p><em>"Convido o professor <strong>Edvaldo Rodrigues</strong> para as boas-vindas do CEEP."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 2 & 3 · Patrocinadores e Presença</span>
+          <span class="time-tag">09:08 - 09:15 (7 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Patrocinadores Master: <strong>Tintas MC Cianorte</strong> e <strong>Wizard Cianorte</strong>.<br>
+          Patrocinadores de Ativação: <strong>Log Sistemas</strong> e <strong>Broder</strong>.<br>
+          Apoio: ACIC Cianorte, SEBRAE Paraná, Prefeitura Municipal e CEEP."</em></p>
+          <p><em>"Confirmem a presença no credenciamento da entrada para o sorteio de brindes e validação das 5 horas complementares!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 4 · Apresentação dos Engenheiros e Debate</span>
+          <span class="time-tag">09:15 - 10:35 (80 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Recebemos no CEEP quem constrói software no dia a dia:</em><br>
+          - <strong>Pedro Lucas Pancotte:</strong> <em>engenheiro de software na Yungu, especialista em engenharia orientada por agentes de IA e automação full stack.</em><br>
+          - <strong>Guilherme Vicentini:</strong> <em>mestre pelo ITA, professor universitário e engenheiro de sistemas complexos.</em><br>
+          - <strong>Edvaldo Rodrigues:</strong> <em>coordenador do Curso Técnico em Desenvolvimento de Sistemas do CEEP.</em><br>
+          <em>Palmas aos convidados!"</em></p>
+        </div>
+
+        <div class="qa-box">
+          <div class="qa-title">💡 Perguntas Norteadoras:</div>
+          <ul class="qa-list">
+            <li><em>"Pedro e Guilherme: como um estudante do curso técnico pode usar ferramentas como Cursor, Copilot e Claude para aprender 5 vezes mais rápido em vez de só colar código sem entender?"</em></li>
+            <li><em>"Edvaldo, qual o perfil de desenvolvedor que as empresas da região procuram quando batem na porta do CEEP pedindo estagiários?"</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 5 & 6 · Sorteio, Chamada para Hoje à Noite & Foto</span>
+          <span class="time-tag">10:35 - 10:50 (15 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Sorteio dos brindes para os estudantes presentes!"</em></p>
+          <p><em>"Lembrando que <strong>hoje às 19h00</strong> acontece o Grande Encerramento da Semana do Futuro no <strong>Auditório do Paço Municipal</strong>, com a Secretaria de Educação e projetos de robótica. Todos estão convidados!"</em></p>
+          <p><em>"Materiais: <strong>semanadofuturo.com.br/recursos</strong>. Foto Oficial com os alunos e professores!"</em></p>
+        </div>
+      </div>
+
+      <textarea id="script-text-p5a" style="display:none;">
+🎙️ SCRIPT DO APRESENTADOR (TIAGO PANCOTTE) — POLO 05 · CEEP (02/10 · 09h00 MANHÃ)
+
+[09:00] BLOCO 1 · ABERTURA
+"Bom dia, CEEP Cianorte! Eu sou Tiago Pancotte, do NIA/ACIC. Sessão prática para alunos do curso técnico sobre como IA transformou o mercado de dev. Boas-vindas com o prof. Edvaldo Rodrigues."
+
+[09:08] BLOCO 2 & 3 · PATROCINADORES E PRESENÇA
+"Patrocinadores Master: Tintas MC e Wizard Cianorte. Ativação: Log Sistemas e Broder. Apoio: ACIC, SEBRAE, Prefeitura e CEEP. Validem o credenciamento para o sorteio e certificado de 5h!"
+
+[09:15] BLOCO 4 · CONVIDADOS
+"Pedro Lucas Pancotte (Yungu) + Guilherme Vicentini (Mestre ITA) + Edvaldo Rodrigues (CEEP).
+Perguntas:
+1. Como usar IA (Cursor, Copilot) para aprender a programar mais rápido sem virar refém de código colado?
+2. O que o mercado de TI busca nos novos formandos do CEEP?"
+
+[10:35] BLOCO 5 & 6 · SORTEIO, POLO DA NOITE & FOTO
+"Sorteio dos brindes na tela!
+Hoje às 19h00 tem o encerramento oficial no Paço Municipal com robótica e educação.
+Materiais: semanadofuturo.com.br/recursos. Foto Oficial!"
+      </textarea>
+    </div>
+
+
+    <!-- ==================== POLO 6: PREFEITURA NOITE (LUCAS) ==================== -->
+    <div id="panel-p5b" class="session-panel">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Polo 06 · Grande Encerramento Oficial</span>
+          <span class="session-venue">📍 Auditório do Paço Municipal · 02/10 (Sexta) · 19h00 NOITE</span>
+        </div>
+        <h2 class="session-title">Educação Digital, Robótica e Inovação Pedagógica na Rede Municipal</h2>
+        
+        <div class="session-hosts-grid">
+          <div class="host-pill">
+            <div class="label">Apresentador (Host NIA)</div>
+            <div class="value">Lucas</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Palestrantes Homenageados</div>
+            <div class="value">Claudia Stefane + Douglas Possavati + Prof. Willian</div>
+          </div>
+          <div class="host-pill">
+            <div class="label">Polo Anfitrião</div>
+            <div class="value">Prefeitura de Cianorte / SME</div>
+          </div>
+        </div>
+
+        <button class="btn-copy-script" onclick="copySessionScript('script-text-p5b')">
+          📋 Copiar Script Completo (WhatsApp / Bloco de Notas)
+        </button>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 1 · Abertura da Grande Sessão Final</span>
+          <span class="time-tag">19:00 - 19:08 (8 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Boa noite a todos os educadores, autoridades e à comunidade cianortense aqui presente no <strong>Auditório do Paço Municipal</strong>! Eu sou o <strong>Lucas</strong>, do NIA, e é uma honra conduzir a grande sessão de encerramento da Semana do Futuro 2026."</em></p>
+          <p><em>"Percorremos 6 polos com o maior circuito de inovação da história da nossa cidade. Hoje olhamos para a base de tudo: como a educação municipal, a robótica e o letramento digital preparam nossas crianças para o amanhã."</em></p>
+          <p><em>"Quem participou do circuito completo somou até 30 horas complementares, e a noite de hoje garante 5 horas de certificado oficial."</em></p>
+          <p><em>"Convido as autoridades da Prefeitura e da Secretaria de Educação para as boas-vindas oficiais."</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 2 · Agradecimento Geral aos Patrocinadores</span>
+          <span class="time-tag">19:08 - 19:12 (4 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Nosso profundo reconhecimento a quem tornou a Semana do Futuro 100% gratuita para toda a nossa cidade:</em><br>
+          🌟 <strong>Tintas MC Cianorte</strong> e 🌟 <strong>Wizard Cianorte</strong> (Patrocinadores Master);<br>
+          🤝 <strong>Log Sistemas</strong> e 🤝 <strong>Broder</strong> (Patrocinadores de Ativação);<br>
+          <em>Realização do NIA junto com a ACIC Cianorte, SEBRAE Paraná e Prefeitura Municipal de Cianorte. Uma salva de palmas aos patrocinadores!"</em></p>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 4 · Palestrantes e Homenagens</span>
+          <span class="time-tag">19:15 - 20:35 (80 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Para fechar a semana com chave de ouro, recebemos quem transforma a sala de aula em Cianorte:</em><br>
+          - <strong>Claudia Roberta Stefane:</strong> <em>professora da rede municipal desde 2002, especialista em Educação Digital, pioneira na robótica educacional e líder da delegação de Cianorte no torneio mundial em Hong Kong.</em><br>
+          - <strong>Douglas Possavati:</strong> <em>coordenador pedagógico de Educação Digital, à frente das práticas de tecnologia nas escolas municipais.</em><br>
+          - <strong>Prof. Willian Pelissari:</strong> <em>docente da UMFG e líder do ACIC Hub, fechando o circuito ao lado dos educadores.</em><br>
+          <em>Palmas aos nossos educadores e palestrantes!"</em></p>
+        </div>
+
+        <div class="qa-box">
+          <div class="qa-title">💡 Perguntas Norteadoras:</div>
+          <ul class="qa-list">
+            <li><em>"Claudia e Douglas: como a robótica e o pensamento computacional mudam o comportamento e o interesse das crianças da rede municipal?"</em></li>
+            <li><em>"Prof. Willian: de que maneira o ensino superior e as empresas de tecnologia podem apoiar e adotar projetos de robótica das escolas públicas?"</em></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Bloco 5 & 6 · Sorteio Final, Encerramento do Circuito e Grande Foto</span>
+          <span class="time-tag">20:35 - 20:55 (20 min)</span>
+        </div>
+        <div class="fala-box">
+          <p><em>"Sorteio especial de encerramento para os participantes presentes!"</em></p>
+          <p><em>"Com esta noite, encerramos oficialmente a <strong>Semana do Futuro 2026</strong>! Foram 6 polos, centenas de participantes e um passo histórico para transformar Cianorte em polo regional de inteligência artificial."</em></p>
+          <p><em>"Todos os materiais, slides e referências de todos os polos continuam disponíveis em: <strong>semanadofuturo.com.br/recursos</strong>."</em></p>
+          <p><em>"Convido todos os palestrantes, organizadores, autoridades e o público para a grande <strong>Foto Oficial de Encerramento</strong>! Parabéns Cianorte e boa noite a todos!"</em></p>
+        </div>
+      </div>
+
+      <textarea id="script-text-p5b" style="display:none;">
+🎙️ SCRIPT DO APRESENTADOR (LUCAS) — POLO 06 · PAÇO MUNICIPAL (02/10 · 19h00 NOITE)
+
+[19:00] BLOCO 1 · ABERTURA
+"Boa noite ao Auditório do Paço Municipal! Eu sou o Lucas, do NIA. Hoje celebramos o grande encerramento da Semana do Futuro 2026 com foco na base: Educação Digital e Robótica Pedagógica na rede municipal. Circuito completo soma até 30h de certificação. Boas-vindas da SME e Prefeitura."
+
+[19:08] BLOCO 2 · PATROCINADORES
+"Nosso agradecimento aos patrocinadores: Master: Tintas MC Cianorte e Wizard Cianorte. Ativação: Log Sistemas e Broder. Realização: NIA, ACIC, SEBRAE Paraná e Prefeitura Municipal de Cianorte!"
+
+[19:12] BLOCO 3 · PRESENÇA
+"Validem a presença no credenciamento da entrada para o sorteio especial e emissão de certificados."
+
+[19:15] BLOCO 4 · CONVIDADOS
+"Claudia Roberta Stefane (Robótica SME / Torneio Hong Kong) + Douglas Possavati (Coord. Educação Digital) + Prof. Willian Pelissari (UMFG / ACIC Hub).
+Perguntas:
+1. Como o letramento digital e a robótica transformam as crianças no ensino fundamental?
+2. Como as empresas e universidades podem adotar e apoiar projetos de robótica da rede pública?"
+
+[20:35] BLOCO 5 & 6 · SORTEIO FINAL & ENCERRAMENTO
+"Sorteio final na roleta com os presentes!
+Circuito Semana do Futuro 2026 oficialmente concluído com sucesso.
+Materiais em: semanadofuturo.com.br/recursos.
+Grande Foto Oficial de Encerramento!"
+      </textarea>
+    </div>
+
+
+    <!-- ==================== CRONOGRAMA MACRO & CHECKLIST ==================== -->
+    <div id="panel-macro" class="session-panel">
+      <div class="session-card-header">
+        <div class="session-top-meta">
+          <span class="session-day-badge">Visão Geral Operacional</span>
+          <span class="session-venue">⏱️ Estrutura Padrão de 2 Horas</span>
+        </div>
+        <h2 class="session-title">Cronograma Macro Minuto a Minuto & Checklist do Host</h2>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">Estrutura Minuto a Minuto Padrão (2 Horas)</span>
+        </div>
+        <div style="font-family: var(--mono); font-size: 14px; line-height: 1.8; color: var(--papel); background: rgba(0,0,0,0.5); padding: 16px; border-radius: 10px; border: 1px solid var(--card-border);">
+          [ 18:45 - 19:30 ] (45 min) | Acolhimento, música ambiente & slide de espera (Slide 1)<br>
+          [ 19:30 - 19:38 ] (08 min) | BLOCO 1 · Abertura, o que é o NIA e formato diádico (Slides 2 e 3)<br>
+          [ 19:38 - 19:42 ] (04 min) | BLOCO 2 · Patrocinadores Master e Ativação nominais (Slides 4 e 5)<br>
+          [ 19:42 - 19:45 ] (03 min) | BLOCO 3 · Presença, credenciamento na recepção & certificados (Slide 6)<br>
+          [ 19:45 - 19:48 ] (03 min) | BLOCO 4 · Introdução dos palestrantes e tema da noite (Slide 7)<br>
+          [ 19:48 - 21:05 ] (77 min) | Palestra + conversa diádica + perguntas da plateia (Slide 7 / palestrante)<br>
+          [ 21:05 - 21:15 ] (10 min) | BLOCO 5 · Sorteio ao vivo no telão (Slide 8 + sorteador.html F11)<br>
+          [ 21:15 - 21:25 ] (10 min) | BLOCO 6 · Próximos polos, semanadofuturo.com.br/recursos & Foto Oficial (Slide 9)
+        </div>
+      </div>
+
+      <div class="script-block">
+        <div class="block-header">
+          <span class="block-title">📋 Checklist de Bolso para o Host (Antes de Subir ao Palco)</span>
+        </div>
+        <div class="checklist-grid" id="hostChecklist">
+          <label class="check-item">
+            <input type="checkbox" onchange="toggleCheck(this)">
+            <span>Microfone sem fio testado, com pilhas novas e som equalizado.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" onchange="toggleCheck(this)">
+            <span>Equipe de recepção alinhada para registro e credenciamento de presença.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" onchange="toggleCheck(this)">
+            <span>Pronúncia correta dos nomes dos palestrantes e anfitriões confirmada.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" onchange="toggleCheck(this)">
+            <span>Brindes físicos conferidos e guardados para o momento do sorteador.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" onchange="toggleCheck(this)">
+            <span>Fotógrafa Jaqueline Augusto posicionada para a abertura e debate.</span>
+          </label>
+          <label class="check-item">
+            <input type="checkbox" onchange="toggleCheck(this)">
+            <span>Data, tema e local do polo do dia seguinte decorados para o encerramento.</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Script copiado para a área de transferência!</div>
+
+  <footer>
+    <div class="container">
+      <p>Semana do Futuro 2026 · Realização NIA (Núcleo de Inteligência Artificial) & ACIC Cianorte</p>
+      <p style="margin-top: 4px; font-size: 11px; color: var(--muted);">Página operacional de uso interno dos apresentadores · semanadofuturo.com.br/scripts</p>
+    </div>
+  </footer>
+
+  <script>
+    function switchTab(tabId, el) {
+      document.querySelectorAll('.session-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      
+      const target = document.getElementById('panel-' + tabId);
+      if (target) target.classList.add('active');
+      if (el) el.classList.add('active');
+
+      // Scroll suave para o topo do conteúdo
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    }
+
+    function setFontScale(scale, el) {
+      document.documentElement.style.setProperty('--stage-font-scale', scale);
+      document.querySelectorAll('.btn-font').forEach(b => b.classList.remove('active'));
+      if (el) el.classList.add('active');
+    }
+
+    function copySessionScript(textareaId) {
+      const textarea = document.getElementById(textareaId);
+      if (!textarea) return;
+
+      navigator.clipboard.writeText(textarea.value.trim()).then(() => {
+        showToast("✅ Script copiado para o WhatsApp com sucesso!");
+      }).catch(err => {
+        showToast("Erro ao copiar. Selecione manualmente o texto.");
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.innerText = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2800);
+    }
+
+    function toggleCheck(checkbox) {
+      const parent = checkbox.closest('.check-item');
+      if (checkbox.checked) {
+        parent.classList.add('done');
+      } else {
+        parent.classList.remove('done');
+      }
+    }
+  </script>
+</body>
+</html>
