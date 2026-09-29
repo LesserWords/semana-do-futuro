@@ -1707,13 +1707,121 @@
 
     .footer-links {
       display: flex;
-      gap: 24px;
+      gap: 36px;
       font-size: 14px;
       color: var(--muted-light);
+      flex-wrap: wrap;
+    }
+
+    .footer-links-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-group-title {
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ciano);
+      margin-bottom: 2px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .footer-links a:hover {
       color: var(--ciano);
+    }
+
+    /* Admin Navigation Badge */
+    .nav-admin-badge {
+      font-family: var(--display);
+      font-size: 12px !important;
+      font-weight: 700 !important;
+      padding: 5px 12px;
+      border-radius: 8px;
+      background: rgba(8, 209, 248, 0.1);
+      border: 1px solid rgba(8, 209, 248, 0.35);
+      color: var(--ciano) !important;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-admin-badge:hover {
+      background: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      color: #FFFFFF !important;
+      border-color: transparent;
+      box-shadow: 0 0 16px rgba(8, 209, 248, 0.45);
+      transform: translateY(-1px);
+    }
+
+    .nav-admin-badge::after {
+      display: none !important;
+    }
+
+    /* Admin Strip in Footer */
+    .footer-admin-bar {
+      margin-top: 20px;
+      padding: 12px 18px;
+      background: rgba(14, 17, 28, 0.85);
+      border: 1px solid rgba(8, 209, 248, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .admin-badge-pill {
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .admin-links-row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .admin-link-tag {
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted-light);
+      padding: 5px 11px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .admin-link-tag:hover {
+      color: #FFFFFF;
+      border-color: var(--ciano);
+      background: rgba(8, 209, 248, 0.14);
+      transform: translateY(-1px);
+    }
+
+    .admin-link-tag.active-tag {
+      color: #FFFFFF;
+      border-color: rgba(8, 209, 248, 0.5);
+      background: rgba(8, 209, 248, 0.12);
+      box-shadow: 0 0 10px rgba(8, 209, 248, 0.2);
     }
 
     .footer-bottom {
@@ -3405,6 +3513,7 @@
           <li><a href="#palestrantes">Especialistas</a></li>
           <li><a href="#patrocinadores">Patrocinadores</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="reels.html" class="nav-admin-badge" title="Área da Organização · Criador de Capas para Reels">🎬 Reels</a></li>
         </ul>
       </nav>
 
@@ -4699,15 +4808,36 @@
         </div>
 
         <div class="footer-links">
-          <a href="recursos.html">📚 Hub de Recursos & Slides</a>
-          <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener">Instagram: @nia.cianorte</a>
-          <a href="mailto:nia.acic.cianorte@gmail.com">E-mail: nia.acic.cianorte@gmail.com</a>
-          <a href="https://linktr.ee/nucleodeiacianorte" target="_blank" rel="noopener">Linktree Oficial</a>
+          <div class="footer-links-group">
+            <span class="footer-group-title">Participantes & Hub</span>
+            <a href="recursos.html">📚 Hub de Recursos & Slides</a>
+            <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener">Instagram: @nia.cianorte</a>
+            <a href="mailto:nia.acic.cianorte@gmail.com">E-mail: nia.acic.cianorte@gmail.com</a>
+            <a href="https://linktr.ee/nucleodeiacianorte" target="_blank" rel="noopener">Linktree Oficial</a>
+          </div>
+
+          <div class="footer-links-group">
+            <span class="footer-group-title">Equipe & Operação (Admin)</span>
+            <a href="reels.html" style="color: var(--ciano); font-weight: 700;">🎬 Moldura Reels (9:16)</a>
+            <a href="scripts.html">🎙️ Scripts & Roteiro dos Hosts</a>
+            <a href="slides.html">🖥️ Apresentação de Telão</a>
+            <a href="sorteador.html">🎁 Sorteador Oficial</a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>© 2026 Semana do Futuro · NIA Cianorte. Todos os direitos reservados. Humanidade no centro da Inteligência
+        <div class="footer-admin-bar">
+          <span class="admin-badge-pill">🔒 ADMIN & OPERAÇÃO:</span>
+          <div class="admin-links-row">
+            <a href="reels.html" class="admin-link-tag active-tag" title="Criador de Capas e Molduras de Reels">🎬 Moldura Reels (9:16)</a>
+            <a href="scripts.html" class="admin-link-tag" title="Scripts e Roteiro dos Apresentadores">🎙️ Scripts Hosts</a>
+            <a href="slides.html" class="admin-link-tag" title="Slides de Telão dos 6 Polos">🖥️ Telão</a>
+            <a href="sorteador.html" class="admin-link-tag" title="Sorteador Oficial de Brindes">🎁 Sorteador</a>
+          </div>
+        </div>
+
+        <p style="margin-top: 14px;">© 2026 Semana do Futuro · NIA Cianorte. Todos os direitos reservados. Humanidade no centro da Inteligência
           Artificial.</p>
       </div>
     </div>
