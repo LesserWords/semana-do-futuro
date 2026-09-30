@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerador de Thumbnail de Reels · Semana do Futuro 2026</title>
+  <title>Gerador de Thumbnail · Semana do Futuro 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -125,15 +125,17 @@
       background: #040508;
       border: 1px solid var(--surface-border);
       border-radius: 20px;
-      padding: 20px;
+      padding: 64px 20px 24px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       position: relative;
-      overflow: hidden;
+      overflow-y: auto;
+      overflow-x: hidden;
       box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.6);
       user-select: none;
+      min-height: 600px;
     }
 
     /* Subtle background grid */
@@ -164,19 +166,9 @@
       pointer-events: auto;
     }
 
-    .guide-toggles {
-      display: flex;
-      gap: 8px;
-      background: rgba(14, 17, 28, 0.85);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--surface-border);
-      padding: 4px;
-      border-radius: 12px;
-    }
-
     .btn-toggle {
       background: transparent;
-      border: none;
+      border: 1px solid var(--surface-border);
       color: var(--texto-muted);
       font-family: var(--disp);
       font-size: 12px;
@@ -188,22 +180,28 @@
       align-items: center;
       gap: 6px;
       transition: all 0.2s ease;
+      background: rgba(14, 17, 28, 0.8);
+      backdrop-filter: blur(8px);
     }
 
     .btn-toggle:hover {
       color: #fff;
-      background: rgba(255, 255, 255, 0.06);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(8, 209, 248, 0.4);
     }
 
     .btn-toggle.active {
       background: var(--accent-grad);
       color: #fff;
+      border-color: transparent;
       box-shadow: 0 0 12px var(--ciano-glow);
     }
 
     .canvas-wrapper {
       position: relative;
-      max-height: calc(100vh - 160px);
+      height: calc(100vh - 200px);
+      max-height: 820px;
+      max-width: calc(100% - 20px);
       aspect-ratio: 9 / 16;
       border-radius: 28px;
       overflow: hidden;
@@ -215,7 +213,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform 0.15s ease;
+      transition: aspect-ratio 0.25s ease, transform 0.15s ease;
+      flex-shrink: 0;
+      margin: auto 0;
     }
 
     .canvas-wrapper:active {
@@ -246,6 +246,7 @@
       border: 2px dashed rgba(8, 209, 248, 0.75);
       background: rgba(8, 209, 248, 0.04);
       display: none;
+      transition: top 0.2s ease, height 0.2s ease;
     }
 
     .grid-1x1-label {
@@ -294,46 +295,48 @@
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     .reels-ui-bottom {
       position: absolute;
-      left: 16px;
-      right: 80px;
       bottom: 24px;
+      left: 20px;
+      right: 80px;
       color: #fff;
-      font-size: 11px;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     }
 
     .reels-ui-handle {
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 6px;
-      margin-bottom: 4px;
+      gap: 8px;
     }
 
     /* Controls Panel */
-    .controls-panel {
+    aside.controls-panel {
       background: var(--surface);
       border: 1px solid var(--surface-border);
       border-radius: 20px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      max-height: calc(100vh - 120px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
     }
 
     .controls-scroll {
-      padding: 24px;
-      overflow-y: auto;
       flex: 1;
+      overflow-y: auto;
+      padding: 24px;
       display: flex;
       flex-direction: column;
       gap: 24px;
@@ -341,7 +344,7 @@
 
     .section-title {
       font-family: var(--disp);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -359,11 +362,67 @@
       background: var(--surface-border);
     }
 
+    /* Format Selection Cards */
+    .format-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .format-card {
+      background: var(--surface-card);
+      border: 1.5px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      position: relative;
+    }
+
+    .format-card:hover {
+      border-color: rgba(8, 209, 248, 0.4);
+      background: rgba(20, 24, 38, 0.9);
+    }
+
+    .format-card.active {
+      border-color: var(--ciano);
+      background: rgba(8, 209, 248, 0.08);
+      box-shadow: 0 0 16px rgba(8, 209, 248, 0.2);
+    }
+
+    .format-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--ciano);
+      background: rgba(8, 209, 248, 0.12);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: var(--disp);
+    }
+
+    .format-name {
+      font-family: var(--disp);
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .format-res {
+      font-size: 11px;
+      color: var(--texto-muted);
+    }
+
     /* Upload Dropzone */
     .dropzone {
       border: 2px dashed rgba(8, 209, 248, 0.3);
       border-radius: 14px;
-      padding: 20px 16px;
+      padding: 24px 16px;
       text-align: center;
       cursor: pointer;
       background: rgba(8, 209, 248, 0.02);
@@ -377,8 +436,8 @@
     }
 
     .dropzone svg {
-      width: 28px;
-      height: 28px;
+      width: 32px;
+      height: 32px;
       fill: var(--ciano);
       margin-bottom: 8px;
     }
@@ -393,49 +452,6 @@
       font-size: 11px;
       color: var(--texto-muted);
       margin-top: 4px;
-    }
-
-    /* Presets Quick Picker */
-    .samples-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 10px;
-    }
-
-    .sample-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--texto-muted);
-    }
-
-    .samples-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
-    }
-
-    .btn-sample {
-      background: var(--surface-card);
-      border: 1px solid var(--surface-border);
-      color: var(--texto);
-      font-family: var(--body);
-      font-size: 11px;
-      font-weight: 600;
-      padding: 7px 4px;
-      border-radius: 8px;
-      cursor: pointer;
-      text-align: center;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      transition: all 0.2s ease;
-    }
-
-    .btn-sample:hover {
-      border-color: var(--ciano);
-      background: rgba(8, 209, 248, 0.1);
-      color: #fff;
     }
 
     /* Frame Styles Picker */
@@ -602,6 +618,69 @@
       cursor: pointer;
     }
 
+    /* Dock Sections Box & Checkcards */
+    .dock-sections-box {
+      background: var(--surface-card);
+      border: 1px solid var(--surface-border);
+      border-radius: 12px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .dock-sections-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ciano);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dock-sections-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .dock-check-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 4px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--surface-border);
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .dock-check-card:hover {
+      border-color: rgba(8, 209, 248, 0.3);
+      background: rgba(8, 209, 248, 0.04);
+    }
+
+    .dock-check-card.checked {
+      border-color: rgba(8, 209, 248, 0.5);
+      background: rgba(8, 209, 248, 0.08);
+    }
+
+    .dock-check-card span {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--texto);
+    }
+
+    .dock-check-card input[type="checkbox"] {
+      accent-color: var(--ciano);
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
     /* Export Action Buttons Footer */
     .export-footer {
       padding: 20px 24px;
@@ -706,10 +785,10 @@
         <svg viewBox="0 0 24 24"><path d="M4 4h7v7H4V4zm9 0h7v7h-7V4zm-9 9h7v7H4v-7zm9 0h7v7h-7v-7z"/></svg>
       </div>
       <div>
-        <h1 class="brand-title">Gerador de Molduras · Reels</h1>
+        <h1 class="brand-title">Gerador de Thumbnail</h1>
         <div style="font-size: 11px; color: var(--texto-muted);">Semana do Futuro 2026 · NIA Cianorte</div>
       </div>
-      <span class="brand-badge">9:16 UHD</span>
+      <span class="brand-badge" id="headerBrandBadge">9:16 STORIES</span>
     </div>
 
     <div class="header-actions">
@@ -717,7 +796,7 @@
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke="currentColor" stroke-width="1.5"/></svg>
         Grid Perfil (1:1)
       </button>
-      <button class="btn-toggle" id="btnGuideReels" title="Simular interface nativa do Instagram">
+      <button class="btn-toggle" id="btnGuideReels" title="Simular interface nativa do Instagram (Reels/Stories)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         Interface Reels
       </button>
@@ -730,7 +809,7 @@
     <!-- Canvas Preview Stage -->
     <section class="preview-stage">
       <div class="stage-toolbar">
-        <div style="font-size: 11px; font-family: var(--disp); font-weight: 700; color: var(--ciano); letter-spacing: 0.1em; background: rgba(0,0,0,0.6); padding: 4px 10px; border-radius: 8px;">
+        <div id="stageResLabel" style="font-size: 11px; font-family: var(--disp); font-weight: 700; color: var(--ciano); letter-spacing: 0.1em; background: rgba(0,0,0,0.6); padding: 4px 10px; border-radius: 8px;">
           PREVIEW EM TEMPO REAL · 1080 × 1920 PX
         </div>
         <button class="btn-toggle" id="btnResetView" title="Centralizar imagem e zoom">
@@ -773,26 +852,39 @@
     <aside class="controls-panel">
       <div class="controls-scroll">
         
+        <!-- Format Selection Section -->
+        <div>
+          <div class="section-title">
+            <span>📐 Formato da Thumbnail</span>
+          </div>
+          <div class="format-cards">
+            <div class="format-card active" data-format="stories" id="fmtStories">
+              <span class="format-badge">9:16</span>
+              <span class="format-name">Stories & Reels</span>
+              <span class="format-res">1080 × 1920 px</span>
+            </div>
+            <div class="format-card" data-format="feed" id="fmtFeed">
+              <span class="format-badge">3:4</span>
+              <span class="format-name">Feed Retrato</span>
+              <span class="format-res">1080 × 1440 px</span>
+            </div>
+          </div>
+        </div>
+
         <!-- Upload Section -->
         <div>
           <div class="section-title">
-            <span>📸 Sua Imagem</span>
+            <span>📸 Sua Foto</span>
           </div>
           <div class="dropzone" id="dropzone">
             <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
-            <div class="dropzone-text">Arraste uma foto aqui ou clique para escolher</div>
-            <div class="dropzone-sub">Você também pode colar direto com Ctrl+V</div>
+            <div class="dropzone-text" id="dropzoneText">Arraste uma foto aqui ou clique para escolher</div>
+            <div class="dropzone-sub" id="dropzoneSub">Suporta PNG, JPG, WEBP · Ou cole com Ctrl+V</div>
             <input type="file" id="fileInput" accept="image/*" style="display: none;">
           </div>
-
-          <!-- Quick Sample Images -->
-          <div class="samples-wrap">
-            <span class="sample-label">Ou teste com fotos do evento:</span>
-            <div class="samples-grid">
-              <button class="btn-sample" id="sample1">Vinicius Grecco</button>
-              <button class="btn-sample" id="sample2">João Gabriel</button>
-              <button class="btn-sample" id="sample3">Anelise Dalberto</button>
-            </div>
+          <div id="fileInfoRow" style="display: none; align-items: center; justify-content: space-between; margin-top: 8px; padding: 6px 12px; background: rgba(8,209,248,0.08); border: 1px solid rgba(8,209,248,0.25); border-radius: 8px; font-size: 11px;">
+            <span id="fileNameLabel" style="color: var(--ciano); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 250px;">foto.png</span>
+            <button id="btnRemovePhoto" style="background: none; border: none; color: #ff6b6b; cursor: pointer; font-size: 11px; font-weight: 700;">Remover</button>
           </div>
         </div>
 
@@ -880,16 +972,16 @@
             <div>
               <span style="font-size: 11px; font-weight: 600; color: var(--texto-muted); margin-bottom: 6px; display: block;">Selo de Categoria:</span>
               <div class="pill-grid">
-                <button class="btn-pill active" data-pill="REELS">REELS</button>
+                <button class="btn-pill active" data-pill="DESTAQUES">DESTAQUES</button>
+                <button class="btn-pill" data-pill="REELS">REELS</button>
                 <button class="btn-pill" data-pill="HIGHLIGHTS">HIGHLIGHTS</button>
                 <button class="btn-pill" data-pill="BASTIDORES">BASTIDORES</button>
                 <button class="btn-pill" data-pill="PALESTRA">PALESTRA</button>
                 <button class="btn-pill" data-pill="CORTES">CORTES</button>
-                <button class="btn-pill" data-pill="CONEXÕES">CONEXÕES</button>
                 <button class="btn-pill" data-pill="AO VIVO">AO VIVO</button>
                 <button class="btn-pill" data-pill="">NENHUM</button>
               </div>
-              <input type="text" id="inputPill" class="text-field" value="REELS" placeholder="Ou digite outro selo...">
+              <input type="text" id="inputPill" class="text-field" value="DESTAQUES" placeholder="Ou digite outro selo...">
             </div>
 
             <label class="switch-label">
@@ -907,7 +999,7 @@
         <!-- Logos Configuration -->
         <div>
           <div class="section-title">
-            <span>🛡️ Assinatura & Logos</span>
+            <span>🛡️ Assinatura & Rodapé</span>
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -915,12 +1007,28 @@
               <span>Logo Semana do Futuro (Topo)</span>
               <input type="checkbox" id="checkLogoSemana" checked>
             </label>
+
+            <!-- Seções do Rodapé (Separadas em checkboxes ocupando o mesmo espaço) -->
+            <div class="dock-sections-box">
+              <div class="dock-sections-title">Seções do Rodapé (Mesmo Espaço)</div>
+              <div class="dock-sections-grid">
+                <label class="dock-check-card checked" id="cardPatrocinio">
+                  <span>Patrocínio</span>
+                  <input type="checkbox" id="checkPatrocinio" checked>
+                </label>
+                <label class="dock-check-card checked" id="cardRealizacao">
+                  <span>Realização</span>
+                  <input type="checkbox" id="checkRealizacao" checked>
+                </label>
+                <label class="dock-check-card checked" id="cardApoio">
+                  <span>Apoio</span>
+                  <input type="checkbox" id="checkApoio" checked>
+                </label>
+              </div>
+            </div>
+
             <label class="switch-label">
-              <span>Dock de Patrocinadores e Apoio (Rodapé)</span>
-              <input type="checkbox" id="checkDockLogos" checked>
-            </label>
-            <label class="switch-label">
-              <span>Selo @nia.cianorte</span>
+              <span>Selo Oficial @nia.cianorte (Rodapé)</span>
               <input type="checkbox" id="checkHandle" checked>
             </label>
           </div>
@@ -930,9 +1038,9 @@
 
       <!-- Action Buttons Footer -->
       <div class="export-footer">
-        <button class="btn-export-primary" id="btnDownloadReel">
+        <button class="btn-export-primary" id="btnDownloadMain">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
-          Baixar Thumbnail (1080 × 1920)
+          <span id="btnDownloadMainText">Baixar Thumbnail (1080 × 1920)</span>
         </button>
 
         <div class="export-secondary-row">
@@ -948,9 +1056,9 @@
 
   </main>
 
-  <!-- Toast -->
   <div class="toast" id="toast">
-    <span id="toastMsg">Imagem copiada com sucesso!</span>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="#08D1F8"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+    <span id="toastMsg">Mensagem</span>
   </div>
 
   <script>
@@ -959,22 +1067,26 @@
 
     // State
     const state = {
+      format: 'stories', // 'stories' (1080x1920) | 'feed' (1080x1440)
       userImage: null,
       userImgObj: null,
-      imgX: 0,
-      imgY: 0,
+      userImgName: '',
+      imgX: 540,
+      imgY: 960,
       imgScale: 1,
       imgRotation: 0,
       brightness: 100,
       contrast: 100,
       scrimAlpha: 0.8,
       style: 'cyber', // 'cyber', 'clean', 'cinematic', 'polaroid'
-      categoryPill: 'REELS',
+      categoryPill: 'DESTAQUES',
       hasTitle: false,
       titleText: 'DESTAQUES DO DIA',
       subtitleText: 'Semana do Futuro · Cianorte',
       showLogoSemana: true,
-      showDockLogos: true,
+      showPatrocinio: true,
+      showRealizacao: true,
+      showApoio: true,
       showHandle: true,
       showGrid1x1: true,
       showReelsUI: false
@@ -1008,7 +1120,13 @@
 
     // UI Elements
     const dropzone = document.getElementById('dropzone');
+    const dropzoneText = document.getElementById('dropzoneText');
+    const dropzoneSub = document.getElementById('dropzoneSub');
     const fileInput = document.getElementById('fileInput');
+    const fileInfoRow = document.getElementById('fileInfoRow');
+    const fileNameLabel = document.getElementById('fileNameLabel');
+    const btnRemovePhoto = document.getElementById('btnRemovePhoto');
+
     const rangeZoom = document.getElementById('rangeZoom');
     const valZoom = document.getElementById('valZoom');
     const rangeRotate = document.getElementById('rangeRotate');
@@ -1025,15 +1143,29 @@
     const titleConfigWrap = document.getElementById('titleConfigWrap');
     const inputTitle = document.getElementById('inputTitle');
     const inputSubtitle = document.getElementById('inputSubtitle');
+
     const checkLogoSemana = document.getElementById('checkLogoSemana');
-    const checkDockLogos = document.getElementById('checkDockLogos');
+    const checkPatrocinio = document.getElementById('checkPatrocinio');
+    const checkRealizacao = document.getElementById('checkRealizacao');
+    const checkApoio = document.getElementById('checkApoio');
     const checkHandle = document.getElementById('checkHandle');
+
+    const cardPatrocinio = document.getElementById('cardPatrocinio');
+    const cardRealizacao = document.getElementById('cardRealizacao');
+    const cardApoio = document.getElementById('cardApoio');
 
     const btnGuideGrid = document.getElementById('btnGuideGrid');
     const btnGuideReels = document.getElementById('btnGuideReels');
     const gridBox = document.getElementById('gridBox');
     const reelsMock = document.getElementById('reelsMock');
     const btnResetView = document.getElementById('btnResetView');
+
+    const fmtStories = document.getElementById('fmtStories');
+    const fmtFeed = document.getElementById('fmtFeed');
+    const stageResLabel = document.getElementById('stageResLabel');
+    const headerBrandBadge = document.getElementById('headerBrandBadge');
+    const btnDownloadMain = document.getElementById('btnDownloadMain');
+    const btnDownloadMainText = document.getElementById('btnDownloadMainText');
 
     // Toast
     function showToast(msg) {
@@ -1043,25 +1175,12 @@
       setTimeout(() => toast.classList.remove('show'), 2800);
     }
 
-    // Load default image (Vinicius Grecco)
-    function loadSampleImage(url) {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.onload = () => {
-        state.userImgObj = img;
-        centerImage();
-        render();
-        showToast('Foto carregada com sucesso!');
-      };
-      img.src = url;
-    }
-
     function centerImage() {
+      state.imgX = canvas.width / 2;
+      state.imgY = canvas.height / 2;
       if (!state.userImgObj) return;
-      state.imgX = 1080 / 2;
-      state.imgY = 1920 / 2;
-      const scaleX = 1080 / state.userImgObj.width;
-      const scaleY = 1920 / state.userImgObj.height;
+      const scaleX = canvas.width / state.userImgObj.width;
+      const scaleY = canvas.height / state.userImgObj.height;
       state.imgScale = Math.max(scaleX, scaleY);
       state.imgRotation = 0;
       rangeZoom.value = 100;
@@ -1070,16 +1189,54 @@
       valRotate.textContent = '0°';
     }
 
-    // Main Draw Function (High Resolution 1080x1920)
+    // Atualiza configuração de formato (Stories 1080x1920 vs Feed 1080x1440)
+    function setFormat(fmt) {
+      state.format = fmt;
+      if (fmt === 'feed') {
+        canvas.width = 1080;
+        canvas.height = 1440;
+        canvasWrap.style.aspectRatio = '3 / 4';
+        fmtFeed.classList.add('active');
+        fmtStories.classList.remove('active');
+        stageResLabel.textContent = 'PREVIEW EM TEMPO REAL · 1080 × 1440 PX';
+        headerBrandBadge.textContent = '3:4 FEED';
+        btnDownloadMainText.textContent = 'Baixar Thumbnail (1080 × 1440)';
+        // Ajusta grid 1:1 safe box para feed (1080x1080 centralizado em 1440 -> top: 180px)
+        gridBox.style.top = 'calc(100% * 180 / 1440)';
+        gridBox.style.height = 'calc(100% * 1080 / 1440)';
+        // Esconde Reels UI no Feed
+        reelsMock.style.display = 'none';
+        btnGuideReels.style.display = 'none';
+      } else {
+        canvas.width = 1080;
+        canvas.height = 1920;
+        canvasWrap.style.aspectRatio = '9 / 16';
+        fmtStories.classList.add('active');
+        fmtFeed.classList.remove('active');
+        stageResLabel.textContent = 'PREVIEW EM TEMPO REAL · 1080 × 1920 PX';
+        headerBrandBadge.textContent = '9:16 STORIES';
+        btnDownloadMainText.textContent = 'Baixar Thumbnail (1080 × 1920)';
+        // Ajusta grid 1:1 safe box para stories (1080x1080 centralizado em 1920 -> top: 420px)
+        gridBox.style.top = 'calc(100% * 420 / 1920)';
+        gridBox.style.height = 'calc(100% * 1080 / 1920)';
+        btnGuideReels.style.display = 'flex';
+        if (state.showReelsUI) reelsMock.style.display = 'block';
+      }
+      centerImage();
+      render();
+    }
+
+    // Main Draw Function
     function render(options = {}) {
       const transparentFrameOnly = options.transparentFrameOnly || false;
-      ctx.clearRect(0, 0, 1080, 1920);
+      const W = canvas.width;
+      const H = canvas.height;
+      ctx.clearRect(0, 0, W, H);
 
-      // 1. DESENHA FOTO DO USUÁRIO (se não for exportação exclusiva de moldura transparente)
+      // 1. DESENHA FOTO DO USUÁRIO OU PLACEHOLDER
       if (!transparentFrameOnly) {
         if (state.userImgObj) {
           ctx.save();
-          // Filtros
           ctx.filter = `brightness(${state.brightness}%) contrast(${state.contrast}%)`;
           ctx.translate(state.imgX, state.imgY);
           ctx.rotate((state.imgRotation * Math.PI) / 180);
@@ -1091,28 +1248,88 @@
           );
           ctx.restore();
         } else {
-          // Placeholder escuro caso sem foto
+          // Placeholder Estilizado e Instrutivo
           ctx.fillStyle = '#080A12';
-          ctx.fillRect(0, 0, 1080, 1920);
+          ctx.fillRect(0, 0, W, H);
+
+          // Grade técnica sutil de fundo
+          ctx.strokeStyle = 'rgba(8, 209, 248, 0.08)';
+          ctx.lineWidth = 1;
+          const gridSize = 60;
+          for (let x = 0; x < W; x += gridSize) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, H);
+            ctx.stroke();
+          }
+          for (let y = 0; y < H; y += gridSize) {
+            ctx.beginPath();
+            ctx.moveTo(0, y);
+            ctx.lineTo(W, y);
+            ctx.stroke();
+          }
+
+          // Card Central de Instrução
+          ctx.save();
+          const boxW = 560;
+          const boxH = 260;
+          const boxX = (W - boxW) / 2;
+          const boxY = (H - boxH) / 2 - 20;
+
+          ctx.fillStyle = 'rgba(14, 17, 28, 0.85)';
+          ctx.strokeStyle = 'rgba(8, 209, 248, 0.35)';
+          ctx.lineWidth = 1.5;
+          roundRect(ctx, boxX, boxY, boxW, boxH, 20);
+          ctx.fill();
+          ctx.stroke();
+
+          // Ícone de upload
+          ctx.fillStyle = '#08D1F8';
+          ctx.font = '800 36px "Space Grotesk", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText('📸', W / 2, boxY + 70);
+
+          ctx.fillStyle = '#FFFFFF';
+          ctx.font = '700 20px "Space Grotesk", sans-serif';
+          ctx.fillText('Arraste sua foto para cá', W / 2, boxY + 120);
+
+          ctx.fillStyle = '#8E99B3';
+          ctx.font = '500 14px "IBM Plex Sans", sans-serif';
+          ctx.fillText('Ou clique no campo de upload na barra lateral', W / 2, boxY + 155);
+          ctx.fillText(`Formato selecionado: ${W} × ${H} px · Suporta Ctrl+V`, W / 2, boxY + 185);
+
+          // Pílula com formato
+          ctx.fillStyle = 'rgba(8, 209, 248, 0.12)';
+          ctx.strokeStyle = 'rgba(8, 209, 248, 0.3)';
+          roundRect(ctx, W / 2 - 110, boxY + 205, 220, 28, 14);
+          ctx.fill();
+          ctx.stroke();
+          ctx.fillStyle = '#08D1F8';
+          ctx.font = '700 11px "Space Grotesk", sans-serif';
+          ctx.letterSpacing = '1px';
+          ctx.fillText(state.format === 'feed' ? 'FEED RETRATO (3:4)' : 'STORIES / REELS (9:16)', W / 2, boxY + 223);
+
+          ctx.restore();
         }
 
         // 2. GRADIENTES DE PROTEÇÃO (Garante leitura dos textos sobre fotos claras)
         if (state.scrimAlpha > 0) {
-          // Top Scrim
-          const topGrad = ctx.createLinearGradient(0, 0, 0, 480);
+          const topScrimH = state.format === 'feed' ? 360 : 480;
+          const topGrad = ctx.createLinearGradient(0, 0, 0, topScrimH);
           topGrad.addColorStop(0, `rgba(6, 7, 11, ${state.scrimAlpha * 0.95})`);
           topGrad.addColorStop(0.5, `rgba(6, 7, 11, ${state.scrimAlpha * 0.65})`);
           topGrad.addColorStop(1, 'rgba(6, 7, 11, 0)');
           ctx.fillStyle = topGrad;
-          ctx.fillRect(0, 0, 1080, 480);
+          ctx.fillRect(0, 0, W, topScrimH);
 
-          // Bottom Scrim
-          const btmGrad = ctx.createLinearGradient(0, 1380, 0, 1920);
+          const btmScrimH = state.format === 'feed' ? 440 : 540;
+          const btmGradY = H - btmScrimH;
+          const btmGrad = ctx.createLinearGradient(0, btmGradY, 0, H);
           btmGrad.addColorStop(0, 'rgba(6, 7, 11, 0)');
           btmGrad.addColorStop(0.4, `rgba(6, 7, 11, ${state.scrimAlpha * 0.65})`);
           btmGrad.addColorStop(1, `rgba(6, 7, 11, ${state.scrimAlpha * 0.98})`);
           ctx.fillStyle = btmGrad;
-          ctx.fillRect(0, 1380, 1080, 540);
+          ctx.fillRect(0, btmGradY, W, btmScrimH);
         }
       }
 
@@ -1137,30 +1354,32 @@
         drawCenterTitle();
       }
 
-      // 6. RODAPÉ: DOCK DE ORGANIZADORES E PARCEIROS
-      if (state.showDockLogos) {
+      // 6. RODAPÉ: DOCK DE PATROCÍNIO, REALIZAÇÃO E APOIO
+      if (state.showPatrocinio || state.showRealizacao || state.showApoio || state.showHandle) {
         drawFooterDock();
       }
     }
 
     // Moldura Cyber Tech
     function drawCyberFrame() {
+      const W = canvas.width;
+      const H = canvas.height;
       ctx.save();
       // Borda Externa Gradiente
-      const grad = ctx.createLinearGradient(0, 0, 1080, 1920);
+      const grad = ctx.createLinearGradient(0, 0, W, H);
       grad.addColorStop(0, '#3B0CAD');
       grad.addColorStop(0.5, '#2B49C4');
       grad.addColorStop(1, '#08D1F8');
 
       ctx.lineWidth = 3;
       ctx.strokeStyle = grad;
-      roundRect(ctx, 36, 36, 1008, 1848, 28);
+      roundRect(ctx, 36, 36, W - 72, H - 72, 28);
       ctx.stroke();
 
       // Borda Interna Fina
       ctx.lineWidth = 1;
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.16)';
-      roundRect(ctx, 48, 48, 984, 1824, 20);
+      roundRect(ctx, 48, 48, W - 96, H - 96, 20);
       ctx.stroke();
 
       // Cantoneiras HUD em Ciano com Glow
@@ -1180,23 +1399,23 @@
 
       // Top-Right
       ctx.beginPath();
-      ctx.moveTo(1044 - len, 36);
-      ctx.lineTo(1044, 36);
-      ctx.lineTo(1044, 36 + len);
+      ctx.moveTo(W - 36 - len, 36);
+      ctx.lineTo(W - 36, 36);
+      ctx.lineTo(W - 36, 36 + len);
       ctx.stroke();
 
       // Bottom-Left
       ctx.beginPath();
-      ctx.moveTo(36, 1884 - len);
-      ctx.lineTo(36, 1884);
-      ctx.lineTo(36 + len, 1884);
+      ctx.moveTo(36, H - 36 - len);
+      ctx.lineTo(36, H - 36);
+      ctx.lineTo(36 + len, H - 36);
       ctx.stroke();
 
       // Bottom-Right
       ctx.beginPath();
-      ctx.moveTo(1044 - len, 1884);
-      ctx.lineTo(1044, 1884);
-      ctx.lineTo(1044, 1884 - len);
+      ctx.moveTo(W - 36 - len, H - 36);
+      ctx.lineTo(W - 36, H - 36);
+      ctx.lineTo(W - 36, H - 36 - len);
       ctx.stroke();
 
       // Micro Metadados
@@ -1210,21 +1429,22 @@
       ctx.arc(76, 78, 4, 0, Math.PI * 2);
       ctx.fill();
 
-      ctx.fillText('REC ● 9:16 UHD', 92, 83);
+      const recLabel = state.format === 'feed' ? 'REC ● 3:4 FEED' : 'REC ● 9:16 UHD';
+      ctx.fillText(recLabel, 92, 83);
       ctx.textAlign = 'right';
-      ctx.fillText('28 SET — 02 OUT · 2026', 1004, 83);
+      ctx.fillText('28 SET — 02 OUT · 2026', W - 76, 83);
       ctx.textAlign = 'left';
 
       // Marcas de Enquadramento 1:1 (Safe Zone)
+      const safeTop = state.format === 'feed' ? 180 : 420;
+      const safeBtm = state.format === 'feed' ? 1260 : 1500;
       ctx.strokeStyle = 'rgba(8, 209, 248, 0.4)';
       ctx.lineWidth = 1.5;
       ctx.beginPath();
-      // Tick top safe
-      ctx.moveTo(36, 420); ctx.lineTo(54, 420);
-      ctx.moveTo(1026, 420); ctx.lineTo(1044, 420);
-      // Tick btm safe
-      ctx.moveTo(36, 1500); ctx.lineTo(54, 1500);
-      ctx.moveTo(1026, 1500); ctx.lineTo(1044, 1500);
+      ctx.moveTo(36, safeTop); ctx.lineTo(54, safeTop);
+      ctx.moveTo(W - 54, safeTop); ctx.lineTo(W - 36, safeTop);
+      ctx.moveTo(36, safeBtm); ctx.lineTo(54, safeBtm);
+      ctx.moveTo(W - 54, safeBtm); ctx.lineTo(W - 36, safeBtm);
       ctx.stroke();
 
       ctx.restore();
@@ -1232,8 +1452,10 @@
 
     // Moldura Clean Flutuante
     function drawCleanFrame() {
+      const W = canvas.width;
+      const H = canvas.height;
       ctx.save();
-      const grad = ctx.createLinearGradient(0, 0, 1080, 1920);
+      const grad = ctx.createLinearGradient(0, 0, W, H);
       grad.addColorStop(0, '#08D1F8');
       grad.addColorStop(0.5, '#2B49C4');
       grad.addColorStop(1, '#3B0CAD');
@@ -1242,38 +1464,43 @@
       ctx.strokeStyle = grad;
       ctx.shadowColor = 'rgba(8, 209, 248, 0.4)';
       ctx.shadowBlur = 12;
-      roundRect(ctx, 42, 42, 996, 1836, 36);
+      roundRect(ctx, 42, 42, W - 84, H - 84, 36);
       ctx.stroke();
       ctx.restore();
     }
 
-    // Moldura Full-Bleed (Sem Borda Interna)
+    // Moldura Full-Bleed
     function drawCinematicFrame() {
-      // Estilo minimalista full-screen, sem linhas de borda para visual cinematográfico imersivo
+      // Minimalista sem bordas para imersão total
     }
 
     // Moldura Polaroid Tech
     function drawPolaroidFrame() {
+      const W = canvas.width;
+      const H = canvas.height;
       ctx.save();
       ctx.fillStyle = 'rgba(10, 13, 22, 0.9)';
+      const deckH = state.format === 'feed' ? 290 : 320;
       // Top bar
-      ctx.fillRect(0, 0, 1080, 80);
-      // Bottom thick card deck
-      ctx.fillRect(0, 1600, 1080, 320);
+      ctx.fillRect(0, 0, W, 70);
+      // Bottom card deck
+      ctx.fillRect(0, H - deckH, W, deckH);
       // Lateral borders
-      ctx.fillRect(0, 0, 40, 1920);
-      ctx.fillRect(1040, 0, 40, 1920);
+      ctx.fillRect(0, 0, 36, H);
+      ctx.fillRect(W - 36, 0, 36, H);
 
       // Linha neon divisória
       ctx.fillStyle = '#08D1F8';
-      ctx.fillRect(40, 1600, 1000, 3);
+      ctx.fillRect(36, H - deckH, W - 72, 3);
       ctx.restore();
     }
 
     // Top Header: Categoria e Logo Oficial
     function drawHeaderBranding() {
       ctx.save();
-      const centerX = 540;
+      const W = canvas.width;
+      const centerX = W / 2;
+      const isFeed = state.format === 'feed';
 
       // Selo de Categoria (Pill)
       if (state.categoryPill && state.categoryPill.trim()) {
@@ -1281,8 +1508,8 @@
         ctx.font = '800 13px "Space Grotesk", sans-serif';
         const metrics = ctx.measureText(pillText);
         const pillW = Math.max(120, metrics.width + 36);
-        const pillH = 32;
-        const pillY = 135;
+        const pillH = 30;
+        const pillY = isFeed ? 60 : 135;
 
         // Fundo Gradiente
         const grad = ctx.createLinearGradient(centerX - pillW/2, pillY, centerX + pillW/2, pillY);
@@ -1291,7 +1518,7 @@
         grad.addColorStop(1, '#08D1F8');
 
         ctx.fillStyle = grad;
-        roundRect(ctx, centerX - pillW / 2, pillY, pillW, pillH, 16);
+        roundRect(ctx, centerX - pillW / 2, pillY, pillW, pillH, 15);
         ctx.fill();
 
         ctx.fillStyle = '#FFFFFF';
@@ -1302,10 +1529,10 @@
 
       // Logo Semana do Futuro Oficial
       if (preloadedLogos.logoBranca.complete && preloadedLogos.logoBranca.naturalWidth > 0) {
-        const logoW = 460;
-        const logoH = 136;
+        const logoW = isFeed ? 410 : 460;
+        const logoH = isFeed ? 121 : 136;
         const logoX = centerX - logoW / 2;
-        const logoY = 182;
+        const logoY = isFeed ? 98 : 182;
 
         ctx.shadowColor = 'rgba(8, 209, 248, 0.4)';
         ctx.shadowBlur = 18;
@@ -1314,27 +1541,30 @@
 
       // Linha de luz e subtítulo
       ctx.shadowBlur = 0;
-      const lineGrad = ctx.createLinearGradient(centerX - 180, 332, centerX + 180, 332);
+      const lineY = isFeed ? 232 : 332;
+      const subY = isFeed ? 250 : 354;
+      const lineGrad = ctx.createLinearGradient(centerX - 180, lineY, centerX + 180, lineY);
       lineGrad.addColorStop(0, 'rgba(8, 209, 248, 0.1)');
       lineGrad.addColorStop(0.5, 'rgba(8, 209, 248, 0.85)');
       lineGrad.addColorStop(1, 'rgba(8, 209, 248, 0.1)');
       ctx.fillStyle = lineGrad;
-      ctx.fillRect(centerX - 180, 332, 360, 1.5);
+      ctx.fillRect(centerX - 180, lineY, 360, 1.5);
 
       ctx.fillStyle = '#B4C4D8';
       ctx.font = '700 13px "Space Grotesk", sans-serif';
       ctx.letterSpacing = '3.5px';
       ctx.textAlign = 'center';
-      ctx.fillText('CIRCUITO ITINERANTE · CIANORTE-PR', centerX, 354);
+      ctx.fillText('CIRCUITO ITINERANTE · CIANORTE-PR', centerX, subY);
 
       ctx.restore();
     }
 
-    // Título Centralizado na Capa (Na Safe Zone 1:1 do Feed)
+    // Título Centralizado na Capa
     function drawCenterTitle() {
       ctx.save();
-      const centerX = 540;
-      const titleY = 1380; // Posicionado perfeitamente no terço inferior da Safe Zone 1:1
+      const W = canvas.width;
+      const centerX = W / 2;
+      const titleY = state.format === 'feed' ? 980 : 1380;
 
       ctx.font = '800 38px "Space Grotesk", sans-serif';
       const text = state.titleText.toUpperCase();
@@ -1342,7 +1572,6 @@
       const cardW = Math.min(940, Math.max(500, metrics.width + 60));
       const cardH = 88;
 
-      // Card de destaque escuro com borda ciano
       ctx.fillStyle = 'rgba(8, 11, 20, 0.92)';
       ctx.strokeStyle = '#08D1F8';
       ctx.lineWidth = 1.5;
@@ -1352,14 +1581,12 @@
       ctx.fill();
       ctx.stroke();
 
-      // Texto Principal
       ctx.shadowBlur = 0;
       ctx.fillStyle = '#FFFFFF';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(text, centerX, titleY - 10);
 
-      // Subtítulo
       if (state.subtitleText) {
         ctx.fillStyle = '#08D1F8';
         ctx.font = '600 15px "IBM Plex Sans", sans-serif';
@@ -1370,15 +1597,35 @@
       ctx.restore();
     }
 
-    // Rodapé Institucional Completo com Todas as Logos de Patrocinadores e Apoio
+    // Rodapé Institucional Separado em Seções (Patrocínio, Realização, Apoio)
+    // Mantém o mesmo espaço total alocado e destaca o Selo do NIA maior e centralizado
     function drawFooterDock() {
       ctx.save();
-      const dockX = 50;
-      const dockY = 1530;
-      const dockW = 980;
-      const dockH = 315;
+      const W = canvas.width;
+      const H = canvas.height;
+      const isFeed = state.format === 'feed';
 
-      // Card de Vidro Fosco Estruturado
+      const dockX = 50;
+      const dockW = 980;
+      const dockH = isFeed ? 295 : 315;
+      const dockY = isFeed ? (H - dockH - 45) : 1530;
+
+      const hasPatrocinio = state.showPatrocinio;
+      const hasRealizacao = state.showRealizacao;
+      const hasApoio = state.showApoio;
+      const hasHandle = state.showHandle;
+
+      const activeTiers = [];
+      if (hasPatrocinio) activeTiers.push('patrocinio');
+      if (hasRealizacao) activeTiers.push('realizacao');
+      if (hasApoio) activeTiers.push('apoio');
+
+      if (activeTiers.length === 0 && !hasHandle) {
+        ctx.restore();
+        return;
+      }
+
+      // Card de Vidro Fosco Estruturado (Espaço total fixo)
       ctx.fillStyle = 'rgba(8, 11, 22, 0.94)';
       const borderGrad = ctx.createLinearGradient(dockX, dockY, dockX + dockW, dockY + dockH);
       borderGrad.addColorStop(0, '#3B0CAD');
@@ -1392,213 +1639,261 @@
       roundRect(ctx, dockX, dockY, dockW, dockH, 24);
       ctx.fill();
       ctx.stroke();
-
       ctx.shadowBlur = 0;
 
-      // -------------------------------------------------------------
-      // 1. TIER PATROCÍNIO
-      // -------------------------------------------------------------
-      const tier1Y = dockY + 14;
-      ctx.fillStyle = '#08D1F8';
-      ctx.font = '800 11px "Space Grotesk", sans-serif';
-      ctx.letterSpacing = '2.5px';
-      ctx.textAlign = 'left';
-      ctx.fillText('PATROCÍNIO', dockX + 25, tier1Y + 11);
+      // Distribuição de altura vertical das seções ativas
+      const handleBarH = hasHandle ? 34 : 0;
+      const sectionsTotalH = dockH - handleBarH - 20;
+      const numTiers = activeTiers.length;
+      const tierH = numTiers > 0 ? (sectionsTotalH / numTiers) : 0;
+      const startContentY = dockY + 12;
 
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(dockX + 120, tier1Y + 8);
-      ctx.lineTo(dockX + 955, tier1Y + 8);
-      ctx.stroke();
+      for (let tIdx = 0; tIdx < numTiers; tIdx++) {
+        const tierType = activeTiers[tIdx];
+        const curTierY = startContentY + tIdx * tierH;
+        const lineY = curTierY + 8;
+        const headerY = curTierY + 11;
+        const cardH = Math.min(tierH - 22, numTiers === 1 ? 58 : (numTiers === 2 ? 50 : 44));
+        const cardY = curTierY + 16 + (tierH - 20 - cardH) / 2;
 
-      const card1Y = tier1Y + 18;
-      const card1W = 218;
-      const card1H = 46;
-      const card1Gap = 19;
-      const card1StartX = dockX + 25;
+        if (tierType === 'patrocinio') {
+          // -------------------------------------------------------------
+          // SEÇÃO 1: PATROCÍNIO
+          // -------------------------------------------------------------
+          ctx.fillStyle = '#08D1F8';
+          ctx.font = '800 11px "Space Grotesk", sans-serif';
+          ctx.letterSpacing = '2.5px';
+          ctx.textAlign = 'left';
+          ctx.fillText('PATROCÍNIO', dockX + 25, headerY);
 
-      // Tintas MC (Master)
-      const xTintas = card1StartX;
-      ctx.fillStyle = '#FFFFFF';
-      ctx.strokeStyle = '#08D1F8';
-      ctx.lineWidth = 1.5;
-      roundRect(ctx, xTintas, card1Y, card1W, card1H, 8);
-      ctx.fill();
-      ctx.stroke();
-      // Badge Master
-      const bGrad1 = ctx.createLinearGradient(xTintas + 154, card1Y - 6, xTintas + 210, card1Y - 6);
-      bGrad1.addColorStop(0, '#3B0CAD');
-      bGrad1.addColorStop(1, '#08D1F8');
-      ctx.fillStyle = bGrad1;
-      roundRect(ctx, xTintas + 154, card1Y - 6, 56, 14, 4);
-      ctx.fill();
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '800 8.5px "Space Grotesk", sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText('MASTER', xTintas + 182, card1Y + 4);
-      drawImageContain(ctx, preloadedLogos.tintasMc, xTintas + 10, card1Y + 6, 150, 34);
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(dockX + 120, lineY);
+          ctx.lineTo(dockX + 955, lineY);
+          ctx.stroke();
 
-      // Wizard Cianorte (Master)
-      const xWizard = xTintas + card1W + card1Gap;
-      ctx.fillStyle = '#FFFFFF';
-      ctx.strokeStyle = '#08D1F8';
-      ctx.lineWidth = 1.5;
-      roundRect(ctx, xWizard, card1Y, card1W, card1H, 8);
-      ctx.fill();
-      ctx.stroke();
-      // Badge Master
-      ctx.fillStyle = bGrad1;
-      roundRect(ctx, xWizard + 154, card1Y - 6, 56, 14, 4);
-      ctx.fill();
-      ctx.fillStyle = '#FFFFFF';
-      ctx.font = '800 8.5px "Space Grotesk", sans-serif';
-      ctx.textAlign = 'center';
-      ctx.fillText('MASTER', xWizard + 182, card1Y + 4);
-      drawImageContain(ctx, preloadedLogos.wizard, xWizard + 10, card1Y + 6, 150, 34);
+          const card1W = 218;
+          const card1Gap = 19;
+          const card1StartX = dockX + 25;
 
-      // Log Sistemas
-      const xLog = xWizard + card1W + card1Gap;
-      ctx.fillStyle = '#FFFFFF';
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-      ctx.lineWidth = 1;
-      roundRect(ctx, xLog, card1Y, card1W, card1H, 8);
-      ctx.fill();
-      ctx.stroke();
-      drawImageContain(ctx, preloadedLogos.logSistemas, xLog + 12, card1Y + 6, 194, 34);
+          // Tintas MC (Master)
+          const xTintas = card1StartX;
+          ctx.fillStyle = '#FFFFFF';
+          ctx.strokeStyle = '#08D1F8';
+          ctx.lineWidth = 1.5;
+          roundRect(ctx, xTintas, cardY, card1W, cardH, 8);
+          ctx.fill();
+          ctx.stroke();
+          // Badge Master
+          const bGrad1 = ctx.createLinearGradient(xTintas + 154, cardY - 6, xTintas + 210, cardY - 6);
+          bGrad1.addColorStop(0, '#3B0CAD');
+          bGrad1.addColorStop(1, '#08D1F8');
+          ctx.fillStyle = bGrad1;
+          roundRect(ctx, xTintas + 154, cardY - 6, 56, 14, 4);
+          ctx.fill();
+          ctx.fillStyle = '#FFFFFF';
+          ctx.font = '800 8.5px "Space Grotesk", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText('MASTER', xTintas + 182, cardY + 4);
+          drawImageContain(ctx, preloadedLogos.tintasMc, xTintas + 10, cardY + 5, 150, cardH - 10);
 
-      // Broder
-      const xBroder = xLog + card1W + card1Gap;
-      ctx.fillStyle = '#FFFFFF';
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
-      ctx.lineWidth = 1;
-      roundRect(ctx, xBroder, card1Y, card1W, card1H, 8);
-      ctx.fill();
-      ctx.stroke();
-      drawImageContain(ctx, preloadedLogos.broder, xBroder + 12, card1Y + 6, 194, 34);
+          // Wizard Cianorte (Master)
+          const xWizard = xTintas + card1W + card1Gap;
+          ctx.fillStyle = '#FFFFFF';
+          ctx.strokeStyle = '#08D1F8';
+          ctx.lineWidth = 1.5;
+          roundRect(ctx, xWizard, cardY, card1W, cardH, 8);
+          ctx.fill();
+          ctx.stroke();
+          // Badge Master
+          ctx.fillStyle = bGrad1;
+          roundRect(ctx, xWizard + 154, cardY - 6, 56, 14, 4);
+          ctx.fill();
+          ctx.fillStyle = '#FFFFFF';
+          ctx.font = '800 8.5px "Space Grotesk", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText('MASTER', xWizard + 182, cardY + 4);
+          drawImageContain(ctx, preloadedLogos.wizard, xWizard + 10, cardY + 5, 150, cardH - 10);
 
-      // -------------------------------------------------------------
-      // 2. TIER REALIZAÇÃO & POLOS
-      // -------------------------------------------------------------
-      const tier2Y = dockY + 96;
-      ctx.fillStyle = '#08D1F8';
-      ctx.font = '800 11px "Space Grotesk", sans-serif';
-      ctx.letterSpacing = '2.5px';
-      ctx.textAlign = 'left';
-      ctx.fillText('REALIZAÇÃO & POLOS', dockX + 25, tier2Y + 11);
+          // Log Sistemas
+          const xLog = xWizard + card1W + card1Gap;
+          ctx.fillStyle = '#FFFFFF';
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+          ctx.lineWidth = 1;
+          roundRect(ctx, xLog, cardY, card1W, cardH, 8);
+          ctx.fill();
+          ctx.stroke();
+          drawImageContain(ctx, preloadedLogos.logSistemas, xLog + 12, cardY + 5, 194, cardH - 10);
 
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(dockX + 195, tier2Y + 8);
-      ctx.lineTo(dockX + 955, tier2Y + 8);
-      ctx.stroke();
+          // Broder
+          const xBroder = xLog + card1W + card1Gap;
+          ctx.fillStyle = '#FFFFFF';
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+          ctx.lineWidth = 1;
+          roundRect(ctx, xBroder, cardY, card1W, cardH, 8);
+          ctx.fill();
+          ctx.stroke();
+          drawImageContain(ctx, preloadedLogos.broder, xBroder + 12, cardY + 5, 194, cardH - 10);
 
-      const card2Y = tier2Y + 18;
-      const card2W = 144;
-      const card2H = 42;
-      const card2Gap = 13;
-      const card2StartX = dockX + 25;
+        } else if (tierType === 'realizacao') {
+          // -------------------------------------------------------------
+          // SEÇÃO 2: REALIZAÇÃO & POLOS (SELO DO NIA MAIOR E CENTRALIZADO)
+          // -------------------------------------------------------------
+          ctx.fillStyle = '#08D1F8';
+          ctx.font = '800 11px "Space Grotesk", sans-serif';
+          ctx.letterSpacing = '2.5px';
+          ctx.textAlign = 'left';
+          ctx.fillText('REALIZAÇÃO & POLOS', dockX + 25, headerY);
 
-      const instLogos = [
-        preloadedLogos.nia,
-        preloadedLogos.centroInovacao,
-        preloadedLogos.umfg,
-        preloadedLogos.uem,
-        preloadedLogos.unipar,
-        preloadedLogos.ceep
-      ];
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(dockX + 195, lineY);
+          ctx.lineTo(dockX + 955, lineY);
+          ctx.stroke();
 
-      for (let i = 0; i < instLogos.length; i++) {
-        const cX = card2StartX + i * (card2W + card2Gap);
-        ctx.fillStyle = '#FFFFFF';
-        roundRect(ctx, cX, card2Y, card2W, card2H, 7);
-        ctx.fill();
-        drawImageContain(ctx, instLogos[i], cX + 8, card2Y + 5, card2W - 16, card2H - 10);
+          // Destaque Nobre e Centralizado para o Selo do NIA
+          const niaCardW = numTiers === 1 ? 260 : 230;
+          const niaCardH = Math.min(cardH + 4, tierH - 18);
+          const niaX = (dockX + dockW / 2) - (niaCardW / 2);
+          const niaY = cardY - 2;
+
+          // Card Central do NIA com borda gradiente neon e badge exclusivo
+          ctx.fillStyle = '#FFFFFF';
+          ctx.strokeStyle = '#08D1F8';
+          ctx.lineWidth = 2;
+          ctx.shadowColor = 'rgba(8, 209, 248, 0.45)';
+          ctx.shadowBlur = 12;
+          roundRect(ctx, niaX, niaY, niaCardW, niaCardH, 9);
+          ctx.fill();
+          ctx.stroke();
+          ctx.shadowBlur = 0;
+
+          // Mini badge Realização Oficial no topo do NIA
+          const niaGrad = ctx.createLinearGradient(niaX + 30, niaY - 6, niaX + niaCardW - 30, niaY - 6);
+          niaGrad.addColorStop(0, '#3B0CAD');
+          niaGrad.addColorStop(0.5, '#2B49C4');
+          niaGrad.addColorStop(1, '#08D1F8');
+          ctx.fillStyle = niaGrad;
+          roundRect(ctx, niaX + (niaCardW - 130) / 2, niaY - 6, 130, 14, 4);
+          ctx.fill();
+          ctx.fillStyle = '#FFFFFF';
+          ctx.font = '800 8.5px "Space Grotesk", sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillText('REALIZAÇÃO OFICIAL', niaX + niaCardW / 2, niaY + 4);
+
+          // Imagem do NIA centralizada e com tamanho ampliado
+          drawImageContain(ctx, preloadedLogos.nia, niaX + 8, niaY + 4, niaCardW - 16, niaCardH - 8);
+
+          // Polos à Esquerda do NIA (Centro de Inovação, UMFG, UEM)
+          const leftLogos = [
+            preloadedLogos.centroInovacao,
+            preloadedLogos.umfg,
+            preloadedLogos.uem
+          ];
+          const leftTotalW = (niaX - 14) - (dockX + 25);
+          const leftCardW = (leftTotalW - (leftLogos.length - 1) * 9) / leftLogos.length;
+          for (let i = 0; i < leftLogos.length; i++) {
+            const cX = (dockX + 25) + i * (leftCardW + 9);
+            ctx.fillStyle = '#FFFFFF';
+            roundRect(ctx, cX, cardY, leftCardW, cardH, 7);
+            ctx.fill();
+            drawImageContain(ctx, leftLogos[i], cX + 6, cardY + 4, leftCardW - 12, cardH - 8);
+          }
+
+          // Polos à Direita do NIA (UNIPAR, CEEP)
+          const rightLogos = [
+            preloadedLogos.unipar,
+            preloadedLogos.ceep
+          ];
+          const rightStartX = niaX + niaCardW + 14;
+          const rightTotalW = (dockX + 955) - rightStartX;
+          const rightCardW = (rightTotalW - (rightLogos.length - 1) * 11) / rightLogos.length;
+          for (let i = 0; i < rightLogos.length; i++) {
+            const cX = rightStartX + i * (rightCardW + 11);
+            ctx.fillStyle = '#FFFFFF';
+            roundRect(ctx, cX, cardY, rightCardW, cardH, 7);
+            ctx.fill();
+            drawImageContain(ctx, rightLogos[i], cX + 8, cardY + 4, rightCardW - 16, cardH - 8);
+          }
+
+        } else if (tierType === 'apoio') {
+          // -------------------------------------------------------------
+          // SEÇÃO 3: APOIO INSTITUCIONAL
+          // -------------------------------------------------------------
+          ctx.fillStyle = '#08D1F8';
+          ctx.font = '800 11px "Space Grotesk", sans-serif';
+          ctx.letterSpacing = '2.5px';
+          ctx.textAlign = 'left';
+          ctx.fillText('APOIO INSTITUCIONAL', dockX + 25, headerY);
+
+          ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(dockX + 205, lineY);
+          ctx.lineTo(dockX + 955, lineY);
+          ctx.stroke();
+
+          const card3W = 218;
+          const card3Gap = 19;
+          const card3StartX = dockX + 25;
+
+          const apoioLogos = [
+            preloadedLogos.acic,
+            preloadedLogos.empreender,
+            preloadedLogos.sebrae,
+            preloadedLogos.prefeitura
+          ];
+
+          for (let i = 0; i < apoioLogos.length; i++) {
+            const cX = card3StartX + i * (card3W + card3Gap);
+            ctx.fillStyle = '#FFFFFF';
+            roundRect(ctx, cX, cardY, card3W, cardH, 7);
+            ctx.fill();
+            drawImageContain(ctx, apoioLogos[i], cX + 12, cardY + 4, card3W - 24, cardH - 8);
+          }
+        }
       }
 
       // -------------------------------------------------------------
-      // 3. TIER APOIO INSTITUCIONAL
+      // 4. BARRA DE ENCERRAMENTO COM SELO OFICIAL DO NIA CENTRALIZADO
       // -------------------------------------------------------------
-      const tier3Y = dockY + 172;
-      ctx.fillStyle = '#08D1F8';
-      ctx.font = '800 11px "Space Grotesk", sans-serif';
-      ctx.letterSpacing = '2.5px';
-      ctx.textAlign = 'left';
-      ctx.fillText('APOIO INSTITUCIONAL', dockX + 25, tier3Y + 11);
-
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
-      ctx.lineWidth = 1;
-      ctx.beginPath();
-      ctx.moveTo(dockX + 205, tier3Y + 8);
-      ctx.lineTo(dockX + 955, tier3Y + 8);
-      ctx.stroke();
-
-      const card3Y = tier3Y + 18;
-      const card3W = 218;
-      const card3H = 42;
-      const card3Gap = 19;
-      const card3StartX = dockX + 25;
-
-      const apoioLogos = [
-        preloadedLogos.acic,
-        preloadedLogos.empreender,
-        preloadedLogos.sebrae,
-        preloadedLogos.prefeitura
-      ];
-
-      for (let i = 0; i < apoioLogos.length; i++) {
-        const cX = card3StartX + i * (card3W + card3Gap);
-        ctx.fillStyle = '#FFFFFF';
-        roundRect(ctx, cX, card3Y, card3W, card3H, 7);
-        ctx.fill();
-        drawImageContain(ctx, apoioLogos[i], cX + 12, card3Y + 5, card3W - 24, card3H - 10);
-      }
-
-      // -------------------------------------------------------------
-      // 4. BARRA DE ENCERRAMENTO DOCK
-      // -------------------------------------------------------------
-      const barY = dockY + 252;
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.14)';
-      ctx.lineWidth = 1.2;
-      ctx.beginPath();
-      ctx.moveTo(dockX + 25, barY);
-      ctx.lineTo(dockX + 955, barY);
-      ctx.stroke();
-
-      if (state.showHandle) {
-        ctx.fillStyle = '#FFFFFF';
-        ctx.font = '700 17px "Space Grotesk", sans-serif';
-        ctx.letterSpacing = '1px';
-        ctx.textAlign = 'left';
-        ctx.fillText('@nia.cianorte', dockX + 25, barY + 22);
-
-        ctx.fillStyle = '#08D1F8';
+      if (hasHandle) {
+        const barY = dockY + dockH - 34;
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.14)';
+        ctx.lineWidth = 1.2;
         ctx.beginPath();
-        ctx.arc(dockX + 165, barY + 17, 3, 0, Math.PI * 2);
+        ctx.moveTo(dockX + 25, barY);
+        ctx.lineTo(dockX + 955, barY);
+        ctx.stroke();
+
+        // Selo Oficial Medido Dinamicamente para Nunca Vazar
+        const sealText = '⚡ @nia.cianorte   •   semanadofuturo.com.br   •   CIRCUITO ITINERANTE 2026';
+        ctx.letterSpacing = '0px';
+        ctx.font = '700 12px "Space Grotesk", sans-serif';
+        const textMetrics = ctx.measureText(sealText);
+        const sealW = Math.min(dockW - 40, Math.round(textMetrics.width + 60));
+        const sealH = 26;
+        const sealX = (dockX + dockW / 2) - (sealW / 2);
+        const sealY = barY + 4;
+
+        ctx.fillStyle = '#0E1322';
+        ctx.strokeStyle = '#08D1F8';
+        ctx.lineWidth = 1.3;
+        ctx.shadowColor = 'rgba(8, 209, 248, 0.35)';
+        ctx.shadowBlur = 8;
+        roundRect(ctx, sealX, sealY, sealW, sealH, 13);
         ctx.fill();
+        ctx.stroke();
+        ctx.shadowBlur = 0;
 
-        ctx.font = '600 15px "Space Grotesk", sans-serif';
-        ctx.fillText('semanadofuturo.com.br', dockX + 180, barY + 22);
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillStyle = '#08D1F8';
+        ctx.letterSpacing = '0px';
+        ctx.fillText(sealText, dockX + dockW / 2, sealY + sealH / 2 + 1);
       }
-
-      // Selo Oficial
-      const badgeW = 250;
-      const badgeH = 28;
-      const badgeX = dockX + 705;
-      const badgeY = barY + 8;
-      ctx.fillStyle = '#111728';
-      ctx.strokeStyle = '#08D1F8';
-      ctx.lineWidth = 1.2;
-      roundRect(ctx, badgeX, badgeY, badgeW, badgeH, 14);
-      ctx.fill();
-      ctx.stroke();
-
-      ctx.fillStyle = '#08D1F8';
-      ctx.font = '800 11px "Space Grotesk", sans-serif';
-      ctx.letterSpacing = '1.5px';
-      ctx.textAlign = 'center';
-      ctx.fillText('CIRCUITO ITINERANTE · 2026', badgeX + badgeW / 2, badgeY + 18);
 
       ctx.restore();
     }
@@ -1639,8 +1934,8 @@
 
     window.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
-      const dx = (e.clientX - startX) * (1080 / canvasWrap.clientWidth);
-      const dy = (e.clientY - startY) * (1920 / canvasWrap.clientHeight);
+      const dx = (e.clientX - startX) * (canvas.width / canvasWrap.clientWidth);
+      const dy = (e.clientY - startY) * (canvas.height / canvasWrap.clientHeight);
       startX = e.clientX;
       startY = e.clientY;
       state.imgX += dx;
@@ -1661,7 +1956,7 @@
       rangeZoom.value = newZoom;
       valZoom.textContent = newZoom + '%';
       
-      const baseScale = Math.max(1080 / (state.userImgObj?.width || 1), 1920 / (state.userImgObj?.height || 1));
+      const baseScale = Math.max(canvas.width / (state.userImgObj?.width || 1), canvas.height / (state.userImgObj?.height || 1));
       state.imgScale = baseScale * (newZoom / 100);
       render();
     }, { passive: false });
@@ -1671,7 +1966,7 @@
       const val = parseInt(e.target.value);
       valZoom.textContent = val + '%';
       if (state.userImgObj) {
-        const baseScale = Math.max(1080 / state.userImgObj.width, 1920 / state.userImgObj.height);
+        const baseScale = Math.max(canvas.width / state.userImgObj.width, canvas.height / state.userImgObj.height);
         state.imgScale = baseScale * (val / 100);
         render();
       }
@@ -1712,6 +2007,10 @@
       render();
       showToast('Enquadramento centralizado!');
     });
+
+    // Seletores de Formato (Stories 1080x1920 vs Feed 1080x1440)
+    fmtStories.addEventListener('click', () => setFormat('stories'));
+    fmtFeed.addEventListener('click', () => setFormat('feed'));
 
     // Estilos de Moldura
     document.querySelectorAll('.style-card').forEach(card => {
@@ -1762,8 +2061,22 @@
       render();
     });
 
-    checkDockLogos.addEventListener('change', (e) => {
-      state.showDockLogos = e.target.checked;
+    // Checkboxes das Seções do Rodapé (Patrocínio, Realização, Apoio)
+    checkPatrocinio.addEventListener('change', (e) => {
+      state.showPatrocinio = e.target.checked;
+      cardPatrocinio.classList.toggle('checked', state.showPatrocinio);
+      render();
+    });
+
+    checkRealizacao.addEventListener('change', (e) => {
+      state.showRealizacao = e.target.checked;
+      cardRealizacao.classList.toggle('checked', state.showRealizacao);
+      render();
+    });
+
+    checkApoio.addEventListener('change', (e) => {
+      state.showApoio = e.target.checked;
+      cardApoio.classList.toggle('checked', state.showApoio);
       render();
     });
 
@@ -1778,7 +2091,7 @@
       btnGuideGrid.classList.toggle('active', state.showGrid1x1);
       gridBox.style.display = state.showGrid1x1 ? 'block' : 'none';
     });
-    gridBox.style.display = 'block'; // Inicialmente ativo por padrão
+    gridBox.style.display = 'block';
 
     btnGuideReels.addEventListener('click', () => {
       state.showReelsUI = !state.showReelsUI;
@@ -1829,6 +2142,7 @@
     });
 
     function handleImageFile(file) {
+      state.userImgName = file.name || 'foto-personalizada.png';
       const reader = new FileReader();
       reader.onload = (e) => {
         const img = new Image();
@@ -1836,47 +2150,40 @@
           state.userImgObj = img;
           centerImage();
           render();
-          showToast('Sua foto foi carregada com sucesso!');
+          dropzoneText.textContent = 'Trocar foto selecionada';
+          dropzoneSub.textContent = 'Clique ou arraste outra imagem se desejar';
+          fileNameLabel.textContent = state.userImgName;
+          fileInfoRow.style.display = 'flex';
+          showToast('Foto carregada com sucesso!');
         };
         img.src = e.target.result;
       };
       reader.readAsDataURL(file);
     }
 
-    // Amostras Rápidas
-    document.getElementById('sample1').addEventListener('click', () => {
-      loadSampleImage('assets/palestrantes/vinicius-grecco-foto.png');
-      inputPill.value = 'MARKETING';
-      state.categoryPill = 'MARKETING';
-      inputTitle.value = 'IA NOS NEGÓCIOS & GESTÃO';
-      inputSubtitle.value = 'Vinicius Grecco · Sessão UMFG';
+    // Botão de remover foto
+    btnRemovePhoto.addEventListener('click', () => {
+      state.userImgObj = null;
+      state.userImgName = '';
+      fileInput.value = '';
+      fileInfoRow.style.display = 'none';
+      dropzoneText.textContent = 'Arraste uma foto aqui ou clique para escolher';
+      dropzoneSub.textContent = 'Suporta PNG, JPG, WEBP · Ou cole com Ctrl+V';
+      render();
+      showToast('Foto removida');
     });
 
-    document.getElementById('sample2').addEventListener('click', () => {
-      loadSampleImage('assets/palestrantes/joao-gabriel-foto.jpeg');
-      inputPill.value = 'PALESTRA';
-      state.categoryPill = 'PALESTRA';
-      inputTitle.value = 'DESMISTIFICANDO A IA';
-      inputSubtitle.value = 'João Gabriel Mauricio · Sessão UEM';
-    });
-
-    document.getElementById('sample3').addEventListener('click', () => {
-      loadSampleImage('assets/palestrantes/anelise-dalberto-foto.jpeg');
-      inputPill.value = 'DESIGN & IA';
-      state.categoryPill = 'DESIGN & IA';
-      inputTitle.value = 'INOVAÇÃO & FAB LAB';
-      inputSubtitle.value = 'Profa. Me. Anelise Dalberto · UEM';
-    });
-
-    // EXPORTAÇÕES (Downloads em Alta Resolução 1080x1920)
-    // 1. Download Capa Completa do Reel
-    document.getElementById('btnDownloadReel').addEventListener('click', () => {
+    // EXPORTAÇÕES
+    // 1. Download Thumbnail Principal no Formato Selecionado
+    btnDownloadMain.addEventListener('click', () => {
       render();
       const link = document.createElement('a');
-      link.download = `thumbnail-reel-semana-do-futuro-${Date.now()}.png`;
+      const isFeed = state.format === 'feed';
+      const fmtLabel = isFeed ? 'feed-1080x1440' : 'stories-1080x1920';
+      link.download = `thumbnail-semana-do-futuro-${fmtLabel}-${Date.now()}.png`;
       link.href = canvas.toDataURL('image/png', 1.0);
       link.click();
-      showToast('Thumbnail do Reel baixada com sucesso (1080×1920)!');
+      showToast(`Thumbnail baixada (${canvas.width}×${canvas.height}) com sucesso!`);
     });
 
     // 2. Download Recorte Quadrado do Feed (1:1 - 1080x1080)
@@ -1886,8 +2193,9 @@
       squareCanvas.width = 1080;
       squareCanvas.height = 1080;
       const sCtx = squareCanvas.getContext('2d');
-      // Recorta da coordenada Y: 420 px (centro exato do 1080x1920)
-      sCtx.drawImage(canvas, 0, 420, 1080, 1080, 0, 0, 1080, 1080);
+      // Recorta no centro exato da imagem
+      const cropY = state.format === 'feed' ? 180 : 420;
+      sCtx.drawImage(canvas, 0, cropY, 1080, 1080, 0, 0, 1080, 1080);
 
       const link = document.createElement('a');
       link.download = `recorte-feed-grid-1080x1080-${Date.now()}.png`;
@@ -1900,18 +2208,16 @@
     document.getElementById('btnDownloadFrame').addEventListener('click', () => {
       render({ transparentFrameOnly: true });
       const link = document.createElement('a');
-      link.download = `moldura-transparente-reels-${state.style}-1080x1920.png`;
+      link.download = `moldura-transparente-${state.format}-${state.style}-${canvas.width}x${canvas.height}.png`;
       link.href = canvas.toDataURL('image/png', 1.0);
       link.click();
-      // Restaura preview com a foto
       render();
       showToast('Moldura transparente PNG baixada para edição de vídeo!');
     });
 
     // Inicialização
     window.addEventListener('load', () => {
-      // Carrega foto de exemplo padrão
-      loadSampleImage('assets/palestrantes/vinicius-grecco-foto.png');
+      render();
     });
   </script>
 </body>

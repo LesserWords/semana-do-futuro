@@ -9,7 +9,7 @@ Disallow: /slides-telao.html
 Disallow: /reels
 Disallow: /reels/
 Disallow: /reels.html
-Disallow: /gerador-thumbnail-reels.html
+Disallow: /gerador-thumbnail.html
 Allow: /
 
 Sitemap: https://semanadofuturo.com.br/sitemap.xml
