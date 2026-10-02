@@ -1,0 +1,50 @@
+/**
+ * Botões Canônicos
+ */
+.btn-primary {
+      background: var(--gradiente-oficial);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.04em;
+      padding: 14px 32px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 4px 25px var(--azul-glow);
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 35px rgba(8, 209, 248, 0.45);
+      filter: brightness(1.1);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--branco);
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      padding: 14px 28px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--ciano);
+      transform: translateY(-2px);
+    }

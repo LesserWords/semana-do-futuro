@@ -1,0 +1,27 @@
+/**
+ * =========================================================================
+ * DESIGN SYSTEM CANÔNICO — NÚCLEO DE IA & SEMANA DO FUTURO
+ * Design tokens compartilhados (cores, tipografia, efeitos e superfícies)
+ * =========================================================================
+ */
+:root {
+      --fundo: #000000;
+      --superficie: #0A0A12;
+      --card-bg: rgba(14, 14, 26, 0.75);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-hover: rgba(255, 255, 255, 0.22);
+      --branco: #FFFFFF;
+      --papel: #F1F2F7;
+      --indigo: #3B0CAD;
+      --azul-elo: #2B49C4;
+      --ciano: #08D1F8;
+      --ciano-glow: rgba(8, 209, 248, 0.35);
+      --azul-glow: rgba(43, 73, 196, 0.4);
+      --muted: #8E8EA8;
+      --muted-light: #C9C9DA;
+      --gradiente-oficial: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      --grad-text: linear-gradient(100deg, #FFFFFF 0%, #08D1F8 100%);
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, sans-serif;
+      --container-max: 1200px;
+    }

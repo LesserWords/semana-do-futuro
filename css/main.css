@@ -1,0 +1,14 @@
+/**
+ * =========================================================================
+ * DESIGN SYSTEM PRINCIPAL — SEMANA DO FUTURO & NÚCLEO DE IA
+ * Folha de estilo central compartilhada entre todas as páginas e edições
+ * =========================================================================
+ */
+
+@import "./core/tokens.css";
+@import "./core/reset.css";
+@import "./components/buttons.css";
+@import "./components/badges.css";
+@import "./components/nav.css";
+@import "./components/footer.css";
+@import "./components/modal.css";
