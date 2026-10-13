@@ -36,7 +36,7 @@
     }
 
     .grad-text {
-      background: var(--gradiente-oficial);
+      background: var(--grad-text);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;

@@ -1,1380 +1,2252 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <script>
-    if (window.location.pathname.includes("/2026")) {
-      document.write('<base href="../">');
-    }
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semana do Futuro 2026 — Circuito de IA Cianorte</title>
-  <meta name="description"
-    content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento, especialistas de mercado e educadores em debate direto.">
+      if (window.location.pathname.includes("/2026")) {
+        document.write('<base href="../">');
+      }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semana do Futuro 2026 — Circuito de IA Cianorte</title>
+    <meta
+      name="description"
+      content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento, especialistas de mercado e educadores em debate direto."
+    />
 
-  <link rel="canonical" href="https://semanadofuturo.com.br/">
+    <link rel="canonical" href="https://semanadofuturo.com.br/" />
 
-  <!-- Favicon Oficial — Padrão Google Search (Múltiplos de 48px) & Navegadores -->
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="144x144" href="assets/favicon-144x144.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#3B0CAD">
+    <!-- Favicon Oficial — Padrão Google Search (Múltiplos de 48px) & Navegadores -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="assets/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="assets/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="144x144"
+      href="assets/favicon-144x144.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#3B0CAD" />
 
-  <!-- Open Graph / Redes Sociais / Google Discover -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://semanadofuturo.com.br/">
-  <meta property="og:title" content="Semana do Futuro 2026 — Circuito de IA Cianorte">
-  <meta property="og:description" content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento.">
-  <meta property="og:image" content="https://semanadofuturo.com.br/assets/favicon-512x512.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Semana do Futuro 2026 — Circuito de IA Cianorte">
-  <meta name="twitter:description" content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento.">
-  <meta name="twitter:image" content="https://semanadofuturo.com.br/assets/favicon-512x512.png">
+    <!-- Open Graph / Redes Sociais / Google Discover -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://semanadofuturo.com.br/" />
+    <meta
+      property="og:title"
+      content="Semana do Futuro 2026 — Circuito de IA Cianorte"
+    />
+    <meta
+      property="og:description"
+      content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento."
+    />
+    <meta
+      property="og:image"
+      content="https://semanadofuturo.com.br/assets/favicon-512x512.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Semana do Futuro 2026 — Circuito de IA Cianorte"
+    />
+    <meta
+      name="twitter:description"
+      content="O maior evento cooperativo e itinerante de Inteligência Artificial e Inovação de Cianorte. 5 dias, 6 polos de conhecimento."
+    />
+    <meta
+      name="twitter:image"
+      content="https://semanadofuturo.com.br/assets/favicon-512x512.png"
+    />
 
-  <!-- Fontes Oficiais do Design System -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
+    <!-- Fontes Oficiais do Design System -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Design System Canônico — Núcleo de IA & Semana do Futuro -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/pages/home.css">
-</head>
+    <!-- Design System Canônico — Núcleo de IA & Semana do Futuro -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- ========================================================================= -->
+    <!-- HEADER & NAVEGAÇÃO                                                        -->
+    <!-- ========================================================================= -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div
+          class="brand-group"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <a href="#inicio" title="Semana do Futuro 2026">
+            <img
+              src="assets/logo-branca.png"
+              alt="Semana do Futuro"
+              class="header-logo-event"
+            />
+          </a>
+          <span
+            style="
+              background: rgba(8, 209, 248, 0.15);
+              border: 1px solid #08d1f8;
+              color: #08d1f8;
+              font-size: 11px;
+              font-weight: 700;
+              padding: 2px 8px;
+              border-radius: 12px;
+            "
+            >Edição 2026</span
+          >
+        </div>
 
-  <!-- ========================================================================= -->
-  <!-- HEADER & NAVEGAÇÃO                                                        -->
-  <!-- ========================================================================= -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand-group">
-        <a href="#inicio" title="Semana do Futuro 2026">
-          <img src="assets/logo-branca.png" alt="Semana do Futuro" class="header-logo-event">
-        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#sobre">O Evento</a></li>
+            <li><a href="#programacao">Programação</a></li>
+            <li><a href="#palestrantes">Especialistas</a></li>
+            <li><a href="#patrocinadores">Patrocinadores</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <div
+          class="header-cta"
+          style="display: flex; align-items: center; gap: 10px"
+        >
+          <a
+            href="../"
+            class="btn-secondary"
+            style="
+              padding: 8px 16px;
+              font-size: 13px;
+              border: 1px solid rgba(255, 255, 255, 0.25);
+              border-radius: 99px;
+              color: #fff;
+              text-decoration: none;
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+              transition: all 0.2s ease;
+            "
+          >
+            <span>✨ Edição 2027</span>
+          </a>
+          <a
+            href="#programacao"
+            class="btn-primary"
+            style="padding: 10px 24px; font-size: 14px"
+          >
+            Ver Resumo
+          </a>
+          <button
+            class="mobile-menu-btn"
+            onclick="toggleMobileNav()"
+            aria-label="Abrir Menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION                                                              -->
+    <!-- ========================================================================= -->
+
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION — VARIAÇÃO DE ALTO IMPACTO                                   -->
+    <!-- ========================================================================= -->
+    <section class="hero hero-impact" id="inicio">
+      <div class="hero-impact-backdrop">
+        <div class="hero-mesh-glow"></div>
+        <div class="hero-tech-grid"></div>
       </div>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#sobre">O Evento</a></li>
-          <li><a href="#programacao">Programação</a></li>
-          <li><a href="#palestrantes">Especialistas</a></li>
-          <li><a href="#patrocinadores">Patrocinadores</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-      </nav>
+      <div class="container hero-impact-container">
+        <div class="hero-impact-duo-grid">
+          <!-- LADO ESQUERDO: LOGO OFICIAL COM ANIMAÇÕES CIRCULARES HERO-EMBLEM-RING-2 -->
+          <div class="hero-impact-logo-stage">
+            <div class="hero-logo-orbital-stage">
+              <div class="hero-orbital-glow"></div>
+              <div class="hero-emblem-ring"></div>
+              <div class="hero-emblem-ring-2"></div>
+              <img
+                src="assets/logo-branca.png"
+                alt="Semana do Futuro — Circuito Itinerante de IA &amp; Tecnologia"
+                class="hero-side-logo"
+              />
+            </div>
+          </div>
 
-      <div class="header-cta">
-        <a href="#programacao" class="btn-primary" style="padding: 10px 24px; font-size: 14px;">
-          Inscrever-se
-        </a>
-        <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Abrir Menu">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
+          <!-- LADO DIREITO (NO LUGAR DO CARD): O TEXTO 'O FUTURO DA IA' + AÇÕES -->
+          <div class="hero-impact-text-stage">
+            <div class="hero-impact-eyebrow">
+              <div class="hero-impact-pill">
+                <span class="pulse-dot"></span>
+                <span>28 SETEMBRO — 02 OUTUBRO</span>
+              </div>
+              <span class="hero-impact-city-badge">Cianorte · PR</span>
+            </div>
 
-  <!-- ========================================================================= -->
-  <!-- HERO SECTION                                                              -->
-  <!-- ========================================================================= -->
+            <h1 class="hero-impact-title">
+              O futuro da IA,<br />
+              <span class="grad-text">acontecendo em Cianorte.</span>
+            </h1>
 
-  <!-- ========================================================================= -->
-  <!-- HERO SECTION — VARIAÇÃO DE ALTO IMPACTO                                   -->
-  <!-- ========================================================================= -->
-  <section class="hero hero-impact" id="inicio">
-    <div class="hero-impact-backdrop">
-      <div class="hero-mesh-glow"></div>
-      <div class="hero-tech-grid"></div>
-    </div>
+            <p class="hero-impact-lead">
+              Cinco noites, 6 polos integrados e até 30 horas de certificação
+              (5h por noite) para acelerar sua carreira e os negócios de toda a
+              região.
+            </p>
 
-    <div class="container hero-impact-container">
-      <div class="hero-impact-duo-grid">
-        <!-- LADO ESQUERDO: LOGO OFICIAL COM ANIMAÇÕES CIRCULARES HERO-EMBLEM-RING-2 -->
-        <div class="hero-impact-logo-stage">
-          <div class="hero-logo-orbital-stage">
-            <div class="hero-orbital-glow"></div>
-            <div class="hero-emblem-ring"></div>
-            <div class="hero-emblem-ring-2"></div>
-            <img src="assets/logo-branca.png" alt="Semana do Futuro — Circuito Itinerante de IA &amp; Tecnologia"
-              class="hero-side-logo">
+            <div class="hero-impact-actions">
+              <a href="#programacao" class="btn-primary hero-btn-main">
+                <span>Programação</span>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#programacao" class="hero-btn-sub">
+                <span>Ver os 6 Polos</span>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <div class="hero-impact-trust">
+              <div class="hero-impact-trust-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>100% Gratuito</span>
+              </div>
+              <div class="hero-impact-trust-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Certificado de 5h por noite (até 30h)</span>
+              </div>
+              <div class="hero-impact-trust-item">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Vagas Limitadas por Polo</span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- LADO DIREITO (NO LUGAR DO CARD): O TEXTO 'O FUTURO DA IA' + AÇÕES -->
-        <div class="hero-impact-text-stage">
-          <div class="hero-impact-eyebrow">
-            <div class="hero-impact-pill">
-              <span class="pulse-dot"></span>
-              <span>28 SETEMBRO — 02 OUTUBRO</span>
-            </div>
-            <span class="hero-impact-city-badge">Cianorte · PR</span>
+        <!-- DOCK UNIFICADO DE MÉTRICAS -->
+        <div class="hero-impact-dock">
+          <div class="dock-metric-cell">
+            <span class="dock-val">5 Dias</span>
+            <span class="dock-lbl">Circuito Itinerante</span>
           </div>
+          <div class="dock-metric-cell">
+            <span class="dock-val">6 Polos</span>
+            <span class="dock-lbl">Anfiteatros Conectados</span>
+          </div>
+          <div class="dock-metric-cell">
+            <span class="dock-val">5h / noite</span>
+            <span class="dock-lbl">Até 30h no circuito</span>
+          </div>
+          <div class="dock-metric-cell">
+            <span class="dock-val">100% Free</span>
+            <span class="dock-lbl">Entrada Gratuita</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <h1 class="hero-impact-title">
-            O futuro da IA,<br>
-            <span class="grad-text">acontecendo em Cianorte.</span>
-          </h1>
-
-          <p class="hero-impact-lead">
-            Cinco noites, 6 polos integrados e até 30 horas de certificação (5h por noite) para acelerar sua carreira e
-            os
-            negócios de toda a região.
+    <!-- ========================================================================= -->
+    <!-- CONCEITO & PROPÓSITO — VARIAÇÃO DE ALTO IMPACTO                           -->
+    <!-- ========================================================================= -->
+    <section id="sobre" class="sobre-impact">
+      <div class="container">
+        <div
+          class="section-header text-center"
+          style="max-width: 860px; margin: 0 auto 50px"
+        >
+          <span class="section-tag">Conceito e Propósito</span>
+          <h2 class="section-title impact-display-title">
+            Menos teoria de palco.<br />
+            <span class="grad-text">Mais impacto na vida real.</span>
+          </h2>
+          <p
+            class="section-subtitle"
+            style="font-size: 18.5px; max-width: 65ch; margin: 16px auto 0"
+          >
+            A tecnologia só tem valor quando gera transformação prática. Por
+            isso, a Semana do Futuro foi desenhada em cima de três pilares
+            objetivos.
           </p>
+        </div>
 
-          <div class="hero-impact-actions">
-            <a href="#programacao" class="btn-primary hero-btn-main">
-              <span>Garantir Ingresso no Sympla</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
-            <a href="#programacao" class="hero-btn-sub">
-              <span>Ver os 6 Polos</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </a>
+        <div class="impact-triad-grid">
+          <div class="impact-triad-card">
+            <div class="triad-num">01</div>
+            <div class="triad-body">
+              <h3>Prática Sem Rodeios</h3>
+              <p>
+                Casos reais de sistemas RAG, agentes autônomos, automação
+                comercial e robótica aplicados sem jargões elitistas.
+              </p>
+            </div>
+            <div class="triad-tag">Aplicação Direta</div>
           </div>
 
-          <div class="hero-impact-trust">
-            <div class="hero-impact-trust-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>100% Gratuito</span>
+          <div class="impact-triad-card">
+            <div class="triad-num">02</div>
+            <div class="triad-body">
+              <h3>Formato Diádico</h3>
+              <p>
+                Mercado corporativo e pesquisadores universitários no mesmo
+                palco. Menos monólogos, mais debate direto com a plateia.
+              </p>
             </div>
-            <div class="hero-impact-trust-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Certificado de 5h por noite (até 30h)</span>
+            <div class="triad-tag active">Debate em Dupla</div>
+          </div>
+
+          <div class="impact-triad-card">
+            <div class="triad-num">03</div>
+            <div class="triad-body">
+              <h3>Circuito Itinerante</h3>
+              <p>
+                O conhecimento vai até a comunidade. Cada dia em uma instituição
+                de ensino diferente, integrando toda Cianorte.
+              </p>
             </div>
-            <div class="hero-impact-trust-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
-              <span>Vagas Limitadas por Polo</span>
+            <div class="triad-tag">6 Polos Conectados</div>
+          </div>
+        </div>
+
+        <div class="diadic-showdown-box">
+          <div class="diadic-showdown-header">
+            <span class="badge-pill">Por dentro da dinâmica</span>
+            <h3>Dois Olhares. Uma Conexão Direta.</h3>
+          </div>
+
+          <div class="diadic-showdown-grid">
+            <div class="diadic-side">
+              <div class="side-pill">Lado 01 · Prática</div>
+              <h4>Especialista de Mercado</h4>
+              <p>
+                Cases corporativos, desafios de escala, inteligência comercial e
+                ferramentas que geram resultado financeiro real hoje.
+              </p>
             </div>
+
+            <div class="diadic-center-spark">
+              <div class="spark-circle">&</div>
+              <div class="spark-label">Debate Aberto</div>
+            </div>
+
+            <div class="diadic-side">
+              <div class="side-pill accent">Lado 02 · Ciência</div>
+              <h4>Pesquisador & Educador</h4>
+              <p>
+                Fundamentação científica, rigor metodológico, formação de
+                talentos de alto nível e visão crítica do futuro.
+              </p>
+            </div>
+          </div>
+
+          <div class="diadic-bottom-banner">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#08D1F8"
+              stroke-width="2.5"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span
+              >Plateia ativa com microfone aberto e perguntas sem filtro em
+              todas as 6 sessões.</span
+            >
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- DOCK UNIFICADO DE MÉTRICAS -->
-      <div class="hero-impact-dock">
-        <div class="dock-metric-cell">
-          <span class="dock-val">5 Dias</span>
-          <span class="dock-lbl">Circuito Itinerante</span>
-        </div>
-        <div class="dock-metric-cell">
-          <span class="dock-val">6 Polos</span>
-          <span class="dock-lbl">Anfiteatros Conectados</span>
-        </div>
-        <div class="dock-metric-cell">
-          <span class="dock-val">5h / noite</span>
-          <span class="dock-lbl">Até 30h no circuito</span>
-        </div>
-        <div class="dock-metric-cell">
-          <span class="dock-val">100% Free</span>
-          <span class="dock-lbl">Entrada Gratuita</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- CONCEITO & PROPÓSITO — VARIAÇÃO DE ALTO IMPACTO                           -->
-  <!-- ========================================================================= -->
-  <section id="sobre" class="sobre-impact">
-    <div class="container">
-      <div class="section-header text-center" style="max-width: 860px; margin: 0 auto 50px;">
-        <span class="section-tag">Conceito e Propósito</span>
-        <h2 class="section-title impact-display-title">
-          Menos teoria de palco.<br>
-          <span class="grad-text">Mais impacto na vida real.</span>
-        </h2>
-        <p class="section-subtitle" style="font-size: 18.5px; max-width: 65ch; margin: 16px auto 0;">
-          A tecnologia só tem valor quando gera transformação prática. Por isso, a Semana do Futuro foi desenhada em
-          cima de três pilares objetivos.
-        </p>
-      </div>
-
-      <div class="impact-triad-grid">
-        <div class="impact-triad-card">
-          <div class="triad-num">01</div>
-          <div class="triad-body">
-            <h3>Prática Sem Rodeios</h3>
-            <p>Casos reais de sistemas RAG, agentes autônomos, automação comercial e robótica aplicados sem jargões
-              elitistas.</p>
-          </div>
-          <div class="triad-tag">Aplicação Direta</div>
+    <!-- ========================================================================= -->
+    <!-- PROGRAMAÇÃO DIA A DIA                                                     -->
+    <!-- ========================================================================= -->
+    <section id="programacao" style="background: rgba(10, 10, 18, 0.5)">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Circuito Itinerante</span>
+          <h2 class="section-title">
+            Programação Oficial das <span class="grad-text">6 Sessões</span>
+          </h2>
+          <p class="section-subtitle">
+            De segunda a sexta-feira, uma jornada por Cianorte. Participe das
+            sessões do seu interesse ou complete o circuito integral de 30
+            horas.
+          </p>
         </div>
 
-        <div class="impact-triad-card">
-          <div class="triad-num">02</div>
-          <div class="triad-body">
-            <h3>Formato Diádico</h3>
-            <p>Mercado corporativo e pesquisadores universitários no mesmo palco. Menos monólogos, mais debate direto
-              com a plateia.</p>
-          </div>
-          <div class="triad-tag active">Debate em Dupla</div>
+        <!-- SELETOR DE DIAS DO CIRCUITO (NAVEGAÇÃO RÁPIDA) -->
+        <div class="circuit-day-selector" id="circuitDaySelector">
+          <button
+            type="button"
+            class="circuit-day-pill view-all-pill active"
+            onclick="switchTimelineDay('all', this)"
+            title="Ver todas as 6 sessões na linha contínua"
+          >
+            <span>👁️ Todas as Sessões</span>
+          </button>
+          <button
+            type="button"
+            class="circuit-day-pill"
+            onclick="switchTimelineDay(0, this)"
+          >
+            <span class="pill-num">01</span>
+            <span>28/09 · UMFG</span>
+          </button>
+          <button
+            type="button"
+            class="circuit-day-pill"
+            onclick="switchTimelineDay(1, this)"
+          >
+            <span class="pill-num">02</span>
+            <span>29/09 · UEM</span>
+          </button>
+          <button
+            type="button"
+            class="circuit-day-pill"
+            onclick="switchTimelineDay(2, this)"
+          >
+            <span class="pill-num">03</span>
+            <span>30/09 · SEBRAE</span>
+          </button>
+          <button
+            type="button"
+            class="circuit-day-pill"
+            onclick="switchTimelineDay(3, this)"
+          >
+            <span class="pill-num">04</span>
+            <span>01/10 · UNIPAR</span>
+          </button>
+          <button
+            type="button"
+            class="circuit-day-pill"
+            onclick="switchTimelineDay(4, this)"
+          >
+            <span class="pill-num">05</span>
+            <span>02/10 M · CEEP</span>
+          </button>
+          <button
+            type="button"
+            class="circuit-day-pill"
+            onclick="switchTimelineDay(5, this)"
+          >
+            <span class="pill-num">06</span>
+            <span>02/10 N · Paço</span>
+          </button>
         </div>
 
-        <div class="impact-triad-card">
-          <div class="triad-num">03</div>
-          <div class="triad-body">
-            <h3>Circuito Itinerante</h3>
-            <p>O conhecimento vai até a comunidade. Cada dia em uma instituição de ensino diferente, integrando toda
-              Cianorte.</p>
-          </div>
-          <div class="triad-tag">6 Polos Conectados</div>
-        </div>
-      </div>
-
-      <div class="diadic-showdown-box">
-        <div class="diadic-showdown-header">
-          <span class="badge-pill">Por dentro da dinâmica</span>
-          <h3>Dois Olhares. Uma Conexão Direta.</h3>
-        </div>
-
-        <div class="diadic-showdown-grid">
-          <div class="diadic-side">
-            <div class="side-pill">Lado 01 · Prática</div>
-            <h4>Especialista de Mercado</h4>
-            <p>Cases corporativos, desafios de escala, inteligência comercial e ferramentas que geram resultado
-              financeiro real hoje.</p>
-          </div>
-
-          <div class="diadic-center-spark">
-            <div class="spark-circle">&</div>
-            <div class="spark-label">Debate Aberto</div>
-          </div>
-
-          <div class="diadic-side">
-            <div class="side-pill accent">Lado 02 · Ciência</div>
-            <h4>Pesquisador & Educador</h4>
-            <p>Fundamentação científica, rigor metodológico, formação de talentos de alto nível e visão crítica do
-              futuro.</p>
-          </div>
-        </div>
-
-        <div class="diadic-bottom-banner">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08D1F8" stroke-width="2.5">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-          <span>Plateia ativa com microfone aberto e perguntas sem filtro em todas as 6 sessões.</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- PROGRAMAÇÃO DIA A DIA                                                     -->
-  <!-- ========================================================================= -->
-  <section id="programacao" style="background: rgba(10, 10, 18, 0.5);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Circuito Itinerante</span>
-        <h2 class="section-title">Programação Oficial das <span class="grad-text">6 Sessões</span></h2>
-        <p class="section-subtitle">
-          De segunda a sexta-feira, uma jornada por Cianorte. Participe das sessões do seu interesse ou complete o
-          circuito integral de 30 horas.
-        </p>
-      </div>
-
-      <!-- SELETOR DE DIAS DO CIRCUITO (NAVEGAÇÃO RÁPIDA) -->
-      <div class="circuit-day-selector" id="circuitDaySelector">
-        <button type="button" class="circuit-day-pill view-all-pill active" onclick="switchTimelineDay('all', this)"
-          title="Ver todas as 6 sessões na linha contínua">
-          <span>👁️ Todas as Sessões</span>
-        </button>
-        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(0, this)">
-          <span class="pill-num">01</span>
-          <span>28/09 · UMFG</span>
-        </button>
-        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(1, this)">
-          <span class="pill-num">02</span>
-          <span>29/09 · UEM</span>
-        </button>
-        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(2, this)">
-          <span class="pill-num">03</span>
-          <span>30/09 · SEBRAE</span>
-        </button>
-        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(3, this)">
-          <span class="pill-num">04</span>
-          <span>01/10 · UNIPAR</span>
-        </button>
-        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(4, this)">
-          <span class="pill-num">05</span>
-          <span>02/10 M · CEEP</span>
-        </button>
-        <button type="button" class="circuit-day-pill" onclick="switchTimelineDay(5, this)">
-          <span class="pill-num">06</span>
-          <span>02/10 N · Paço</span>
-        </button>
-      </div>
-
-      <div class="timeline-container" id="timelineContainer">
-
-        <!-- SESSÃO 01 · 28/09 (SEG) — UMFG -->
-        <div class="timeline-item" data-session-idx="0">
-          <div class="timeline-node">
-            <div class="timeline-dot">01</div>
-          </div>
-          <article class="session-card" onclick="openSessionModal(0)" role="button" tabindex="0"
-            aria-label="Ver detalhes da Sessão 01 · UMFG"
-            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(0);event.preventDefault();}">
-            <div class="session-side">
-              <div>
-                <div class="session-polo-header">
-                  <div class="session-badges-wrap">
-                    <div class="session-polo-badge">UMFG</div>
-                    <span class="session-status-badge status-programado" data-session-date="2026-09-28">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                      <span>Em breve</span>
-                    </span>
-                  </div>
-                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
-                    onclick="event.stopPropagation()" title="Acessar portal da UMFG">
-                    <img src="assets/instituicoes/umfg-logo.png" alt="UMFG Faculdade" class="session-inst-logo">
-                  </a>
-                </div>
-                <div class="session-date">28 de Setembro</div>
-                <div class="session-time">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  Segunda-feira · 19h30
-                </div>
-                <p class="session-venue">📍 Anfiteatro Principal da UMFG Cianorte</p>
-                <span class="session-cert">🎓 Certificação de 5h</span>
-              </div>
-              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
-                class="btn-session-sub" onclick="event.stopPropagation()">
-                <span>Inscrever no Sympla</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
+        <div class="timeline-container" id="timelineContainer">
+          <!-- SESSÃO 01 · 28/09 (SEG) — UMFG -->
+          <div class="timeline-item" data-session-idx="0">
+            <div class="timeline-node">
+              <div class="timeline-dot">01</div>
             </div>
-
-            <div class="session-main">
-              <h3 class="session-topic">Inteligência Artificial nos Negócios, Gestão e Estratégias de Marketing</h3>
-
-              <div class="speakers-row">
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/vinicius-grecco-foto.png" alt="Vinicius Grecco" class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Vinicius Grecco</h4>
-                    <p>Especialista em Marketing e Estratégia Digital</p>
-                    <span class="speaker-tag">Palestrante Convidado</span>
-                  </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/willian-pelissari-original.png" alt="Prof. Willian Pelissari"
-                    class="speaker-avatar" style="object-fit: contain; padding: 2px;">
-                  <div class="speaker-info">
-                    <h4>Prof. Willian Pelissari</h4>
-                    <p>Corpo Docente de Gestão e Tecnologia</p>
-                    <span class="speaker-tag" style="color:#9EC0FF;">Educador Anfitrião · UMFG</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M15 3h6v6"></path>
-                <path d="M9 21H3v-6"></path>
-                <path d="M21 3l-7 7"></path>
-                <path d="M3 21l7-7"></path>
-              </svg>
-            </div>
-          </article>
-        </div>
-
-        <!-- SESSÃO 02 · 29/09 (TER) — UEM -->
-        <div class="timeline-item" data-session-idx="1">
-          <div class="timeline-node">
-            <div class="timeline-dot">02</div>
-          </div>
-          <article class="session-card" onclick="openSessionModal(1)" role="button" tabindex="0"
-            aria-label="Ver detalhes da Sessão 02 · UEM"
-            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(1);event.preventDefault();}">
-            <div class="session-side">
-              <div>
-                <div class="session-polo-header">
-                  <div class="session-badges-wrap">
-                    <div class="session-polo-badge">UEM</div>
-                    <span class="session-status-badge status-programado" data-session-date="2026-09-29">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                      <span>Em breve</span>
-                    </span>
-                  </div>
-                  <a href="https://www.uem.br" target="_blank" rel="noopener" class="session-inst-logo-link"
-                    onclick="event.stopPropagation()" title="Acessar portal da UEM Cianorte">
-                    <img src="assets/instituicoes/uem-logo.png" alt="UEM — Universidade Estadual de Maringá"
-                      class="session-inst-logo">
-                  </a>
-                </div>
-                <div class="session-date">29 de Setembro</div>
-                <div class="session-time">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  Terça-feira · 19h30
-                </div>
-                <p class="session-venue">📍 Anfiteatro UEM — Câmpus Regional de Cianorte</p>
-                <span class="session-cert">🎓 Certificação de 5h</span>
-              </div>
-              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
-                class="btn-session-sub" onclick="event.stopPropagation()">
-                <span>Inscrever no Sympla</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-
-            <div class="session-main">
-              <h3 class="session-topic">Desmistificando a IA no mercado de trabalho</h3>
-
-              <div class="speakers-row">
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/joao-gabriel-foto.jpeg" alt="João Gabriel Mauricio"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>João Gabriel Mauricio</h4>
-                    <p>Senior Software Engineer · Altas AI</p>
-                    <span class="speaker-tag">Palestrante Convidado</span>
-                  </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/anelise-dalberto-foto.jpeg"
-                    alt="Profa. Me. Anelise Gudagnin Dalberto de Carvalho" class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Profa. Me. Anelise Gudagnin Dalberto de Carvalho</h4>
-                    <p>Design · Fab Lab Design UEM Cianorte</p>
-                    <span class="speaker-tag" style="color:#9EC0FF;">Educadora Anfitriã · UEM</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M15 3h6v6"></path>
-                <path d="M9 21H3v-6"></path>
-                <path d="M21 3l-7 7"></path>
-                <path d="M3 21l7-7"></path>
-              </svg>
-            </div>
-          </article>
-        </div>
-
-        <!-- SESSÃO 03 · 30/09 (QUA) — SEBRAE -->
-        <div class="timeline-item" data-session-idx="2">
-          <div class="timeline-node">
-            <div class="timeline-dot">03</div>
-          </div>
-          <article class="session-card" onclick="openSessionModal(2)" role="button" tabindex="0"
-            aria-label="Ver detalhes da Sessão 03 · SEBRAE"
-            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(2);event.preventDefault();}">
-            <div class="session-side">
-              <div>
-                <div class="session-polo-header">
-                  <div class="session-badges-wrap">
-                    <div class="session-polo-badge">SEBRAE</div>
-                    <span class="session-status-badge status-programado" data-session-date="2026-09-30">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                      <span>Em breve</span>
-                    </span>
-                  </div>
-                  <a href="https://sebraepr.com.br" target="_blank" rel="noopener" class="session-inst-logo-link"
-                    onclick="event.stopPropagation()" title="Acessar portal do SEBRAE Paraná">
-                    <img src="assets/instituicoes/sebrae-logo.svg" alt="SEBRAE Paraná" class="session-inst-logo">
-                  </a>
-                </div>
-                <div class="session-date">30 de Setembro</div>
-                <div class="session-time">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  Quarta-feira · 19h30
-                </div>
-                <p class="session-venue">📍 Auditório do Sebrae Cianorte<br><span style="font-size: 0.85em; color: var(--ciano); font-weight: 600;">Av. Goiás, 1055 — Zona de Armazém</span></p>
-                <span class="session-cert">🎓 Certificação de 5h</span>
-              </div>
-              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
-                class="btn-session-sub" onclick="event.stopPropagation()">
-                <span>Inscrever no Sympla</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-
-            <div class="session-main">
-              <h3 class="session-topic">Ecossistema Regional de Inovação, Tecnologia e o Uso de IA</h3>
-
-              <div class="speakers-row">
-                <div class="speaker-card" style="grid-column: 1 / -1;">
-                  <div class="speaker-avatar-placeholder" style="background: var(--gradiente-oficial);">Mesa</div>
-                  <div class="speaker-info">
-                    <h4>Mesa Redonda: ACIC · SEBRAE · Prefeitura · UEM · NIA</h4>
-                    <p>Discussão estratégica sobre o ecossistema regional de tecnologia, inovação aberta, desafios
-                      locais e a aplicação prática da inteligência artificial nos negócios e instituições.</p>
-                    <span class="speaker-tag">Painel Estratégico</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M15 3h6v6"></path>
-                <path d="M9 21H3v-6"></path>
-                <path d="M21 3l-7 7"></path>
-                <path d="M3 21l7-7"></path>
-              </svg>
-            </div>
-          </article>
-        </div>
-
-        <!-- SESSÃO 04 · 01/10 (QUI) — UNIPAR -->
-        <div class="timeline-item" data-session-idx="3">
-          <div class="timeline-node">
-            <div class="timeline-dot"
-              style="border-color: #FFFFFF; background: linear-gradient(135deg, #2B49C4, #08D1F8); color: #FFF;">04
-            </div>
-          </div>
-          <article class="session-card" style="border-color: rgba(8, 209, 248, 0.4);" onclick="openSessionModal(3)"
-            role="button" tabindex="0" aria-label="Ver detalhes da Sessão 04 · UNIPAR"
-            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(3);event.preventDefault();}">
-            <div class="session-side">
-              <div>
-                <div class="session-polo-header">
-                  <div class="session-badges-wrap">
-                    <div class="session-polo-badge">UNIPAR</div>
-                    <span class="session-status-badge status-programado" data-session-date="2026-10-01">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                      <span>Em breve</span>
-                    </span>
-                  </div>
-                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
-                    onclick="event.stopPropagation()" title="Acessar portal da UNIPAR">
-                    <img src="assets/instituicoes/unipar-logo.png" alt="UNIPAR" class="session-inst-logo">
-                  </a>
-                </div>
-                <div class="session-date">01 de Outubro</div>
-                <div class="session-time">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  Quinta-feira · 19h30
-                </div>
-                <p class="session-venue">📍 Anfiteatro Principal UNIPAR Cianorte</p>
-                <span class="session-cert">🎓 Certificação de 5h</span>
-              </div>
-              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
-                class="btn-session-sub" onclick="event.stopPropagation()">
-                <span>Inscrever no Sympla</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-
-            <div class="session-main">
-              <h3 class="session-topic">RAG na Prática: Fazendo a IA Responder com Fatos, Não com Achismo</h3>
-
-              <div class="speakers-row">
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/alberto-vieira-de-lima-foto.jpeg" alt="Alberto Vieira de Lima"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Alberto Vieira de Lima</h4>
-                    <p>CIO Think Outside Tech (+23 anos em TI)</p>
-                    <span class="speaker-tag">Palestrante Confirmado</span>
-                  </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/allan-da-silva-foto.jpeg" alt="Allan da Silva" class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Allan da Silva</h4>
-                    <p>Tech Lead, Dev Full Stack &amp; Prof. UNIPAR</p>
-                    <span class="speaker-tag">Palestrante Confirmado</span>
-                  </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/erica-romero-foto.jpeg" alt="Erica Romero" class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Erica Romero</h4>
-                    <p>Coord. Núcleo de Ciências Sociais e Humanas UNIPAR</p>
-                    <span class="speaker-tag" style="color:#9EC0FF;">Educadora Anfitriã · UNIPAR</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M15 3h6v6"></path>
-                <path d="M9 21H3v-6"></path>
-                <path d="M21 3l-7 7"></path>
-                <path d="M3 21l7-7"></path>
-              </svg>
-            </div>
-          </article>
-        </div>
-
-        <!-- SESSÃO 05 · 02/10 (SEX - MANHÃ) — CEEP -->
-        <div class="timeline-item" data-session-idx="4">
-          <div class="timeline-node">
-            <div class="timeline-dot">05</div>
-          </div>
-          <article class="session-card" onclick="openSessionModal(4)" role="button" tabindex="0"
-            aria-label="Ver detalhes da Sessão 05 · CEEP"
-            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(4);event.preventDefault();}">
-            <div class="session-side">
-              <div>
-                <div class="session-polo-header">
-                  <div class="session-badges-wrap">
-                    <div class="session-polo-badge">CEEP (Manhã)</div>
-                    <span class="session-status-badge status-programado" data-session-date="2026-10-02">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                      <span>Em breve</span>
-                    </span>
-                  </div>
-                  <a href="#" target="_blank" rel="noopener" class="session-inst-logo-link"
-                    onclick="event.stopPropagation()" title="Acessar portal do CEEP Cianorte">
-                    <img src="assets/instituicoes/ceep-logo.png" alt="CEEP Cianorte" class="session-inst-logo">
-                  </a>
-                </div>
-                <div class="session-date">02 de Outubro</div>
-                <div class="session-time">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  Sexta-feira · 09h00 (Manhã)
-                </div>
-                <p class="session-venue">📍 Anfiteatro CEEP Cianorte</p>
-                <span class="session-cert">🎓 Certificação de 5h</span>
-              </div>
-              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
-                class="btn-session-sub" onclick="event.stopPropagation()">
-                <span>Inscrever no Sympla</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            </div>
-
-            <div class="session-main">
-              <h3 class="session-topic">Desenvolvimento com IA</h3>
-
-              <div class="speakers-row">
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/pedro-pancotte-foto.png" alt="Pedro Lucas Pancotte"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Pedro Lucas Pancotte</h4>
-                    <p>Software Engineer · Especialista em IA e LLMs (Yungu)</p>
-                    <span class="speaker-tag">Palestrante Confirmado</span>
-                  </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/guilherme-vicentini-foto.jpeg" alt="Guilherme Vicentini"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Guilherme Vicentini</h4>
-                    <p>Mestre (ITA) & Prof. Universitário UMFG</p>
-                    <span class="speaker-tag">Palestrante Confirmado</span>
-                  </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/edvaldo-rodrigues-foto.jpeg" alt="Edvaldo Rodrigues"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Edvaldo Rodrigues</h4>
-                    <p>Coord. Desenv. de Sistemas · CEEP</p>
-                    <span class="speaker-tag" style="color:#9EC0FF;">Educador Anfitrião · CEEP</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M15 3h6v6"></path>
-                <path d="M9 21H3v-6"></path>
-                <path d="M21 3l-7 7"></path>
-                <path d="M3 21l7-7"></path>
-              </svg>
-            </div>
-          </article>
-        </div>
-
-        <!-- SESSÃO 06 · 02/10 (SEX - NOITE) — PREFEITURA -->
-        <div class="timeline-item" data-session-idx="5">
-          <div class="timeline-node">
-            <div class="timeline-dot" style="background: linear-gradient(135deg, #3B0CAD, #08D1F8); color:#FFF;">06
-            </div>
-          </div>
-          <article class="session-card" style="border-color: rgba(59, 12, 173, 0.6);" onclick="openSessionModal(5)"
-            role="button" tabindex="0" aria-label="Ver detalhes da Sessão 06 · Paço Municipal"
-            onkeydown="if(event.key==='Enter'||event.key===' '){openSessionModal(5);event.preventDefault();}">
-            <div class="session-side">
-              <div>
-                <div class="session-polo-header">
-                  <div class="session-badges-wrap">
-                    <div class="session-polo-badge">Paço Municipal</div>
-                    <span class="session-status-badge status-programado" data-session-date="2026-10-02">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                      </svg>
-                      <span>Em breve</span>
-                    </span>
-                  </div>
-                  <div class="session-logos-group">
-                    <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="session-inst-logo-link"
-                      onclick="event.stopPropagation()" title="Prefeitura Municipal de Cianorte">
-                      <img src="assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura Municipal de Cianorte"
-                        class="session-inst-logo">
-                    </a>
-                    <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="session-inst-logo-link"
-                      onclick="event.stopPropagation()" title="Centro de Inovação de Cianorte">
-                      <img src="assets/instituicoes/centro-de-inovacao-logo.png" alt="Centro de Inovação de Cianorte"
-                        class="session-inst-logo">
+            <article
+              class="session-card"
+              onclick="openSessionModal(0)"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalhes da Sessão 01 · UMFG"
+              onkeydown="
+                if (event.key === 'Enter' || event.key === ' ') {
+                  openSessionModal(0);
+                  event.preventDefault();
+                }
+              "
+            >
+              <div class="session-side">
+                <div>
+                  <div class="session-polo-header">
+                    <div class="session-badges-wrap">
+                      <div class="session-polo-badge">UMFG</div>
+                      <span
+                        class="session-status-badge status-programado"
+                        data-session-date="2026-09-28"
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Em breve</span>
+                      </span>
+                    </div>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener"
+                      class="session-inst-logo-link"
+                      onclick="event.stopPropagation()"
+                      title="Acessar portal da UMFG"
+                    >
+                      <img
+                        src="assets/instituicoes/umfg-logo.png"
+                        alt="UMFG Faculdade"
+                        class="session-inst-logo"
+                      />
                     </a>
                   </div>
+                  <div class="session-date">28 de Setembro</div>
+                  <div class="session-time">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Segunda-feira · 19h30
+                  </div>
+                  <p class="session-venue">
+                    📍 Anfiteatro Principal da UMFG Cianorte
+                  </p>
+                  <span class="session-cert">🎓 Certificação de 5h</span>
                 </div>
-                <div class="session-date">02 de Outubro</div>
-                <div class="session-time">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polyline points="12 6 12 12 16 14"></polyline>
-                  </svg>
-                  Sexta-feira · 19h00
-                </div>
-                <p class="session-venue">📍 Auditório da Prefeitura Municipal de Cianorte</p>
-                <span class="session-cert">🎓 Certificação de 5h</span>
               </div>
-              <a href="https://www.sympla.com.br/evento/semana-do-futuro/3578027" target="_blank" rel="noopener"
-                class="btn-session-sub" onclick="event.stopPropagation()">
-                <span>Inscrever no Sympla</span>
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
+
+              <div class="session-main">
+                <h3 class="session-topic">
+                  Inteligência Artificial nos Negócios, Gestão e Estratégias de
+                  Marketing
+                </h3>
+
+                <div class="speakers-row">
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/vinicius-grecco-foto.png"
+                      alt="Vinicius Grecco"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Vinicius Grecco</h4>
+                      <p>Especialista em Marketing e Estratégia Digital</p>
+                      <span class="speaker-tag">Palestrante Convidado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/willian-pelissari-original.png"
+                      alt="Prof. Willian Pelissari"
+                      class="speaker-avatar"
+                      style="object-fit: contain; padding: 2px"
+                    />
+                    <div class="speaker-info">
+                      <h4>Prof. Willian Pelissari</h4>
+                      <p>Corpo Docente de Gestão e Tecnologia</p>
+                      <span class="speaker-tag" style="color: #9ec0ff"
+                        >Educador Anfitrião · UMFG</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-expand-corner"
+                title="Expandir detalhes da sessão"
+                aria-hidden="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M9 21H3v-6"></path>
+                  <path d="M21 3l-7 7"></path>
+                  <path d="M3 21l7-7"></path>
                 </svg>
-              </a>
+              </div>
+            </article>
+          </div>
+
+          <!-- SESSÃO 02 · 29/09 (TER) — UEM -->
+          <div class="timeline-item" data-session-idx="1">
+            <div class="timeline-node">
+              <div class="timeline-dot">02</div>
             </div>
-
-            <div class="session-main">
-              <h3 class="session-topic">Educação Digital, Robótica e Inovação Pedagógica na Rede Municipal</h3>
-
-              <div class="speakers-row">
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/claudia-stefane-foto.jpeg" alt="Claudia Roberta Stefane"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Claudia Roberta Stefane</h4>
-                    <p>Coord. Educação Integral e Robótica Municipal</p>
-                    <span class="speaker-tag">Palestrante Confirmada</span>
+            <article
+              class="session-card"
+              onclick="openSessionModal(1)"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalhes da Sessão 02 · UEM"
+              onkeydown="
+                if (event.key === 'Enter' || event.key === ' ') {
+                  openSessionModal(1);
+                  event.preventDefault();
+                }
+              "
+            >
+              <div class="session-side">
+                <div>
+                  <div class="session-polo-header">
+                    <div class="session-badges-wrap">
+                      <div class="session-polo-badge">UEM</div>
+                      <span
+                        class="session-status-badge status-programado"
+                        data-session-date="2026-09-29"
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Em breve</span>
+                      </span>
+                    </div>
+                    <a
+                      href="https://www.uem.br"
+                      target="_blank"
+                      rel="noopener"
+                      class="session-inst-logo-link"
+                      onclick="event.stopPropagation()"
+                      title="Acessar portal da UEM Cianorte"
+                    >
+                      <img
+                        src="assets/instituicoes/uem-logo.png"
+                        alt="UEM — Universidade Estadual de Maringá"
+                        class="session-inst-logo"
+                      />
+                    </a>
                   </div>
-                </div>
-
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/douglas-possavati-foto.jpeg" alt="Douglas Possavati"
-                    class="speaker-avatar">
-                  <div class="speaker-info">
-                    <h4>Douglas Possavati</h4>
-                    <p>Coord. Pedagógico de Educação Digital</p>
-                    <span class="speaker-tag">Palestrante Confirmado</span>
+                  <div class="session-date">29 de Setembro</div>
+                  <div class="session-time">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Terça-feira · 19h30
                   </div>
+                  <p class="session-venue">
+                    📍 Anfiteatro UEM — Câmpus Regional de Cianorte
+                  </p>
+                  <span class="session-cert">🎓 Certificação de 5h</span>
                 </div>
+              </div>
 
-                <div class="speaker-card">
-                  <img src="assets/palestrantes/willian-pelissari-original.png" alt="Prof. Willian Pelissari"
-                    class="speaker-avatar" style="object-fit: contain; padding: 2px;">
-                  <div class="speaker-info">
-                    <h4>Prof. Willian Pelissari</h4>
-                    <p>Docência, Inovação e Educação Tecnológica</p>
-                    <span class="speaker-tag" style="color:#9EC0FF;">Participante Confirmado</span>
+              <div class="session-main">
+                <h3 class="session-topic">
+                  Desmistificando a IA no mercado de trabalho
+                </h3>
+
+                <div class="speakers-row">
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/joao-gabriel-foto.jpeg"
+                      alt="João Gabriel Mauricio"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>João Gabriel Mauricio</h4>
+                      <p>Senior Software Engineer · Altas AI</p>
+                      <span class="speaker-tag">Palestrante Convidado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/anelise-dalberto-foto.jpeg"
+                      alt="Profa. Me. Anelise Gudagnin Dalberto de Carvalho"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Profa. Me. Anelise Gudagnin Dalberto de Carvalho</h4>
+                      <p>Design · Fab Lab Design UEM Cianorte</p>
+                      <span class="speaker-tag" style="color: #9ec0ff"
+                        >Educadora Anfitriã · UEM</span
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div class="card-expand-corner" title="Expandir detalhes da sessão" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <path d="M15 3h6v6"></path>
-                <path d="M9 21H3v-6"></path>
-                <path d="M21 3l-7 7"></path>
-                <path d="M3 21l7-7"></path>
-              </svg>
+              <div
+                class="card-expand-corner"
+                title="Expandir detalhes da sessão"
+                aria-hidden="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M9 21H3v-6"></path>
+                  <path d="M21 3l-7 7"></path>
+                  <path d="M3 21l7-7"></path>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <!-- SESSÃO 03 · 30/09 (QUA) — SEBRAE -->
+          <div class="timeline-item" data-session-idx="2">
+            <div class="timeline-node">
+              <div class="timeline-dot">03</div>
+            </div>
+            <article
+              class="session-card"
+              onclick="openSessionModal(2)"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalhes da Sessão 03 · SEBRAE"
+              onkeydown="
+                if (event.key === 'Enter' || event.key === ' ') {
+                  openSessionModal(2);
+                  event.preventDefault();
+                }
+              "
+            >
+              <div class="session-side">
+                <div>
+                  <div class="session-polo-header">
+                    <div class="session-badges-wrap">
+                      <div class="session-polo-badge">SEBRAE</div>
+                      <span
+                        class="session-status-badge status-programado"
+                        data-session-date="2026-09-30"
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Em breve</span>
+                      </span>
+                    </div>
+                    <a
+                      href="https://sebraepr.com.br"
+                      target="_blank"
+                      rel="noopener"
+                      class="session-inst-logo-link"
+                      onclick="event.stopPropagation()"
+                      title="Acessar portal do SEBRAE Paraná"
+                    >
+                      <img
+                        src="assets/instituicoes/sebrae-logo.svg"
+                        alt="SEBRAE Paraná"
+                        class="session-inst-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="session-date">30 de Setembro</div>
+                  <div class="session-time">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Quarta-feira · 19h30
+                  </div>
+                  <p class="session-venue">
+                    📍 Auditório do Sebrae Cianorte<br /><span
+                      style="
+                        font-size: 0.85em;
+                        color: var(--ciano);
+                        font-weight: 600;
+                      "
+                      >Av. Goiás, 1055 — Zona de Armazém</span
+                    >
+                  </p>
+                  <span class="session-cert">🎓 Certificação de 5h</span>
+                </div>
+              </div>
+
+              <div class="session-main">
+                <h3 class="session-topic">
+                  Ecossistema Regional de Inovação, Tecnologia e o Uso de IA
+                </h3>
+
+                <div class="speakers-row">
+                  <div class="speaker-card" style="grid-column: 1 / -1">
+                    <div
+                      class="speaker-avatar-placeholder"
+                      style="background: var(--gradiente-oficial)"
+                    >
+                      Mesa
+                    </div>
+                    <div class="speaker-info">
+                      <h4>
+                        Mesa Redonda: ACIC · SEBRAE · Prefeitura · UEM · NIA
+                      </h4>
+                      <p>
+                        Discussão estratégica sobre o ecossistema regional de
+                        tecnologia, inovação aberta, desafios locais e a
+                        aplicação prática da inteligência artificial nos
+                        negócios e instituições.
+                      </p>
+                      <span class="speaker-tag">Painel Estratégico</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-expand-corner"
+                title="Expandir detalhes da sessão"
+                aria-hidden="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M9 21H3v-6"></path>
+                  <path d="M21 3l-7 7"></path>
+                  <path d="M3 21l7-7"></path>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <!-- SESSÃO 04 · 01/10 (QUI) — UNIPAR -->
+          <div class="timeline-item" data-session-idx="3">
+            <div class="timeline-node">
+              <div
+                class="timeline-dot"
+                style="
+                  border-color: #ffffff;
+                  background: linear-gradient(135deg, #2b49c4, #08d1f8);
+                  color: #fff;
+                "
+              >
+                04
+              </div>
+            </div>
+            <article
+              class="session-card"
+              style="border-color: rgba(8, 209, 248, 0.4)"
+              onclick="openSessionModal(3)"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalhes da Sessão 04 · UNIPAR"
+              onkeydown="
+                if (event.key === 'Enter' || event.key === ' ') {
+                  openSessionModal(3);
+                  event.preventDefault();
+                }
+              "
+            >
+              <div class="session-side">
+                <div>
+                  <div class="session-polo-header">
+                    <div class="session-badges-wrap">
+                      <div class="session-polo-badge">UNIPAR</div>
+                      <span
+                        class="session-status-badge status-programado"
+                        data-session-date="2026-10-01"
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Em breve</span>
+                      </span>
+                    </div>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener"
+                      class="session-inst-logo-link"
+                      onclick="event.stopPropagation()"
+                      title="Acessar portal da UNIPAR"
+                    >
+                      <img
+                        src="assets/instituicoes/unipar-logo.png"
+                        alt="UNIPAR"
+                        class="session-inst-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="session-date">01 de Outubro</div>
+                  <div class="session-time">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Quinta-feira · 19h30
+                  </div>
+                  <p class="session-venue">
+                    📍 Anfiteatro Principal UNIPAR Cianorte
+                  </p>
+                  <span class="session-cert">🎓 Certificação de 5h</span>
+                </div>
+              </div>
+
+              <div class="session-main">
+                <h3 class="session-topic">
+                  RAG na Prática: Fazendo a IA Responder com Fatos, Não com
+                  Achismo
+                </h3>
+
+                <div class="speakers-row">
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/alberto-vieira-de-lima-foto.jpeg"
+                      alt="Alberto Vieira de Lima"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Alberto Vieira de Lima</h4>
+                      <p>CIO Think Outside Tech (+23 anos em TI)</p>
+                      <span class="speaker-tag">Palestrante Confirmado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/allan-da-silva-foto.jpeg"
+                      alt="Allan da Silva"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Allan da Silva</h4>
+                      <p>Tech Lead, Dev Full Stack &amp; Prof. UNIPAR</p>
+                      <span class="speaker-tag">Palestrante Confirmado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/erica-romero-foto.jpeg"
+                      alt="Erica Romero"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Erica Romero</h4>
+                      <p>Coord. Núcleo de Ciências Sociais e Humanas UNIPAR</p>
+                      <span class="speaker-tag" style="color: #9ec0ff"
+                        >Educadora Anfitriã · UNIPAR</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-expand-corner"
+                title="Expandir detalhes da sessão"
+                aria-hidden="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M9 21H3v-6"></path>
+                  <path d="M21 3l-7 7"></path>
+                  <path d="M3 21l7-7"></path>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <!-- SESSÃO 05 · 02/10 (SEX - MANHÃ) — CEEP -->
+          <div class="timeline-item" data-session-idx="4">
+            <div class="timeline-node">
+              <div class="timeline-dot">05</div>
+            </div>
+            <article
+              class="session-card"
+              onclick="openSessionModal(4)"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalhes da Sessão 05 · CEEP"
+              onkeydown="
+                if (event.key === 'Enter' || event.key === ' ') {
+                  openSessionModal(4);
+                  event.preventDefault();
+                }
+              "
+            >
+              <div class="session-side">
+                <div>
+                  <div class="session-polo-header">
+                    <div class="session-badges-wrap">
+                      <div class="session-polo-badge">CEEP (Manhã)</div>
+                      <span
+                        class="session-status-badge status-programado"
+                        data-session-date="2026-10-02"
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Em breve</span>
+                      </span>
+                    </div>
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener"
+                      class="session-inst-logo-link"
+                      onclick="event.stopPropagation()"
+                      title="Acessar portal do CEEP Cianorte"
+                    >
+                      <img
+                        src="assets/instituicoes/ceep-logo.png"
+                        alt="CEEP Cianorte"
+                        class="session-inst-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="session-date">02 de Outubro</div>
+                  <div class="session-time">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Sexta-feira · 09h00 (Manhã)
+                  </div>
+                  <p class="session-venue">📍 Anfiteatro CEEP Cianorte</p>
+                  <span class="session-cert">🎓 Certificação de 5h</span>
+                </div>
+              </div>
+
+              <div class="session-main">
+                <h3 class="session-topic">Desenvolvimento com IA</h3>
+
+                <div class="speakers-row">
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/pedro-pancotte-foto.png"
+                      alt="Pedro Lucas Pancotte"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Pedro Lucas Pancotte</h4>
+                      <p>
+                        Software Engineer · Especialista em IA e LLMs (Yungu)
+                      </p>
+                      <span class="speaker-tag">Palestrante Confirmado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/guilherme-vicentini-foto.jpeg"
+                      alt="Guilherme Vicentini"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Guilherme Vicentini</h4>
+                      <p>Mestre (ITA) & Prof. Universitário UMFG</p>
+                      <span class="speaker-tag">Palestrante Confirmado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/edvaldo-rodrigues-foto.jpeg"
+                      alt="Edvaldo Rodrigues"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Edvaldo Rodrigues</h4>
+                      <p>Coord. Desenv. de Sistemas · CEEP</p>
+                      <span class="speaker-tag" style="color: #9ec0ff"
+                        >Educador Anfitrião · CEEP</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-expand-corner"
+                title="Expandir detalhes da sessão"
+                aria-hidden="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M9 21H3v-6"></path>
+                  <path d="M21 3l-7 7"></path>
+                  <path d="M3 21l7-7"></path>
+                </svg>
+              </div>
+            </article>
+          </div>
+
+          <!-- SESSÃO 06 · 02/10 (SEX - NOITE) — PREFEITURA -->
+          <div class="timeline-item" data-session-idx="5">
+            <div class="timeline-node">
+              <div
+                class="timeline-dot"
+                style="
+                  background: linear-gradient(135deg, #3b0cad, #08d1f8);
+                  color: #fff;
+                "
+              >
+                06
+              </div>
+            </div>
+            <article
+              class="session-card"
+              style="border-color: rgba(59, 12, 173, 0.6)"
+              onclick="openSessionModal(5)"
+              role="button"
+              tabindex="0"
+              aria-label="Ver detalhes da Sessão 06 · Paço Municipal"
+              onkeydown="
+                if (event.key === 'Enter' || event.key === ' ') {
+                  openSessionModal(5);
+                  event.preventDefault();
+                }
+              "
+            >
+              <div class="session-side">
+                <div>
+                  <div class="session-polo-header">
+                    <div class="session-badges-wrap">
+                      <div class="session-polo-badge">Paço Municipal</div>
+                      <span
+                        class="session-status-badge status-programado"
+                        data-session-date="2026-10-02"
+                      >
+                        <svg
+                          width="12"
+                          height="12"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <rect
+                            x="3"
+                            y="4"
+                            width="18"
+                            height="18"
+                            rx="2"
+                            ry="2"
+                          ></rect>
+                          <line x1="16" y1="2" x2="16" y2="6"></line>
+                          <line x1="8" y1="2" x2="8" y2="6"></line>
+                          <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        <span>Em breve</span>
+                      </span>
+                    </div>
+                    <div class="session-logos-group">
+                      <a
+                        href="https://cianorte.pr.gov.br"
+                        target="_blank"
+                        rel="noopener"
+                        class="session-inst-logo-link"
+                        onclick="event.stopPropagation()"
+                        title="Prefeitura Municipal de Cianorte"
+                      >
+                        <img
+                          src="assets/instituicoes/prefeitura-cianorte-logo.png"
+                          alt="Prefeitura Municipal de Cianorte"
+                          class="session-inst-logo"
+                        />
+                      </a>
+                      <a
+                        href="https://cianorte.pr.gov.br"
+                        target="_blank"
+                        rel="noopener"
+                        class="session-inst-logo-link"
+                        onclick="event.stopPropagation()"
+                        title="Centro de Inovação de Cianorte"
+                      >
+                        <img
+                          src="assets/instituicoes/centro-de-inovacao-logo.png"
+                          alt="Centro de Inovação de Cianorte"
+                          class="session-inst-logo"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="session-date">02 de Outubro</div>
+                  <div class="session-time">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    Sexta-feira · 19h00
+                  </div>
+                  <p class="session-venue">
+                    📍 Auditório da Prefeitura Municipal de Cianorte
+                  </p>
+                  <span class="session-cert">🎓 Certificação de 5h</span>
+                </div>
+              </div>
+
+              <div class="session-main">
+                <h3 class="session-topic">
+                  Educação Digital, Robótica e Inovação Pedagógica na Rede
+                  Municipal
+                </h3>
+
+                <div class="speakers-row">
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/claudia-stefane-foto.jpeg"
+                      alt="Claudia Roberta Stefane"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Claudia Roberta Stefane</h4>
+                      <p>Coord. Educação Integral e Robótica Municipal</p>
+                      <span class="speaker-tag">Palestrante Confirmada</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/douglas-possavati-foto.jpeg"
+                      alt="Douglas Possavati"
+                      class="speaker-avatar"
+                    />
+                    <div class="speaker-info">
+                      <h4>Douglas Possavati</h4>
+                      <p>Coord. Pedagógico de Educação Digital</p>
+                      <span class="speaker-tag">Palestrante Confirmado</span>
+                    </div>
+                  </div>
+
+                  <div class="speaker-card">
+                    <img
+                      src="assets/palestrantes/willian-pelissari-original.png"
+                      alt="Prof. Willian Pelissari"
+                      class="speaker-avatar"
+                      style="object-fit: contain; padding: 2px"
+                    />
+                    <div class="speaker-info">
+                      <h4>Prof. Willian Pelissari</h4>
+                      <p>Docência, Inovação e Educação Tecnológica</p>
+                      <span class="speaker-tag" style="color: #9ec0ff"
+                        >Participante Confirmado</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="card-expand-corner"
+                title="Expandir detalhes da sessão"
+                aria-hidden="true"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="M15 3h6v6"></path>
+                  <path d="M9 21H3v-6"></path>
+                  <path d="M21 3l-7 7"></path>
+                  <path d="M3 21l7-7"></path>
+                </svg>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- CONTROLES DO DECK SEM SCROLL -->
+        <div class="deck-nav-bar" id="deckNavBar" style="display: none">
+          <button
+            type="button"
+            class="deck-btn"
+            id="prevDayBtn"
+            onclick="navigateDayStep(-1)"
+            disabled
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <span>Dia Anterior</span>
+          </button>
+
+          <div class="deck-indicator" id="deckIndicator">
+            <span class="deck-current-polo" id="deckCurrentPolo"
+              >UMFG (28/09)</span
+            >
+            <div class="deck-dots">
+              <span
+                class="deck-dot active"
+                onclick="switchTimelineDay(0)"
+              ></span>
+              <span class="deck-dot" onclick="switchTimelineDay(1)"></span>
+              <span class="deck-dot" onclick="switchTimelineDay(2)"></span>
+              <span class="deck-dot" onclick="switchTimelineDay(3)"></span>
+              <span class="deck-dot" onclick="switchTimelineDay(4)"></span>
+              <span class="deck-dot" onclick="switchTimelineDay(5)"></span>
+            </div>
+          </div>
+
+          <button
+            type="button"
+            class="deck-btn"
+            id="nextDayBtn"
+            onclick="navigateDayStep(1)"
+          >
+            <span>Próximo Dia</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- PALESTRANTES E ESPECIALISTAS CONFIRMADOS                                  -->
+    <!-- ========================================================================= -->
+    <section id="palestrantes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Vanguarda e Liderança</span>
+          <h2 class="section-title">Quem conduz as discussões</h2>
+          <p class="section-subtitle">
+            Profissionais com cases reais de mercado, liderança em tecnologia e
+            atuação destacada em inovação e educação.
+          </p>
+        </div>
+
+        <div class="speakers-grid">
+          <!-- VINICIUS GRECCO -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/vinicius-grecco-foto.png"
+                alt="Vinicius Grecco"
+              />
+              <span class="speaker-badge-polo">28/09 · UMFG</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Vinicius Grecco</h3>
+                <p class="speaker-role">
+                  Especialista em Marketing e Estratégia Digital
+                </p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                IA nos negócios, automação de funis comerciais e estratégias de
+                crescimento acelerado.
+              </div>
+            </div>
+          </article>
+
+          <!-- JOÃO GABRIEL MAURICIO -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/joao-gabriel-foto.jpeg"
+                alt="João Gabriel Mauricio"
+              />
+              <span class="speaker-badge-polo">29/09 · UEM</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>João Gabriel Mauricio</h3>
+                <p class="speaker-role">Senior Software Engineer · Altas AI</p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                Engenharia AI-Native, infraestrutura Google e o impacto real da
+                IA no mercado de trabalho.
+              </div>
+            </div>
+          </article>
+
+          <!-- ALBERTO VIEIRA DE LIMA -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/alberto-vieira-de-lima-foto.jpeg"
+                alt="Alberto Vieira de Lima"
+              />
+              <span class="speaker-badge-polo">01/10 · UNIPAR</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Alberto Vieira de Lima</h3>
+                <p class="speaker-role">CIO Think Outside Tech</p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                RAG na prática corporativa: precisão e LLMs conectados a bases
+                reais de negócio.
+              </div>
+            </div>
+          </article>
+
+          <!-- ALLAN DA SILVA -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/allan-da-silva-foto.jpeg"
+                alt="Allan da Silva"
+              />
+              <span class="speaker-badge-polo">01/10 · UNIPAR</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Allan da Silva</h3>
+                <p class="speaker-role">
+                  Tech Lead & Prof. Universitário UNIPAR
+                </p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                Arquitetura de sistemas escaláveis e formação de desenvolvedores
+                para a era da IA.
+              </div>
+            </div>
+          </article>
+
+          <!-- PEDRO PANCOTTE -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/pedro-pancotte-foto.png"
+                alt="Pedro Lucas Pancotte"
+              />
+              <span class="speaker-badge-polo">02/10 · CEEP</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Pedro Lucas Pancotte</h3>
+                <p class="speaker-role">
+                  Software Engineer & Product Owner (Yungu)
+                </p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                Agentes de IA, arquiteturas conversacionais autônomas e futuro
+                do ensino técnico.
+              </div>
+            </div>
+          </article>
+
+          <!-- GUILHERME VICENTINI -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/guilherme-vicentini-foto.jpeg"
+                alt="Guilherme Vicentini"
+              />
+              <span class="speaker-badge-polo">02/10 · CEEP</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Guilherme Vicentini</h3>
+                <p class="speaker-role">
+                  Mestre (ITA) & Prof. Universitário UMFG
+                </p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                Engenharia de software aplicada, microsserviços e formação de
+                novos desenvolvedores.
+              </div>
+            </div>
+          </article>
+
+          <!-- CLAUDIA ROBERTA STEFANE -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/claudia-stefane-foto.jpeg"
+                alt="Claudia Roberta Stefane"
+              />
+              <span class="speaker-badge-polo">02/10 · Prefeitura</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Claudia Roberta Stefane</h3>
+                <p class="speaker-role">
+                  Coord. de Educação Integral da Sec. Municipal
+                </p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                Pioneirismo em robótica educacional e torneios mundiais na rede
+                pública.
+              </div>
+            </div>
+          </article>
+
+          <!-- DOUGLAS POSSAVATI -->
+          <article class="speaker-profile-card">
+            <div class="speaker-img-wrap">
+              <img
+                src="assets/palestrantes/douglas-possavati-foto.jpeg"
+                alt="Douglas Possavati"
+              />
+              <span class="speaker-badge-polo">02/10 · Prefeitura</span>
+            </div>
+            <div class="speaker-body">
+              <div>
+                <h3>Douglas Possavati</h3>
+                <p class="speaker-role">
+                  Coord. Pedagógico de Educação Digital
+                </p>
+              </div>
+              <div class="speaker-topic-pill">
+                <strong>Tema de Destaque</strong>
+                Pensamento computacional nas séries iniciais e inovação em sala
+                de aula.
+              </div>
             </div>
           </article>
         </div>
-
       </div>
+    </section>
 
-      <!-- CONTROLES DO DECK SEM SCROLL -->
-      <div class="deck-nav-bar" id="deckNavBar" style="display: none;">
-        <button type="button" class="deck-btn" id="prevDayBtn" onclick="navigateDayStep(-1)" disabled>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-          <span>Dia Anterior</span>
-        </button>
-
-        <div class="deck-indicator" id="deckIndicator">
-          <span class="deck-current-polo" id="deckCurrentPolo">UMFG (28/09)</span>
-          <div class="deck-dots">
-            <span class="deck-dot active" onclick="switchTimelineDay(0)"></span>
-            <span class="deck-dot" onclick="switchTimelineDay(1)"></span>
-            <span class="deck-dot" onclick="switchTimelineDay(2)"></span>
-            <span class="deck-dot" onclick="switchTimelineDay(3)"></span>
-            <span class="deck-dot" onclick="switchTimelineDay(4)"></span>
-            <span class="deck-dot" onclick="switchTimelineDay(5)"></span>
-          </div>
-        </div>
-
-        <button type="button" class="deck-btn" id="nextDayBtn" onclick="navigateDayStep(1)">
-          <span>Próximo Dia</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- PALESTRANTES E ESPECIALISTAS CONFIRMADOS                                  -->
-  <!-- ========================================================================= -->
-  <section id="palestrantes">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Vanguarda e Liderança</span>
-        <h2 class="section-title">Quem conduz as discussões</h2>
-        <p class="section-subtitle">
-          Profissionais com cases reais de mercado, liderança em tecnologia e atuação destacada em inovação e educação.
-        </p>
-      </div>
-
-      <div class="speakers-grid">
-
-        <!-- VINICIUS GRECCO -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/vinicius-grecco-foto.png" alt="Vinicius Grecco">
-            <span class="speaker-badge-polo">28/09 · UMFG</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Vinicius Grecco</h3>
-              <p class="speaker-role">Especialista em Marketing e Estratégia Digital</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              IA nos negócios, automação de funis comerciais e estratégias de crescimento acelerado.
-            </div>
-          </div>
-        </article>
-
-        <!-- JOÃO GABRIEL MAURICIO -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/joao-gabriel-foto.jpeg" alt="João Gabriel Mauricio">
-            <span class="speaker-badge-polo">29/09 · UEM</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>João Gabriel Mauricio</h3>
-              <p class="speaker-role">Senior Software Engineer · Altas AI</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              Engenharia AI-Native, infraestrutura Google e o impacto real da IA no mercado de trabalho.
-            </div>
-          </div>
-        </article>
-
-        <!-- ALBERTO VIEIRA DE LIMA -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/alberto-vieira-de-lima-foto.jpeg" alt="Alberto Vieira de Lima">
-            <span class="speaker-badge-polo">01/10 · UNIPAR</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Alberto Vieira de Lima</h3>
-              <p class="speaker-role">CIO Think Outside Tech</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              RAG na prática corporativa: precisão e LLMs conectados a bases reais de negócio.
-            </div>
-          </div>
-        </article>
-
-        <!-- ALLAN DA SILVA -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/allan-da-silva-foto.jpeg" alt="Allan da Silva">
-            <span class="speaker-badge-polo">01/10 · UNIPAR</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Allan da Silva</h3>
-              <p class="speaker-role">Tech Lead & Prof. Universitário UNIPAR</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              Arquitetura de sistemas escaláveis e formação de desenvolvedores para a era da IA.
-            </div>
-          </div>
-        </article>
-
-        <!-- PEDRO PANCOTTE -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/pedro-pancotte-foto.png" alt="Pedro Lucas Pancotte">
-            <span class="speaker-badge-polo">02/10 · CEEP</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Pedro Lucas Pancotte</h3>
-              <p class="speaker-role">Software Engineer & Product Owner (Yungu)</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              Agentes de IA, arquiteturas conversacionais autônomas e futuro do ensino técnico.
-            </div>
-          </div>
-        </article>
-
-        <!-- GUILHERME VICENTINI -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/guilherme-vicentini-foto.jpeg" alt="Guilherme Vicentini">
-            <span class="speaker-badge-polo">02/10 · CEEP</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Guilherme Vicentini</h3>
-              <p class="speaker-role">Mestre (ITA) & Prof. Universitário UMFG</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              Engenharia de software aplicada, microsserviços e formação de novos desenvolvedores.
-            </div>
-          </div>
-        </article>
-
-        <!-- CLAUDIA ROBERTA STEFANE -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/claudia-stefane-foto.jpeg" alt="Claudia Roberta Stefane">
-            <span class="speaker-badge-polo">02/10 · Prefeitura</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Claudia Roberta Stefane</h3>
-              <p class="speaker-role">Coord. de Educação Integral da Sec. Municipal</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              Pioneirismo em robótica educacional e torneios mundiais na rede pública.
-            </div>
-          </div>
-        </article>
-
-        <!-- DOUGLAS POSSAVATI -->
-        <article class="speaker-profile-card">
-          <div class="speaker-img-wrap">
-            <img src="assets/palestrantes/douglas-possavati-foto.jpeg" alt="Douglas Possavati">
-            <span class="speaker-badge-polo">02/10 · Prefeitura</span>
-          </div>
-          <div class="speaker-body">
-            <div>
-              <h3>Douglas Possavati</h3>
-              <p class="speaker-role">Coord. Pedagógico de Educação Digital</p>
-            </div>
-            <div class="speaker-topic-pill">
-              <strong>Tema de Destaque</strong>
-              Pensamento computacional nas séries iniciais e inovação em sala de aula.
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- PATROCINADORES E APOIADORES                                               -->
-  <!-- ========================================================================= -->
-  <section id="patrocinadores" style="background: rgba(8, 8, 14, 0.75);">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Apoio e Parceria</span>
-        <h2 class="section-title">Empresas e Instituições que <span class="grad-text">constroem o evento</span></h2>
-        <p class="section-subtitle">
-          O empresariado e as entidades de classe de Cianorte acelerando a formação tecnológica e o protagonismo
-          regional.
-        </p>
-      </div>
-
-      <div class="sponsors-hierarchy">
-
-        <!-- 1. PATROCINADORES MASTER (TAMANHO MAIOR DAS LOGOS) -->
-        <div class="sponsor-tier-wrapper">
-          <span class="sponsor-tier-label">Patrocínio Master</span>
-
-          <div class="master-sponsors-grid">
-            <!-- Tintas MC (Confirmado) -->
-            <div class="sponsor-card-master">
-              <span class="master-badge-tag">💎 Patrocinador Master</span>
-              <a href="https://www.instagram.com/tintasmc_cianorte/" target="_blank" rel="noopener"
-                class="sponsor-brand-link" title="Tintas MC">
-                <div class="master-brand-box">
-                  <img src="assets/patrocinadores/tintas-mc-logo.jpeg" alt="Tintas MC" class="master-sponsor-logo">
-                </div>
-                <h4 class="master-brand-name">Tintas MC Cianorte</h4>
-              </a>
-            </div>
-
-            <!-- Wizard Cianorte (Confirmado) -->
-            <div class="sponsor-card-master">
-              <span class="master-badge-tag">💎 Patrocinador Master</span>
-              <a href="https://www.instagram.com/wizardcianorte" target="_blank" rel="noopener"
-                class="sponsor-brand-link" title="Wizard Cianorte">
-                <div class="master-brand-box">
-                  <img src="assets/patrocinadores/wizard-logo-cta.jpeg" alt="Wizard Cianorte"
-                    class="master-sponsor-logo">
-                </div>
-                <h4 class="master-brand-name">Wizard Cianorte</h4>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. OUTROS PATROCINADORES (ORDEM DE CHEGADA, BORDA CINZA, 0.75 DO TAMANHO DA MASTER) -->
-        <div class="sponsor-tier-wrapper">
-          <span class="sponsor-tier-label">Patrocinadores</span>
-
-          <div class="regular-sponsors-grid">
-
-            <!-- Log Sistemas -->
-            <div class="sponsor-card-regular">
-              <span class="badge-arrival">01 · Confirmado</span>
-              <a href="https://www.instagram.com/logsistemas/" target="_blank" rel="noopener" class="sponsor-brand-link"
-                title="Acessar instagram da Log Sistemas">
-                <img src="assets/patrocinadores/log-sistemas-logo.png" alt="Log Sistemas" class="regular-sponsor-logo">
-                <h4 class="regular-brand-name">Log Sistemas</h4>
-              </a>
-              <p>Sistemas de gestão empresarial e inteligência de negócios.</p>
-            </div>
-
-            <!-- Broder -->
-            <div class="sponsor-card-regular">
-              <span class="badge-arrival">02 · Confirmado</span>
-              <a href="https://www.broderdigital.com.br/" target="_blank" rel="noopener" class="sponsor-brand-link"
-                title="Broder">
-                <img src="assets/patrocinadores/broder-logo.png" alt="Broder" class="regular-sponsor-logo">
-                <h4 class="regular-brand-name">Broder</h4>
-              </a>
-              <p>Tecnologia e inovação acelerando o ecossistema de Cianorte.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. REALIZAÇÃO -->
-        <div class="sponsor-tier-wrapper">
-          <span class="sponsor-tier-label">Realização</span>
-          <p class="tier-instruction-note">
-            Iniciativa do ecossistema de tecnologia, centro de inovação e faculdades anfitriãs de Cianorte.
+    <!-- ========================================================================= -->
+    <!-- PATROCINADORES E APOIADORES                                               -->
+    <!-- ========================================================================= -->
+    <section id="patrocinadores" style="background: rgba(8, 8, 14, 0.75)">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Apoio e Parceria</span>
+          <h2 class="section-title">
+            Empresas e Instituições que
+            <span class="grad-text">constroem o evento</span>
+          </h2>
+          <p class="section-subtitle">
+            O empresariado e as entidades de classe de Cianorte acelerando a
+            formação tecnológica e o protagonismo regional.
           </p>
-
-          <div class="realizacao-strip">
-            <!-- NIA -->
-            <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener"
-              class="entity-card realizacao-card" title="NIA — Núcleo de Inteligência Artificial de Cianorte">
-              <img src="assets/instituicoes/nia-logo.svg" alt="NIA — Núcleo de Inteligência Artificial de Cianorte"
-                class="entity-logo">
-            </a>
-
-            <!-- Centro de Inovação -->
-            <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
-              title="Centro de Inovação de Cianorte">
-              <img src="assets/instituicoes/centro-de-inovacao-logo.png" alt="Centro de Inovação de Cianorte"
-                class="entity-logo">
-            </a>
-
-            <!-- Faculdades (divulgação geral / no dia do polo somente a anfitriã) -->
-            <a href="https://umfg.edu.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
-              title="UMFG — Faculdade de Cianorte (Polo 01)">
-              <img src="assets/instituicoes/umfg-logo.png" alt="Faculdade UMFG" class="entity-logo">
-            </a>
-
-            <a href="https://www.uem.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
-              title="UEM — Universidade Estadual de Maringá / Câmpus Cianorte (Polo 02)">
-              <img src="assets/instituicoes/uem-logo.png" alt="UEM — Universidade Estadual de Maringá"
-                class="entity-logo">
-            </a>
-
-            <a href="https://www.unipar.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
-              title="UNIPAR — Universidade Paranaense / Unidade Cianorte (Polo 04)">
-              <img src="assets/instituicoes/unipar-logo.png" alt="UNIPAR" class="entity-logo">
-            </a>
-
-            <a href="http://www.ceepcianorte.com.br" target="_blank" rel="noopener" class="entity-card realizacao-card"
-              title="CEEP — Centro Estadual de Educação Profissional de Cianorte (Polo 05)">
-              <img src="assets/instituicoes/ceep-logo.png" alt="CEEP Cianorte" class="entity-logo">
-            </a>
-          </div>
         </div>
 
-        <!-- 4. APOIADORES INSTITUCIONAIS -->
-        <div class="sponsor-tier-wrapper">
-          <span class="sponsor-tier-label">Apoiadores</span>
+        <div class="sponsors-hierarchy">
+          <!-- 1. PATROCINADORES MASTER (TAMANHO MAIOR DAS LOGOS) -->
+          <div class="sponsor-tier-wrapper">
+            <span class="sponsor-tier-label">Patrocínio Master</span>
 
-          <div class="apoiadores-strip">
-            <!-- Programa Empreender -->
-            <a href="https://www.acic-cianorte.com.br/programa-empreender/" target="_blank" rel="noopener"
-              class="entity-card apoiador-card" title="Programa Empreender">
-              <img src="assets/instituicoes/logo-empreender.png" alt="Programa Empreender" class="entity-logo">
-            </a>
+            <div class="master-sponsors-grid">
+              <!-- Tintas MC (Confirmado) -->
+              <div class="sponsor-card-master">
+                <span class="master-badge-tag">💎 Patrocinador Master</span>
+                <a
+                  href="https://www.instagram.com/tintasmc_cianorte/"
+                  target="_blank"
+                  rel="noopener"
+                  class="sponsor-brand-link"
+                  title="Tintas MC"
+                >
+                  <div class="master-brand-box">
+                    <img
+                      src="assets/patrocinadores/tintas-mc-logo.jpeg"
+                      alt="Tintas MC"
+                      class="master-sponsor-logo"
+                    />
+                  </div>
+                  <h4 class="master-brand-name">Tintas MC Cianorte</h4>
+                </a>
+              </div>
 
-            <!-- ACIC -->
-            <a href="https://www.acic-cianorte.com.br/" target="_blank" rel="noopener" class="entity-card apoiador-card"
-              title="ACIC — Associação Comercial e Industrial de Cianorte">
-              <img src="assets/instituicoes/acic-logo.png" alt="ACIC Cianorte" class="entity-logo">
-            </a>
+              <!-- Wizard Cianorte (Confirmado) -->
+              <div class="sponsor-card-master">
+                <span class="master-badge-tag">💎 Patrocinador Master</span>
+                <a
+                  href="https://www.instagram.com/wizardcianorte"
+                  target="_blank"
+                  rel="noopener"
+                  class="sponsor-brand-link"
+                  title="Wizard Cianorte"
+                >
+                  <div class="master-brand-box">
+                    <img
+                      src="assets/patrocinadores/wizard-logo-cta.jpeg"
+                      alt="Wizard Cianorte"
+                      class="master-sponsor-logo"
+                    />
+                  </div>
+                  <h4 class="master-brand-name">Wizard Cianorte</h4>
+                </a>
+              </div>
+            </div>
+          </div>
 
-            <!-- SEBRAE -->
-            <a href="https://sebraepr.com.br" target="_blank" rel="noopener" class="entity-card apoiador-card"
-              title="SEBRAE Paraná">
-              <img src="assets/instituicoes/sebrae-logo.svg" alt="SEBRAE Paraná" class="entity-logo">
-            </a>
+          <!-- 2. OUTROS PATROCINADORES (ORDEM DE CHEGADA, BORDA CINZA, 0.75 DO TAMANHO DA MASTER) -->
+          <div class="sponsor-tier-wrapper">
+            <span class="sponsor-tier-label">Patrocinadores</span>
 
-            <!-- PREFEITURA -->
-            <a href="https://cianorte.pr.gov.br" target="_blank" rel="noopener" class="entity-card apoiador-card"
-              title="Prefeitura Municipal de Cianorte">
-              <img src="assets/instituicoes/prefeitura-cianorte-logo.png" alt="Prefeitura Municipal de Cianorte"
-                class="entity-logo">
-            </a>
+            <div class="regular-sponsors-grid">
+              <!-- Log Sistemas -->
+              <div class="sponsor-card-regular">
+                <span class="badge-arrival">01 · Confirmado</span>
+                <a
+                  href="https://www.instagram.com/logsistemas/"
+                  target="_blank"
+                  rel="noopener"
+                  class="sponsor-brand-link"
+                  title="Acessar instagram da Log Sistemas"
+                >
+                  <img
+                    src="assets/patrocinadores/log-sistemas-logo.png"
+                    alt="Log Sistemas"
+                    class="regular-sponsor-logo"
+                  />
+                  <h4 class="regular-brand-name">Log Sistemas</h4>
+                </a>
+                <p>
+                  Sistemas de gestão empresarial e inteligência de negócios.
+                </p>
+              </div>
+
+              <!-- Broder -->
+              <div class="sponsor-card-regular">
+                <span class="badge-arrival">02 · Confirmado</span>
+                <a
+                  href="https://www.broderdigital.com.br/"
+                  target="_blank"
+                  rel="noopener"
+                  class="sponsor-brand-link"
+                  title="Broder"
+                >
+                  <img
+                    src="assets/patrocinadores/broder-logo.png"
+                    alt="Broder"
+                    class="regular-sponsor-logo"
+                  />
+                  <h4 class="regular-brand-name">Broder</h4>
+                </a>
+                <p>
+                  Tecnologia e inovação acelerando o ecossistema de Cianorte.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. REALIZAÇÃO -->
+          <div class="sponsor-tier-wrapper">
+            <span class="sponsor-tier-label">Realização</span>
+            <p class="tier-instruction-note">
+              Iniciativa do ecossistema de tecnologia, centro de inovação e
+              faculdades anfitriãs de Cianorte.
+            </p>
+
+            <div class="realizacao-strip">
+              <!-- NIA -->
+              <a
+                href="https://instagram.com/nia.cianorte"
+                target="_blank"
+                rel="noopener"
+                class="entity-card realizacao-card"
+                title="NIA — Núcleo de Inteligência Artificial de Cianorte"
+              >
+                <img
+                  src="assets/instituicoes/nia-logo.svg"
+                  alt="NIA — Núcleo de Inteligência Artificial de Cianorte"
+                  class="entity-logo"
+                />
+              </a>
+
+              <!-- Centro de Inovação -->
+              <a
+                href="https://cianorte.pr.gov.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card realizacao-card"
+                title="Centro de Inovação de Cianorte"
+              >
+                <img
+                  src="assets/instituicoes/centro-de-inovacao-logo.png"
+                  alt="Centro de Inovação de Cianorte"
+                  class="entity-logo"
+                />
+              </a>
+
+              <!-- Faculdades (divulgação geral / no dia do polo somente a anfitriã) -->
+              <a
+                href="https://umfg.edu.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card realizacao-card"
+                title="UMFG — Faculdade de Cianorte (Polo 01)"
+              >
+                <img
+                  src="assets/instituicoes/umfg-logo.png"
+                  alt="Faculdade UMFG"
+                  class="entity-logo"
+                />
+              </a>
+
+              <a
+                href="https://www.uem.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card realizacao-card"
+                title="UEM — Universidade Estadual de Maringá / Câmpus Cianorte (Polo 02)"
+              >
+                <img
+                  src="assets/instituicoes/uem-logo.png"
+                  alt="UEM — Universidade Estadual de Maringá"
+                  class="entity-logo"
+                />
+              </a>
+
+              <a
+                href="https://www.unipar.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card realizacao-card"
+                title="UNIPAR — Universidade Paranaense / Unidade Cianorte (Polo 04)"
+              >
+                <img
+                  src="assets/instituicoes/unipar-logo.png"
+                  alt="UNIPAR"
+                  class="entity-logo"
+                />
+              </a>
+
+              <a
+                href="http://www.ceepcianorte.com.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card realizacao-card"
+                title="CEEP — Centro Estadual de Educação Profissional de Cianorte (Polo 05)"
+              >
+                <img
+                  src="assets/instituicoes/ceep-logo.png"
+                  alt="CEEP Cianorte"
+                  class="entity-logo"
+                />
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. APOIADORES INSTITUCIONAIS -->
+          <div class="sponsor-tier-wrapper">
+            <span class="sponsor-tier-label">Apoiadores</span>
+
+            <div class="apoiadores-strip">
+              <!-- Programa Empreender -->
+              <a
+                href="https://www.acic-cianorte.com.br/programa-empreender/"
+                target="_blank"
+                rel="noopener"
+                class="entity-card apoiador-card"
+                title="Programa Empreender"
+              >
+                <img
+                  src="assets/instituicoes/logo-empreender.png"
+                  alt="Programa Empreender"
+                  class="entity-logo"
+                />
+              </a>
+
+              <!-- ACIC -->
+              <a
+                href="https://www.acic-cianorte.com.br/"
+                target="_blank"
+                rel="noopener"
+                class="entity-card apoiador-card"
+                title="ACIC — Associação Comercial e Industrial de Cianorte"
+              >
+                <img
+                  src="assets/instituicoes/acic-logo.png"
+                  alt="ACIC Cianorte"
+                  class="entity-logo"
+                />
+              </a>
+
+              <!-- SEBRAE -->
+              <a
+                href="https://sebraepr.com.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card apoiador-card"
+                title="SEBRAE Paraná"
+              >
+                <img
+                  src="assets/instituicoes/sebrae-logo.svg"
+                  alt="SEBRAE Paraná"
+                  class="entity-logo"
+                />
+              </a>
+
+              <!-- PREFEITURA -->
+              <a
+                href="https://cianorte.pr.gov.br"
+                target="_blank"
+                rel="noopener"
+                class="entity-card apoiador-card"
+                title="Prefeitura Municipal de Cianorte"
+              >
+                <img
+                  src="assets/instituicoes/prefeitura-cianorte-logo.png"
+                  alt="Prefeitura Municipal de Cianorte"
+                  class="entity-logo"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========================================================================= -->
-  <!-- FAQ / PERGUNTAS FREQUENTES                                                -->
-  <!-- ========================================================================= -->
-  <section id="faq">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Dúvidas Frequentes</span>
-        <h2 class="section-title">Tudo o que você precisa saber</h2>
-        <p class="section-subtitle">Tire suas dúvidas operacionais sobre ingressos, certificação e participação.</p>
-      </div>
-
-      <div class="faq-grid">
-        <div class="faq-item">
-          <h4>O evento é gratuito?</h4>
-          <p>Sim! A Semana do Futuro é 100% gratuita para toda a população de Cianorte e região. É uma iniciativa
-            colaborativa do NIA, da ACIC e de todas as entidades anfitriãs.</p>
-        </div>
-
-        <div class="faq-item">
-          <h4>Como funciona a certificação de horas?</h4>
-          <p>Cada sessão confere um certificado oficial de 5 horas complementares. Ao participar de todas as sessões do
-            circuito itinerante, você acumula 30 horas totais de certificação.</p>
-        </div>
-
-        <div class="faq-item">
-          <h4>Preciso me inscrever para cada dia separadamente?</h4>
-          <p>Sim! Cada polo do circuito possui seu link próprio no Sympla e capacidade limitada pelo anfiteatro
-            anfitrião.
-            Escolha as sessões de seu interesse na programação e emita seus ingressos individuais gratuitos.</p>
-        </div>
-
-        <div class="faq-item">
-          <h4>Quem pode participar?</h4>
-          <p>O evento é aberto a estudantes de graduação e ensino técnico, profissionais de TI, empresários,
-            comerciantes, gestores públicos e qualquer pessoa interessada em IA.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================= -->
-  <!-- FOOTER INSTITUCIONAL                                                      -->
-  <!-- ========================================================================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-left">
-          <div class="brand-group" style="margin-bottom: 12px;">
-            <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener"
-              title="NIA - Núcleo de Inteligência Artificial de Cianorte">
-              <svg class="footer-logo-nia" viewBox="110 340 860 310" fill="none"
-                style="height: 38px; width: auto; display: block;">
-                <defs>
-                  <linearGradient id="footerNavG" x1="120" y1="347" x2="682" y2="643" gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#3B0CAD" />
-                    <stop offset=".5" stop-color="#2B49C4" />
-                    <stop offset="1" stop-color="#08D1F8" />
-                  </linearGradient>
-                </defs>
-                <path
-                  d="M 682 347 L 478 348 L 458 353 L 441 361 L 431 368 L 412 387 L 388 364 L 370 354 L 347 348 L 324 348 L 305 352 L 287 360 L 268 375 L 253 395 L 120 643 L 328 642 L 344 638 L 360 630 L 371 622 L 389 604 L 391 604 L 405 619 L 420 630 L 434 637 L 451 642 L 484 642 L 501 637 L 513 631 L 527 621 L 537 611 L 548 596 Z M 186 603 L 286 416 L 292 407 L 310 391 L 327 385 L 342 385 L 360 392 L 378 408 L 415 461 L 448 407 L 460 396 L 471 390 L 483 387 L 615 388 L 517 572 L 506 588 L 494 598 L 477 605 L 458 605 L 439 597 L 424 583 L 386 529 L 358 578 L 349 588 L 332 599 L 308 604 Z"
-                  fill="url(#footerNavG)" fill-rule="evenodd" />
-                <circle cx="650.5" cy="571" r="23" fill="#FFFFFF" />
-                <rect x="693" y="397" width="47" height="197" fill="#FFFFFF" />
-                <polygon points="831,397 887,397 959,594 910,594 858.5,442 806,594 760,594" fill="#FFFFFF" />
-              </svg>
-            </a>
-          </div>
-          <p>Realização: <strong>Núcleo de Inteligência Artificial de Cianorte (NIA)</strong> & <strong>ACIC</strong>
+    <!-- ========================================================================= -->
+    <!-- FAQ / PERGUNTAS FREQUENTES                                                -->
+    <!-- ========================================================================= -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Dúvidas Frequentes</span>
+          <h2 class="section-title">Tudo o que você precisa saber</h2>
+          <p class="section-subtitle">
+            Tire suas dúvidas operacionais sobre ingressos, certificação e
+            participação.
           </p>
-          <p>Endereço Oficial: Av. Goiás, 550 — Centro, Cianorte - PR</p>
         </div>
 
-        <div class="footer-links">
-          <div class="footer-links-group">
-            <span class="footer-group-title">Participantes & Hub</span>
-            <a href="recursos.html">📚 Hub de Recursos & Slides</a>
-            <a href="https://instagram.com/nia.cianorte" target="_blank" rel="noopener">Instagram: @nia.cianorte</a>
-            <a href="mailto:nia.acic.cianorte@gmail.com">E-mail: nia.acic.cianorte@gmail.com</a>
-            <a href="https://linktr.ee/nucleodeiacianorte" target="_blank" rel="noopener">Linktree Oficial</a>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>O evento é gratuito?</h4>
+            <p>
+              Sim! A Semana do Futuro é 100% gratuita para toda a população de
+              Cianorte e região. É uma iniciativa colaborativa do NIA, da ACIC e
+              de todas as entidades anfitriãs.
+            </p>
           </div>
 
-          <div class="footer-links-group">
-            <span class="footer-group-title">Equipe & Operação (Admin)</span>
-            <a href="gerador-thumbnail.html" style="color: var(--ciano); font-weight: 700;">🖼️ Gerador de Thumbnail</a>
-            <a href="scripts.html">🎙️ Scripts & Roteiro dos Hosts</a>
-            <a href="slides.html">🖥️ Apresentação de Telão</a>
-            <a href="sorteador.html">🎁 Sorteador Oficial</a>
+          <div class="faq-item">
+            <h4>Como funciona a certificação de horas?</h4>
+            <p>
+              Cada sessão confere um certificado oficial de 5 horas
+              complementares. Ao participar de todas as sessões do circuito
+              itinerante, você acumula 30 horas totais de certificação.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Preciso me inscrever para cada dia separadamente?</h4>
+            <p>
+              Sim! Cada polo do circuito possui seu link próprio no Sympla e
+              capacidade limitada pelo anfiteatro anfitrião. Escolha as sessões
+              de seu interesse na programação e emita seus ingressos individuais
+              gratuitos.
+            </p>
+          </div>
+
+          <div class="faq-item">
+            <h4>Quem pode participar?</h4>
+            <p>
+              O evento é aberto a estudantes de graduação e ensino técnico,
+              profissionais de TI, empresários, comerciantes, gestores públicos
+              e qualquer pessoa interessada em IA.
+            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p>© 2026 Semana do Futuro · NIA Cianorte. Todos os direitos reservados. Humanidade no centro da Inteligência
-          Artificial.</p>
+    <!-- ========================================================================= -->
+    <!-- FOOTER INSTITUCIONAL                                                      -->
+    <!-- ========================================================================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-left">
+            <div class="brand-group" style="margin-bottom: 12px">
+              <a
+                href="https://instagram.com/nia.cianorte"
+                target="_blank"
+                rel="noopener"
+                title="NIA - Núcleo de Inteligência Artificial de Cianorte"
+              >
+                <svg
+                  class="footer-logo-nia"
+                  viewBox="110 340 860 310"
+                  fill="none"
+                  style="height: 38px; width: auto; display: block"
+                >
+                  <defs>
+                    <linearGradient
+                      id="footerNavG"
+                      x1="120"
+                      y1="347"
+                      x2="682"
+                      y2="643"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#3B0CAD" />
+                      <stop offset=".5" stop-color="#2B49C4" />
+                      <stop offset="1" stop-color="#08D1F8" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 682 347 L 478 348 L 458 353 L 441 361 L 431 368 L 412 387 L 388 364 L 370 354 L 347 348 L 324 348 L 305 352 L 287 360 L 268 375 L 253 395 L 120 643 L 328 642 L 344 638 L 360 630 L 371 622 L 389 604 L 391 604 L 405 619 L 420 630 L 434 637 L 451 642 L 484 642 L 501 637 L 513 631 L 527 621 L 537 611 L 548 596 Z M 186 603 L 286 416 L 292 407 L 310 391 L 327 385 L 342 385 L 360 392 L 378 408 L 415 461 L 448 407 L 460 396 L 471 390 L 483 387 L 615 388 L 517 572 L 506 588 L 494 598 L 477 605 L 458 605 L 439 597 L 424 583 L 386 529 L 358 578 L 349 588 L 332 599 L 308 604 Z"
+                    fill="url(#footerNavG)"
+                    fill-rule="evenodd"
+                  />
+                  <circle cx="650.5" cy="571" r="23" fill="#FFFFFF" />
+                  <rect
+                    x="693"
+                    y="397"
+                    width="47"
+                    height="197"
+                    fill="#FFFFFF"
+                  />
+                  <polygon
+                    points="831,397 887,397 959,594 910,594 858.5,442 806,594 760,594"
+                    fill="#FFFFFF"
+                  />
+                </svg>
+              </a>
+            </div>
+            <p>
+              Realização:
+              <strong
+                >Núcleo de Inteligência Artificial de Cianorte (NIA)</strong
+              >
+              & <strong>ACIC</strong>
+            </p>
+            <p>Endereço Oficial: Av. Goiás, 550 — Centro, Cianorte - PR</p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-links-group">
+              <span class="footer-group-title">Participantes & Hub</span>
+              <a href="recursos.html">📚 Hub de Recursos & Slides</a>
+              <a
+                href="https://instagram.com/nia.cianorte"
+                target="_blank"
+                rel="noopener"
+                >Instagram: @nia.cianorte</a
+              >
+              <a href="mailto:nia.acic.cianorte@gmail.com"
+                >E-mail: nia.acic.cianorte@gmail.com</a
+              >
+              <a
+                href="https://linktr.ee/nucleodeiacianorte"
+                target="_blank"
+                rel="noopener"
+                >Linktree Oficial</a
+              >
+            </div>
+
+            <div class="footer-links-group">
+              <span class="footer-group-title">Equipe & Operação (Admin)</span>
+              <a
+                href="gerador-thumbnail.html"
+                style="color: var(--ciano); font-weight: 700"
+                >🖼️ Gerador de Thumbnail</a
+              >
+              <a href="scripts.html">🎙️ Scripts & Roteiro dos Hosts</a>
+              <a href="slides.html">🖥️ Apresentação de Telão</a>
+              <a href="sorteador.html">🎁 Sorteador Oficial</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            © 2026 Semana do Futuro · NIA Cianorte. Todos os direitos
+            reservados. Humanidade no centro da Inteligência Artificial.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ========================================================================= -->
+    <!-- MODAL DE DETALHES AMPLIADOS (WIDESCREEN ZERO SCROLL DASHBOARD)            -->
+    <!-- ========================================================================= -->
+    <div
+      id="sessionModalOverlay"
+      class="session-modal-overlay"
+      onclick="closeSessionModal(event)"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTopicTitle"
+    >
+      <div class="session-modal-box" onclick="event.stopPropagation()">
+        <div class="modal-top-bar">
+          <div class="modal-top-left" id="modalTopLeft"></div>
+          <button
+            type="button"
+            class="modal-close-btn"
+            onclick="closeSessionModal()"
+            aria-label="Fechar Detalhes"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-grid-layout">
+          <div class="modal-col-left" id="modalColLeft"></div>
+          <div class="modal-col-right" id="modalColRight"></div>
+        </div>
       </div>
     </div>
-  </footer>
 
-  <!-- ========================================================================= -->
-  <!-- MODAL DE DETALHES AMPLIADOS (WIDESCREEN ZERO SCROLL DASHBOARD)            -->
-  <!-- ========================================================================= -->
-  <div id="sessionModalOverlay" class="session-modal-overlay" onclick="closeSessionModal(event)" role="dialog"
-    aria-modal="true" aria-labelledby="modalTopicTitle">
-    <div class="session-modal-box" onclick="event.stopPropagation()">
-      <div class="modal-top-bar">
-        <div class="modal-top-left" id="modalTopLeft"></div>
-        <button type="button" class="modal-close-btn" onclick="closeSessionModal()" aria-label="Fechar Detalhes">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <line x1="18" y1="6" x2="6" y2="18"></line>
-            <line x1="6" y1="6" x2="18" y2="18"></line>
-          </svg>
-        </button>
-      </div>
-      <div class="modal-grid-layout">
-        <div class="modal-col-left" id="modalColLeft"></div>
-        <div class="modal-col-right" id="modalColRight"></div>
-      </div>
-    </div>
-  </div>
+    <!-- SCRIPT INTERATIVO -->
+    <!-- Módulos JavaScript — ES Modules Nativos -->
+    <script type="module" src="js/pages/home.js"></script>
 
-  <!-- SCRIPT INTERATIVO -->
-  <!-- Módulos JavaScript — ES Modules Nativos -->
-  <script type="module" src="js/pages/home.js"></script>
-
-  <!-- SWITCH FLUTUANTE DE VERSÕES (COMPARATIVO) -->
-  <!-- <div class="version-switch-pill" id="versionSwitchPill">
+    <!-- SWITCH FLUTUANTE DE VERSÕES (COMPARATIVO) -->
+    <!-- <div class="version-switch-pill" id="versionSwitchPill">
     <span style="color: var(--ciano); font-size: 13px;">⚡ Modo:</span>
     <a href="index.html" class="active" title="Versão padrão com menos conteúdo e alto impacto visual">Alto Impacto (Padrão)</a>
     <a href="index-completa.html" title="Versão completa descritiva">Completa</a>
   </div> -->
-
-</body>
-
+  </body>
 </html>

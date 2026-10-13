@@ -1,0 +1,53 @@
+@import "fonts.css";
+/**
+ * =========================================================================
+ * DESIGN SYSTEM CANÔNICO — NÚCLEO DE IA & SEMANA DO FUTURO
+ * Design tokens compartilhados (cores, tipografia, efeitos e superfícies)
+ * =========================================================================
+ */
+:root {
+      --fundo: #000000;
+      --superficie: #0A0A12;
+      --card-bg: rgba(14, 14, 26, 0.75);
+      --card-border: rgba(255, 255, 255, 0.12);
+      --card-hover: rgba(255, 255, 255, 0.22);
+      --branco: #FFFFFF;
+      --papel: #F1F2F7;
+      --indigo: #3B0CAD;
+      --azul-elo: #2B49C4;
+      --ciano: #08D1F8;
+      --ciano-glow: rgba(8, 209, 248, 0.35);
+      --azul-glow: rgba(43, 73, 196, 0.4);
+      --muted: #8E8EA8;
+      --muted-light: #C9C9DA;
+      --gradiente-oficial: linear-gradient(135deg, #3B0CAD 0%, #2B49C4 50%, #08D1F8 100%);
+      --grad-text: linear-gradient(100deg, #93C5FD 0%, #38BDF8 45%, #08D1F8 100%);
+      --display: "Space Grotesk", system-ui, sans-serif;
+      --body: "IBM Plex Sans", system-ui, sans-serif;
+      --container-max: 1200px;
+    }
+
+/* =========================================================================
+ * VARIAÇÕES CROMÁTICAS ANUAIS (CADA EDIÇÃO TEM SUA IDENTIDADE DE COR)
+ * - 2026: Indigo + Azul Elo + Ciano Elétrico (Padrão :root)
+ * - 2027: Esmeralda Profundo + Verde Elo + Verde Neon (logo-verde.png)
+ * ========================================================================= */
+[data-edition="2027"],
+.theme-2027 {
+      --fundo: #020805;
+      --superficie: #06130B;
+      --card-bg: rgba(8, 28, 16, 0.78);
+      --card-border: rgba(22, 254, 115, 0.2);
+      --card-hover: rgba(22, 254, 115, 0.45);
+      --indigo: #067A35;
+      --azul-elo: #09BF52;
+      --ciano: #16FE73;
+      --ciano-glow: rgba(22, 254, 115, 0.4);
+      --azul-glow: rgba(9, 191, 82, 0.45);
+      --muted: #86B89A;
+      --muted-light: #D1FAE5;
+      --gradiente-oficial: linear-gradient(135deg, #067A35 0%, #09BF52 52%, #16FE73 100%);
+      --grad-text: linear-gradient(100deg, #A7F3D0 0%, #34D399 42%, #16FE73 100%);
+    }
+
+
