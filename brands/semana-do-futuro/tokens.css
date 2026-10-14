@@ -34,20 +34,21 @@
  * ========================================================================= */
 [data-edition="2027"],
 .theme-2027 {
-      --fundo: #020805;
-      --superficie: #06130B;
-      --card-bg: rgba(8, 28, 16, 0.78);
-      --card-border: rgba(22, 254, 115, 0.2);
-      --card-hover: rgba(22, 254, 115, 0.45);
-      --indigo: #067A35;
-      --azul-elo: #09BF52;
-      --ciano: #16FE73;
-      --ciano-glow: rgba(22, 254, 115, 0.4);
-      --azul-glow: rgba(9, 191, 82, 0.45);
-      --muted: #86B89A;
+      --fundo: #040D08;
+      --superficie: #0A1B12;
+      --card-bg: rgba(10, 27, 18, 0.78);
+      --card-border: rgba(52, 211, 153, 0.18);
+      --card-hover: rgba(52, 211, 153, 0.38);
+      --indigo: #064E3B;
+      --azul-elo: #059669;
+      --ciano: #10B981;
+      --ciano-light: #34D399;
+      --ciano-glow: rgba(16, 185, 129, 0.35);
+      --azul-glow: rgba(5, 150, 105, 0.4);
+      --muted: #7FA890;
       --muted-light: #D1FAE5;
-      --gradiente-oficial: linear-gradient(135deg, #067A35 0%, #09BF52 52%, #16FE73 100%);
-      --grad-text: linear-gradient(100deg, #A7F3D0 0%, #34D399 42%, #16FE73 100%);
+      --gradiente-oficial: linear-gradient(135deg, #064E3B 0%, #059669 50%, #34D399 100%);
+      --grad-text: linear-gradient(100deg, #ECFDF5 0%, #6EE7B7 45%, #10B981 100%);
     }
 
 

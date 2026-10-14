@@ -84,34 +84,36 @@
     <link rel="stylesheet" href="css/pages/home.css" />
 
     <style>
+    <style>
       /* =========================================================================
-       * TEMA ANUAL 2027 — VARIAÇÃO VERDE OFICIAL (logo-verde.png)
-       * (2026 = Azul/Ciano · 2027 = Esmeralda / Verde Elo / Verde Neon)
+       * TEMA ANUAL 2027 — VARIAÇÃO VERDE BOTÂNICO NATURAL (logo-verde.png)
+       * (2026 = Azul/Ciano • 2027 = Pinheiro / Esmeralda Foliar / Jade Suave)
        * ========================================================================= */
       html[data-edition="2027"] {
-        --fundo: #020805;
-        --superficie: #06130b;
-        --card-bg: rgba(8, 28, 16, 0.78);
-        --card-border: rgba(22, 254, 115, 0.2);
-        --card-hover: rgba(22, 254, 115, 0.45);
-        --indigo: #067a35;
-        --azul-elo: #09bf52;
-        --ciano: #16fe73;
-        --ciano-glow: rgba(22, 254, 115, 0.42);
-        --azul-glow: rgba(9, 191, 82, 0.48);
-        --muted: #86b89a;
-        --muted-light: #d1fae5;
+        --fundo: #040D08;
+        --superficie: #0A1B12;
+        --card-bg: rgba(10, 27, 18, 0.78);
+        --card-border: rgba(52, 211, 153, 0.18);
+        --card-hover: rgba(52, 211, 153, 0.38);
+        --indigo: #064E3B;
+        --azul-elo: #059669;
+        --ciano: #10B981;
+        --ciano-light: #34D399;
+        --ciano-glow: rgba(16, 185, 129, 0.35);
+        --azul-glow: rgba(5, 150, 105, 0.4);
+        --muted: #7FA890;
+        --muted-light: #D1FAE5;
         --gradiente-oficial: linear-gradient(
           135deg,
-          #05682d 0%,
-          #09bf52 52%,
-          #16fe73 100%
+          #064E3B 0%,
+          #059669 50%,
+          #34D399 100%
         );
         --grad-text: linear-gradient(
           100deg,
-          #a7f3d0 0%,
-          #34d399 42%,
-          #16fe73 100%
+          #ECFDF5 0%,
+          #6EE7B7 45%,
+          #10B981 100%
         );
       }
 
@@ -119,46 +121,46 @@
         background:
           radial-gradient(
             circle at 50% 0%,
-            rgba(9, 191, 82, 0.28) 0%,
+            rgba(5, 150, 105, 0.22) 0%,
             transparent 62%
           ),
           radial-gradient(
             circle at 95% 35%,
-            rgba(22, 254, 115, 0.18) 0%,
+            rgba(16, 185, 129, 0.14) 0%,
             transparent 52%
           ),
           radial-gradient(
             circle at 5% 80%,
-            rgba(6, 122, 53, 0.24) 0%,
+            rgba(6, 78, 59, 0.22) 0%,
             transparent 60%
           ),
           var(--fundo);
       }
 
       html[data-edition="2027"] .site-header {
-        background: rgba(2, 8, 5, 0.85);
-        border-bottom: 1px solid rgba(22, 254, 115, 0.14);
+        background: rgba(4, 13, 8, 0.88);
+        border-bottom: 1px solid rgba(52, 211, 153, 0.14);
       }
 
       html[data-edition="2027"] .header-logo-event {
-        filter: drop-shadow(0 2px 12px rgba(22, 254, 115, 0.35));
+        filter: drop-shadow(0 2px 10px rgba(16, 185, 129, 0.25));
       }
 
       html[data-edition="2027"] .hero {
         background:
           radial-gradient(
             circle at 18% 22%,
-            rgba(9, 191, 82, 0.34) 0%,
+            rgba(5, 150, 105, 0.26) 0%,
             transparent 55%
           ),
           radial-gradient(
             circle at 82% 28%,
-            rgba(22, 254, 115, 0.2) 0%,
+            rgba(16, 185, 129, 0.16) 0%,
             transparent 55%
           ),
           radial-gradient(
             circle at 50% 85%,
-            rgba(6, 122, 53, 0.26) 0%,
+            rgba(6, 78, 59, 0.22) 0%,
             transparent 60%
           );
       }
@@ -166,8 +168,8 @@
       html[data-edition="2027"] .hero-mesh-glow {
         background: radial-gradient(
           circle,
-          rgba(22, 254, 115, 0.24) 0%,
-          rgba(9, 191, 82, 0.28) 50%,
+          rgba(16, 185, 129, 0.18) 0%,
+          rgba(5, 150, 105, 0.22) 50%,
           transparent 72%
         );
       }
@@ -175,29 +177,29 @@
       html[data-edition="2027"] .hero-orbital-glow {
         background: radial-gradient(
           circle,
-          rgba(22, 254, 115, 0.34) 0%,
-          rgba(9, 191, 82, 0.24) 60%,
+          rgba(16, 185, 129, 0.24) 0%,
+          rgba(5, 150, 105, 0.18) 60%,
           transparent 72%
         );
       }
 
       html[data-edition="2027"] .hero-emblem-ring {
-        border-color: rgba(22, 254, 115, 0.45);
+        border-color: rgba(52, 211, 153, 0.32);
       }
 
       html[data-edition="2027"] .hero-emblem-ring-2 {
-        border-color: rgba(9, 191, 82, 0.45);
-        border-top-color: rgba(167, 243, 208, 0.75);
-        border-bottom-color: rgba(6, 122, 53, 0.75);
+        border-color: rgba(16, 185, 129, 0.32);
+        border-top-color: rgba(110, 231, 183, 0.65);
+        border-bottom-color: rgba(6, 78, 59, 0.65);
       }
 
       html[data-edition="2027"] .hero-side-logo {
-        filter: drop-shadow(0 14px 38px rgba(22, 254, 115, 0.38))
-          drop-shadow(0 0 24px rgba(9, 191, 82, 0.32));
+        filter: drop-shadow(0 14px 38px rgba(16, 185, 129, 0.28))
+          drop-shadow(0 0 20px rgba(5, 150, 105, 0.22));
       }
 
       html[data-edition="2027"] .footer-logo-event {
-        filter: drop-shadow(0 2px 12px rgba(22, 254, 115, 0.3));
+        filter: drop-shadow(0 2px 10px rgba(16, 185, 129, 0.2));
       }
 
       html[data-edition="2027"] .grad-text {
@@ -210,43 +212,43 @@
       .badge-aguarde-glow {
         background: linear-gradient(
           135deg,
-          rgba(6, 122, 53, 0.45),
-          rgba(22, 254, 115, 0.16)
+          rgba(6, 78, 59, 0.45),
+          rgba(16, 185, 129, 0.14)
         ) !important;
-        border: 1px solid rgba(22, 254, 115, 0.5) !important;
-        color: #d1fae5 !important;
-        box-shadow: 0 0 24px rgba(22, 254, 115, 0.24) !important;
+        border: 1px solid rgba(52, 211, 153, 0.38) !important;
+        color: #D1FAE5 !important;
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.18) !important;
       }
 
       .header-edition-badge {
-        background: rgba(9, 191, 82, 0.18);
-        border: 1px solid rgba(22, 254, 115, 0.5);
-        color: #d1fae5;
+        background: rgba(5, 150, 105, 0.18);
+        border: 1px solid rgba(52, 211, 153, 0.4);
+        color: #D1FAE5;
         font-size: 11px;
         font-weight: 700;
         padding: 3px 10px;
         border-radius: 99px;
         font-family: var(--display);
         letter-spacing: 0.05em;
-        box-shadow: 0 0 14px rgba(22, 254, 115, 0.22);
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.18);
       }
 
       html[data-edition="2027"] .btn-primary {
         background: linear-gradient(
           135deg,
-          #05682d 0%,
-          #09bf52 60%,
-          #12e065 100%
+          #064E3B 0%,
+          #059669 55%,
+          #10B981 100%
         );
-        color: #ffffff;
+        color: #FFFFFF;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
         box-shadow:
-          0 6px 28px rgba(9, 191, 82, 0.42),
-          inset 0 1px 0 rgba(255, 255, 255, 0.25);
+          0 6px 24px rgba(5, 150, 105, 0.35),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
       }
 
       html[data-edition="2027"] .btn-primary:hover {
-        box-shadow: 0 10px 38px rgba(22, 254, 115, 0.55);
+        box-shadow: 0 10px 32px rgba(16, 185, 129, 0.45);
       }
     </style>
   </head>
